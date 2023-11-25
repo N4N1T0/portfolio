@@ -1,0 +1,118 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '@/layouts/Layout.astro'
+import { TTStyle } from '@/assets'
+import SideNavbar from '@/components/SideNavbar.astro'
+---
+
+<Layout title='Three Shirt - 3D Graphics App' className='bg-background'>
+  <SideNavbar label='Works' link='/works' border='border-gray-800' />
+  <main
+    class='w-screen mt-20 md:mt-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
+    <div class='w-full bg-[#dddddd] text-center h-[700px] flex justify-center'>
+      <h1
+        transition:name='three shirt'
+        class='font-prata text-[11vw] text-black self-center md:self-end md:leading-[11rem]'>
+        THREE SHIRT
+      </h1>
+    </div>
+    <h2
+      class='text-[7vw] md:text-[3vw] font-prata max-w-[700px] md:leading-[4rem] my-10 px-5 md:p-0'>
+      Fullstack 3D Graphics App for a T-Shirt mockup using color-pick, native
+      tools and Dall-e AI for ideas to create designs
+    </h2>
+    <div
+      class='flex flex-col md:flex-row justify-between items-start gap-3 md:gap-5 md:px-10 px-5'>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Three.js</h3>
+        <p class='text-sm md:text-base'>
+          Three.js is a lightweight library written in JavaScript for creating
+          and displaying 3D computer animated graphics in a web browser and can
+          be used in conjunction with the HTML5 canvas element, SVG or WebGL.
+        </p>
+        <a
+          href='https://threejs.org/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>More info.</a
+        >
+      </div>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Vite</h3>
+        <p class='text-sm md:text-base'>
+          Is a build tool that aims to provide a faster and more agile
+          development experience for modern web projects.
+        </p>
+        <a
+          href='https://es.vitejs.dev/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>More info.</a
+        >
+      </div>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>DALL-E</h3>
+        <p class='text-sm md:text-base'>
+          An AI research and deployment company. Their mission is to ensure that
+          artificial general intelligence benefits all of humanity.
+        </p>
+        <a
+          href='https://openai.com/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>More info.</a
+        >
+      </div>
+    </div>
+    <Image src={TTStyle} alt='Finance Clover Website Showcase' />
+    <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base mb-5'>
+      Combining the prowess of Three.js, Vite, and React, I sculpt a full-stack
+      app where creativity knows no bounds. With Three.js, I render an immersive
+      T-shirt mockup that users can seamlessly customize. Vite accelerates
+      development, ensuring a swift and responsive front-end experience, while
+      React streamlines UI interactions. On the backend, I harness the
+      generative magic of DALL-E to craft unique logos, enriching the
+      customization possibilities. This amalgamation of cutting-edge
+      technologies delivers a visually captivating and highly customizable
+      experience, where users can personalize T-shirts and logos in real-time,
+      marking a new frontier in the realm of interactive and dynamic full-stack
+      applications.
+    </p>
+  </main>
+</Layout>
+<div
+  class='fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-[#dddddd]'>
+  <a
+    href='https://github.com/N4N1T0/Tshirt-ThreeJS'
+    target='_blank'
+    class='text-sm md:text-base hover-underline-animation-widget'>CODE</a
+  >
+  <a
+    href='https://tshirt-three-js-nu.vercel.app/'
+    target='_blank'
+    class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
+  >
+</div>
+
+<style>
+  .hover-underline-animation-widget {
+    display: block;
+    position: relative;
+    color: black;
+  }
+
+  .hover-underline-animation-widget::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation-widget:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+</style>

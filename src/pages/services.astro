@@ -1,0 +1,54 @@
+---
+import SideNavbar from '@/components/SideNavbar.astro'
+import Layout from '../layouts/Layout.astro'
+import { services } from '@/constants'
+---
+
+<Layout title='Adrian - Services' className='bg-gray-800 text-gray-300'>
+  <SideNavbar label='Home' link='/' border='border-gray-300' />
+  <main
+    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32'>
+    <aside class='space-y-3 self-end z-10 sticky bottom-24 flex-1'>
+      <h1 class='font-semibold tracking-widest' transition:name='services'>
+        Services
+      </h1>
+      <p class='text-sm'>
+        Explore a compilation of my finest endeavors spanning Web Design and
+        Development. In a dynamic digital landscape, my role has transformed
+        over the past 3 years, adapting to the ever-evolving realms of design
+        and development. I remain committed to continuous learning, consistently
+        acquiring new skills to stay at the forefront of innovation.
+      </p>
+    </aside>
+    <articule class='font-prata md:space-y-10 space-y-5 flex-1'>
+      {
+        services.map((service) => (
+          <div>
+            <h2 class=" class='text-[12vw] md:text-[7vw] leading-[0.95em]">
+              {service.label}
+            </h2>
+            <h3 class='text-xs md:text-base font-sans pl-5 pt-5'>
+              <hr class='w-5 inline-block' />
+              {service.info}
+            </h3>
+          </div>
+        ))
+      }
+      <hr class='w-full' />
+      <div>
+        <a
+          transition:name='contact'
+          href='/contact'
+          class='text-[12vw] md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-300 leading-[0.95em] ease-out'
+          >CONTACT</a
+        >
+        <p class='text-xs md:text-base font-sans pl-5 inline'>
+          Need help with anyone of this services?<span
+            class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse'
+            >No hesitate!</span
+          >
+        </p>
+      </div>
+    </articule>
+  </main>
+</Layout>

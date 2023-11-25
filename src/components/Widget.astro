@@ -1,0 +1,49 @@
+---
+interface Props {
+  code: string
+  live: string
+  background: string
+  text: string
+}
+
+const { code, live, background, text } = Astro.props
+---
+
+<div
+  class=`${background} fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2`>
+  <a
+    href={code}
+    target='_blank'
+    class='text-sm md:text-base hover-underline-animation text-inherit after:bg-inherit'
+    >CODE</a
+  >
+  <a
+    href={live}
+    target='_blank'
+    class='text-sm md:text-base hover-underline-animation'>LIVE</a
+  >
+</div>
+
+<style>
+  .hover-underline-animation {
+    display: block;
+    position: relative;
+  }
+
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+</style>

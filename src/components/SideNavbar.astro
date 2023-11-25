@@ -1,0 +1,32 @@
+---
+interface Props {
+  link?: string
+  label?: string
+  border: string
+}
+
+const { link, label, border } = Astro.props
+---
+
+<aside
+  class='p-10 h-10 md:h-screen w-screen md:w-10 flex justify-between items-center md:flex-col fixed top-0 z-10'>
+  <div
+    class='md:-rotate-90 md:mt-32 flex items-center space-x-5 md:space-x-10 text-sm'>
+    <hr class=`w-10 md:w-20 border-[1.5px] ${border}` />
+    {
+      link === undefined ? (
+        <>
+          <a class='hover-underline-animation cursor-pointer'>Español</a>
+          <a class='hover-underline-animation cursor-pointer'>English</a>
+        </>
+      ) : (
+        <a class='hover-underline-animation cursor-pointer' href={link}>
+          {label}
+        </a>
+      )
+    }
+  </div>
+  <small class='md:-rotate-90 block text-xs'
+    >@2020 <span class='hidden md:inline'>Copyrights</span></small
+  >
+</aside>

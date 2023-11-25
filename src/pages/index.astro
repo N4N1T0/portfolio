@@ -1,0 +1,55 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import SideNavbar from '@/components/SideNavbar.astro'
+---
+
+<Layout title='Adrian Alvarez Portfolio' className='bg-background'>
+  <SideNavbar border='border-gray-800' />
+  <main class='h-screen w-screen overflow-hidden p-10 md:p-24 mt-20 md:mt-0'>
+    <div
+      class='h-full flex flex-col md:flex-row md:mt-0 md:justify-around items-center gap-16 md:gap-32'>
+      <div class='space-y-3 self-end'>
+        <h1 class='font-semibold tracking-widest'>Adrian Alvarez Alonso</h1>
+        <p class='text-sm'>
+          Web Designer / Web Developer / APP Designer / APP Developer
+        </p>
+        <p class='text-sm'>
+          Co-Founder and Developer of <span
+            class='underline hover:text-gray-600 transition-colors duration-200 cursor-pointer'
+            >Masobi Web Solutions</span
+          >
+        </p>
+        <p class='text-sm'>
+          Cuban-born and self-taught, I bring a unique blend of passion and
+          proficiency to development and design. Obsessed with performance and
+          dedicated to crafting clean, impactful designs, my work is a testament
+          to the fusion of skill and creativity. I thrive on pushing boundaries,
+          delivering excellence in every project.
+        </p>
+      </div>
+      <div
+        class='[&>a]:text-[16vw] md:[&>a]:text-[10vw] [&>a]:block font-prata [&>a]:cursor-pointer'>
+        <a
+          href='/works'
+          class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-300 leading-[0.95em] ease-out'
+          transition:name='works'>WORKS</a
+        >
+        <a
+          href='/services'
+          class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-300 leading-[0.95em] ease-out'
+          transition:name='services'>SERVICES</a
+        >
+        <a
+          href='/about'
+          class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-300 leading-[0.95em] ease-out'
+          transition:name='about'>ABOUT</a
+        >
+        <a
+          href='/contact'
+          class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-300 leading-[0.95em] ease-out'
+          transition:name='contact'>CONTACT</a
+        >
+      </div>
+    </div>
+  </main>
+</Layout>
