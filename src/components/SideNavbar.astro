@@ -2,7 +2,7 @@
 interface Props {
   link?: string
   label?: string
-  border: string
+  border: 'border-gray-300' | 'border-gray-800'
 }
 
 const { link, label, border } = Astro.props
@@ -20,7 +20,13 @@ const { link, label, border } = Astro.props
           <a class='hover-underline-animation cursor-pointer'>English</a>
         </>
       ) : (
-        <a class='hover-underline-animation cursor-pointer' href={link}>
+        <a
+          class:list={[
+            'cursor-pointer',
+            { 'hover-underline-animation-white': border === 'border-gray-300' },
+            { 'hover-underline-animation': border === 'border-gray-800' },
+          ]}
+          href={link}>
           {label}
         </a>
       )

@@ -69,3 +69,34 @@ export const works = [
     inProcess: true
   }
 ]
+
+export const diplomas = [
+  {
+    label: 'FCC Responsive Web Design',
+    link: 'https://www.freecodecamp.org/certification/fcc0c7054f7-09c1-43bf-8f90-c9121bc86e5a/responsive-web-design'
+  },
+  {
+    label: 'FCC JavaScript Algorithms and Data Structure',
+    link: 'https://www.freecodecamp.org/certification/fcc0c7054f7-09c1-43bf-8f90-c9121bc86e5a/javascript-algorithms-and-data-structures'
+  },
+  {
+    label: 'FCC Front End Development Libraries',
+    link: 'https://www.freecodecamp.org/certification/fcc0c7054f7-09c1-43bf-8f90-c9121bc86e5a/front-end-development-libraries'
+  },
+  {
+    label: 'FCC Data Visualization',
+    link: 'https://www.freecodecamp.org/certification/fcc0c7054f7-09c1-43bf-8f90-c9121bc86e5a/data-visualization'
+  },
+  {
+    label: 'FCC Back End Development and APIs',
+    link: 'https://www.freecodecamp.org/certification/fcc0c7054f7-09c1-43bf-8f90-c9121bc86e5a/back-end-development-and-apis'
+  },
+  {
+    label: 'Apollo Graph Developer - Associate',
+    link: 'https://www.apollographql.com/tutorials/certifications/2877a312-31ad-44a0-bd0c-febb6dc9a4ca'
+  },
+  {
+    label: 'Google SkillsShop Diplomas',
+    link: 'https://skillshop.exceedlms.com/profiles/e041a50daf52423ca72f738e181e05ed'
+  }
+]

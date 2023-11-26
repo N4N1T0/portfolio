@@ -1,23 +1,82 @@
 ---
-import SideNavbar from '@/components/SideNavbar.astro'
 import Layout from '../layouts/Layout.astro'
+import { fade } from 'astro:transitions'
 ---
 
-<Layout title='Adrian - Contact' className='bg-gray-800 text-gray-300'>
-  <SideNavbar label='Home' link='/' border='border-gray-300' />
+<Layout title='Adrian - Contact' className='bg-gray-800 text-gray-300' label='Home' link='/' border='border-gray-300'>
   <main
-    class='w-screen p-10 mt-20 md:p-24 relative justify-around items-center gap-16 md:gap-32'>
-    <h1
-      class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em] p-10'
-      transition:name='contact'>
-      Contact
-    </h1>
-    <p class='text-sm'>
-      Explore a compilation of my finest endeavors spanning Web Design and
-      Development. In a dynamic digital landscape, my role has transformed over
-      the past 3 years, adapting to the ever-evolving realms of design and
-      development. I remain committed to continuous learning, consistently
-      acquiring new skills to stay at the forefront of innovation.
-    </p>
+    class='w-screen p-10 mt-20 md:p-24 relative justify-around items-center gap-16 md:gap-32'
+    transition:animate={fade({ duration: '0.5s' })}>
+    <div class='p-10 space-y-5'>
+      <h1
+        class='font-prata text-[1vw] md:text-[8vw] leading-[0.95em]'
+        transition:name='contact'>
+        Contact
+      </h1>
+      <div>
+        <h2 class='block'>
+          If you need any help with a Website or an App, dont hesitate to
+          contact me
+        </h2>
+        <a
+          href='https://www.nanofighters.club/es/'
+          target='_blank'
+          class='inline-block text-xs hover-underline-animation-widget'
+          >or if you want a sparring too! &#128513; &#129354;</a
+        >
+      </div>
+      <div class='space-y-2'>
+        <p class='text-sm'>
+          Email: <a
+            href='mailto:adrian.alvarezalonso1991@gmail.com'
+            class='hover-underline-animation-widget'
+            >adrian.alvarezalonso1991@gmail.com</a
+          >
+        </p>
+        <p class='text-sm'>
+          Phone: <a
+            href='tel:34-647-31-72-14'
+            class='hover-underline-animation-widget'>+34 647 31 72 14</a
+          >
+        </p>
+        <p class='text-sm'>
+          On the Web: <a
+            href='https://www.linkedin.com/in/adrian-%C3%A1lvarez-alonso/'
+            target='_blank'
+            class='hover-underline-animation-widget'>LinkedIn</a
+          >
+           /
+          <a
+            href='https://github.com/N4N1T0'
+            target='_blank'
+            class='hover-underline-animation-widget'>Github</a
+          >
+        </p>
+      </div>
+    </div>
   </main>
 </Layout>
+
+<style>
+  .hover-underline-animation-widget {
+    position: relative;
+  }
+
+  .hover-underline-animation-widget::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation-widget:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+</style>

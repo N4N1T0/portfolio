@@ -1,40 +1,57 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import SideNavbar from '@/components/SideNavbar.astro'
+import { fade } from 'astro:transitions'
+import { diplomas } from '@/constants'
 ---
 
-<Layout title='Adrian - About' className='bg-background'>
-  <SideNavbar label='Home' link='/' border='border-gray-900' />
+<Layout
+  title='Adrian - About'
+  className='bg-background'
+  label='Home'
+  link='/'
+  border='border-gray-800'>
   <main
-    class='w-screen mt-20 md:mt-10 md:px-24 relative flex flex-col justify-around items-center gap-10 md:gap-20'>
+    class='w-screen mt-20 md:mt-10 md:px-24 relative flex flex-col justify-around items-center gap-10 md:gap-20'
+    transition:animate={fade({ duration: '0.5s' })}>
+    <!-- ABOUT SECTION -->
     <section class='flex w-full relative' id='about'>
-      <div class='p-10 space-y-3 max-w-[800px]'>
+      <div class='p-10 space-y-5 max-w-[800px]'>
+        <h3 class='font-prata text-3xl'>
+          My name is Adrian, Im Front-end Developer and Designer.
+        </h3>
         <p class='leading-8'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
-          veniam rem blanditiis, harum autem quaerat doloremque eligendi aperiam
-          dolor quas nobis magnam numquam perferendis illo, illum nisi nostrum
-          animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Laboriosam deleniti impedit iste aliquid, fuga blanditiis quas?
-          Necessitatibus quod maiores atque deserunt, similique ad id iure,
-          corporis ducimus quae accusamus aperiam!
+          part degree, part self-taught, blending the best of both worlds. I
+          kicked off my journey diving into the nitty-gritty of C and C++ at
+          computer science school, then switched gears to the enchanting realms
+          of JavaScript and Python. The magic started when I first laid eyes on
+          Adobe Dreamweaver – that's when the web stole my heart.
         </p>
         <p class='leading-8'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
-          veniam rem blanditiis, harum autem quaerat doloremque eligendi aperiam
-          dolor quas nobis magnam numquam perferendis illo, illum nisi nostrum
-          animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Laboriosam deleniti impedit iste aliquid, fuga blanditiis quas?
-          Necessitatibus quod maiores atque deserunt, similique ad id iure,
-          corporis ducimus quae accusamus aperiam!
+          What lights me up? The sheer simplicity of typing out some code and
+          conjuring up something visually appealing. It's like art, but with a
+          techy twist. Beyond the screen, I'm also a combat sports enthusiast
+          and coach. I get the hustle, the grind, and the sweet taste of
+          victory. That's the energy I bring to crafting high-quality web
+          wonders – a perfect blend of code and combat spirit.
         </p>
         <p class='leading-8'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
-          veniam rem blanditiis, harum autem quaerat doloremque eligendi aperiam
-          dolor quas nobis magnam numquam perferendis illo, illum nisi nostrum
-          animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Laboriosam deleniti impedit iste aliquid, fuga blanditiis quas?
-          Necessitatibus quod maiores atque deserunt, similique ad id iure,
-          corporis ducimus quae accusamus aperiam!
+          This one of my favorites quotes from the 2 times boxing champion
+          <a
+            href='https://es.wikipedia.org/wiki/George_Foreman'
+            target='_blank'
+            class='hover-underline-animation font-semibold'>George Foreman</a
+          >
+        </p>
+        <h3 class='font-prata text-3xl p-10'>
+          “The fighter who give their all will be around next year. Don’t save
+          anything. Give it all you got.”
+        </h3>
+        <p class='leading-8'>
+          In the realm of web development, this quote resonates in me as a
+          powerful reminder to embrace every project with full dedication and
+          passion. Much like a fighter who gives their all in the ring, a web
+          developer who invests wholeheartedly in their work ensures lasting
+          impact and relevance. Let's create something awesome together!
         </p>
       </div>
       <aside class='sticky top-2 z-10 self-start'>
@@ -44,77 +61,76 @@ import SideNavbar from '@/components/SideNavbar.astro'
           About
         </h1>
       </aside>
+      <!-- EXPERIENCE SECTION -->
     </section>
     <section class='flex w-full relative' id='experience'>
-      <div class='p-10 space-y-3 max-w-[800px]'>
+      <div class='p-10 space-y-5 max-w-[800px]'>
+        <h3 class='font-prata text-3xl p-10'>Embarking on My Tech Odyssey</h3>
         <p class='leading-8'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
-          veniam rem blanditiis, harum autem quaerat doloremque eligendi aperiam
-          dolor quas nobis magnam numquam perferendis illo, illum nisi nostrum
-          animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Laboriosam deleniti impedit iste aliquid, fuga blanditiis quas?
-          Necessitatibus quod maiores atque deserunt, similique ad id iure,
-          corporis ducimus quae accusamus aperiam!
+          Between 2009 and 2012, I laid my initial tech foundations at the
+          Computer Science School "Martires de Giron," where I honed my skills
+          in network management and became the go-to person for hardware
+          maintenance conundrums.
         </p>
         <p class='leading-8'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
-          veniam rem blanditiis, harum autem quaerat doloremque eligendi aperiam
-          dolor quas nobis magnam numquam perferendis illo, illum nisi nostrum
-          animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Laboriosam deleniti impedit iste aliquid, fuga blanditiis quas?
-          Necessitatibus quod maiores atque deserunt, similique ad id iure,
-          corporis ducimus quae accusamus aperiam!
+          Venturing into the realm of digital marketing from 2012 to 2018 at the
+          Research Center "Inmunologia Molecular," I crafted compelling web
+          strategies and lent my creative touch to branding endeavors. It was a
+          dynamic period where tech met creativity, setting the stage for my
+          evolving journey.
         </p>
         <p class='leading-8'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
-          veniam rem blanditiis, harum autem quaerat doloremque eligendi aperiam
-          dolor quas nobis magnam numquam perferendis illo, illum nisi nostrum
-          animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Laboriosam deleniti impedit iste aliquid, fuga blanditiis quas?
-          Necessitatibus quod maiores atque deserunt, similique ad id iure,
-          corporis ducimus quae accusamus aperiam!
+          The transition to the role of a Junior Front-End Developer at "Desoft"
+          from 2018 to 2020 marked a significant chapter. There, I dived into
+          the intricacies of Javascript software, adding a data analysis twist
+          to my skill set. It was a time of learning, growth, and embracing the
+          fast-paced world of software development.
+        </p>
+        <p class='leading-8'>
+          Since 2020, I've been captaining my freelance ship, weaving my unique
+          blend of skills into every web development and design project. With a
+          passion for clean design and an unwavering commitment to performance,
+          I embark on each endeavor with the aim of crafting digital experiences
+          that leave a lasting impression. Join me on this exciting tech
+          odyssey!
         </p>
       </div>
       <aside class='sticky top-2 z-10 self-start'>
-        <h1 class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em] p-10'>
+        <h2 class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em] p-10'>
           Experience
-        </h1>
+        </h2>
       </aside>
+      <!-- SKILLS & DIPLOMAS SECTION -->
     </section>
-    <section class='flex w-full relative' id='experience'>
-      <div class='p-10 space-y-3 max-w-[800px]'>
-        <p class='leading-8'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
-          veniam rem blanditiis, harum autem quaerat doloremque eligendi aperiam
-          dolor quas nobis magnam numquam perferendis illo, illum nisi nostrum
-          animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Laboriosam deleniti impedit iste aliquid, fuga blanditiis quas?
-          Necessitatibus quod maiores atque deserunt, similique ad id iure,
-          corporis ducimus quae accusamus aperiam!
+    <section class='flex w-full relative' id='skills'>
+      <div class='p-10 space-y-5 max-w-[800px]'>
+        <p class='leading-8 text-lg'>
+          HTML and CSS / JavaScript / Typescript / React / React Native /
+          Next.js / GraphQL / Node / Express.js / Mongo & Mongoose / Astro /
+          ThreeJS / Tailwind / Git & GitHub / UI/UX Design / Strategy / User
+          Research / Agile Methodologies / Collaboration / Design Systems /
+          Photography / Graphic Design
         </p>
-        <p class='leading-8'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
-          veniam rem blanditiis, harum autem quaerat doloremque eligendi aperiam
-          dolor quas nobis magnam numquam perferendis illo, illum nisi nostrum
-          animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Laboriosam deleniti impedit iste aliquid, fuga blanditiis quas?
-          Necessitatibus quod maiores atque deserunt, similique ad id iure,
-          corporis ducimus quae accusamus aperiam!
-        </p>
-        <p class='leading-8'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
-          veniam rem blanditiis, harum autem quaerat doloremque eligendi aperiam
-          dolor quas nobis magnam numquam perferendis illo, illum nisi nostrum
-          animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Laboriosam deleniti impedit iste aliquid, fuga blanditiis quas?
-          Necessitatibus quod maiores atque deserunt, similique ad id iure,
-          corporis ducimus quae accusamus aperiam!
-        </p>
+        <hr class='border-gray-900' />
+        <ul class='space-y-5'>
+          {
+            diplomas.map((diploma) => (
+              <li>
+                <a
+                  href={diploma.link}
+                  target='_blank'
+                  class='hover-underline-animation inline'>
+                  {diploma.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </div>
       <aside class='sticky top-2 z-10 self-start'>
-        <h1 class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em] p-10'>
+        <h2 class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em] p-10'>
           Skills & Diplomas
-        </h1>
+        </h2>
       </aside>
     </section>
   </main>

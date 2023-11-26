@@ -1,83 +1,87 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import SideNavbar from '@/components/SideNavbar.astro'
+import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
-	title: string;
-	className?: string;
+  title: string
+  className?: string
+  link?: string
+  label?: string
+  border: 'border-gray-300' | 'border-gray-800'
 }
 
-const { title, className } = Astro.props;
+const { title, className, border, link, label } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions />
-	</head>
-	<body class=`overflow-x-hidden flex relative ${className}`>
-		<slot />
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class=`overflow-x-hidden flex relative ${className}`>
+    <SideNavbar border={border} link={link} label={label} />
+    <slot />
+    <style is:global>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Prata&display=swap');
+
+      html,
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .hover-underline-animation {
+        display: inline-block;
+        position: relative;
+      }
+
+      .hover-underline-animation::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(31 41 55 / 1);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      .hover-underline-animation:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      .hover-underline-animation-white {
+        display: inline-block;
+        position: relative;
+      }
+
+      .hover-underline-animation-white::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(209 213 219 / 1);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      .hover-underline-animation-white:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    </style>
+  </body>
 </html>
-
-<style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Prata&display=swap');
-
-	html,
-	body {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
-
-	.hover-underline-animation {
-  display: inline-block;
-  position: relative;
-}
-
-.hover-underline-animation::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: rgb(31 41 55 / 1);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-	.hover-underline-animation-white {
-  display: block;
-  position: relative;
-}
-
-.hover-underline-animation-white::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: rgb(209 213 219 / 1);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation-white:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-</style>

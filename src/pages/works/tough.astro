@@ -2,11 +2,14 @@
 import { Image } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
 import { ToughShowcase, ToughStyle } from '@/assets'
-import SideNavbar from '@/components/SideNavbar.astro'
 ---
 
-<Layout title='Tough - Ecommerce Site' className='bg-background'>
-  <SideNavbar label='Works' link='/works' border='border-gray-800' />
+<Layout
+  title='Tough - Ecommerce Site'
+  className='bg-background'
+  label='Works'
+  link='/works'
+  border='border-gray-800'>
   <main
     class='w-screen mt-20 md:mt-0 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
     <div class='w-full bg-gray-950 text-center h-[500px] flex justify-center'>

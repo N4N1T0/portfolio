@@ -2,13 +2,14 @@
 import { Image } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
 import { FinanceCloverShowcase, FinanceCloverView } from '@/assets'
-import SideNavbar from '@/components/SideNavbar.astro'
 ---
 
 <Layout
   title='Finance Clover - Data Analysis Powered Dashboard'
-  className='bg-background'>
-  <SideNavbar label='Works' link='/works' border='border-gray-800' />
+  className='bg-background'
+  label='Works'
+  link='/works'
+  border='border-gray-800'>
   <main
     class='w-screen mt-20 md:mt-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
     <div class='w-full bg-[#2d2d34] text-center h-[700px] flex justify-center'>
