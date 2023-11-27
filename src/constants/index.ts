@@ -136,7 +136,7 @@ export const worksEspañol = [
   },
   {
     nombre: 'masobi',
-    informacion: 'Sitio de Última Generación',
+    informacion: 'Sitio de Next.js 14',
     nuevo: false,
     enProceso: true
   }
