@@ -8,7 +8,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.CI ? 'https://www.nanofighters.club' : 'http://localhost:4321',
+  site: process.env.CI ? 'https://portfolio-nine-theta-20.vercel.app' : 'http://localhost:4321',
   integrations: [tailwind(), sitemap(), robotsTxt(), partytown()],
   output: "server",
   adapter: vercel()
