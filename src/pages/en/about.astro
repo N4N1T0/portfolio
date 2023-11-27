@@ -2,20 +2,25 @@
 import Layout from '@/layouts/Layout.astro'
 import { fade } from 'astro:transitions'
 import { diplomas } from '@/constants'
+import { Image } from 'astro:assets'
+import { ProfilePic } from '@/assets'
 ---
 
 <Layout
+  description='About page of my online web portfolio with information of my experience, skills and personal info'
   title='Adrian - About'
   className='bg-background'
   label='Home'
-  link='/'
+  link='/en/'
   border='border-gray-800'>
   <main
     class='w-screen mt-20 md:mt-10 md:px-24 relative flex flex-col justify-around items-center gap-10 md:gap-20'
     transition:animate={fade({ duration: '0.5s' })}>
     <!-- ABOUT SECTION -->
-    <section class='flex w-full relative' id='about'>
-      <div class='p-10 space-y-5 max-w-[800px]'>
+    <section
+      class='w-full flex flex-col-reverse md:flex-row relative'
+      id='about'>
+      <div class='md:p-10 px-10 space-y-5 max-w-[800px]'>
         <h3 class='font-prata text-3xl'>
           My name is Adrian, Im Front-end Developer and Designer.
         </h3>
@@ -54,18 +59,22 @@ import { diplomas } from '@/constants'
           impact and relevance. Let's create something awesome together!
         </p>
       </div>
-      <aside class='sticky top-2 z-10 self-start'>
+      <aside class='hidden md:sticky md:block top-2 z-10 self-start'>
         <h1
-          class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em] p-10'
+          class='font-prata text-[7vw] leading-[0.95em] p-10'
           transition:name='about'>
           About
         </h1>
       </aside>
       <!-- EXPERIENCE SECTION -->
     </section>
-    <section class='flex w-full relative' id='experience'>
-      <div class='p-10 space-y-5 max-w-[800px]'>
-        <h3 class='font-prata text-3xl p-10'>Embarking on My Tech Odyssey</h3>
+    <section
+      class='flex w-full flex-col-reverse md:flex-row relative'
+      id='experience'>
+      <div class='md:p-10 px-10 space-y-5 max-w-[800px]'>
+        <h3 class='font-prata text-3xl md:p-10'>
+          Embarking on My Tech Odyssey
+        </h3>
         <p class='leading-8'>
           Between 2009 and 2012, I laid my initial tech foundations at the
           Computer Science School "Martires de Giron," where I honed my skills
@@ -95,14 +104,14 @@ import { diplomas } from '@/constants'
           odyssey!
         </p>
       </div>
-      <aside class='sticky top-2 z-10 self-start'>
-        <h2 class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em] p-10'>
-          Experience
-        </h2>
+      <aside class='hidden md:sticky md:block top-2 z-10 self-start'>
+        <h2 class='font-prata text-[7vw] leading-[0.95em] p-10'>Experience</h2>
       </aside>
       <!-- SKILLS & DIPLOMAS SECTION -->
     </section>
-    <section class='flex w-full relative' id='skills'>
+    <section
+      class='flex flex-col-reverse md:flex-row w-full relative'
+      id='skills'>
       <div class='p-10 space-y-5 max-w-[800px]'>
         <p class='leading-8 text-lg'>
           HTML and CSS / JavaScript / Typescript / React / React Native /
@@ -127,11 +136,32 @@ import { diplomas } from '@/constants'
           }
         </ul>
       </div>
-      <aside class='sticky top-2 z-10 self-start'>
-        <h2 class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em] p-10'>
+      <aside class='md:sticky top-2 z-10 self-start'>
+        <h2
+          class='font-prata text-3xl md:text-[7vw] leading-[0.95em] md:p-10 px-10'>
           Skills & Diplomas
         </h2>
       </aside>
+    </section>
+    <!-- PROFILE SECTION -->
+    <section class='flex w-full relative mb-10 md:px-20 px-10' id='profile'>
+      <Image
+        src={ProfilePic}
+        alt='Adrian Alvarez Profile Picture'
+        height={400}
+        width={400}
+      />
+      <div class='absolute bottom-0 flex flex-col p-5 md:p-10'>
+        <h2 class='font-prata text-[10vw] md:text-[7vw] leading-[0.95em]'>
+          Adrian Alvarez
+        </h2>
+        <p class='text-xs md:text-base font-sans inline self-end py-2'>
+          Need help with a beatiful website?<a
+            class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl cursor-pointer hover:bg-background hover:text-white duration-200 transition-colors'
+            href='/en/contact'>Contact</a
+          >
+        </p>
+      </div>
     </section>
   </main>
 </Layout>

@@ -1,13 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '../../layouts/Layout.astro'
 import { services } from '@/constants'
 ---
 
 <Layout
+  description='Embark on a journey through my dynamic expertise, spanning web design, development, maintenance, app design, development, and SEO audit'
   title='Adrian - Services'
   className='bg-gray-800 text-gray-300'
   label='Home'
-  link='/'
+  link='/en/'
   border='border-gray-300'>
   <main
     class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32'>
@@ -26,7 +27,7 @@ import { services } from '@/constants'
       {
         services.map((service) => (
           <div>
-            <h2 class=" class='text-[12vw] md:text-[7vw] leading-[0.95em]">
+            <h2 class='text-[12vw] md:text-[7vw] leading-[0.95em]'>
               {service.label}
             </h2>
             <h3 class='text-xs md:text-base font-sans pl-5 pt-5'>
@@ -39,13 +40,14 @@ import { services } from '@/constants'
       <hr class='w-full' />
       <div>
         <a
-          href='/contact'
+          href='/en/contact'
           class='text-[12vw] md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-300 leading-[0.95em] ease-out'
           >CONTACT</a
         >
         <p class='text-xs md:text-base font-sans pl-5 inline'>
-          Need help with anyone of this services?<span
-            class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse'
+          Need help with anyone of this services?
+          <span
+            class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse hidden md:inline'
             >No hesitate!</span
           >
         </p>

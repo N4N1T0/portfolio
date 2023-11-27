@@ -7,6 +7,7 @@ import NFCStyle from './nano-fighters-club-style.png'
 import FinanceCloverShowcase from './finace-clover-showcase.jpg'
 import FinanceCloverView from './finace-clover-view.mp4'
 import TTStyle from './three-shirt-style.png'
+import ProfilePic from './about-profile.jpg'
 
 export {
   ToughShowcase,
@@ -17,5 +18,6 @@ export {
   NFCStyle,
   FinanceCloverShowcase,
   FinanceCloverView,
-  TTStyle
+  TTStyle,
+  ProfilePic
 }

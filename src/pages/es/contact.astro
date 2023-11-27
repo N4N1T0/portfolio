@@ -1,28 +1,34 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '../../layouts/Layout.astro'
 import { fade } from 'astro:transitions'
 ---
 
-<Layout title='Adrian - Contact' className='bg-gray-800 text-gray-300' label='Home' link='/' border='border-gray-300'>
+<Layout
+  description='Página de contacto para mi negocio de desarrollo web en línea Portafolio con mi información de contacto'
+  title='Adrian - Contacto'
+  className='bg-gray-800 text-gray-300'
+  label='Home'
+  link='/es/'
+  border='border-gray-300'>
   <main
     class='w-screen p-10 mt-20 md:p-24 relative justify-around items-center gap-16 md:gap-32'
     transition:animate={fade({ duration: '0.5s' })}>
-    <div class='p-10 space-y-5'>
+    <div class='p-0 md:p-10 space-y-5'>
       <h1
-        class='font-prata text-[1vw] md:text-[8vw] leading-[0.95em]'
+        class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em]'
         transition:name='contact'>
-        Contact
+        Contacto
       </h1>
       <div>
         <h2 class='block'>
-          If you need any help with a Website or an App, dont hesitate to
-          contact me
+          Si necesitas ayuda con un sitio web o una aplicación, no dudes en
+          contactarme
         </h2>
         <a
           href='https://www.nanofighters.club/es/'
           target='_blank'
           class='inline-block text-xs hover-underline-animation-widget'
-          >or if you want a sparring too! &#128513; &#129354;</a
+          >o si quieres un sparring tambien! &#128513; &#129354;</a
         >
       </div>
       <div class='space-y-2'>
@@ -34,13 +40,13 @@ import { fade } from 'astro:transitions'
           >
         </p>
         <p class='text-sm'>
-          Phone: <a
+          Telefono: <a
             href='tel:34-647-31-72-14'
             class='hover-underline-animation-widget'>+34 647 31 72 14</a
           >
         </p>
         <p class='text-sm'>
-          On the Web: <a
+          en la Web: <a
             href='https://www.linkedin.com/in/adrian-%C3%A1lvarez-alonso/'
             target='_blank'
             class='hover-underline-animation-widget'>LinkedIn</a

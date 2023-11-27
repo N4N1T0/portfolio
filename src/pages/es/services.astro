@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { servicesEspañol } from '@/constants'
+---
+
+<Layout
+  description='Embárcate en un viaje a través de mi experiencia dinámica, que abarca el diseño web, desarrollo, mantenimiento, diseño de aplicaciones, desarrollo y auditoría SEO.'
+  title='Adrian - Services'
+  className='bg-gray-800 text-gray-300'
+  label='Home'
+  link='/es/'
+  border='border-gray-300'>
+  <main
+    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32'>
+    <aside class='space-y-3 self-end z-10 sticky bottom-24 flex-1'>
+      <h1 class='font-semibold tracking-widest' transition:name='services'>
+        Servicios
+      </h1>
+      <p class='text-sm'>
+        Embárcate en un viaje a través de mi experiencia dinámica, que abarca el
+        diseño web, desarrollo, mantenimiento, diseño de aplicaciones,
+        desarrollo y auditoría SEO. Evolucionando con el panorama digital, me
+        mantengo a la vanguardia de la innovación, asegurando que su presencia
+        digital prospere.
+      </p>
+    </aside>
+    <articule class='font-prata md:space-y-10 space-y-5 flex-1'>
+      {
+        servicesEspañol.map((service) => (
+          <div>
+            <h2 class='text-[12vw] md:text-[7vw] leading-[0.95em]'>
+              {service.etiqueta}
+            </h2>
+            <h3 class='text-xs md:text-base font-sans pl-5 pt-5'>
+              <hr class='w-5 inline-block' />
+              {service.informacion}
+            </h3>
+          </div>
+        ))
+      }
+      <hr class='w-full' />
+      <div>
+        <a
+          href='/es/contact'
+          class='text-[12vw] md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-300 leading-[0.95em] ease-out'
+          >CONTACTO</a
+        >
+        <p class='text-xs md:text-base font-sans pl-5 inline'>
+          ¿Necesita ayuda con alguno de estos servicios?
+          <span
+            class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse hidden md:inline'
+            >No Dudes!</span
+          >
+        </p>
+      </div>
+    </articule>
+  </main>
+</Layout>

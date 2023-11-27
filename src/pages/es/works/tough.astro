@@ -1,0 +1,141 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '@/layouts/Layout.astro'
+import { ToughShowcase, ToughStyle } from '@/assets'
+---
+
+<Layout
+  description='Llamativo ecommerce de equipamiento deportivo, inspirado en la web de Everlast'
+  title='Tough - Ecommerce Site'
+  className='bg-background'
+  label='Proyectos'
+  link='/es/works'
+  border='border-gray-800'>
+  <main
+    class='w-screen mt-20 md:mt-0 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
+    <div class='w-full bg-gray-950 text-center h-[500px] flex justify-center'>
+      <h1
+        transition:name='tough'
+        class='font-prata text-[11vw] text-gray-50 self-center md:self-end'>
+        TOUGH
+      </h1>
+    </div>
+    <h2
+      class='text-[7vw] md:text-[3vw] font-prata max-w-[700px] md:leading-[4rem] my-10 px-5 md:p-0'>
+      Llamativo ecommerce de equipamiento deportivo, inspirado en la web de
+      Everlast y hecho con estas tecnologías:
+    </h2>
+    <div
+      class='flex flex-col md:flex-row justify-between items-start gap-3 md:gap-5 md:px-10 px-5'>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Next.js</h3>
+        <p class='text-sm md:text-base'>
+          Utilizado por algunas de las empresas más grandes del mundo, Next.js
+          le permite crear aplicaciones web completas ampliando las últimas
+          funciones de React e integrando potentes herramientas JavaScript
+          basadas en Rust para las construcciones más rápidas.
+        </p>
+        <a
+          href='https://nextjs.org/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>Mas info.</a
+        >
+      </div>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Supabase</h3>
+        <p class='text-sm md:text-base'>
+          Supabase es una alternativa de código abierto a Firebase. Comienza tu
+          proyecto con una base de datos Postgres, Autenticación, APIs
+          instantáneas, Edge Funciones, suscripciones en tiempo real,
+          almacenamiento, y Vector incrustaciones.
+        </p>
+        <a
+          href='https://supabase.com/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>Mas info.</a
+        >
+      </div>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Shadcn UI</h3>
+        <p class='text-sm md:text-base'>
+          Componentes bellamente diseñados que puedes copiar y pegar en tus
+          aplicaciones. Accesibles. Personalizables. De código abierto.
+        </p>
+        <a
+          href='https://ui.shadcn.com/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>Mas info.</a
+        >
+      </div>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Stripe</h3>
+        <p class='text-sm md:text-base'>
+          Millones de empresas de todos los tamaños utilizan Stripe en línea y
+          en persona para aceptar pagos, enviar transferencias, automatizar
+          procesos financieros y y, en última instancia, aumentar los ingresos.
+        </p>
+        <a
+          href='https://stripe.com/es'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>Mas info.</a
+        >
+      </div>
+    </div>
+    <Image src={ToughShowcase} alt='Tough Website Showcase' />
+    <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base'>
+      Para crear soluciones sólidas de comercio electrónico, aprovecho la
+      potencia de Next.js por sus capacidades de renderizado sin interrupciones
+      y del lado del servidor. Esto no sólo garantiza una experiencia de usuario
+      rápida y receptiva sino que también facilita un rendimiento óptimo de los
+      motores de búsqueda. Supabase actúa como la columna vertebral,
+      proporcionando una infraestructura de base de datos escalable y segura,
+      que permite una gestión de datos fluida y la colaboración en tiempo real.
+      La integración de Stripe en el ecosistema garantiza un proceso de pago
+      seguro y sin fisuras. y seguro, dotando a la plataforma de comercio
+      electrónico de fiabilidad y fiabilidad y flexibilidad. Juntos, Next.js,
+      Supabase y Stripe forman una tríada de tecnologías que convergen para
+      crear una plataforma de comercio electrónico de alta calidad. tecnologías
+      que convergen para crear una experiencia de comercio electrónico de alto
+      rendimiento, segura y repleta de funciones.
+    </p>
+    <Image src={ToughStyle} alt='Tough Website Style' />
+    <div
+      class='fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-black text-white'>
+      <a
+        href='https://github.com/N4N1T0/sports-ai-blog'
+        target='_blank'
+        class='text-sm md:text-base hover-underline-animation-widget'>CODE</a
+      >
+      <a
+        href='https://sports-ai-blog.vercel.app/'
+        target='_blank'
+        class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
+      >
+    </div>
+  </main>
+
+  <style>
+    .hover-underline-animation-widget {
+      display: block;
+      position: relative;
+    }
+
+    .hover-underline-animation-widget::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation-widget:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  </style>
+</Layout>

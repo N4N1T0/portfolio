@@ -1,0 +1,60 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { fade } from 'astro:transitions'
+---
+
+<Layout
+  description='De origen cubano y autodidacta, aporto una mezcla única de pasión competencia al desarrollo y diseño web.'
+  title='Adrian Alvarez Portfolio'
+  className='bg-background'
+  border='border-gray-800'>
+  <main
+    class='h-screen w-screen overflow-hidden p-10 md:p-24 mt-20 md:mt-0'
+    transition:animate={fade({ duration: '0.5s' })}>
+    <div
+      class='h-full flex flex-col md:flex-row md:mt-0 md:justify-around items-center gap-16 md:gap-32'>
+      <div class='space-y-3 self-end'>
+        <h1 class='font-semibold tracking-widest'>Adrian Alvarez Alonso</h1>
+        <p class='text-sm'>
+          Web Designer / Web Developer / APP Designer / APP Developer
+        </p>
+        <p class='text-sm'>
+          Co-Fundador y Desarrolador de <span
+            class='underline hover:text-gray-600 transition-colors duration-200 cursor-pointer'
+            >Masobi Web Solutions</span
+          >
+        </p>
+        <p class='text-sm'>
+          De origen cubano y autodidacta, aporto una mezcla única de pasión y al
+          desarrollo y el diseño. Obsesionado con el rendimiento y y dedicado a
+          crear diseños limpios e impactantes, mi trabajo es un testamento de la
+          fusión de habilidad y creatividad. Me gusta ir más allá de los
+          límites, ofreciendo excelencia en cada proyecto.
+        </p>
+      </div>
+      <div
+        class='[&>a]:text-[15.5vw] md:[&>a]:text-[9vw] [&>a]:block font-prata [&>a]:cursor-pointer'>
+        <a
+          href='/es/works'
+          class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
+          transition:name='works'>PROJECTOS</a
+        >
+        <a
+          href='/es/services'
+          class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
+          transition:name='services'>SERVICIOS</a
+        >
+        <a
+          href='/es/about'
+          class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
+          transition:name='about'>ACERCA</a
+        >
+        <a
+          href='/es/contact'
+          class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
+          transition:name='contact'>CONTACTO</a
+        >
+      </div>
+    </div>
+  </main>
+</Layout>

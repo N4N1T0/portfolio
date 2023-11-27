@@ -1,0 +1,136 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '@/layouts/Layout.astro'
+import { StrikingGoldShowcase, StrikingGoldStyle } from '@/assets'
+---
+
+<Layout
+  description='Sports Blog Powered by AI, Using LLM Davinci to tweak the voice of the articules with onsite edit technologies'
+  title='Striking Gold - AI Powered Blog'
+  className='bg-background'
+  label='Works'
+  link='/en/works'
+  border='border-gray-800'>
+  <main
+    class='w-screen mt-20 md:mt-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
+    <div class='w-full bg-[#f6cf68] text-center h-[700px] flex justify-center'>
+      <h1
+        transition:name='striking gold'
+        class='font-prata text-[11vw] text-gray-950 self-center md:self-end md:leading-[11rem]'>
+        STRIKING <br /> GOLD
+      </h1>
+    </div>
+    <h2
+      class='text-[7vw] md:text-[3vw] font-prata max-w-[700px] md:leading-[4rem] my-10 px-5 md:p-0'>
+      Sports Blog Powered by AI, Using LLM Davinci to tweak the voice of the
+      articules with onsite edit technologies and also:
+    </h2>
+    <div
+      class='flex flex-col md:flex-row justify-between items-start gap-3 md:gap-5 md:px-10 px-5'>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Next.js</h3>
+        <p class='text-sm md:text-base'>
+          Used by some of the world's largest companies, Next.js enables you to
+          create full-stack Web applications by extending the latest React
+          features, and integrating powerful Rust-based JavaScript tooling for
+          the fastest builds.
+        </p>
+        <a
+          href='https://nextjs.org/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>More info.</a
+        >
+      </div>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>OpenAi</h3>
+        <p class='text-sm md:text-base'>
+          An AI research and deployment company. Their mission is to ensure that
+          artificial general intelligence benefits all of humanity.
+        </p>
+        <a
+          href='https://openai.com/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>More info.</a
+        >
+      </div>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Prisma</h3>
+        <p class='text-sm md:text-base'>
+          Prisma unlocks a new level of developer experience when working with
+          databases thanks to its intuitive data model, automated migrations,
+          type-safety & auto-completion.
+        </p>
+        <a
+          href='https://www.prisma.io/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>More info.</a
+        >
+      </div>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>TipTap</h3>
+        <p class='text-sm md:text-base'>
+          Tiptap is a suite of open source content editing and real-time
+          collaboration tools for developers building apps like Notion or Google
+          Docs.
+        </p>
+        <a
+          href='https://tiptap.dev/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>More info.</a
+        >
+      </div>
+    </div>
+    <Image src={StrikingGoldShowcase} alt='Striking Gold Website Showcase' />
+    <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base'>
+      Embracing OpenAI for my blog brings forth a revolution in content
+      creation. Leveraging its advanced language models, I harness the power of
+      natural language processing to generate engaging and contextually relevant
+      articles. OpenAI's capabilities elevate the overall quality of my content,
+      making it more compelling and resonant with readers. Additionally,
+      employing an on-site editing tool like Tiptap enhances the editorial
+      process, streamlining content creation with its intuitive and feature-rich
+      interface. This combination not only expedites the writing process but
+      also ensures a seamless and collaborative editing experience, ultimately
+      enhancing the efficiency and impact of my blog.
+    </p>
+    <Image src={StrikingGoldStyle} alt='Striking Gold Website Style' />
+  </main>
+  <div
+    class='fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-[#f6cf68]'>
+    <a
+      href='https://github.com/N4N1T0/sports-ai-blog'
+      target='_blank'
+      class='text-sm md:text-base hover-underline-animation-widget'>CODE</a
+    >
+    <a
+      href='https://sports-ai-blog.vercel.app/'
+      target='_blank'
+      class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
+    >
+  </div>
+</Layout>
+
+<style>
+  .hover-underline-animation-widget {
+    display: block;
+    position: relative;
+  }
+
+  .hover-underline-animation-widget::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation-widget:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+</style>

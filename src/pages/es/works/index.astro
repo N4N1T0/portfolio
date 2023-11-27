@@ -1,15 +1,16 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { works } from '@/constants'
+import { worksEspañol } from '@/constants'
 import { urlNames } from '@/lib'
 import { fade } from 'astro:transitions'
 ---
 
 <Layout
+  description='Explore una recopilación de mis mejores esfuerzos en Diseño y Desarrollo Web. En un panorama digital dinámico'
   title='Adrian - Works'
   className='bg-gray-800 text-gray-300'
   label='Home'
-  link='/'
+  link='/es/'
   border='border-gray-300'>
   <main
     class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32'
@@ -19,33 +20,36 @@ import { fade } from 'astro:transitions'
         Works
       </h1>
       <p class='text-sm'>
-        Explore a compilation of my finest endeavors spanning Web Design and
-        Development. In a dynamic digital landscape, my role has transformed
-        over the past 3 years, adapting to the ever-evolving realms of design
-        and development. I remain committed to continuous learning, consistently
-        acquiring new skills to stay at the forefront of innovation.
+        Explora una recopilación de mis mejores esfuerzos que abarcan Diseño Web
+        y y Desarrollo Web. En un paisaje digital dinámico, mi papel se ha
+        transformado en los últimos 3 años, adaptándose a los reinos en
+        constante evolución de diseño y el desarrollo. Sigo comprometido con el
+        aprendizaje continuo adquirir nuevas habilidades para mantenerme a la
+        vanguardia de la innovación.
       </p>
     </aside>
     <articule class='font-prata md:space-y-10 space-y-5 flex-1'>
       {
-        works.map((work) => (
+        worksEspañol.map((work) => (
           <div>
             <a
-              transition:name={work.name}
-              href={`/works/${urlNames(work.name)}`}
-              class='text-[12vw] uppercase md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-300 leading-[0.95em] ease-out'>
-              {work.name}
+              transition:name={work.nombre}
+              href={
+                work.enProceso ? '/works' : `/es/works/${urlNames(work.nombre)}`
+              }
+              class='text-[12vw] uppercase md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'>
+              {work.nombre}
             </a>
             <p class='text-xs md:text-base font-sans pl-5 inline'>
-              - {work.info}
-              {work.new && (
+              - {work.informacion}
+              {work.nuevo && (
                 <span class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse'>
-                  New
+                  Nuevo
                 </span>
               )}
-              {work.inProcess && (
+              {work.enProceso && (
                 <span class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse'>
-                  Coming Soon
+                  En camino
                 </span>
               )}
             </p>

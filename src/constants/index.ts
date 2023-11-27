@@ -25,6 +25,33 @@ export const services = [
   }
 ]
 
+export const servicesEspañol = [
+  {
+    etiqueta: 'Diseño Web',
+    informacion: 'Lleva tu marca a nuevas alturas con mi diseño web personalizado. Entrelazo una arquitectura limpia y las últimas tendencias en una obra maestra digital que rezuma sofisticación e innovación.'
+  },
+  {
+    etiqueta: 'Desarrollo Web',
+    informacion: '¡Vamos a revolucionar tu juego online! Con mis habilidades de desarrollo web, me sumerjo en la tecnología de vanguardia y una mentalidad centrada en el rendimiento, ofreciendo experiencias digitales simplemente asombrosas.'
+  },
+  {
+    etiqueta: 'Mantenimiento Web',
+    informacion: 'Relájate mientras mantengo tu mundo digital en orden. Mis servicios de mantenimiento web son como una manta de seguridad acogedora para tus activos en línea, cubriendo todo, desde actualizaciones hasta inspecciones de seguridad sin estrés.'
+  },
+  {
+    etiqueta: 'Diseño de Apps',
+    informacion: 'Dale sabor a las sensaciones del usuario con mi destreza en el diseño de aplicaciones. Me especializo en crear interfaces que se sientan como una brisa y experiencias que dejan a los usuarios diciendo: “¡Guau!” — la combinación perfecta de estilo y funcionalidad.'
+  },
+  {
+    etiqueta: 'Desarrollo de Apps',
+    informacion: '¡Acompáñame en esta aventura digital! Con mis habilidades en el desarrollo de aplicaciones, creo soluciones escalables y ricas en funciones utilizando la tecnología más reciente. Prepárate para una experiencia de usuario inmersiva como ninguna otra.'
+  },
+  {
+    etiqueta: 'Auditoría SEO',
+    informacion: '¡Impulsemos ese estilo online! Mi auditoría SEO es como un pase VIP para el éxito de tu sitio web. Analizo, optimizo y estrategizo, asegurando que te robes el espectáculo en los rankings de búsqueda.'
+  }
+];
+
 export const works = [
   {
     name: 'tough',
@@ -64,11 +91,57 @@ export const works = [
   },
   {
     name: 'masobi',
-    info: 'Cutting Edge Technoligies Site',
+    info: 'Cutting Edge Site',
     new: false,
     inProcess: true
   }
 ]
+
+export const worksEspañol = [
+  {
+    nombre: 'tough',
+    informacion: 'Ecommerce',
+    nuevo: true,
+    enProceso: false
+  },
+  {
+    nombre: 'striking gold',
+    informacion: 'Blog Potenciado por Inteligencia Artificial',
+    nuevo: false,
+    enProceso: false
+  },
+  {
+    nombre: 'nano fighters club',
+    informacion: 'Astro SEO Mejorado',
+    nuevo: false,
+    enProceso: false
+  },
+  {
+    nombre: 'finance clover',
+    informacion: 'Panel Potenciado por Análisis de Datos',
+    nuevo: false,
+    enProceso: false
+  },
+  {
+    nombre: 'three tshirt',
+    informacion: 'Aplicación de Gráficos 3D',
+    nuevo: false,
+    enProceso: false
+  },
+  {
+    nombre: 'portfolio',
+    informacion: 'Sitio Astro Animado',
+    nuevo: false,
+    enProceso: true
+  },
+  {
+    nombre: 'masobi',
+    informacion: 'Sitio de Última Generación',
+    nuevo: false,
+    enProceso: true
+  }
+];
+
 
 export const diplomas = [
   {
