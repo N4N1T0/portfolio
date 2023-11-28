@@ -75,18 +75,19 @@ const newLangUrl = changeLangFromUrl(Astro.url, lang)
 <meta property='twitter:image' content={`${Astro.site}${lang}/og-image.jpg`} />
 
 <!-- Schema -->
-<script type='application/ld+json'>
+<Fragment
+  set:html={`<script type='application/ld+json'>
   {
     "@context": "https://schema.org",
     "@type": "WebDevelopment",
     "name": "Adrian Alvarez",
     "description": "Cuban-born and self-taught, I bring a unique blend of passion and proficiency to development and design. Obsessed with performance and dedicated to crafting clean, impactful designs, my work is a testament to the fusion of skill and creativity.",
-    "image": `${Astro.site}${lang}/og-image.jpg`,
-    "logo": `${Astro.site}/apple-touch-icon.png`,
+    "image": "${Astro.site}${lang}/og-image.jpg",
+    "logo": "${Astro.site}/apple-touch-icon.png",
     "parentOrganization": {
       "@type": "OnlineBusiness",
       "name": "Adrian Alvarez Web Development",
-      "url": `Astro.site`
+      "url": "${Astro.site}"
     },
     "address": {
       "@type": "PostalAddress",
@@ -95,6 +96,7 @@ const newLangUrl = changeLangFromUrl(Astro.url, lang)
     },
     "foundingDate": "2019-10-24"
   }
-</script>
+</script>`}
+/>
 
 <ViewTransitions />
