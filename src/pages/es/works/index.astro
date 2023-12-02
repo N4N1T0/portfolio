@@ -16,8 +16,8 @@ import { fade } from 'astro:transitions'
     class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32'
     transition:animate={fade({ duration: '0.5s' })}>
     <aside class='space-y-3 self-end z-10 sticky bottom-24 flex-1'>
-      <h1 class='font-semibold tracking-widest' transition:name='works'>
-        Works
+      <h1 class='font-semibold tracking-widest' transition:name='proyectos'>
+        proyectos
       </h1>
       <p class='text-sm'>
         Explora una recopilación de mis mejores esfuerzos que abarcan Diseño Web
@@ -38,7 +38,7 @@ import { fade } from 'astro:transitions'
                 work.enProceso ? '/works' : `/es/works/${urlNames(work.nombre)}`
               }
               class='text-[12vw] uppercase md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'>
-              {work.nombre}
+              <h2>{work.nombre}</h2>
             </a>
             <p class='text-xs md:text-base font-sans pl-5 inline'>
               - {work.informacion}
