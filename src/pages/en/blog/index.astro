@@ -1,0 +1,58 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { worksEspañol } from '@/constants'
+import { urlNames } from '@/lib'
+import { fade } from 'astro:transitions'
+---
+
+<Layout
+  description='Explore una recopilación de mis mejores esfuerzos en Diseño y Desarrollo Web. En un panorama digital dinámico'
+  title='Adrian - Blog'
+  className='bg-gray-800 text-gray-300'
+  label='Home'
+  link='/es/'
+  border='border-gray-300'>
+  <main
+    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32'
+    transition:animate={fade({ duration: '0.5s' })}>
+    <aside class='space-y-3 self-end z-10 sticky bottom-24 flex-1'>
+      <h1 class='font-semibold tracking-widest' transition:name='blog'>Blog</h1>
+      <p class='text-sm'>
+        Explore my featured articles about Web Design and Development,
+        Marketing, SEO, Tech and Graphic Design. Delve into the exciting digital
+        digital universe of the last 3 years and join me in this continuous
+        journey of learning and innovation. Discover the latest trends and
+        developments in these exciting fields! in these exciting fields!
+      </p>
+    </aside>
+    <articule class='font-prata md:space-y-10 space-y-5 flex-1'>
+      {
+        worksEspañol.map((work) => (
+          <div>
+            <a
+              transition:name={work.nombre}
+              href={
+                work.enProceso ? '/works' : `/es/works/${urlNames(work.nombre)}`
+              }
+              class='text-[12vw] uppercase md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'>
+              <h2>{work.nombre}</h2>
+            </a>
+            <p class='text-xs md:text-base font-sans pl-5 inline'>
+              - {work.informacion}
+              {work.nuevo && (
+                <span class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse'>
+                  Nuevo
+                </span>
+              )}
+              {work.enProceso && (
+                <span class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse'>
+                  En camino
+                </span>
+              )}
+            </p>
+          </div>
+        ))
+      }
+    </articule>
+  </main>
+</Layout>

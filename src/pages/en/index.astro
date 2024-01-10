@@ -22,7 +22,7 @@ import { fade } from 'astro:transitions'
           Co-Founder and Developer of <a
             href='https://www.masobi.com/'
             class='underline hover:text-gray-600 transition-colors duration-200 cursor-pointer'
-            >Masobi Web Solutions</a
+            target='_blank'>Masobi Web Solutions</a
           >
         </p>
         <p class='text-sm'>
@@ -32,6 +32,13 @@ import { fade } from 'astro:transitions'
           to the fusion of skill and creativity. I thrive on pushing boundaries,
           delivering excellence in every project.
         </p>
+        <br />
+        <a
+          href={`${Astro.site}en/Adrian_Alvarez_Alonso_CV.pdf`}
+          target='_blank'
+          class='underline hover:text-gray-600 transition-colors duration-200 cursor-pointer text-sm'
+          >Download my CV</a
+        >
       </div>
       <div
         class='[&>a]:text-[16vw] md:[&>a]:text-[10vw] [&>a]:block font-prata [&>a]:cursor-pointer'>
@@ -46,14 +53,14 @@ import { fade } from 'astro:transitions'
           transition:name='services'><h2>SERVICES</h2></a
         >
         <a
-          href='/en/about'
-          class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
-          transition:name='about'><h2>ABOUT</h2></a
-        >
-        <a
           href='/en/contact'
           class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
           transition:name='contact'><h2>CONTACT</h2></a
+        >
+        <a
+          href='/en/blog'
+          class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
+          transition:name='about'><h2>BLOG</h2></a
         >
       </div>
     </div>
