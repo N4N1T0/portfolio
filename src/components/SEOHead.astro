@@ -99,4 +99,16 @@ const newLangUrl = changeLangFromUrl(Astro.url, lang)
 </script>`}
 />
 
+<!-- Google tag (gtag.js) -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-BH16G0HVKV'
+></script>
+<script>
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+
+  gtag('config', 'G-BH16G0HVKV')
+</script>
 <ViewTransitions />
