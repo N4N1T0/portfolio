@@ -14,9 +14,7 @@ import { ToughShowcase, ToughStyle } from '@/assets'
   <main
     class='w-screen mt-20 md:mt-0 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
     <div class='w-full bg-gray-950 text-center h-[500px] flex justify-center'>
-      <h1
-        transition:name='tough'
-        class='font-prata text-[11vw] text-gray-50 self-center md:self-end'>
+      <h1 class='font-prata text-[11vw] text-gray-50 self-center md:self-end'>
         TOUGH
       </h1>
     </div>
@@ -95,43 +93,58 @@ import { ToughShowcase, ToughStyle } from '@/assets'
       feature-rich e-commerce experience.
     </p>
     <Image src={ToughStyle} alt='Tough Website Style' />
-    <div
-      class='fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-black text-white'>
-      <a
-        href='https://github.com/N4N1T0/tough-ecommerce'
-        target='_blank'
-        class='text-sm md:text-base hover-underline-animation-widget'>CODE</a
-      >
-      <a
-        href='https://tough-ecommerce.vercel.app/'
-        target='_blank'
-        class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
-      >
-    </div>
   </main>
-
-  <style>
-    .hover-underline-animation-widget {
-      display: block;
-      position: relative;
-    }
-
-    .hover-underline-animation-widget::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: white;
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
-    }
-
-    .hover-underline-animation-widget:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-  </style>
+  <div
+    class='fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-black text-white'>
+    <a
+      href='https://github.com/N4N1T0/tough-ecommerce'
+      target='_blank'
+      class='text-sm md:text-base hover-underline-animation-widget'>CODE</a
+    >
+    <a
+      href='https://tough-ecommerce.vercel.app/'
+      target='_blank'
+      class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
+    >
+  </div>
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom'
+    id='courtin'>
+  </div>
 </Layout>
+
+<style>
+  .hover-underline-animation-widget {
+    display: block;
+    position: relative;
+  }
+
+  .hover-underline-animation-widget::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation-widget:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+</style>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime({
+    targets: '#courtin',
+    scaleY: [1, 0],
+    duration: 700,
+    easing: 'easeInExpo',
+  })
+</script>

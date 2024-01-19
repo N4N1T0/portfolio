@@ -1,6 +1,5 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { fade } from 'astro:transitions'
 import { getPosts } from '@/lib'
 
 const allBlogPosts = await getPosts('es')
@@ -9,15 +8,16 @@ const allBlogPosts = await getPosts('es')
 <Layout
   description='Explore una recopilación de mis mejores esfuerzos en Diseño y Desarrollo Web. En un panorama digital dinámico'
   title='Adrian - Blog'
-  className='bg-gray-800 text-gray-300'
+  className='text-gray-300'
   label='Home'
   link='/es/'
   border='border-gray-300'>
   <main
-    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32'
-    transition:animate={fade({ duration: '0.5s' })}>
-    <aside class='space-y-3 self-end z-10 sticky bottom-24 flex-1'>
-      <h1 class='font-semibold tracking-widest' transition:name='blog'>Blog</h1>
+    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'>
+    <aside
+      class='space-y-3 self-end sticky bottom-24 flex-1 opacity-0'
+      id='info'>
+      <h1 class='font-semibold tracking-widest'>Blog</h1>
       <p class='text-sm'>
         Explora mis artículos destacados sobre Diseño y Desarrollo Web,
         Marketing, SEO, Tech y Diseño Gráfico. Adéntrate en el apasionante
@@ -26,12 +26,13 @@ const allBlogPosts = await getPosts('es')
         más recientes en estos emocionantes campos!
       </p>
     </aside>
-    <articule class='font-prata md:space-y-12 space-y-5 flex-1'>
+    <articule
+      class='font-prata md:space-y-12 space-y-5 flex-1 opacity-0'
+      id='links'>
       {
         allBlogPosts.map((post) => (
           <div class='space-y-2'>
             <a
-              transition:name={post.slug}
               href={`/es/blog/${post.slug}`}
               class='text-[7vw] uppercase md:text-[4vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'>
               <h2>{post.data.title}</h2>
@@ -47,4 +48,40 @@ const allBlogPosts = await getPosts('es')
       }
     </articule>
   </main>
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'
+    id='courtin'>
+  </div>
 </Layout>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime
+    .timeline({
+      easing: 'easeInExpo',
+    })
+    .add({
+      targets: '#courtin',
+      scaleY: [0, 1],
+      duration: 700,
+    })
+    .add(
+      {
+        targets: '#links',
+        opacity: 1,
+        duration: 500,
+      },
+      500
+    )
+    .add(
+      {
+        targets: '#info',
+        opacity: 1,
+        translateY: [50, 0],
+        delay: anime.stagger(100),
+        duration: 600,
+      },
+      700
+    )
+</script>

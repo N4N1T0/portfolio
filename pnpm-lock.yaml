@@ -20,6 +20,12 @@ dependencies:
   '@astrojs/vercel':
     specifier: 7.0.0
     version: 7.0.0(astro@4.2.1)
+  '@types/animejs':
+    specifier: ^3.1.12
+    version: 3.1.12
+  animejs:
+    specifier: ^3.2.2
+    version: 3.2.2
   astro:
     specifier: 4.2.1
     version: 4.2.1(@types/node@20.9.4)(typescript@5.3.2)
@@ -35,7 +41,7 @@ dependencies:
 
 devDependencies:
   '@tailwindcss/typography':
-    specifier: ^0.5.10
+    specifier: 0.5.10
     version: 0.5.10(tailwindcss@3.4.1)
   '@types/node':
     specifier: 20.9.4
@@ -44,7 +50,7 @@ devDependencies:
     specifier: 6.12.0
     version: 6.12.0(eslint@8.54.0)(typescript@5.3.2)
   autoprefixer:
-    specifier: ^10.4.17
+    specifier: 10.4.17
     version: 10.4.17(postcss@8.4.33)
   eslint:
     specifier: 8.54.0
@@ -56,7 +62,7 @@ devDependencies:
     specifier: 6.8.0
     version: 6.8.0(eslint@8.54.0)
   postcss:
-    specifier: ^8.4.33
+    specifier: 8.4.33
     version: 8.4.33
   tailwindcss:
     specifier: 3.4.1
@@ -956,6 +962,10 @@ packages:
       tailwindcss: 3.4.1
     dev: true
 
+  /@types/animejs@3.1.12:
+    resolution: {integrity: sha512-fpdH+ZtlO0kqjTOqRaBdsEmvpRNOayI8k4EVkEtitL5l6wducDOXk0rgQgfZqWf/ZX9DzXrHf257S5i9xTcISQ==}
+    dev: false
+
   /@types/babel__core@7.20.5:
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
     dependencies:
@@ -1258,6 +1268,10 @@ packages:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
     dev: true
+
+  /animejs@3.2.2:
+    resolution: {integrity: sha512-Ao95qWLpDPXXM+WrmwcKbl6uNlC5tjnowlaRYtuVDHHoygjtIPfDUoK9NthrlZsQSKjZXlmji2TrBUAVbiH0LQ==}
+    dev: false
 
   /ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}

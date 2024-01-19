@@ -61,6 +61,10 @@ export const prerender = true
       <Content />
     </section>
   </main>
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-50 origin-bottom'
+    id='courtin'>
+  </div>
 </Layout>
 
 <style>
@@ -88,3 +92,14 @@ export const prerender = true
     transform-origin: bottom left;
   }
 </style>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime({
+    targets: '#courtin',
+    scaleY: [1, 0],
+    duration: 700,
+    easing: 'easeInExpo',
+  })
+</script>

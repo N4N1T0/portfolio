@@ -19,63 +19,64 @@ const { title, className, border, link, label, description } = Astro.props
   <head>
     <SEOHead title={title} description={description} />
   </head>
-  <body class=`overflow-x-hidden flex relative ${className}`>
+  <body class=`overflow-x-hidden flex relative bg-background ${className}`>
     <SideNavbar border={border} link={link} label={label} />
     <slot />
-  </body><style is:global>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Prata&display=swap');
+    <style is:global>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Prata&display=swap');
 
-    html,
-    body {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+      html,
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    .hover-underline-animation {
-      display: inline-block;
-      position: relative;
-    }
+      .hover-underline-animation {
+        display: inline-block;
+        position: relative;
+      }
 
-    .hover-underline-animation::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: rgb(31 41 55 / 1);
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
-    }
+      .hover-underline-animation::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(31 41 55 / 1);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
 
-    .hover-underline-animation:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
+      .hover-underline-animation:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
 
-    .hover-underline-animation-white {
-      display: inline-block;
-      position: relative;
-    }
+      .hover-underline-animation-white {
+        display: inline-block;
+        position: relative;
+      }
 
-    .hover-underline-animation-white::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: rgb(209 213 219 / 1);
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
-    }
+      .hover-underline-animation-white::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(209 213 219 / 1);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
 
-    .hover-underline-animation-white:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-  </style>
+      .hover-underline-animation-white:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    </style>
+  </body>
 </html>

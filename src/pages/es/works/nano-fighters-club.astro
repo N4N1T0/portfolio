@@ -7,7 +7,6 @@ import { NFCShowcase, NFCStyle } from '@/assets'
 <Layout
   description='Sitio de Entrenador de Deportes de Combate usando las Nuevas tecnologías de Astro para crear máximo rendimiento y sitios estáticos SEO mejorados'
   title='Nano Fighters Club - Astro Sitio Estatico'
-  className='bg-background'
   label='Proyectos'
   link='/es/works'
   border='border-gray-800'>
@@ -15,7 +14,6 @@ import { NFCShowcase, NFCStyle } from '@/assets'
     class='w-screen mt-20 md:mt-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
     <div class='w-full bg-[#020817] text-center h-[700px] flex justify-center'>
       <h1
-        transition:name='nano fighters club'
         class='font-prata text-[11vw] text-[#f64646] self-center md:self-end md:leading-[11rem]'>
         NANO FIGHTERS CLUB
       </h1>
@@ -96,6 +94,10 @@ import { NFCShowcase, NFCStyle } from '@/assets'
       class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
     >
   </div>
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom'
+    id='courtin'>
+  </div>
 </Layout>
 
 <style>
@@ -123,3 +125,14 @@ import { NFCShowcase, NFCStyle } from '@/assets'
     transform-origin: bottom left;
   }
 </style>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime({
+    targets: '#courtin',
+    scaleY: [1, 0],
+    duration: 700,
+    easing: 'easeInExpo',
+  })
+</script>

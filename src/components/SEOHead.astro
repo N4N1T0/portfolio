@@ -1,6 +1,5 @@
 ---
 import { getLangFromUrl, changeLangFromUrl } from '@/i18n/utils'
-import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
   title?: string | undefined
@@ -113,4 +112,3 @@ const newLangUrl = changeLangFromUrl(Astro.url, lang)
 
   gtag('config', 'G-BH16G0HVKV')
 </script>
-<ViewTransitions />

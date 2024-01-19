@@ -2,23 +2,21 @@
 import Layout from '@/layouts/Layout.astro'
 import { worksEspañol } from '@/constants'
 import { urlNames } from '@/lib'
-import { fade } from 'astro:transitions'
 ---
 
 <Layout
   description='Explore una recopilación de mis mejores esfuerzos en Diseño y Desarrollo Web. En un panorama digital dinámico'
   title='Adrian - Works'
-  className='bg-gray-800 text-gray-300'
+  className='text-gray-300'
   label='Home'
   link='/es/'
   border='border-gray-300'>
   <main
-    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32'
-    transition:animate={fade({ duration: '0.5s' })}>
-    <aside class='space-y-3 self-end z-10 sticky bottom-24 flex-1'>
-      <h1 class='font-semibold tracking-widest' transition:name='proyectos'>
-        proyectos
-      </h1>
+    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'>
+    <aside
+      class='space-y-3 self-end sticky bottom-24 flex-1 opacity-0'
+      id='info'>
+      <h1 class='font-semibold tracking-widest'>proyectos</h1>
       <p class='text-sm'>
         Explora una recopilación de mis mejores esfuerzos que abarcan Diseño Web
         y y Desarrollo Web. En un paisaje digital dinámico, mi papel se ha
@@ -28,12 +26,13 @@ import { fade } from 'astro:transitions'
         vanguardia de la innovación.
       </p>
     </aside>
-    <articule class='font-prata md:space-y-10 space-y-5 flex-1'>
+    <articule
+      class='font-prata md:space-y-10 space-y-5 flex-1 opacity-0'
+      id='links'>
       {
         worksEspañol.map((work) => (
           <div>
             <a
-              transition:name={work.nombre}
               href={
                 work.enProceso ? '/works' : `/es/works/${urlNames(work.nombre)}`
               }
@@ -58,4 +57,40 @@ import { fade } from 'astro:transitions'
       }
     </articule>
   </main>
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'
+    id='courtin'>
+  </div>
 </Layout>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime
+    .timeline({
+      easing: 'easeOutExpo',
+    })
+    .add({
+      targets: '#courtin',
+      scaleY: [0, 1],
+      duration: 700,
+    })
+    .add(
+      {
+        targets: '#links',
+        opacity: 1,
+        duration: 500,
+      },
+      500
+    )
+    .add(
+      {
+        targets: '#info',
+        opacity: 1,
+        translateY: [50, 0],
+        delay: anime.stagger(100),
+        duration: 600,
+      },
+      700
+    )
+</script>

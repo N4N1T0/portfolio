@@ -7,7 +7,6 @@ import { TTStyle } from '@/assets'
 <Layout
   description='Fullstack 3D Graphics App para una maqueta de camiseta usando color-pick, herramientas nativas y Dall-e IA'
   title='Three Shirt - 3D Graphics App'
-  className='bg-background'
   label='Proyectos'
   link='/es/works'
   border='border-gray-800'>
@@ -15,7 +14,6 @@ import { TTStyle } from '@/assets'
     class='w-screen mt-20 md:mt-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
     <div class='w-full bg-[#dddddd] text-center h-[700px] flex justify-center'>
       <h1
-        transition:name='three shirt'
         class='font-prata text-[11vw] text-black self-center md:self-end md:leading-[11rem]'>
         THREE SHIRT
       </h1>
@@ -94,6 +92,10 @@ import { TTStyle } from '@/assets'
     target='_blank'
     class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
   >
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom'
+    id='courtin'>
+  </div>
 </div>
 
 <style>
@@ -121,3 +123,14 @@ import { TTStyle } from '@/assets'
     transform-origin: bottom left;
   }
 </style>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime({
+    targets: '#courtin',
+    scaleY: [1, 0],
+    duration: 700,
+    easing: 'easeInExpo',
+  })
+</script>

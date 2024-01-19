@@ -1,19 +1,15 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { fade } from 'astro:transitions'
 ---
 
 <Layout
   description='De origen cubano y autodidacta, aporto una mezcla única de pasión competencia al desarrollo y diseño web.'
   title='Adrian Alvarez Portfolio'
-  className='bg-background'
   border='border-gray-800'>
-  <main
-    class='h-screen w-screen overflow-hidden p-10 md:p-24 mt-20 md:mt-0'
-    transition:animate={fade({ duration: '0.5s' })}>
+  <main class='h-screen w-screen overflow-hidden p-10 md:p-24 mt-20 md:mt-0'>
     <div
       class='h-full flex flex-col md:flex-row md:mt-0 md:justify-around items-center gap-16 md:gap-32'>
-      <div class='space-y-3 self-end'>
+      <div class='space-y-3 self-end opacity-0' id='info'>
         <h1 class='font-semibold tracking-widest'>Adrian Alvarez Alonso</h1>
         <p class='text-sm'>
           Diseñador Grafico / Web Designer & Developer / Estratega de Marketing
@@ -41,29 +37,65 @@ import { fade } from 'astro:transitions'
         >
       </div>
       <div
-        class='[&>a]:text-[13.5vw] md:[&>a]:text-[9vw] [&>a]:block font-prata [&>a]:cursor-pointer'>
+        class='[&>a]:text-[13.5vw] md:[&>a]:text-[9vw] [&>a]:block font-prata [&>a]:cursor-pointer opacity-0'
+        id='links'>
         <a
           href='/es/works'
           class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
-          transition:name='proyectos'><h2>PROYECTOS</h2></a
+          ><h2>PROYECTOS</h2></a
         >
         <a
           href='/es/services'
           class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
-          transition:name='services'><h2>SERVICIOS</h2></a
+          ><h2>SERVICIOS</h2></a
         >
         <a
           href='/es/contact'
           class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
-          transition:name='contact'
           ><h2>CONTACTO</h2>
         </a>
         <a
           href='/es/blog'
           class='hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
-          transition:name='blog'><h2>BLOG</h2></a
+          ><h2>BLOG</h2></a
         >
       </div>
     </div>
   </main>
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-50 origin-bottom'
+    id='courtin'>
+  </div>
 </Layout>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime
+    .timeline({
+      easing: 'easeInExpo',
+    })
+    .add({
+      targets: '#courtin',
+      scaleY: [1, 0],
+      duration: 700,
+    })
+    .add(
+      {
+        targets: '#links',
+        opacity: 1,
+        duration: 500,
+      },
+      500
+    )
+    .add(
+      {
+        targets: '#info',
+        opacity: 1,
+        translateY: [50, 0],
+        delay: anime.stagger(100),
+        duration: 600,
+      },
+      700
+    )
+</script>

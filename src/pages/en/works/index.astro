@@ -16,7 +16,7 @@ import { fade } from 'astro:transitions'
     class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32'
     transition:animate={fade({ duration: '0.5s' })}>
     <aside class='space-y-3 self-end z-10 sticky bottom-24 flex-1'>
-      <h1 class='font-semibold tracking-widest' transition:name='projects'>
+      <h1 class='font-semibold tracking-widest'>
         Projects
       </h1>
       <p class='text-sm'>
@@ -32,7 +32,6 @@ import { fade } from 'astro:transitions'
         works.map((work) => (
           <div>
             <a
-              transition:name={work.name}
               href={
                 work.inProcess ? '/works' : `/en/works/${urlNames(work.name)}`
               }

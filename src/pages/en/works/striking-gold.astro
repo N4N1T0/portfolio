@@ -15,7 +15,6 @@ import { StrikingGoldShowcase, StrikingGoldStyle } from '@/assets'
     class='w-screen mt-20 md:mt-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
     <div class='w-full bg-[#f6cf68] text-center h-[700px] flex justify-center'>
       <h1
-        transition:name='striking gold'
         class='font-prata text-[11vw] text-gray-950 self-center md:self-end md:leading-[11rem]'>
         STRIKING <br /> GOLD
       </h1>
@@ -108,6 +107,10 @@ import { StrikingGoldShowcase, StrikingGoldStyle } from '@/assets'
       class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
     >
   </div>
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom'
+    id='courtin'>
+  </div>
 </Layout>
 
 <style>
@@ -134,3 +137,14 @@ import { StrikingGoldShowcase, StrikingGoldStyle } from '@/assets'
     transform-origin: bottom left;
   }
 </style>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime({
+    targets: '#courtin',
+    scaleY: [1, 0],
+    duration: 700,
+    easing: 'easeInExpo',
+  })
+</script>

@@ -1,22 +1,18 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { fade } from 'astro:transitions'
 ---
 
 <Layout
   description='Contact page for my online web development business Portfolio with my contact info'
   title='Adrian - Contact'
-  className='bg-gray-800 text-gray-300'
+  className='text-gray-300'
   label='Home'
   link='/en/'
   border='border-gray-300'>
   <main
-    class='w-screen p-10 mt-20 md:p-24 relative justify-around items-center gap-16 md:gap-32'
-    transition:animate={fade({ duration: '0.5s' })}>
-    <div class='p-0 md:p-10 space-y-5'>
-      <h1
-        class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em]'
-        transition:name='contact'>
+    class='w-screen h-screen p-10 mt-20 md:p-24 relative justify-around items-center gap-16 md:gap-32 z-10'>
+    <div class='p-0 md:p-10 space-y-5 opacity-0' id='info'>
+      <h1 class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em]'>
         Contact
       </h1>
       <div>
@@ -51,7 +47,7 @@ import { fade } from 'astro:transitions'
             target='_blank'
             class='hover-underline-animation-widget'>LinkedIn</a
           >
-           /
+          /
           <a
             href='https://github.com/N4N1T0'
             target='_blank'
@@ -61,6 +57,10 @@ import { fade } from 'astro:transitions'
       </div>
     </div>
   </main>
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'
+    id='courtin'>
+  </div>
 </Layout>
 
 <style>
@@ -86,3 +86,27 @@ import { fade } from 'astro:transitions'
     transform-origin: bottom left;
   }
 </style>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime
+    .timeline({
+      easing: 'easeOutExpo',
+    })
+    .add({
+      targets: '#courtin',
+      scaleY: [0, 1],
+      duration: 700,
+    })
+    .add(
+      {
+        targets: '#info',
+        opacity: 1,
+        translateY: [50, 0],
+        delay: anime.stagger(100),
+        duration: 600,
+      },
+      700
+    )
+</script>
