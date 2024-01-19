@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '@/layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+
+// Function to create the path for all the blogs
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ id }) => {
+    return id.startsWith('es/')
+  })
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }))
+}
+
+// Astro Props
+const post = Astro.props
+
+// Astro Params
+const slug = Astro.params.slug
+
+// Special function to render the content of the MD
+const { Content } = await post.render()
+
+// Redirect in case the path dosent exits
+if (!slug || !post) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found',
+  })
+}
+
+// create static page instead of SSR
+export const prerender = true
+---
+
+<Layout
+  description={post.data.excerpt}
+  title={post.data.title}
+  className='bg-background'
+  label='Blog'
+  link='/es/blog'
+  border='border-gray-800'>
+  <main
+    class='w-screen my-20 md:my-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
+    <Image src={post.data.image} alt={post.data.imageAlt} loading='eager' />
+    <div
+      class='flex w-full justify-between flex-col md:flex-row items-center px-5 gap-2 md:gap-0'>
+      <strong>
+        {post.data.author}
+      </strong>
+      <span>
+        {post.data.excerpt}
+      </span>
+      <strong>
+        {post.data.date.toLocaleDateString()}
+      </strong>
+    </div>
+    <section class='prose max-w-[1200px] px-5'>
+      <Content />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hover-underline-animation-widget {
+    display: block;
+    position: relative;
+    color: #3ba697;
+  }
+
+  .hover-underline-animation-widget::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3ba697;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation-widget:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+</style>
