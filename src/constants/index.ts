@@ -1,56 +1,58 @@
 export const services = [
   {
-    label: 'Web Design',
-    info: 'Take your brand to new heights with my custom web design. I weave clean architecture and the latest trends into a digital masterpiece that screams sophistication and innovation.'
-  },
-  {
     label: 'Web Development',
-    info: 'Let’s shake up your online game! With my web development skills, I dive into cutting-edge tech and a performance-first mindset, delivering digital experiences that are simply mind-blowing.'
-  },
-  {
-    label: 'Web Maintenance',
-    info: 'Chill out while I keep your digital world in check. My web maintenance services are like a cozy security blanket for your online assets, covering everything from updates to stress-free security checks.'
-  },
-  {
-    label: 'App Design',
-    info: 'Spice up user vibes with my app design wizardry. I’m all about crafting interfaces that feel like a breeze and experiences that leave users going, “Wow!” — the perfect blend of looks and functionality.'
+    info: 'Elevate your online presence! With my expertise in web development, I leverage cutting-edge technology and a performance-driven approach to deliver digital experiences that are truly exceptional.'
   },
   {
     label: 'App Development',
-    info: 'Join me on a digital adventure! With my app development skills, I cook up feature-rich, scalable solutions using the latest tech. Get ready for an immersive user experience like no other.'
+    info: 'Embark on a digital journey! Utilizing my skills in app development, I design and develop feature-rich, scalable solutions using the latest technologies. Get ready for an immersive user experience like never before.'
   },
   {
     label: 'SEO Audit',
-    info: 'Let’s boost that online swagger! My SEO audit is like a backstage pass to your website&apos;s success. I analyze, optimize, and strategize, ensuring you steal the show in search rankings.'
+    info: 'Boost your online visibility! My SEO audit offers a comprehensive analysis and optimization strategy, ensuring your website takes center stage in search rankings.'
+  },
+  {
+    label: 'Email Marketing',
+    info: 'Stand out in the inbox! With my expertise in email marketing, I create captivating campaigns that drive traffic and sales, leveraging the latest technologies.'
+  },
+  {
+    label: 'Social Media Marketing',
+    info: 'Grow your brand&apos;s presence! Through engaging content tailored to your audience, my social media marketing services help you connect with customers and expand your reach.'
+  },
+  {
+    label: 'CRO',
+    info: 'Optimize customer retention! With my expertise in Conversion Rate Optimization (CRO), I develop customized solutions to enhance ecommerce growth by maximizing customer engagement and retention.'
   }
-]
+];
+
 
 export const servicesEspañol = [
   {
-    etiqueta: 'Diseño Web',
-    informacion: 'Lleva tu marca a nuevas alturas con mi diseño web personalizado. Entrelazo una arquitectura limpia y las últimas tendencias en una obra maestra digital que rezuma sofisticación e innovación.'
-  },
-  {
     etiqueta: 'Desarrollo Web',
-    informacion: '¡Vamos a revolucionar tu juego online! Con mis habilidades de desarrollo web, me sumerjo en la tecnología de vanguardia y una mentalidad centrada en el rendimiento, ofreciendo experiencias digitales simplemente asombrosas.'
-  },
-  {
-    etiqueta: 'Mantenimiento Web',
-    informacion: 'Relájate mientras mantengo tu mundo digital en orden. Mis servicios de mantenimiento web son como una manta de seguridad acogedora para tus activos en línea, cubriendo todo, desde actualizaciones hasta inspecciones de seguridad sin estrés.'
-  },
-  {
-    etiqueta: 'Diseño de Apps',
-    informacion: 'Dale sabor a las sensaciones del usuario con mi destreza en el diseño de aplicaciones. Me especializo en crear interfaces que se sientan como una brisa y experiencias que dejan a los usuarios diciendo: “¡Guau!” — la combinación perfecta de estilo y funcionalidad.'
+    info: '¡Eleva tu presencia en línea! Con mi experiencia en desarrollo web, aprovecho la tecnología de vanguardia y un enfoque orientado al rendimiento para ofrecer experiencias digitales verdaderamente excepcionales.'
   },
   {
     etiqueta: 'Desarrollo de Apps',
-    informacion: '¡Acompáñame en esta aventura digital! Con mis habilidades en el desarrollo de aplicaciones, creo soluciones escalables y ricas en funciones utilizando la tecnología más reciente. Prepárate para una experiencia de usuario inmersiva como ninguna otra.'
+    info: '¡Embárcate en un viaje digital! Utilizando mis habilidades en desarrollo de aplicaciones, diseño y desarrollo soluciones ricas en funciones y escalables utilizando las últimas tecnologías. Prepárate para una experiencia de usuario inmersiva como nunca antes.'
   },
   {
     etiqueta: 'Auditoría SEO',
-    informacion: '¡Impulsemos ese estilo online! Mi auditoría SEO es como un pase VIP para el éxito de tu sitio web. Analizo, optimizo y estrategizo, asegurando que te robes el espectáculo en los rankings de búsqueda.'
+    info: '¡Mejora tu visibilidad en línea! Mi auditoría SEO ofrece un análisis exhaustivo y una estrategia de optimización, asegurando que tu sitio web tome el centro del escenario en los rankings de búsqueda.'
+  },
+  {
+    etiqueta: 'Email Marketing',
+    info: '¡Destácate en la bandeja de entrada! Con mi experiencia en marketing por correo electrónico, creo campañas cautivadoras que impulsan el tráfico y las ventas, aprovechando las últimas tecnologías.'
+  },
+  {
+    etiqueta: 'Marketing en Redes',
+    info: '¡Haz crecer la presencia de tu marca! A través de contenido atractivo adaptado a tu audiencia, mis servicios de marketing en redes sociales te ayudan a conectar con los clientes y expandir tu alcance.'
+  },
+  {
+    etiqueta: 'CRO',
+    info: '¡Optimiza la retención de clientes! Con mi experiencia en Optimización de la Tasa de Conversión (CRO), desarrollo soluciones personalizadas para mejorar el crecimiento del comercio electrónico al maximizar el compromiso y la retención de los clientes.'
   }
 ];
+
 
 export const works = [
   {
