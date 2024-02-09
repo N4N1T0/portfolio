@@ -4,7 +4,7 @@ date: 2023-08-17
 slug: 'diseño-marketing-digital'
 excerpt: 'Eleva tu presencia digital con un diseño gráfico estratégico. Desde identidad visual hasta contenido impactante, maximiza el potencial de tu marca.'
 author: 'Adrian "Nano" Alvarez'
-image: '../../../assets/blog/nordwood-themes-ubIWo074QlU-unsplash.jpg'
+image: '../../../assets/blog/nordwood-themes-ubIWo074QlU-unsplash.webp'
 imageAlt: 'un setup de apple con una IMac y una AirBook'
 ---
 

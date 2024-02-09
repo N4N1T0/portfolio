@@ -4,7 +4,7 @@ date: 2023-06-19
 slug: 'guia-diseño-responsive'
 excerpt: 'Cómo el diseño responsivo transforma la experiencia del usuario, impulsa el SEO y optimiza tu presencia en todos los dispositivos.'
 author: 'Adrian "Nano" Alvarez'
-image: '../../../assets/blog/domenico-loia-EhTcC9sYXsw-unsplash.jpg'
+image: '../../../assets/blog/domenico-loia-EhTcC9sYXsw-unsplash.webp'
 imageAlt: 'un setup de apple con una IMac y una AirBook'
 ---
 

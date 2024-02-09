@@ -4,7 +4,7 @@ date: 2023-09-15
 slug: 'gestion-en-scrum'
 excerpt: 'Domina proyectos digitales con Scrum: sprints cortos, colaboración eficiente y resultados predecibles. Descubre cómo potenciar tu equipo.'
 author: 'Adrian "Nano" Alvarez'
-image: '../../../assets/blog/dylan-gillis-KdeqA3aTnBY-unsplash.jpg'
+image: '../../../assets/blog/dylan-gillis-KdeqA3aTnBY-unsplash.webp'
 imageAlt: 'un equipo de trabajo usando la metodologia SCRUM'
 ---
 

@@ -5,6 +5,8 @@ import robotsTxt from 'astro-robots-txt';
 import vercel from "@astrojs/vercel/serverless";
 import partytown from "@astrojs/partytown";
 
+import compress from "astro-compress";
+
 // https://astro.build/config
 export default defineConfig({
   site: process.env.CI ? 'https://www.adrian-alvarez.dev' : 'http://localhost:4321',
@@ -16,7 +18,7 @@ export default defineConfig({
       forward: ["dataLayer.push"],
       debug: false
     }
-  })],
+  }), compress()],
   output: "server",
   adapter: vercel()
 });
