@@ -1,20 +1,22 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { worksEspañol } from '@/constants'
+import { works } from '@/constants'
 import { urlNames } from '@/lib'
+import { fade } from 'astro:transitions'
 ---
 
 <Layout
-  description='Explore una recopilación de mis mejores esfuerzos en Diseño y Desarrollo Web. En un panorama digital dinámico'
+  description='Explore a compilation of my finest endeavors spanning Web Design and Development. In a dynamic digital landscape'
   title='Adrian - Works'
   className='text-gray-300'
   label='Home'
   link='/es/'
   border='border-gray-300'>
   <main
-    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'>
+    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'
+    transition:animate={fade({ duration: '0.5s' })}>
     <aside
-      class='space-y-3 self-end sticky bottom-24 flex-1 opacity-0'
+      class='space-y-3 self-end z-10 sticky bottom-24 flex-1 opacity-0'
       id='info'>
       <h1 class='font-semibold tracking-widest'>proyectos</h1>
       <p class='text-sm'>
@@ -30,25 +32,25 @@ import { urlNames } from '@/lib'
       class='font-prata md:space-y-10 space-y-5 flex-1 opacity-0'
       id='links'>
       {
-        worksEspañol.map((work) => (
+        works.map((work) => (
           <div>
             <a
               href={
-                work.enProceso ? '/works' : `/es/works/${urlNames(work.nombre)}`
+                work.inProcess ? '/works' : `/en/works/${urlNames(work.name)}`
               }
               class='text-[12vw] uppercase md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'>
-              <h2>{work.nombre}</h2>
+              <h2>{work.name}</h2>
             </a>
             <p class='text-xs md:text-base font-sans pl-5 inline'>
-              - {work.informacion}
-              {work.nuevo && (
+              - {work.info}
+              {work.new && (
                 <span class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse'>
-                  Nuevo
+                  New
                 </span>
               )}
-              {work.enProceso && (
+              {work.inProcess && (
                 <span class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse'>
-                  En camino
+                  Coming Soon
                 </span>
               )}
             </p>
@@ -62,6 +64,12 @@ import { urlNames } from '@/lib'
     id='courtin'>
   </div>
 </Layout>
+
+<style>
+  html {
+    scrollbar-color: #d1d5db #1f2937;
+  }
+</style>
 
 <script>
   import anime from 'animejs/lib/anime.es.js'
