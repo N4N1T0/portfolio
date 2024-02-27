@@ -47,7 +47,12 @@ export const prerender = true
     <div
       class='flex w-full justify-between flex-col md:flex-row items-center px-5 gap-2 md:gap-0'>
       <strong>
-        {post.data.author}
+        <a
+          href={`${post.data.author === 'Dayana Abuin' ? 'https://www.linkedin.com/in/dayana-abuin-rios/' : 'https://www.linkedin.com/in/adrian-alvarez-alonso/'}`}
+          target='_blank'
+          class='hover:text-gray-700 hover:underline text-gray-950 duration-200 transition ease-out'
+          rel='nofollow noopener noreferrer'>{post.data.author}</a
+        >
       </strong>
       <span>
         {post.data.excerpt}
