@@ -1,7 +1,8 @@
 ---
-import { Picture } from 'astro:assets'
+import { Image, Picture } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
-import { ToughShowcase, ToughStyle } from '@/assets'
+import { ToughStyle } from '@/assets'
+import ToughShowcase from '../../../assets/tough-showcase.webp'
 ---
 
 <Layout
@@ -78,11 +79,7 @@ import { ToughShowcase, ToughStyle } from '@/assets'
         >
       </div>
     </div>
-    <Picture
-      src={ToughShowcase}
-      alt='Tough Website Showcase'
-      formats={['webp', 'avif']}
-    />
+    <Image src={ToughShowcase} alt='Tough Website Showcase' />
     <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base'>
       Para crear soluciones sólidas de comercio electrónico, aprovecho la
       potencia de Next.js por sus capacidades de renderizado sin interrupciones
