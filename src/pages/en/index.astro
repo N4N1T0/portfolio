@@ -71,7 +71,7 @@ const allBlogPosts = await getPosts('en')
   </div>
   <div
     id='modal'
-    class='absolute hidden md:block bg-gray-800 text-gray-100 p-6 w-[300px] z-40 bottom-5 right-5 space-y-5 opacity-0 animate-bounce hover:[animation-play-state:paused]'>
+    class='absolute hidden md:block bg-gray-800 rounded-lg text-gray-100 p-3 w-[300px] z-40 bottom-5 right-5 space-y-3 opacity-0 animate-bounce hover:[animation-play-state:paused]'>
     <h5 class='uppercase font-prata text-xl'>New Articule</h5>
     <a
       class='block hover:text-gray-400 hover:underline duration-200 transition ease-out text-sm'
@@ -95,21 +95,21 @@ const allBlogPosts = await getPosts('en')
     })
     .add(
       {
-        targets: '#links',
+        targets: '#info',
         opacity: 1,
-        duration: 500,
+        translateY: [40, 0],
+        duration: 600,
       },
       500
     )
     .add(
       {
-        targets: '#info',
+        targets: '#links',
         opacity: 1,
-        translateY: [50, 0],
+        duration: 500,
         delay: anime.stagger(100),
-        duration: 600,
       },
-      700
+      900
     )
     .add(
       {
