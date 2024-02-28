@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
 import { StrikingGoldShowcase, StrikingGoldStyle } from '@/assets'
 ---
@@ -79,7 +78,7 @@ import { StrikingGoldShowcase, StrikingGoldStyle } from '@/assets'
         >
       </div>
     </div>
-    <Image src={StrikingGoldShowcase} alt='Striking Gold Website Showcase' />
+    <img src={StrikingGoldShowcase.src} alt='Striking Gold Website Showcase' />
     <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base'>
       Embracing OpenAI for my blog brings forth a revolution in content
       creation. Leveraging its advanced language models, I harness the power of
@@ -92,7 +91,7 @@ import { StrikingGoldShowcase, StrikingGoldStyle } from '@/assets'
       also ensures a seamless and collaborative editing experience, ultimately
       enhancing the efficiency and impact of my blog.
     </p>
-    <Image src={StrikingGoldStyle} alt='Striking Gold Website Style' />
+    <img src={StrikingGoldStyle.src} alt='Striking Gold Website Style' />
   </main>
   <div
     class='fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-[#f6cf68]'>

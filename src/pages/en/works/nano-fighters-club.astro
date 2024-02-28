@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
 import { NFCShowcase, NFCStyle } from '@/assets'
 ---
@@ -64,7 +63,7 @@ import { NFCShowcase, NFCStyle } from '@/assets'
         >
       </div>
     </div>
-    <Image src={NFCShowcase} alt='Nano Fighters Club Website Showcase' />
+    <img src={NFCShowcase.src} alt='Nano Fighters Club Website Showcase' />
     <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base'>
       For crafting dynamic static sites for small businesses, I choose Astro for
       its lightning-fast performance, enabling rapid page loads and an
@@ -78,7 +77,7 @@ import { NFCShowcase, NFCStyle } from '@/assets'
       only looks impressive but also performs optimally for a standout online
       presence.
     </p>
-    <Image src={NFCStyle} alt='Nano Fighters Club Gold Website Style' />
+    <img src={NFCStyle.src} alt='Nano Fighters Club Gold Website Style' />
   </main>
   <div
     class='fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-[#020817]'>

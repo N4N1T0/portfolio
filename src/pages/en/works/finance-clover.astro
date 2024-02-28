@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
 import { FinanceCloverShowcase, FinanceCloverView } from '@/assets'
 ---
@@ -79,7 +78,10 @@ import { FinanceCloverShowcase, FinanceCloverView } from '@/assets'
         >
       </div>
     </div>
-    <Image src={FinanceCloverShowcase} alt='Finance Clover Website Showcase' />
+    <img
+      src={FinanceCloverShowcase.src}
+      alt='Finance Clover Website Showcase'
+    />
     <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base'>
       Employing React, Material UI, and robust backend technologies such as a
       Node server with Express and MongoDB is pivotal in crafting a powerful

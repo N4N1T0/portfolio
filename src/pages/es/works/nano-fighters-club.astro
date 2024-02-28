@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
 import { NFCShowcase, NFCStyle } from '@/assets'
 ---
@@ -64,7 +63,7 @@ import { NFCShowcase, NFCStyle } from '@/assets'
         >
       </div>
     </div>
-    <Image src={NFCShowcase} alt='Nano Fighters Club Website Showcase' />
+    <img src={NFCShowcase.src} alt='Nano Fighters Club Website Showcase' />
     <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base'>
       Para crear sitios estáticos dinámicos para pequeñas empresas, elijo Astro
       por su rendimiento ultrarrápido, que permite cargas de página rápidas y
@@ -79,7 +78,7 @@ import { NFCShowcase, NFCStyle } from '@/assets'
       que permite a las pequeñas empresas estática que no sólo tiene un aspecto
       impresionante, sino que también funciona en línea.
     </p>
-    <Image src={NFCStyle} alt='Nano Fighters Club Gold Website Style' />
+    <img src={NFCStyle.src} alt='Nano Fighters Club Gold Website Style' />
   </main>
   <div
     class='fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-[#020817]'>

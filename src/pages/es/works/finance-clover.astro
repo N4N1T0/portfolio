@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
 import { FinanceCloverShowcase, FinanceCloverView } from '@/assets'
 ---
@@ -81,7 +80,10 @@ import { FinanceCloverShowcase, FinanceCloverView } from '@/assets'
         >
       </div>
     </div>
-    <Image src={FinanceCloverShowcase} alt='Finance Clover Website Showcase' />
+    <img
+      src={FinanceCloverShowcase.src}
+      alt='Finance Clover Website Showcase'
+    />
     <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base'>
       El empleo de React, Material UI y tecnologías backend robustas como un
       servidor servidor Node con Express y MongoDB es fundamental para crear una

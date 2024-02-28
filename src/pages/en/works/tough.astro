@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
 import { ToughShowcase, ToughStyle } from '@/assets'
 ---
@@ -78,7 +77,7 @@ import { ToughShowcase, ToughStyle } from '@/assets'
         >
       </div>
     </div>
-    <Image src={ToughShowcase} alt='Tough Website Showcase' />
+    <img src={ToughShowcase.src} alt='Tough Website Showcase' />
     <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base'>
       In crafting robust e-commerce solutions, I leverage the power of Next.js
       for its seamless rendering and efficient server-side rendering
@@ -92,7 +91,7 @@ import { ToughShowcase, ToughStyle } from '@/assets'
       technologies that converge to create a high-performance, secure, and
       feature-rich e-commerce experience.
     </p>
-    <Image src={ToughStyle} alt='Tough Website Style' />
+    <img src={ToughStyle.src} alt='Tough Website Style' />
   </main>
   <div
     class='fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-black text-white'>
