@@ -102,8 +102,9 @@ const newLangUrl = changeLangFromUrl(Astro.url, lang)
 <script
   type='text/partytown'
   async
+  is:inline
   src='https://www.googletagmanager.com/gtag/js?id=G-BH16G0HVKV'></script>
-<script type='text/partytown'>
+<script type='text/partytown' is:inline>
   window.dataLayer = window.dataLayer || []
   function gtag() {
     dataLayer.push(arguments)
