@@ -268,7 +268,7 @@ const ClientForm = () => {
           <div>
             <label
               htmlFor='gris'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='ColorOption'
@@ -277,13 +277,13 @@ const ClientForm = () => {
                 className='sr-only'
                 defaultChecked
               />
-              <p className='text-sm font-medium'>Gris</p>
+              <p className='text-xs md:text-sm font-medium'>Gris</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Neutro'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='ColorOption'
@@ -291,13 +291,13 @@ const ClientForm = () => {
                 id='Neutro'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Neutro</p>
+              <p className='text-xs md:text-sm font-medium'>Neutro</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Colorido'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='ColorOption'
@@ -305,7 +305,7 @@ const ClientForm = () => {
                 id='Colorido'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Colorido</p>
+              <p className='text-xs md:text-sm font-medium'>Colorido</p>
             </label>
           </div>
         </div>
@@ -314,7 +314,7 @@ const ClientForm = () => {
           <div>
             <label
               htmlFor='Autoritario'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='autoridad'
@@ -323,13 +323,13 @@ const ClientForm = () => {
                 className='sr-only'
                 defaultChecked
               />
-              <p className='text-sm font-medium'>Autoritario</p>
+              <p className='text-xs md:text-sm font-medium'>Autoritario</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Neutro1'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='autoridad'
@@ -337,13 +337,13 @@ const ClientForm = () => {
                 id='Neutro1'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Neutro</p>
+              <p className='text-xs md:text-sm font-medium'>Neutro</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Amistoso'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='autoridad'
@@ -351,7 +351,7 @@ const ClientForm = () => {
                 id='Amistoso'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Amistoso</p>
+              <p className='text-xs md:text-sm font-medium'>Amistoso</p>
             </label>
           </div>
         </div>
@@ -360,7 +360,7 @@ const ClientForm = () => {
           <div>
             <label
               htmlFor='Minimalista'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='estilo'
@@ -369,13 +369,13 @@ const ClientForm = () => {
                 className='sr-only'
                 defaultChecked
               />
-              <p className='text-sm font-medium'>Minimalista</p>
+              <p className='text-xs md:text-sm font-medium'>Minimalista</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Neutro2'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='estilo'
@@ -383,13 +383,13 @@ const ClientForm = () => {
                 id='Neutro2'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Neutro</p>
+              <p className='text-xs md:text-sm font-medium'>Neutro</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Complejo'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='estilo'
@@ -397,7 +397,7 @@ const ClientForm = () => {
                 id='Complejo'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Complejo</p>
+              <p className='text-xs md:text-sm font-medium'>Complejo</p>
             </label>
           </div>
         </div>
@@ -406,7 +406,7 @@ const ClientForm = () => {
           <div>
             <label
               htmlFor='Profesional'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='proModern'
@@ -415,13 +415,13 @@ const ClientForm = () => {
                 className='sr-only'
                 defaultChecked
               />
-              <p className='text-sm font-medium'>Profesional</p>
+              <p className='text-xs md:text-sm font-medium'>Profesional</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Neutro3'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='proModern'
@@ -429,13 +429,13 @@ const ClientForm = () => {
                 id='Neutro3'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Neutro</p>
+              <p className='text-xs md:text-sm font-medium'>Neutro</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Casual'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='proModern'
@@ -443,7 +443,7 @@ const ClientForm = () => {
                 id='Casual'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Casual</p>
+              <p className='text-xs md:text-sm font-medium'>Casual</p>
             </label>
           </div>
         </div>
@@ -453,7 +453,7 @@ const ClientForm = () => {
           <div>
             <label
               htmlFor='Clasico'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='modernidad'
@@ -462,13 +462,13 @@ const ClientForm = () => {
                 className='sr-only'
                 defaultChecked
               />
-              <p className='text-sm font-medium'>Clasico</p>
+              <p className='text-xs md:text-sm font-medium'>Clasico</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Neutro4'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='modernidad'
@@ -476,13 +476,13 @@ const ClientForm = () => {
                 id='Neutro4'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Neutro</p>
+              <p className='text-xs md:text-sm font-medium'>Neutro</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Moderno'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='modernidad'
@@ -490,7 +490,7 @@ const ClientForm = () => {
                 id='Moderno'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Moderno</p>
+              <p className='text-xs md:text-sm font-medium'>Moderno</p>
             </label>
           </div>
         </div>
@@ -500,7 +500,7 @@ const ClientForm = () => {
           <div>
             <label
               htmlFor='Masculino'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='sexo'
@@ -509,13 +509,13 @@ const ClientForm = () => {
                 className='sr-only'
                 defaultChecked
               />
-              <p className='text-sm font-medium'>Masculino</p>
+              <p className='text-xs md:text-sm font-medium'>Masculino</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Neutro5'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='sexo'
@@ -523,13 +523,13 @@ const ClientForm = () => {
                 id='Neutro5'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Neutro</p>
+              <p className='text-xs md:text-sm font-medium'>Neutro</p>
             </label>
           </div>
           <div>
             <label
               htmlFor='Femenino'
-              className='flex cursor-pointer items-center justify-center border border-gray-900 px-5 py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
+              className='flex cursor-pointer items-center justify-center border border-gray-900 px-3 md:px-5 py-1 md:py-2 text-gray-900 hover:text-gray-700 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white'>
               <input
                 type='radio'
                 name='sexo'
@@ -537,7 +537,7 @@ const ClientForm = () => {
                 id='Femenino'
                 className='sr-only'
               />
-              <p className='text-sm font-medium'>Femenino</p>
+              <p className='text-xs md:text-sm font-medium'>Femenino</p>
             </label>
           </div>
         </div>
