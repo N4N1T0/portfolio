@@ -2,7 +2,13 @@
 import Layout from '@/layouts/Layout.astro'
 import { works } from '@/constants'
 import { urlNames } from '@/lib'
-import { fade } from 'astro:transitions'
+
+interface Work {
+  name: string
+  info: string
+  new: boolean
+  inProcess: boolean
+}
 ---
 
 <Layout
@@ -13,8 +19,7 @@ import { fade } from 'astro:transitions'
   link='/es/'
   border='border-gray-300'>
   <main
-    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'
-    transition:animate={fade({ duration: '0.5s' })}>
+    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'>
     <aside
       class='space-y-3 self-end z-10 sticky bottom-24 flex-1 opacity-0'
       id='info'>
@@ -32,7 +37,7 @@ import { fade } from 'astro:transitions'
       class='font-prata md:space-y-10 space-y-5 flex-1 opacity-0'
       id='links'>
       {
-        works.map((work) => (
+        works.map((work: Work) => (
           <div>
             <a
               href={

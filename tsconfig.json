@@ -2,7 +2,7 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "strictNullChecks": true,
-    "baseUrl": "C:/Users/Big Nano Coach/Documents/CS50_VS/Nano/Portfolio/portfolio",
+    "baseUrl": "./",
     "paths": {
       "@/*": [
         "./src/*"

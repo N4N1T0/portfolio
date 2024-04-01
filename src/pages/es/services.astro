@@ -1,6 +1,11 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import { servicesEspañol } from '@/constants'
+
+interface Service {
+  etiqueta: string
+  info: string
+}
 ---
 
 <Layout
@@ -34,7 +39,7 @@ import { servicesEspañol } from '@/constants'
       class='font-prata md:space-y-10 space-y-5 flex-1 opacity-0'
       id='links'>
       {
-        servicesEspañol.map((service) => (
+        servicesEspañol.map((service: Service) => (
           <div>
             <h2 class='text-[12vw] md:text-[7vw] leading-[0.95em]'>
               {service.etiqueta}

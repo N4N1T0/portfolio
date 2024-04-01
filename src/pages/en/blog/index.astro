@@ -1,8 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import { getPosts } from '@/lib'
+import { type CollectionEntry } from 'astro:content'
 
-const allBlogPosts = await getPosts('en')
+const allBlogPosts: CollectionEntry<'blog'>[] = await getPosts('en')
 ---
 
 <Layout

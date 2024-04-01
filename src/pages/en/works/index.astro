@@ -2,6 +2,13 @@
 import Layout from '@/layouts/Layout.astro'
 import { works } from '@/constants'
 import { urlNames } from '@/lib'
+
+interface Work {
+  name: string
+  info: string
+  new: boolean
+  inProcess: boolean
+}
 ---
 
 <Layout
@@ -29,7 +36,7 @@ import { urlNames } from '@/lib'
       class='font-prata md:space-y-10 space-y-5 flex-1 opacity-0'
       id='links'>
       {
-        works.map((work) => (
+        works.map((work: Work) => (
           <div>
             <a
               href={
