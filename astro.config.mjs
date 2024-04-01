@@ -4,8 +4,9 @@ import sitemap from "@astrojs/sitemap";
 import robotsTxt from 'astro-robots-txt';
 import vercel from "@astrojs/vercel/serverless";
 import partytown from "@astrojs/partytown";
-
 import compress from "astro-compress";
+
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +19,7 @@ export default defineConfig({
       forward: ["dataLayer.push"],
       debug: false
     }
-  }), compress()],
+  }), compress(), react()],
   output: "server",
   adapter: vercel()
 });

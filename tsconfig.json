@@ -2,9 +2,13 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "strictNullChecks": true,
-    "baseUrl": ".",
+    "baseUrl": "C:/Users/Big Nano Coach/Documents/CS50_VS/Nano/Portfolio/portfolio",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
