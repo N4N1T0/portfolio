@@ -19,31 +19,42 @@ export async function onSubmit(
 	e: React.FormEvent<HTMLFormElement>,
 	setSending: React.Dispatch<React.SetStateAction<boolean>>,
 ) {
-	console.log(e);
 	e.preventDefault();
-	const formData = new FormData(e.currentTarget);
+	const form = e.currentTarget; // Capture the form element reference
+	const formData = new FormData(form);
 	setSending(true);
+
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const values: { [key: string]: any } = {};
-
 	formData.forEach((value, key) => {
 		values[key] = value;
 	});
 
-	const res = await fetch("/api/sendEmail.json", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({
-			values,
-		}),
-	});
+	try {
+		const res = await fetch("/api/sendEmail.json", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ values }),
+		});
 
-	if (res.status === 200) {
-		setSending(false);
-		alert(
-			"Gracias por su coperacion. En breve nos prepararemos para crear su projecto/presupuesto",
-		);
+		if (res.status === 200) {
+			setSending(false);
+			const alert = window.confirm(
+				"Gracias por su cooperación. En breve nos prepararemos para crear su proyecto/presupuesto",
+			);
+
+			if (alert) {
+				console.log("Resetting form");
+				form.reset(); // Use the captured form reference to reset
+			}
+		} else {
+			console.error("Error with fetch request:", res.status, res.statusText);
+			setSending(false); // Ensure to set sending to false in case of an error as well
+		}
+	} catch (error) {
+		console.error("Fetch error:", error);
+		setSending(false); // Ensure to set sending to false in case of an error as well
 	}
 }
