@@ -19,6 +19,7 @@ export async function onSubmit(
 	e: React.FormEvent<HTMLFormElement>,
 	setSending: React.Dispatch<React.SetStateAction<boolean>>,
 ) {
+	console.log(e);
 	e.preventDefault();
 	const formData = new FormData(e.currentTarget);
 	setSending(true);
@@ -41,12 +42,8 @@ export async function onSubmit(
 
 	if (res.status === 200) {
 		setSending(false);
-		const alert = window.confirm(
+		alert(
 			"Gracias por su coperacion. En breve nos prepararemos para crear su projecto/presupuesto",
 		);
-
-		if (alert) {
-			e.currentTarget.reset();
-		}
 	}
 }
