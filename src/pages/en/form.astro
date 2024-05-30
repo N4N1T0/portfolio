@@ -1,7 +1,7 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import Design from '@/assets/balazs-ketyi-_x335IZXxfc-unsplash.webp'
-import ClientForm from '@/components/react/client-form'
+import Layout from "@/layouts/Layout.astro";
+import FormImage from "@/assets/form/balazs-ketyi-_x335IZXxfc-unsplash.webp";
+import ClientForm from "@/components/react/client-form";
 ---
 
 <Layout
@@ -28,7 +28,7 @@ import ClientForm from '@/components/react/client-form'
       class='self-start z-10 sticky top-20 flex-1 opacity-0 hidden md:block aspect-square'
       id='image'>
       <img
-        src={Design.src}
+        src={FormImage.src}
         alt='Design'
         loading='eager'
         id='image-to-change'
@@ -89,7 +89,7 @@ import ClientForm from '@/components/react/client-form'
   ) as HTMLImageElement
 
   // Get all sections in the aside element
-  const sections = document.querySelectorAll('aside fieldset')
+  const sections = document.querySelectorAll('#fieldsetForm')
 
   // Initialize an Intersection Observer
   const observer = new IntersectionObserver(
