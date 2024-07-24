@@ -1,13 +1,18 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import { works } from '@/constants'
-import { urlNames } from '@/lib'
+// Componenys Imports
+import Layout from "@/layouts/Layout.astro";
+
+// Constants Imports
+import { works } from "@/constants";
+
+// Utility Imports
+import { urlNames } from "@/lib";
 
 interface Work {
-  name: string
-  info: string
-  new: boolean
-  inProcess: boolean
+	name: string;
+	info: string;
+	new: boolean;
+	inProcess: boolean;
 }
 ---
 
@@ -40,7 +45,7 @@ interface Work {
           <div>
             <a
               href={
-                work.inProcess ? '/works' : `/en/works/${urlNames(work.name)}`
+                work.inProcess ? '/en/works' : `/en/works/${urlNames(work.name)}`
               }
               class='text-[12vw] uppercase md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'>
               <h2>{work.name}</h2>

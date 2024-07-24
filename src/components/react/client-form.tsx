@@ -1,5 +1,10 @@
+// React Imports
 import { useState } from "react";
+
+// Uitility Imports
 import { onSubmit } from "@/lib/index";
+
+// Form Imports
 import {
 	ObjetivosForm,
 	KeyFuntionalityForm,
@@ -9,7 +14,13 @@ import {
 	Services,
 } from "@/components/react";
 
-const ClientForm = () => {
+/**
++ * Renders a form for client input.
++ *
++ * @return {JSX.Element} The form component.
++ */
+const ClientForm = (): JSX.Element => {
+	// State declaration and initialization
 	const [sending, setSending] = useState(false);
 
 	return (

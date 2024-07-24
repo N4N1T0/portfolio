@@ -1,7 +1,11 @@
 ---
+// Project Imports
 import Layout from "@/layouts/Layout.astro";
+
+// Utilities Imports
 import { getPosts } from "@/lib";
 
+// Astro get Collection
 const allBlogPosts = await getPosts("es");
 ---
 

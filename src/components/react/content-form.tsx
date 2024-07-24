@@ -1,7 +1,17 @@
+// Form Imports
 import { content } from "@/constants/form";
-import FormImage from "@/assets/form/ben-maffin-Ux6_jnk2cO8-unsplash.webp";
 
-const ContentForm = ({ sending }: { sending: boolean }) => {
+// Assets Imports
+import { FormImage } from "@/assets";
+
+/**
++ * Renders a form for content input.
++ *
++ * @param {Object} props - The properties for the component.
++ * @param {boolean} props.sending - Indicates if the form is being sent.
++ * @return {JSX.Element} The rendered form.
++ */
+const ContentForm = ({ sending }: { sending: boolean }): JSX.Element => {
 	return (
 		<fieldset
 			disabled={sending}
@@ -10,6 +20,7 @@ const ContentForm = ({ sending }: { sending: boolean }) => {
 			data-image={FormImage.src}
 		>
 			<legend className="text-3xl">4. Contenidos</legend>
+			{/* Section 4.1: ¿Quién los proporciona? */}
 			<fieldset className="space-y-3">
 				<legend className="text-lg">4.1 ¿Quién los proporciona?</legend>
 				{content.quien.map((item) => (
@@ -24,6 +35,7 @@ const ContentForm = ({ sending }: { sending: boolean }) => {
 					</label>
 				))}
 			</fieldset>
+			{/* Section 4.3: Productos y/o servicios */}
 			<fieldset className="space-y-3">
 				<legend className="text-lg">4.3 Productos y/o servicios</legend>
 				<label className="block">

@@ -1,11 +1,24 @@
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 
-export const urlNames = (name: string) => {
+/**
++ * Replaces spaces in a string with hyphens.
++ *
++ * @param {string} name - The string to modify.
++ * @return {string} The modified string with hyphens instead of spaces.
++ */
+export const urlNames = (name: string): string => {
 	return name.split(" ").join("-");
 };
 
-// Get all the posts
-export async function getPosts(lang: string) {
+/**
++ * Retrieves an array of blog posts in a specified language.
++ *
++ * @param {string} lang - The language of the blog posts to retrieve.
++ * @return {Promise<Array<CollectionEntry<'blog'>>>} A promise that resolves to an array of blog posts.
++ */
+export async function getPosts(
+	lang: string,
+): Promise<Array<CollectionEntry<"blog">>> {
 	const posts = (
 		await getCollection("blog", ({ id }) => {
 			return id.startsWith(lang);
@@ -15,10 +28,17 @@ export async function getPosts(lang: string) {
 	return posts;
 }
 
+/**
++ * Submits a form and sends the form data to the server via a POST request.
++ *
++ * @param {React.FormEvent<HTMLFormElement>} e - The form event triggered by the submit action.
++ * @param {React.Dispatch<React.SetStateAction<boolean>>} setSending - A function to update the sending state.
++ * @return {Promise<void>} A promise that resolves when the form submission is complete.
++ */
 export async function onSubmit(
 	e: React.FormEvent<HTMLFormElement>,
 	setSending: React.Dispatch<React.SetStateAction<boolean>>,
-) {
+): Promise<void> {
 	e.preventDefault();
 	const form = e.currentTarget; // Capture the form element reference
 	const formData = new FormData(form);

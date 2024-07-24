@@ -1,8 +1,20 @@
+// Form Imports
 import { styleAndDesign } from "@/constants/form";
-import { useState } from "react";
-import FormImage from "@/assets/form/ux-indonesia-qC2n6RQU4Vw-unsplash.webp";
 
-const StyleAndDesign = ({ sending }: { sending: boolean }) => {
+// Assets Imports
+import { FormImage5 } from "@/assets";
+
+// React Imports
+import { useState } from "react";
+
+/**
++ * Renders a form for selecting the style and design of a project.
++ *
++ * @param {Object} props - The properties passed to the component.
++ * @param {boolean} props.sending - Indicates whether the form is in the process of being sent.
++ * @return {JSX.Element} The rendered form.
++ */
+const StyleAndDesign = ({ sending }: { sending: boolean }): JSX.Element => {
 	const [hasDesign, setHasDesign] = useState(false);
 
 	return (
@@ -10,9 +22,10 @@ const StyleAndDesign = ({ sending }: { sending: boolean }) => {
 			disabled={sending}
 			className="space-y-7"
 			id="fieldsetForm"
-			data-image={FormImage.src}
+			data-image={FormImage5.src}
 		>
 			<legend className="text-3xl">3. Estilo y Diseño</legend>
+			{/* Checkbox to ask if the user already has a custom design */}
 			<label className="flex items-center gap-1 mt-4 text-lg">
 				<input
 					type="checkbox"
@@ -21,12 +34,14 @@ const StyleAndDesign = ({ sending }: { sending: boolean }) => {
 					value="hasDesign"
 					onChange={() => setHasDesign(!hasDesign)}
 				/>
-				¿Ya tienes el diseño personalizado?
+				¿Ya tienes el diseño personalizado? ¿Ya tienes el diseño personalizado?
 			</label>
+			{/* If the user does not have a custom design, show the rest of the form */}
 			{!hasDesign && (
 				<>
 					<fieldset className="space-y-3">
 						<legend className="text-lg">3.1 Temática del diseño</legend>
+						{/* Render checkboxes for design themes */}
 						{styleAndDesign.tematica.map((item) => (
 							<label className="flex items-center gap-1" key={item.name}>
 								<input
@@ -41,6 +56,7 @@ const StyleAndDesign = ({ sending }: { sending: boolean }) => {
 					</fieldset>
 					<fieldset className="space-y-3">
 						<legend className="text-lg">3.2 ¿Qué estilo te gustaría?</legend>
+						{/* Render checkboxes for design styles */}
 						{styleAndDesign.estilo.map((item) => (
 							<label className="flex items-center gap-1" key={item.name}>
 								<input
@@ -55,6 +71,7 @@ const StyleAndDesign = ({ sending }: { sending: boolean }) => {
 					</fieldset>
 					<fieldset className="space-y-3">
 						<legend className="text-lg">3.3 Referencias</legend>
+						{/* Input for design references */}
 						<label className="block">
 							<span className="text-sm">
 								proporciona 3 nombres de web se su agrado como referencias
@@ -62,7 +79,7 @@ const StyleAndDesign = ({ sending }: { sending: boolean }) => {
 							<input
 								type="text"
 								name="referencias"
-								className="block bg-transparent border-b border-gray-800 outline-none w-full"
+								className="block bg-transparent border-b border-gray-800 outline-none"
 							/>
 						</label>
 					</fieldset>

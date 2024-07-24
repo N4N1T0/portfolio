@@ -1,38 +1,41 @@
 ---
-import { Image } from 'astro:assets'
-import Layout from '@/layouts/Layout.astro'
-import { getCollection } from 'astro:content'
+// Astro Imports
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+// Project Imports
+import Layout from "@/layouts/Layout.astro";
 
 // Function to create the path for all the blogs
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ id }) => {
-    return id.startsWith('en/')
-  })
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: post,
-  }))
+	const posts = await getCollection("blog", ({ id }) => {
+		return id.startsWith("en/");
+	});
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
 }
 
 // Astro Props
-const post = Astro.props
+const post = Astro.props;
 
 // Astro Params
-const slug = Astro.params.slug
+const slug = Astro.params.slug;
 
 // Special function to render the content of the MD
-const { Content } = await post.render()
+const { Content } = await post.render();
 
 // Redirect in case the path dosent exits
 if (!slug || !post) {
-  return new Response(null, {
-    status: 404,
-    statusText: 'Not found',
-  })
+	return new Response(null, {
+		status: 404,
+		statusText: "Not found",
+	});
 }
 
 // create static page instead of SSR
-export const prerender = true
+export const prerender = true;
 ---
 
 <Layout

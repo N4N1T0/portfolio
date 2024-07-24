@@ -1,9 +1,18 @@
 import type { APIRoute } from "astro";
 import { Resend } from "resend";
 
+// Resend API key
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
-export const POST: APIRoute = async ({ request }) => {
+/**
++ * Handles the POST request to send an email.
++ *
++ * @param {Request} request - The incoming request.
++ * @return {Promise<Response>} A promise that resolves to the response.
++ */
+export const POST: APIRoute = async ({
+	request,
+}: Request): Promise<Response> => {
 	const body = await request.json();
 
 	try {
