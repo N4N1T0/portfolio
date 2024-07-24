@@ -6,13 +6,9 @@ const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
 /**
 + * Handles the POST request to send an email.
-+ *
-+ * @param {Request} request - The incoming request.
 + * @return {Promise<Response>} A promise that resolves to the response.
 + */
-export const POST: APIRoute = async ({
-	request,
-}: Request): Promise<Response> => {
+export const POST: APIRoute = async ({ request }): Promise<Response> => {
 	const body = await request.json();
 
 	try {
