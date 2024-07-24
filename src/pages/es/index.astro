@@ -1,8 +1,8 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import { getPosts } from '@/lib'
+import Layout from "@/layouts/Layout.astro";
+import { getPosts } from "@/lib";
 
-const allBlogPosts = await getPosts('es')
+const allBlogPosts = await getPosts("es");
 ---
 
 <Layout
@@ -15,14 +15,7 @@ const allBlogPosts = await getPosts('es')
       <div class='space-y-3 self-end opacity-0' id='info'>
         <h1 class='font-semibold tracking-widest'>Adrian Alvarez Alonso</h1>
         <p class='text-sm'>
-          Diseñador Grafico / Web Designer & Developer / Estratega de Marketing
-        </p>
-        <p class='text-sm'>
-          Co-Fundador y Desarrollador de <a
-            href='https://www.masobi.com/'
-            class='underline hover:text-gray-600 transition-colors duration-200 cursor-pointer'
-            target='_blank'>Masobi Web Solutions</a
-          >
+          Web Designer & Developer / Estratega de Marketing
         </p>
         <p class='text-sm'>
           De origen cubano y autodidacta, aporto una mezcla única de pasión y al

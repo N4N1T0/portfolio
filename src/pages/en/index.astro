@@ -1,8 +1,8 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import { getPosts } from '@/lib'
+import Layout from "@/layouts/Layout.astro";
+import { getPosts } from "@/lib";
 
-const allBlogPosts = await getPosts('en')
+const allBlogPosts = await getPosts("en");
 ---
 
 <Layout
@@ -16,14 +16,7 @@ const allBlogPosts = await getPosts('en')
       <div class='space-y-3 self-end opacity-0' id='info'>
         <h1 class='font-semibold tracking-widest'>Adrian Alvarez Alonso</h1>
         <p class='text-sm'>
-          Graphic Designer / Web Designer & Developer / Marketing Strategist
-        </p>
-        <p class='text-sm'>
-          Co-Founder and Developer of <a
-            href='https://www.masobi.com/'
-            class='underline hover:text-gray-600 transition-colors duration-200 cursor-pointer'
-            target='_blank'>Masobi Web Solutions</a
-          >
+          Web Designer & Developer / Marketing Strategist
         </p>
         <p class='text-sm'>
           Cuban-born and self-taught, I bring a unique blend of passion and

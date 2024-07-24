@@ -1,0 +1,131 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { BSShowcase, BSStyle } from "@/assets";
+---
+
+<Layout
+  description='Woocomerce Headless creado con Next.js, Next-Auth and Wordpress para la venta de articulos de Padle'
+  title='Backswing - Woocomerce Headless'
+  label='Proyectos'
+  link='/es/works'
+  border='border-gray-800'>
+  <main
+    class='w-screen mt-20 md:mt-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
+    <div class='w-full bg-gray-950 text-center h-[700px] flex justify-center'>
+      <h1
+        class='font-prata text-[11vw] text-gray-100 self-center md:self-end md:leading-[11rem]'>
+        BACKSWING
+      </h1>
+    </div>
+    <h2
+      class='text-[7vw] md:text-[3vw] font-prata max-w-[700px] md:leading-[4rem] my-10 px-5 md:p-0'>
+       Woocomerce Headless para la venta de articulos de Padle, usando Next.js como base de aplicacion y estas tecnologias:
+    </h2>
+    <div
+      class='flex flex-col md:flex-row justify-between items-start gap-3 md:gap-5 md:px-10 px-5'>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Next.js</h3>
+        <p class='text-sm md:text-base'>
+          Utilizado por algunas de las empresas más grandes del mundo, Next.js
+          le permite crear aplicaciones web completas ampliando las últimas
+          funciones de React e integrando potentes herramientas JavaScript
+          basadas en Rust para las construcciones más rápidas.
+        </p>
+        <a
+          href='https://astro.build/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>Mas info.</a
+        >
+      </div>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Next-Auth</h3>
+        <p class='text-sm md:text-base'>
+          Procesamiento de datos de usuario, autenticación, autorización y
+          autenticación de proveedores.
+        </p>
+        <a
+          href='https://authjs.dev/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>Mas info.</a
+        >
+      </div>
+      <div class='flex-1 space-y-2'>
+        <h3 class='font-bold md:text-lg'>Woocommerce</h3>
+        <p class='text-sm md:text-base'>
+          Woocommerce es un sistema de comercio electrónico de comercio
+          en línea para WordPress.
+        </p>
+        <a
+          href='https://woocommerce.com/es/'
+          target='_blank'
+          class='hover-underline-animation text-sm font-bold'>Mas info.</a
+        >
+      </div>
+    </div>
+    <img src={BSShowcase.src} alt='Backswing Website Showcase' />
+    <p class='max-w-[800px] px-5 md:px-0 text-sm md:text-base'>
+      Para este sitio, el objetivo era crear un storefront rápido, personalizable y funcional que cumpliera con las expectativas del cliente. Optamos por Next.js como base de la aplicación, integrando shdcn y Tailwind CSS para optimizar la interfaz y la experiencia del usuario.
+
+Utilizamos WordPress y WooCommerce para la tienda backend, debido a su gran capacidad para configurar una tienda virtual y su facilidad de aprendizaje. Añadimos algunos plugins para mejorar esta interacción, como JWT para la autorización y Headless para que el cliente pueda usarlo exclusivamente.
+    </p>
+    <img src={BSStyle.src} alt='Backswing Website Style' />
+  </main>
+  <div
+    class='fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-gray-950'>
+    <a
+      href='https://github.com/N4N1T0/backswing-ecommerce'
+      target='_blank'
+      class='text-sm md:text-base hover-underline-animation-widget'>CODE</a
+    >
+    <a
+      href='https://backswing-ecommerce.vercel.app/'
+      target='_blank'
+      class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
+    >
+  </div>
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom'
+    id='courtin'>
+  </div>
+</Layout>
+
+<style>
+  .hover-underline-animation-widget {
+    display: block;
+    position: relative;
+    color: #f3f4f6;
+  }
+
+  .hover-underline-animation-widget::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f3f4f6;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation-widget:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  html {
+    scrollbar-color: #f3f4f6 #baccfc;
+  }
+</style>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime({
+    targets: '#courtin',
+    scaleY: [1, 0],
+    duration: 700,
+    easing: 'easeInExpo',
+  })
+</script>
