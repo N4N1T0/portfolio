@@ -1,54 +1,58 @@
-# Astro Starter Kit: Basics
+# Adrian "Nano" Alvarez Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to the portfolio of Adrian Alvarez Alonso, a Web Developer and Marketing Strategist.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Description
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This project is the main development portfolio of Adrian Alvarez Alonso. It showcases his skills and projects using modern web technologies.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Features
 
-## 🚀 Project Structure
+- **Framework:** Astro
+- **UI:** Tailwind CSS
+- **Animations:** Anime.js
+- **Dynamic Components:** React
+- **Contact Form:** React Hook Form and Zod
 
-Inside of your Astro project, you'll see the following folders and files:
+## Installation
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+To set up this portfolio project locally, follow these steps:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1. **Clone the repository:**
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name``
 
-Any static assets, like images, can be placed in the `public/` directory.
+2. **Install dependencies:**
 
-## 🧞 Commands
+   ```bash
+   npm install
+   ```
 
-All commands are run from the root of the project, from a terminal:
+3. **Start the development server:**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+   ```bash
+   npm run dev
+   ```
 
-## 👀 Want to learn more?
+## Usage
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This is a basic portfolio application showcasing the skills and projects of Adrian Alvarez Alonso.
+
+## License
+
+This project is not licensed.
+
+## Contributing
+
+Contributions are welcome! Please be nice, and if you see any improvements or bugs, just make a Pull Request (PR), and I will review it.
+
+## Contact
+
+For support or questions, please contact me at: <a href="mailto:adrian.alvarezalonso1991@gmail.com" target="_blank">adrian.alvarezalonso1991@gmail.com</a>
+
+ ## TODO
+ [] Projects as Content
+ [] Astro 4.12 Upgrade
+ [] Services Pages
