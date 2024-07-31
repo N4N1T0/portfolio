@@ -1,15 +1,11 @@
 export const services = [
 	{
 		label: "Web Development",
-		info: "Elevate your online presence! With my expertise in web development, I leverage cutting-edge technology and a performance-driven approach to deliver digital experiences that are truly exceptional.",
+		info: "Elevate your online presence! With my expertise in web development, I leverage cutting-edge technology and a performance-oriented approach to deliver truly exceptional digital experiences.",
 	},
 	{
-		label: "App Development",
-		info: "Embark on a digital journey! Utilizing my skills in app development, I design and develop feature-rich, scalable solutions using the latest technologies. Get ready for an immersive user experience like never before.",
-	},
-	{
-		label: "SEO Audit",
-		info: "Boost your online visibility! My SEO audit offers a comprehensive analysis and optimization strategy, ensuring your website takes center stage in search rankings.",
+		label: "Shopify Development",
+		info: "Transform your online store! With my expertise in Shopify development, I create custom e-commerce solutions that enhance customer experience and boost sales.",
 	},
 	{
 		label: "Email Marketing",
@@ -17,11 +13,11 @@ export const services = [
 	},
 	{
 		label: "Social Media Marketing",
-		info: "Grow your brand&apos;s presence! Through engaging content tailored to your audience, my social media marketing services help you connect with customers and expand your reach.",
+		info: "Grow your brand's presence! Through engaging content tailored to your audience, my social media marketing services help you connect with customers and expand your reach.",
 	},
 	{
 		label: "CRO",
-		info: "Optimize customer retention! With my expertise in Conversion Rate Optimization (CRO), I develop customized solutions to enhance ecommerce growth by maximizing customer engagement and retention.",
+		info: "Optimize customer retention! With my expertise in Conversion Rate Optimization (CRO), I develop personalized solutions to enhance e-commerce growth by maximizing customer engagement and retention.",
 	},
 ];
 
@@ -31,12 +27,8 @@ export const servicesEspañol = [
 		info: "¡Eleva tu presencia en línea! Con mi experiencia en desarrollo web, aprovecho la tecnología de vanguardia y un enfoque orientado al rendimiento para ofrecer experiencias digitales verdaderamente excepcionales.",
 	},
 	{
-		etiqueta: "Desarrollo de Apps",
-		info: "¡Embárcate en un viaje digital! Utilizando mis habilidades en desarrollo de aplicaciones, diseño y desarrollo soluciones ricas en funciones y escalables utilizando las últimas tecnologías. Prepárate para una experiencia de usuario inmersiva como nunca antes.",
-	},
-	{
-		etiqueta: "Auditoría SEO",
-		info: "¡Mejora tu visibilidad en línea! Mi auditoría SEO ofrece un análisis exhaustivo y una estrategia de optimización, asegurando que tu sitio web tome el centro del escenario en los rankings de búsqueda.",
+		etiqueta: "Desarrollo en Shopify",
+		info: "¡Transforma tu tienda en línea! Con mi experiencia en desarrollo en Shopify, creo soluciones de comercio electrónico a medida que mejoran la experiencia del cliente y aumentan las ventas.",
 	},
 	{
 		etiqueta: "Email Marketing",
