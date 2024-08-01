@@ -53,6 +53,10 @@ Contributions are welcome! Please be nice, and if you see any improvements or bu
 For support or questions, please contact me at: <a href="mailto:adrian.alvarezalonso1991@gmail.com" target="_blank">adrian.alvarezalonso1991@gmail.com</a>
 
  ## TODO
- [] Projects as Content
- [] Astro 4.12 Upgrade
- [] Services Pages
+[ ] Projects as Content
+[ ] Astro 4.12 Upgrade
+[ ] Services Pages
+[ ] French Language
+[ ] Add Testimonaial to Projects
+[ ] Improve Contact Page (Add dynamic Services)
+[ ] Change Blog to Project Stetics (Name Inside Image)
