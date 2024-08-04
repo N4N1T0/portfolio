@@ -76,7 +76,6 @@ export async function getProjects(
  * Retrieves a collection entry by its slug and language.
  *
  * @param {string} slug - The slug of the collection entry.
- * @param {string} lang - The language of the collection entry.
  * @return {Promise<CollectionEntry<"projects"> | undefined>} A promise that resolves to the collection entry.
  */
 export async function getCollecionBySlug(

@@ -13,7 +13,7 @@ interface Props {
 	lang: string;
 }
 
-const project = await getCollecionBySlug(slug, lang);
+const project = await getCollecionBySlug(slug);
 ---
 {project !== undefined && (
  <li>
