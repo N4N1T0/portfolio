@@ -1,127 +1,3 @@
-export const services = [
-	{
-		label: "Web Development",
-		info: "Elevate your online presence! With my expertise in web development, I leverage cutting-edge technology and a performance-oriented approach to deliver truly exceptional digital experiences.",
-	},
-	{
-		label: "Shopify Development",
-		info: "Transform your online store! With my expertise in Shopify development, I create custom e-commerce solutions that enhance customer experience and boost sales.",
-	},
-	{
-		label: "Email Marketing",
-		info: "Stand out in the inbox! With my expertise in email marketing, I create captivating campaigns that drive traffic and sales, leveraging the latest technologies.",
-	},
-	{
-		label: "Social Media Marketing",
-		info: "Grow your brand's presence! Through engaging content tailored to your audience, my social media marketing services help you connect with customers and expand your reach.",
-	},
-	{
-		label: "CRO",
-		info: "Optimize customer retention! With my expertise in Conversion Rate Optimization (CRO), I develop personalized solutions to enhance e-commerce growth by maximizing customer engagement and retention.",
-	},
-];
-
-export const servicesEspañol = [
-	{
-		etiqueta: "Desarrollo Web",
-		info: "¡Eleva tu presencia en línea! Con mi experiencia en desarrollo web, aprovecho la tecnología de vanguardia y un enfoque orientado al rendimiento para ofrecer experiencias digitales verdaderamente excepcionales.",
-	},
-	{
-		etiqueta: "Desarrollo en Shopify",
-		info: "¡Transforma tu tienda en línea! Con mi experiencia en desarrollo en Shopify, creo soluciones de comercio electrónico a medida que mejoran la experiencia del cliente y aumentan las ventas.",
-	},
-	{
-		etiqueta: "Email Marketing",
-		info: "¡Destácate en la bandeja de entrada! Con mi experiencia en marketing por correo electrónico, creo campañas cautivadoras que impulsan el tráfico y las ventas, aprovechando las últimas tecnologías.",
-	},
-	{
-		etiqueta: "Marketing en Redes",
-		info: "¡Haz crecer la presencia de tu marca! A través de contenido atractivo adaptado a tu audiencia, mis servicios de marketing en redes sociales te ayudan a conectar con los clientes y expandir tu alcance.",
-	},
-	{
-		etiqueta: "CRO",
-		info: "¡Optimiza la retención de clientes! Con mi experiencia en Optimización de la Tasa de Conversión (CRO), desarrollo soluciones personalizadas para mejorar el crecimiento del comercio electrónico al maximizar el compromiso y la retención de los clientes.",
-	},
-];
-
-export const works = [
-	{
-		name: "Lavanda del Lago",
-		info: "Sanity Ecommerce",
-		new: true,
-		inProcess: true,
-	},
-	{
-		name: "backswing",
-		info: "Woocommerce Headless",
-		new: true,
-		inProcess: false,
-	},
-	{
-		name: "tough",
-		info: "Next.js Ecommerce",
-		new: false,
-		inProcess: false,
-	},
-	{
-		name: "striking gold",
-		info: "Ai Powered Blog",
-		new: false,
-		inProcess: false,
-	},
-	{
-		name: "nano fighters club",
-		info: "Astro SEO Enhanced",
-		new: false,
-		inProcess: false,
-	},
-];
-
-export const worksEspañol = [
-	{
-		nombre: "tough",
-		informacion: "Ecommerce",
-		nuevo: true,
-		enProceso: false,
-	},
-	{
-		nombre: "striking gold",
-		informacion: "Blog Potenciado por Inteligencia Artificial",
-		nuevo: false,
-		enProceso: false,
-	},
-	{
-		nombre: "nano fighters club",
-		informacion: "Astro SEO Mejorado",
-		nuevo: false,
-		enProceso: false,
-	},
-	{
-		nombre: "finance clover",
-		informacion: "Panel Potenciado por Análisis de Datos",
-		nuevo: false,
-		enProceso: false,
-	},
-	{
-		nombre: "three tshirt",
-		informacion: "Aplicación de Gráficos 3D",
-		nuevo: false,
-		enProceso: false,
-	},
-	{
-		nombre: "portfolio",
-		informacion: "Sitio Astro Animado",
-		nuevo: false,
-		enProceso: true,
-	},
-	{
-		nombre: "masobi",
-		informacion: "Sitio de Next.js 14",
-		nuevo: false,
-		enProceso: true,
-	},
-];
-
 export const diplomas = [
 	{
 		label: "FCC Responsive Web Design",
@@ -150,5 +26,51 @@ export const diplomas = [
 	{
 		label: "Google SkillsShop Diplomas",
 		link: "https://skillshop.exceedlms.com/profiles/e041a50daf52423ca72f738e181e05ed",
+	},
+];
+
+export const servicesResponse = [
+	{
+		service: "desarrollo-en-shopify",
+		response:
+			"Hola, estoy interesado en los servicios de desarrollo en Shopify. ¿Podrían brindarme más información sobre sus paquetes y precios?",
+	},
+	{
+		service: "desarrollo-en-site-builders",
+		response:
+			"Hola, me gustaría saber más sobre el desarrollo en site builders. ¿Podrían darme detalles sobre cómo trabajan con estas plataformas?",
+	},
+	{
+		service: "desarrollo-web",
+		response:
+			"Hola, estoy buscando servicios de desarrollo web. ¿Podrían proporcionarme información sobre sus ofertas y tiempos de entrega?",
+	},
+	{
+		service: "email-marketing",
+		response:
+			"Hola, estoy interesado en sus servicios de email marketing. ¿Podrían enviarme más detalles sobre sus estrategias y costos?",
+	},
+];
+
+export const servicesResponseEnglish = [
+	{
+		service: "shopify-development",
+		response:
+			"Hello, I am interested in your Shopify development services. Could you provide me with more information about your packages and pricing?",
+	},
+	{
+		service: "site-builders-development",
+		response:
+			"Hello, I would like to know more about your development services for site builders. Could you give me details about how you work with these platforms?",
+	},
+	{
+		service: "web-development",
+		response:
+			"Hello, I am looking for web development services. Could you provide me with information about your offerings and delivery times?",
+	},
+	{
+		service: "email-marketing-en",
+		response:
+			"Hello, I am interested in your email marketing services. Could you send me more details about your strategies and costs?",
 	},
 ];

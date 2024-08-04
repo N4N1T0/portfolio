@@ -1,6 +1,21 @@
 ---
 // Project Imports
 import Layout from "@/layouts/Layout.astro";
+
+// Utilities Imports
+import {
+	handleResponseFromQuery,
+	generateWhatsAppLink,
+	generateEmailLink,
+	desUrlNames,
+} from "@/lib";
+
+// Query Params
+const { searchParams } = Astro.url;
+const query = searchParams.get("service");
+
+// Services Response Handler
+const response = handleResponseFromQuery(query, "es");
 ---
 
 <Layout
@@ -11,9 +26,9 @@ import Layout from "@/layouts/Layout.astro";
   link='/es/'
   border='border-gray-300'>
   <main
-    class='w-screen h-screen p-10 mt-20 md:p-24 relative justify-around items-center gap-16 md:gap-32 z-10'>
+    class='w-screen min-h-screen p-10 mt-20 md:p-24 relative justify-around items-center gap-16 md:gap-32 z-10'>
     <div class='p-0 md:p-10 space-y-5 opacity-0' id='info'>
-      <h1 class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em]'>
+      <h1 class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em] uppercase'>
         Contacto
       </h1>
       <div>
@@ -21,13 +36,29 @@ import Layout from "@/layouts/Layout.astro";
           Si necesitas ayuda con un sitio web o una aplicación, no dudes en
           contactarme
         </h2>
-        <a
-          href='https://www.nanofighters.club/es/'
-          target='_blank'
-          class='inline-block text-xs hover-underline-animation-widget'
-          >o si quieres un sparring tambien! &#128513; &#129354;</a
-        >
+          <a
+            href='https://www.nanofighters.club/es/'
+            target='_blank'
+            class='inline-block text-xs hover-underline-animation-widget'
+            >o si quieres un sparring tambien! &#128513; &#129354;</a
+          >
       </div>
+    
+    <!-- Info Section -->
+    {response !== null ? (
+      <div class="space-y-3 max-w-[700px]">
+        <hr>
+        <p class="uppercase">Posible Mensage</p>
+        <h4
+          class='font-prata md:text-3xl text-2xl'>
+          {response}
+        </h4>
+        <div class="flex gap-3 justify-start items-start">
+          <a href={generateWhatsAppLink(response)} target="_blank" rel="noopener noreferrer"  class="animate-pulse hover-underline-animation-widget">Whatsapp</a>
+          <a href={generateEmailLink(desUrlNames(query!, true), response)} target="_blank" rel="noopener noreferrer" class="animate-pulse hover-underline-animation-widget">Email</a>
+        </div>
+      </div>
+    ) : (
       <div class='space-y-2'>
         <p class='text-sm'>
           Email: <a
@@ -57,6 +88,7 @@ import Layout from "@/layouts/Layout.astro";
         </p>
       </div>
     </div>
+    )} 
   </main>
   <div
     class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'
