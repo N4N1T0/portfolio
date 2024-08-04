@@ -4,9 +4,6 @@ import StrikingGoldShowcase from "./striking-gold-showcase.webp";
 import StrikingGoldStyle from "./striking-gold-style.webp";
 import NFCShowcase from "./nano-fighters-club-showcase.webp";
 import NFCStyle from "./nano-fighters-club-style.webp";
-import FinanceCloverShowcase from "./finace-clover-showcase.webp";
-import FinanceCloverView from "./finace-clover-view.mp4";
-import TTStyle from "./three-shirt-style.webp";
 import BSShowcase from "./backswing-showcase.webp";
 import BSStyle from "./backswing-style.webp";
 import FormImage from "./form/ben-maffin-Ux6_jnk2cO8-unsplash.webp";
@@ -23,9 +20,6 @@ export {
 	StrikingGoldShowcase,
 	NFCShowcase,
 	NFCStyle,
-	FinanceCloverShowcase,
-	FinanceCloverView,
-	TTStyle,
 	BSShowcase,
 	BSStyle,
 	FormImage,
