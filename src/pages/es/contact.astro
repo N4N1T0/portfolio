@@ -45,9 +45,9 @@ const response = handleResponseFromQuery(query, "es");
       </div>
     
     <!-- Info Section -->
-    {response !== null ? (
+    { response !== null ? (
       <div class="space-y-3 max-w-[700px]">
-        <hr>
+        <hr />
         <p class="uppercase">Posible Mensage</p>
         <h4
           class='font-prata md:text-3xl text-2xl'>
@@ -57,38 +57,34 @@ const response = handleResponseFromQuery(query, "es");
           <a href={generateWhatsAppLink(response)} target="_blank" rel="noopener noreferrer"  class="animate-pulse hover-underline-animation-widget">Whatsapp</a>
           <a href={generateEmailLink(desUrlNames(query!, true), response)} target="_blank" rel="noopener noreferrer" class="animate-pulse hover-underline-animation-widget">Email</a>
         </div>
-      </div>
-    ) : (
-      <div class='space-y-2'>
+      </div> 
+      ) : (
+        <div class='space-y-2'>
         <p class='text-sm'>
           Email: <a
             href='mailto:adrian.alvarezalonso1991@gmail.com'
             class='hover-underline-animation-widget'
-            >adrian.alvarezalonso1991@gmail.com</a
-          >
+            >adrian.alvarezalonso1991@gmail.com</a>
         </p>
         <p class='text-sm'>
           Telefono: <a
             href='tel:34-647-31-72-14'
-            class='hover-underline-animation-widget'>+34 647 31 72 14</a
-          >
+            class='hover-underline-animation-widget'>+34 647 31 72 14</a>
         </p>
         <p class='text-sm'>
           en la Web: <a
             href='https://www.linkedin.com/in/adrian-%C3%A1lvarez-alonso/'
             target='_blank'
-            class='hover-underline-animation-widget'>LinkedIn</a
-          >
-          /
+            class='hover-underline-animation-widget'>LinkedIn</a>
+          <span>/</span>
           <a
             href='https://github.com/N4N1T0'
             target='_blank'
-            class='hover-underline-animation-widget'>Github</a
-          >
+            class='hover-underline-animation-widget'>Github</a>
         </p>
       </div>
-    </div>
     )} 
+    </div>
   </main>
   <div
     class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'

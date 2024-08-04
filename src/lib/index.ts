@@ -81,7 +81,6 @@ export async function getProjects(
  */
 export async function getCollecionBySlug(
 	slug: string,
-	lang: string,
 ): Promise<CollectionEntry<"projects"> | undefined> {
 	const projects = await getEntry("projects", slug);
 	return projects;
