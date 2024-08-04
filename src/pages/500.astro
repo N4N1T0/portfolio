@@ -1,0 +1,58 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+  title="Error 500 - Error Page"
+  description="Error 500 - Error Page"
+  border="border-gray-300"
+  className='text-gray-300'
+  label='Home'
+  link='/es/'
+>
+<main class="w-screen md:min-h-screen p-10 mt-20 md:p-24 relative flex flex-col justify-around items-center gap-5 z-10 text-center opacity-0" id="info">
+  <h1 class="text-[12vw] md:text-[7vw] uppercase leading-[0.95em] font-prata" style="color: #f87171">SERVER ERROR</h1>
+  <h2 class="text-[7vw] md:text-[3vw] font-prata max-w-[700px] md:leading-[4rem] my-5 px-5 md:p-0 text-red-400">
+    An unexpected error has occurred.
+  </h2>
+  <h3 class="text-lg my-5 px-5 md:p-0">You can go back to the home page and continue browsing</h3>
+  <div class="flex justify-center items-center gap-5">
+    <a href="/es/" class="text-xl block hover:-skew-x-12 transition-all duration-300 leading-[0.95em] ease-out">ESPAÑOL</a>
+    <a href="/en/" class="text-xl block hover:-skew-x-12 transition-all duration-300 leading-[0.95em] ease-out">ENGLISH</a>
+  </div>
+</main>
+ <div
+    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'
+    id='courtin'>
+  </div>
+</Layout>
+
+<style>
+  html {
+    scrollbar-color: #f87171 #1f2937;
+  }
+</style>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime
+    .timeline({
+      easing: 'easeOutExpo',
+    })
+    .add({
+      targets: '#courtin',
+      scaleY: [0, 1],
+      duration: 700,
+    })
+    .add(
+      {
+        targets: '#info',
+        opacity: 1,
+        translateY: [50, 0],
+        delay: anime.stagger(100),
+        duration: 500,
+      },
+      700
+    )
+</script>
