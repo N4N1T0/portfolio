@@ -1,0 +1,24 @@
+---
+// Types Imports
+import type { TechStack } from "@/types";
+
+// Astro Props
+const { techStack } = Astro.props;
+
+// Props deconstruction
+const { link, title, image } = techStack;
+
+interface Props {
+	techStack: TechStack;
+}
+---
+
+<li class="aspect-square size-20">
+  <a
+    href={link}
+    target='_blank'
+    class='group relative inset-0 w-full h-full'
+    rel='nofollow noopener noreferrer'>
+    <img src={image} alt={title} title={title} loading='lazy' class='w-full h-full object-cover group-hover:scale-110 group-hover:opacity-70 duration-200 transition-all ease-in-out' />
+  </a>
+</li>
