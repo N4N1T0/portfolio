@@ -20,6 +20,9 @@ export async function getStaticPaths() {
 // Astro Props
 const post = Astro.props;
 
+// Props deconstruction
+const { title, excerpt, image, imageAlt, author, date } = post.data;
+
 // Astro Params
 const slug = Astro.params.slug;
 
@@ -47,8 +50,20 @@ export const prerender = true;
   border='border-gray-800'>
   <main
     class='w-screen my-20 md:my-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
-    <Image src={post.data.image} alt={post.data.imageAlt} loading='eager' />
-    <div
+
+     <!-- Header Section -->
+   <section id="header" class='w-full bg-gray-800 text-center h-[600px] flex justify-center relative overflow-hidden'>
+      <h1
+        class='font-prata text-[6vw] text-background self-center md:self-end md:leading-[6rem] uppercase z-20'>
+        {title}
+      </h1>
+      <div class="absolute inset-0 w-full h-full z-10 bg-gray-800 opacity-50" />
+      <Image src={image} alt={imageAlt} loading='eager' class='absolute inset-0 h-full w-full object-cover' />
+    </section>
+
+    <!-- SubHeading Section -->
+    <section
+      id="subheader"
       class='flex w-full justify-between flex-col md:flex-row items-center px-5 gap-2 md:gap-0'>
       <strong>
         <a
@@ -64,11 +79,15 @@ export const prerender = true;
       <strong>
         {post.data.date.toLocaleDateString()}
       </strong>
-    </div>
-    <section class='prose max-w-[1200px] px-5'>
+    </section>
+
+    <!-- Content Section -->
+    <section id="content" class='prose max-w-[1200px] px-5'>
       <Content />
     </section>
   </main>
+
+  <!-- Courtin Section -->
   <div
     class='absolute bg-gray-800 w-screen inset-0 z-50 origin-bottom'
     id='courtin'>
@@ -101,7 +120,7 @@ export const prerender = true;
   }
 
   html {
-    scrollbar-color: #000000 #baccfc;
+    scrollbar-color: #000000 #A3BBFB;
   }
 </style>
 
