@@ -1,0 +1,167 @@
+---
+// Astro Imports
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+// Project Imports
+import Layout from "@/layouts/Layout.astro";
+import ProjectTechStackCard from "@/components/ProjectTechStackCard.astro";
+
+// Types Imports
+import type { ProjectTechStack } from "@/types";
+
+// function to create the path for all the projects
+export async function getStaticPaths() {
+	const projects = await getCollection("projects", ({ id }) => {
+		return id.startsWith("en/");
+	});
+	return projects.map((project) => ({
+		params: { slug: project.slug },
+		props: project,
+	}));
+}
+
+// Astro Props
+const project = Astro.props;
+
+// Props deconstruction
+const {
+	title,
+	excerpt,
+	image,
+	imageAlt,
+	liveLink,
+	repoLink,
+	mainColor,
+	secondaryColor,
+	techStack,
+	testimonial,
+	imageSecondary,
+} = project.data;
+
+// Astro Params
+const slug = Astro.params.slug;
+
+// Special function to render the content of the MD
+const { Content } = await project.render();
+
+// Redirect in case the path dosent exits
+if (!slug || !project) {
+	return new Response(null, {
+		status: 404,
+		statusText: "Not found",
+	});
+}
+
+// create static page instead of SSR
+export const prerender = true;
+---
+
+<Layout
+  description='Llamativo ecommerce de equipamiento deportivo, inspirado en la web de Everlast'
+  title='Tough - Ecommerce Site'
+  label='Proyectos'
+  link='/es/works'
+  border='border-gray-800'>
+  <main
+    class='w-screen mt-20 md:mt-0 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
+
+    <!-- Title Section -->
+    <div class='w-full text-center h-[500px] flex justify-center uppercase' style={`background-color: ${mainColor}`}>
+      <h1 class='font-prata text-[11vw] self-center md:self-end' style={`color: ${secondaryColor}`}>
+       {title}
+      </h1>
+    </div>
+
+    <!-- SubHeader -->
+    <h2
+      class='text-[7vw] md:text-[3vw] font-prata max-w-[700px] md:leading-[4rem] my-10 px-5 md:p-0'>
+      {excerpt}
+    </h2>
+    <ul
+    role="presentation"
+      class='flex flex-col md:flex-row justify-between items-start gap-3 md:gap-5 md:px-10 px-5'>
+      {techStack.map((tech: ProjectTechStack) => <ProjectTechStackCard techStack={tech} lang="es" />)}
+    </ul>
+   <Image src={image} alt={`${imageAlt} - Showcase`} loading="lazy" />
+
+    <!-- Content Section -->
+    <section id="content" class='prose max-w-[1200px] px-5'>
+      <Content />
+
+    <Image src={imageSecondary} alt={`${imageAlt} - Style`} loading="lazy" />
+
+      <!-- Testimonial Section -->
+      {testimonial && (
+        <section id="Testimonial" class="w-full md:leading-tight text-center text-gray-800 font-prata pb-12">
+          <h2 class="text-[3vw]">"{testimonial.quote}"</h2>
+          <div class="w-full flex justify-between">
+            <p class="text-[2vw]">{testimonial.name}</p>
+            <p class="text-[2vw]">{testimonial.role}</p>
+          </div>
+        </section>
+      )}
+    </section>
+  </main>
+
+  <!-- Widget -->
+  <div
+    class='fixed bottom-7 md:bottom-10 right-7 md:right-10 p-3 md:p-5 text-left rounded-lg space-y-2' style={`background-color: ${mainColor}; color: ${secondaryColor}`}>
+    <a
+      href={repoLink}
+      target='_blank'
+      class='text-sm md:text-base hover-underline-animation-widget'>CODE</a
+    >
+    <a
+      href={liveLink}
+      target='_blank'
+      class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
+    >
+  </div>
+
+  <!-- Courtin -->
+  <div
+    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom'
+    id='courtin'>
+  </div>
+</Layout>
+
+<style>
+  .hover-underline-animation-widget {
+    display: block;
+    position: relative;
+  }
+
+  .hover-underline-animation-widget::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation-widget:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  html {
+    scrollbar-color: #000000 #A3BBFB;
+  }
+</style>
+
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  anime({
+    targets: '#courtin',
+    scaleY: [1, 0],
+    duration: 700,
+    easing: 'easeInExpo',
+  })
+</script>

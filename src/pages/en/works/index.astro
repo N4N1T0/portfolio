@@ -1,19 +1,15 @@
 ---
-// Componenys Imports
+// Astro Imports
+import type { CollectionEntry } from "astro:content";
+
+// Project Imports
 import Layout from "@/layouts/Layout.astro";
 
-// Constants Imports
-import { works } from "@/constants";
+// Utlities Imports
+import { getProjects } from "@/lib";
 
-// Utility Imports
-import { urlNames } from "@/lib";
-
-interface Work {
-	name: string;
-	info: string;
-	new: boolean;
-	inProcess: boolean;
-}
+// Astro get Collection
+const allProjects: CollectionEntry<"projects">[] = await getProjects("en");
 ---
 
 <Layout
@@ -41,25 +37,18 @@ interface Work {
       class='font-prata md:space-y-10 space-y-5 flex-1 opacity-0'
       id='links'>
       {
-        works.map((work: Work) => (
+        allProjects.map(({data: { title, excerpt }, slug }, index) => (
           <div>
             <a
-              href={
-                work.inProcess ? '/en/works' : `/en/works/${urlNames(work.name)}`
-              }
+              href={`/en/works/${slug}`}
               class='text-[12vw] uppercase md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'>
-              <h2>{work.name}</h2>
+              <h2>{title}</h2>
             </a>
             <p class='text-xs md:text-base font-sans pl-5 inline'>
-              - {work.info}
-              {work.new && (
+              - {excerpt}
+              {index === 0 && (
                 <span class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse'>
-                  New
-                </span>
-              )}
-              {work.inProcess && (
-                <span class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse'>
-                  Coming Soon
+                  Nuevo
                 </span>
               )}
             </p>
