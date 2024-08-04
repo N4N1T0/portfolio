@@ -1,71 +1,69 @@
 ---
+// Astro Imports
+import type { CollectionEntry } from "astro:content";
+
 // Project Imports
 import Layout from "@/layouts/Layout.astro";
 
-// Constants Imports
-import { servicesEspañol } from "@/constants";
+// Utilities Imports
+import { getServices } from "@/lib";
 
-interface Service {
-	etiqueta: string;
-	info: string;
-}
+// Astro get Collection
+const allServices: CollectionEntry<"services">[] = await getServices("en");
 ---
 
 <Layout
-  description='Embárcate en un viaje a través de mi experiencia dinámica, que abarca el diseño web, desarrollo, mantenimiento, diseño de aplicaciones, desarrollo y auditoría SEO.'
+  description='Embark on a journey through my dynamic expertise, spanning web design, development, maintenance, app design, development, and SEO audit'
   title='Adrian - Services'
   className='text-gray-300'
   label='Home'
-  link='/es/'
+  link='/en/'
   border='border-gray-300'>
   <main
     class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'>
     <aside
-      class='space-y-3 self-end sticky bottom-24 flex-1 opacity-0'
+      class='space-y-3 self-end z-10 sticky bottom-24 flex-1 opacity-0'
       id='info'>
-      <h1 class='font-semibold tracking-widest'>Servicios</h1>
+      <h1 class='font-semibold tracking-widest'>Services</h1>
       <p class='text-sm'>
-        Embárcate en un viaje a través de mi experiencia dinámica, que abarca el
-        diseño web, desarrollo, mantenimiento, diseño de aplicaciones,
-        desarrollo y auditoría SEO. Evolucionando con el panorama digital, me
-        mantengo a la vanguardia de la innovación, asegurando que su presencia
-        digital prospere.
+        Embark on a journey through my dynamic expertise, spanning web design,
+        development, maintenance, app design, development, and SEO audit.
+        Evolving with the digital landscape, I stay at the forefront of
+        innovation, ensuring your digital presence thrives.
       </p>
-      <a
-        href='https://N4N0.redbubble.com'
-        target='_blank'
-        class='py-1 px-2 bg-slate-200 text-gray-950 rounded-xl animate-pulse inline-block md:text-base text-xs'
-        >Pagina de Plataforma de Diseñador Grafico</a
-      >
     </aside>
     <articule
       class='font-prata md:space-y-10 space-y-5 flex-1 opacity-0'
       id='links'>
+        <ul class='md:space-y-10 space-y-5' role="list">
       {
-        servicesEspañol.map((service: Service) => (
-          <div>
-            <h2 class='text-[12vw] md:text-[7vw] leading-[0.95em]'>
-              {service.etiqueta}
+        allServices.map(({ data: { name, excerpt}, slug }) => (
+          <li>
+          <a href={`/en/services/${slug}`} class='text-[12vw] md:text-[7vw] uppercase block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'>
+            <h2>
+              {name}
             </h2>
+          </a>
             <h3 class='text-xs md:text-base font-sans pl-5 pt-5'>
               <hr class='w-5 inline-block' />
-              {service.info}
+              {excerpt}
             </h3>
-          </div>
+          </li>
         ))
       }
+      </ul>
       <hr class='w-full' />
       <div>
         <a
-          href='/es/contact'
+          href='/en/contact'
           class='text-[12vw] md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-300 leading-[0.95em] ease-out'
-          >CONTACTO</a
+          >CONTACT</a
         >
         <p class='text-xs md:text-base font-sans pl-5 inline'>
-          ¿Necesita ayuda con alguno de estos servicios?
+          Need help with anyone of this services?
           <span
             class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse hidden md:inline'
-            >No Dudes!</span
+            >No hesitate!</span
           >
         </p>
       </div>
