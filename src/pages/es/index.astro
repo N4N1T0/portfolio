@@ -13,7 +13,7 @@ const allBlogPosts = await getPosts("es");
   description='De origen cubano y autodidacta, aporto una mezcla única de pasión competencia al desarrollo y diseño web.'
   title='Adrian Alvarez Portfolio'
   border='border-gray-800'>
-  <main class='min-h-screen w-screen overflow-hidden p-10 md:p-24 mt-20 md:mt-0'>
+  <main class='min-h-screen md:h-screen w-screen overflow-hidden p-10 md:p-24 mt-20 md:mt-0'>
     <div
       class='h-full flex flex-col md:flex-row md:mt-0 md:justify-around items-center gap-16 md:gap-32'>
       <div class='space-y-3 self-end opacity-0' id='info'>
@@ -71,7 +71,7 @@ const allBlogPosts = await getPosts("es");
     <h5 class='uppercase font-prata text-xl'>Articulo Nuevo</h5>
     <a
       class='block hover:text-gray-400 hover:underline duration-200 transition ease-out text-sm'
-      href={`${Astro.site}/es/blog/${allBlogPosts[0].slug}`}
+      href={`${Astro.site}es/blog/${allBlogPosts[0].slug}`}
       >{allBlogPosts[0].data.title}</a
     >
   </div>
