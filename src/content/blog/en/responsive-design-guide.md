@@ -1,11 +1,11 @@
 ---
-title: 'Responsive Design in Websites'
+title: "Responsive Design in Websites"
 date: 2023-06-19
-slug: 'responsive-design-guide'
-excerpt: 'How responsive design transforms user experience, boosts SEO, and optimizes your presence across all devices.'
+slug: "responsive-design-guide"
+excerpt: "How responsive design transforms user experience, boosts SEO, and optimizes your presence across all devices."
 author: 'Adrian "Nano" Alvarez'
-image: '../../../assets/blog/domenico-loia-EhTcC9sYXsw-unsplash.webp'
-imageAlt: 'An Apple setup with an iMac and an AirBook'
+image: "../../../assets/blog/domenico-loia-EhTcC9sYXsw-unsplash.webp"
+imageAlt: "An Apple setup with an iMac and an AirBook"
 ---
 
 # The Importance of Responsive Design in the Digital World

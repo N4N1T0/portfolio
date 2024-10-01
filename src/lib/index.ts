@@ -10,16 +10,16 @@ import { servicesResponse, servicesResponseEnglish } from "@/constants";
 + * @return {string} The modified string with hyphens instead of spaces.
 + */
 export const urlNames = (name: string): string => {
-	return name.split(" ").join("-").toLowerCase();
+  return name.split(" ").join("-").toLowerCase();
 };
 
 export const desUrlNames = (name: string, capitalize: boolean): string => {
-	return capitalize
-		? name.split("-").join(" ")
-		: name
-				.split("-")
-				.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-				.join(" ");
+  return capitalize
+    ? name.split("-").join(" ")
+    : name
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
 };
 
 /**
@@ -29,15 +29,15 @@ export const desUrlNames = (name: string, capitalize: boolean): string => {
 + * @return {Promise<Array<CollectionEntry<'blog'>>>} A promise that resolves to an array of blog posts.
 + */
 export async function getPosts(
-	lang: string,
+  lang: string,
 ): Promise<Array<CollectionEntry<"blog">>> {
-	const posts = (
-		await getCollection("blog", ({ id }) => {
-			return id.startsWith(lang);
-		})
-	).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const posts = (
+    await getCollection("blog", ({ id }) => {
+      return id.startsWith(lang);
+    })
+  ).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-	return posts;
+  return posts;
 }
 
 /**
@@ -47,13 +47,13 @@ export async function getPosts(
  * @return {Promise<Array<CollectionEntry<"services">>>} A promise that resolves to an array of services.
  */
 export async function getServices(
-	lang: string,
+  lang: string,
 ): Promise<Array<CollectionEntry<"services">>> {
-	const services = await getCollection("services", ({ id }) => {
-		return id.startsWith(lang);
-	});
+  const services = await getCollection("services", ({ id }) => {
+    return id.startsWith(lang);
+  });
 
-	return services;
+  return services;
 }
 
 /**
@@ -63,13 +63,13 @@ export async function getServices(
  * @return {Promise<Array<CollectionEntry<"projects">>>} A promise that resolves to an array of projects.
  */
 export async function getProjects(
-	lang: string,
+  lang: string,
 ): Promise<Array<CollectionEntry<"projects">>> {
-	const projects = await getCollection("projects", ({ id }) =>
-		id.startsWith(lang),
-	);
+  const projects = await getCollection("projects", ({ id }) =>
+    id.startsWith(lang),
+  );
 
-	return projects;
+  return projects;
 }
 
 /**
@@ -79,10 +79,10 @@ export async function getProjects(
  * @return {Promise<CollectionEntry<"projects"> | undefined>} A promise that resolves to the collection entry.
  */
 export async function getCollecionBySlug(
-	slug: string,
+  slug: string,
 ): Promise<CollectionEntry<"projects"> | undefined> {
-	const projects = await getEntry("projects", slug);
-	return projects;
+  const projects = await getEntry("projects", slug);
+  return projects;
 }
 
 /**
@@ -93,76 +93,76 @@ export async function getCollecionBySlug(
 + * @return {Promise<void>} A promise that resolves when the form submission is complete.
 + */
 export async function onSubmit(
-	e: React.FormEvent<HTMLFormElement>,
-	setSending: React.Dispatch<React.SetStateAction<boolean>>,
+  e: React.FormEvent<HTMLFormElement>,
+  setSending: React.Dispatch<React.SetStateAction<boolean>>,
 ): Promise<void> {
-	e.preventDefault();
-	const form = e.currentTarget; // Capture the form element reference
-	const formData = new FormData(form);
-	setSending(true);
+  e.preventDefault();
+  const form = e.currentTarget; // Capture the form element reference
+  const formData = new FormData(form);
+  setSending(true);
 
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	const values: { [key: string]: any } = {};
-	formData.forEach((value, key) => {
-		values[key] = value;
-	});
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  const values: { [key: string]: any } = {};
+  formData.forEach((value, key) => {
+    values[key] = value;
+  });
 
-	try {
-		const res = await fetch("/api/sendEmail.json", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({ values }),
-		});
+  try {
+    const res = await fetch("/api/sendEmail.json", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ values }),
+    });
 
-		if (res.status === 200) {
-			setSending(false);
-			const alert = window.confirm(
-				"Gracias por su cooperación. En breve nos prepararemos para crear su proyecto/presupuesto",
-			);
+    if (res.status === 200) {
+      setSending(false);
+      const alert = window.confirm(
+        "Gracias por su cooperación. En breve nos prepararemos para crear su proyecto/presupuesto",
+      );
 
-			if (alert) {
-				console.log("Resetting form");
-				form.reset(); // Use the captured form reference to reset
-			}
-		} else {
-			console.error("Error with fetch request:", res.status, res.statusText);
-			setSending(false); // Ensure to set sending to false in case of an error as well
-		}
-	} catch (error) {
-		console.error("Fetch error:", error);
-		setSending(false); // Ensure to set sending to false in case of an error as well
-	}
+      if (alert) {
+        console.log("Resetting form");
+        form.reset(); // Use the captured form reference to reset
+      }
+    } else {
+      console.error("Error with fetch request:", res.status, res.statusText);
+      setSending(false); // Ensure to set sending to false in case of an error as well
+    }
+  } catch (error) {
+    console.error("Fetch error:", error);
+    setSending(false); // Ensure to set sending to false in case of an error as well
+  }
 }
 
 export const handleResponseFromQuery = (
-	service: string | null,
-	lang: string,
+  service: string | null,
+  lang: string,
 ) => {
-	const serviceList =
-		lang === "es" ? servicesResponse : servicesResponseEnglish;
+  const serviceList =
+    lang === "es" ? servicesResponse : servicesResponseEnglish;
 
-	const serviceEntry = serviceList.find((entry) => entry.service === service);
+  const serviceEntry = serviceList.find((entry) => entry.service === service);
 
-	return serviceEntry ? serviceEntry.response : null;
+  return serviceEntry ? serviceEntry.response : null;
 };
 
 export function generateWhatsAppLink(message: string) {
-	// Base URL para WhatsApp
-	const baseUrl = "https://wa.me/34647317214?text=";
-	// Codifica el mensaje para que sea seguro en la URL
-	const encodedMessage = encodeURIComponent(message);
-	// Devuelve el enlace completo
-	return baseUrl + encodedMessage;
+  // Base URL para WhatsApp
+  const baseUrl = "https://wa.me/34647317214?text=";
+  // Codifica el mensaje para que sea seguro en la URL
+  const encodedMessage = encodeURIComponent(message);
+  // Devuelve el enlace completo
+  return baseUrl + encodedMessage;
 }
 
 export function generateEmailLink(subject: string, body: string) {
-	// Base URL para email
-	const baseUrl = "mailto:adrian.alvarezalonso1991@gmail.com";
-	// Codifica el asunto y el cuerpo del mensaje para que sean seguros en la URL
-	const encodedSubject = encodeURIComponent(subject);
-	const encodedBody = encodeURIComponent(body);
-	// Devuelve el enlace completo
-	return `${baseUrl}?subject=${encodedSubject}&body=${encodedBody}`;
+  // Base URL para email
+  const baseUrl = "mailto:adrian.alvarezalonso1991@gmail.com";
+  // Codifica el asunto y el cuerpo del mensaje para que sean seguros en la URL
+  const encodedSubject = encodeURIComponent(subject);
+  const encodedBody = encodeURIComponent(body);
+  // Devuelve el enlace completo
+  return `${baseUrl}?subject=${encodedSubject}&body=${encodedBody}`;
 }

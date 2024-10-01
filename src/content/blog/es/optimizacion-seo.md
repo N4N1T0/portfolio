@@ -1,11 +1,11 @@
 ---
-title: 'Optimización SEO'
+title: "Optimización SEO"
 date: 2023-07-20
-slug: 'optimizacion-seo'
-excerpt: 'Unifica diseño y SEO para un sitio web efectivo. Desde una estructura intuitiva hasta palabras clave estratégicas.'
+slug: "optimizacion-seo"
+excerpt: "Unifica diseño y SEO para un sitio web efectivo. Desde una estructura intuitiva hasta palabras clave estratégicas."
 author: 'Adrian "Nano" Alvarez'
-image: '../../../assets/blog/ferenc-almasi-eYpcLDXHVb0-unsplash.webp'
-imageAlt: 'una pantalla con codigo html y SEO'
+image: "../../../assets/blog/ferenc-almasi-eYpcLDXHVb0-unsplash.webp"
+imageAlt: "una pantalla con codigo html y SEO"
 ---
 
 # Optimización SEO: Integrando Diseño y Experiencia del Usuario

@@ -1,53 +1,55 @@
 ---
-name: 'Web Development'
-slug: 'web-development'
-excerpt: 'Elevate your online presence! With my web development expertise, I leverage cutting-edge technology and a performance-oriented approach.'
-image: '../../../assets/services/caspar-camille-rubin-0qvBNep1Y04-unsplash.webp'
-imageAlt: 'Desk of a Web Developer'
-quote: 'Transform your digital vision into an impressive reality with cutting-edge technology and unmatched performance.'
-techStack: [
-  {
-    title: 'Next.js',
-    image: 'https://cdn.simpleicons.org/nextdotjs/243E61',
-    link: 'https://nextjs.org/',
-  },
-  {
-    title: 'React',
-    image: 'https://cdn.simpleicons.org/react/243E61',
-    link: 'https://reactjs.org/',
-  },
-  {
-    title: 'Astro',
-    image: 'https://cdn.simpleicons.org/astro/243E61',
-    link: 'https://astro.build/',
-  },
-  {
-    title: 'Tailwindcss',
-    image: 'https://cdn.simpleicons.org/tailwindcss/243E61',
-    link: 'https://tailwindcss.com/',
-  },
-  {
-    title: 'Payload cms',
-    image: 'https://cdn.simpleicons.org/payloadcms/243E61',
-    link: 'https://payloadcms.com/',
-  },
-  {
-    title: 'Sanity',
-    image: 'https://cdn.simpleicons.org/sanity/243E61',
-    link: 'https://www.sanity.io/',
-  },
-  {
-    title: 'Stripe',
-    image: 'https://cdn.simpleicons.org/stripe/243E61',
-    link: 'https://stripe.com/',
-  },
-  {
-    title: 'Supabase',
-    image: 'https://cdn.simpleicons.org/supabase/243E61',
-    link: 'https://supabase.com/',
-  },
-]
-projects: ['striking-gold-en', 'en/tough-ecommerce-en', 'en/nano-fighters-club-en']
+name: "Web Development"
+slug: "web-development"
+excerpt: "Elevate your online presence! With my web development expertise, I leverage cutting-edge technology and a performance-oriented approach."
+image: "../../../assets/services/caspar-camille-rubin-0qvBNep1Y04-unsplash.webp"
+imageAlt: "Desk of a Web Developer"
+quote: "Transform your digital vision into an impressive reality with cutting-edge technology and unmatched performance."
+techStack:
+  [
+    {
+      title: "Next.js",
+      image: "https://cdn.simpleicons.org/nextdotjs/243E61",
+      link: "https://nextjs.org/",
+    },
+    {
+      title: "React",
+      image: "https://cdn.simpleicons.org/react/243E61",
+      link: "https://reactjs.org/",
+    },
+    {
+      title: "Astro",
+      image: "https://cdn.simpleicons.org/astro/243E61",
+      link: "https://astro.build/",
+    },
+    {
+      title: "Tailwindcss",
+      image: "https://cdn.simpleicons.org/tailwindcss/243E61",
+      link: "https://tailwindcss.com/",
+    },
+    {
+      title: "Payload cms",
+      image: "https://cdn.simpleicons.org/payloadcms/243E61",
+      link: "https://payloadcms.com/",
+    },
+    {
+      title: "Sanity",
+      image: "https://cdn.simpleicons.org/sanity/243E61",
+      link: "https://www.sanity.io/",
+    },
+    {
+      title: "Stripe",
+      image: "https://cdn.simpleicons.org/stripe/243E61",
+      link: "https://stripe.com/",
+    },
+    {
+      title: "Supabase",
+      image: "https://cdn.simpleicons.org/supabase/243E61",
+      link: "https://supabase.com/",
+    },
+  ]
+projects:
+  ["striking-gold-en", "en/tough-ecommerce-en", "en/nano-fighters-club-en"]
 ---
 
 ### Transforming Your Digital Presence

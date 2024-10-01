@@ -1,10 +1,10 @@
 ---
-name: 'Desarrollo Shopify'
-slug: 'desarrollo-en-shopify'
-excerpt: 'Aprovecha el poder de Shopify para crear una tienda online personalizada, rápida y segura, llena de funcionalidades avanzadas para impulsar tu negocio.'
-image: '../../../assets/services/shoper-slLo94wES2M-unsplash.webp'
-imageAlt: 'Escritoria de un desarrollador Web de Shopify'
-quote: 'Lleva tu negocio al siguiente nivel con una tienda Shopify personalizada, robusta y llena de funcionalidades avanzadas.'
+name: "Desarrollo Shopify"
+slug: "desarrollo-en-shopify"
+excerpt: "Aprovecha el poder de Shopify para crear una tienda online personalizada, rápida y segura, llena de funcionalidades avanzadas para impulsar tu negocio."
+image: "../../../assets/services/shoper-slLo94wES2M-unsplash.webp"
+imageAlt: "Escritoria de un desarrollador Web de Shopify"
+quote: "Lleva tu negocio al siguiente nivel con una tienda Shopify personalizada, robusta y llena de funcionalidades avanzadas."
 techStack: []
 projects: '<p>Durante aproximadamente un año, he colaborado de manera remunerada con <a href="https://3dids.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">3Dids</a>, una agencia de desarrollo y marketing de e-commerce, principalmente enfocada en Shopify. Por normas contractuales, no puedo revelar los proyectos en los que he trabajado, pero actualmente suman más de 20.</p>'
 ---

@@ -24,6 +24,8 @@ To set up this portfolio project locally, follow these steps:
    git clone https://github.com/yourusername/your-repo-name.git
    cd your-repo-name``
 
+   ```
+
 2. **Install dependencies:**
 
    ```bash
@@ -52,7 +54,8 @@ Contributions are welcome! Please be nice, and if you see any improvements or bu
 
 For support or questions, please contact me at: <a href="mailto:adrian.alvarezalonso1991@gmail.com" target="_blank">adrian.alvarezalonso1991@gmail.com</a>
 
- ## TODO
+## TODO
+
 [X] Projects as Content
 [X] Astro 4.12 Upgrade
 [X] Services Pages

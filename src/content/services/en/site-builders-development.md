@@ -1,38 +1,39 @@
 ---
-name: 'Site Builders Development'
-slug: 'site-builders-development'
-excerpt: 'Create stunning and functional websites with WordPress and Framer, leveraging their flexibility and capability for advanced customization.'
-image: '../../../assets/services/webfactory-ltd-CzShzocZtW0-unsplash.webp'
-imageAlt: 'A computer with WordPress Admin'
-quote: 'Take your online presence to the next level with stunning and highly functional websites, developed on WordPress and Framer.'
-techStack: [
-  {
-    title: 'WordPress',
-    image: 'https://cdn.simpleicons.org/wordpress/243E61',
-    link: 'https://wordpress.org/',
-  },
-  {
-    title: 'Framer',
-    image: 'https://cdn.simpleicons.org/framer/243E61',
-    link: 'https://www.framer.com/',
-  },
-  {
-    title: 'Figma',
-    image: 'https://cdn.simpleicons.org/figma/243E61',
-    link: 'https://www.figma.com/',
-  },
-  {
-    title: 'PHP',
-    image: 'https://cdn.simpleicons.org/php/243E61',
-    link: 'https://www.php.net/',
-  },
-  {
-    title: 'React',
-    image: 'https://cdn.simpleicons.org/react/243E61',
-    link: 'https://reactjs.org/',
-  }
-]
-projects: ['es/backswing-ecommerce']
+name: "Site Builders Development"
+slug: "site-builders-development"
+excerpt: "Create stunning and functional websites with WordPress and Framer, leveraging their flexibility and capability for advanced customization."
+image: "../../../assets/services/webfactory-ltd-CzShzocZtW0-unsplash.webp"
+imageAlt: "A computer with WordPress Admin"
+quote: "Take your online presence to the next level with stunning and highly functional websites, developed on WordPress and Framer."
+techStack:
+  [
+    {
+      title: "WordPress",
+      image: "https://cdn.simpleicons.org/wordpress/243E61",
+      link: "https://wordpress.org/",
+    },
+    {
+      title: "Framer",
+      image: "https://cdn.simpleicons.org/framer/243E61",
+      link: "https://www.framer.com/",
+    },
+    {
+      title: "Figma",
+      image: "https://cdn.simpleicons.org/figma/243E61",
+      link: "https://www.figma.com/",
+    },
+    {
+      title: "PHP",
+      image: "https://cdn.simpleicons.org/php/243E61",
+      link: "https://www.php.net/",
+    },
+    {
+      title: "React",
+      image: "https://cdn.simpleicons.org/react/243E61",
+      link: "https://reactjs.org/",
+    },
+  ]
+projects: ["es/backswing-ecommerce"]
 ---
 
 ### Create Stunning Websites with WordPress and Framer

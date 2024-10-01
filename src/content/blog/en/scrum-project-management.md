@@ -1,11 +1,11 @@
 ---
-title: 'Managing Digital Projects with Scrum'
+title: "Managing Digital Projects with Scrum"
 date: 2023-09-15
-slug: 'scrum-project-management'
-excerpt: 'Master digital projects with Scrum: short sprints, efficient collaboration, and predictable results. Discover how to empower your team.'
+slug: "scrum-project-management"
+excerpt: "Master digital projects with Scrum: short sprints, efficient collaboration, and predictable results. Discover how to empower your team."
 author: 'Adrian "Nano" Alvarez'
-image: '../../../assets/blog/dylan-gillis-KdeqA3aTnBY-unsplash.webp'
-imageAlt: 'A team using the SCRUM methodology'
+image: "../../../assets/blog/dylan-gillis-KdeqA3aTnBY-unsplash.webp"
+imageAlt: "A team using the SCRUM methodology"
 ---
 
 # Managing Digital Projects with Scrum: Efficiency and Transparency

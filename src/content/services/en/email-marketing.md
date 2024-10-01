@@ -1,38 +1,39 @@
 ---
-name: 'Email Marketing'
-slug: 'email-marketing-en'
-excerpt: 'Transform your email marketing campaigns with personalized and dynamic emails, utilizing the latest technologies and leading distribution platforms.'
-image: '../../../assets/services/solen-feyissa-TaOGbz_S-Qw-unsplash.webp'
-imageAlt: 'A computer with Email Marketing in Gmail'
-quote: 'Connect with your customers effectively and meaningfully through personalized and dynamic email marketing campaigns.'
-techStack: [
-  {
-    title: 'Resend',
-    image: 'https://cdn.simpleicons.org/resend/243E61',
-    link: 'https://resend.com/',
-  },
-  {
-    title: 'React Email',
-    image: 'https://cdn.simpleicons.org/react/243E61',
-    link: 'https://react.email/',
-  },
-  {
-    title: 'MailChimp',
-    image: 'https://cdn.simpleicons.org/mailchimp/243E61',
-    link: 'https://mailchimp.com/',
-  },
-  {
-    title: 'Open AI',
-    image: 'https://cdn.simpleicons.org/openai/243E61',
-    link: 'https://openai.com/',
-  },
-  {
-    title: 'Gmail',
-    image: 'https://cdn.simpleicons.org/gmail/243E61',
-    link: 'https://www.gmail.com/',
-  }
-]
-projects: ['en/nano-fighters-club-en']
+name: "Email Marketing"
+slug: "email-marketing-en"
+excerpt: "Transform your email marketing campaigns with personalized and dynamic emails, utilizing the latest technologies and leading distribution platforms."
+image: "../../../assets/services/solen-feyissa-TaOGbz_S-Qw-unsplash.webp"
+imageAlt: "A computer with Email Marketing in Gmail"
+quote: "Connect with your customers effectively and meaningfully through personalized and dynamic email marketing campaigns."
+techStack:
+  [
+    {
+      title: "Resend",
+      image: "https://cdn.simpleicons.org/resend/243E61",
+      link: "https://resend.com/",
+    },
+    {
+      title: "React Email",
+      image: "https://cdn.simpleicons.org/react/243E61",
+      link: "https://react.email/",
+    },
+    {
+      title: "MailChimp",
+      image: "https://cdn.simpleicons.org/mailchimp/243E61",
+      link: "https://mailchimp.com/",
+    },
+    {
+      title: "Open AI",
+      image: "https://cdn.simpleicons.org/openai/243E61",
+      link: "https://openai.com/",
+    },
+    {
+      title: "Gmail",
+      image: "https://cdn.simpleicons.org/gmail/243E61",
+      link: "https://www.gmail.com/",
+    },
+  ]
+projects: ["en/nano-fighters-club-en"]
 ---
 
 ### Enhance Your Campaigns with Cutting-Edge Technology

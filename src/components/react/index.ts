@@ -6,10 +6,10 @@ import Technical from "@/components/react/technical";
 import Services from "@/components/react/services";
 
 export {
-	ObjetivosForm,
-	KeyFuntionalityForm,
-	StyleAndDesign,
-	ContentForm,
-	Technical,
-	Services,
+  ObjetivosForm,
+  KeyFuntionalityForm,
+  StyleAndDesign,
+  ContentForm,
+  Technical,
+  Services,
 };

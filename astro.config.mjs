@@ -9,25 +9,25 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-	site: process.env.CI
-		? "https://www.adrian-alvarez.dev"
-		: "http://localhost:4321",
-	integrations: [
-		tailwind(),
-		sitemap(),
-		robotsTxt({
-			sitemap: "https://www.adrian-alvarez.dev/sitemap-0.xml",
-			host: "adrian-alvarez.dev",
-		}),
-		partytown({
-			config: {
-				forward: ["dataLayer.push"],
-				debug: false,
-			},
-		}),
-		playformCompress(),
-		react(),
-	],
-	output: "server",
-	adapter: vercel(),
+  site: process.env.CI
+    ? "https://www.adrian-alvarez.dev"
+    : "http://localhost:4321",
+  integrations: [
+    tailwind(),
+    sitemap(),
+    robotsTxt({
+      sitemap: "https://www.adrian-alvarez.dev/sitemap-0.xml",
+      host: "adrian-alvarez.dev",
+    }),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+        debug: false,
+      },
+    }),
+    playformCompress(),
+    react(),
+  ],
+  output: "server",
+  adapter: vercel(),
 });

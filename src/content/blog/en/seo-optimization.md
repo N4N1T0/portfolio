@@ -1,11 +1,11 @@
 ---
-title: 'SEO Optimization'
+title: "SEO Optimization"
 date: 2023-07-20
-slug: 'seo-optimization'
-excerpt: 'Unify design and SEO for an effective website. From an intuitive structure to strategic keywords.'
+slug: "seo-optimization"
+excerpt: "Unify design and SEO for an effective website. From an intuitive structure to strategic keywords."
 author: 'Adrian "Nano" Alvarez'
-image: '../../../assets/blog/ferenc-almasi-eYpcLDXHVb0-unsplash.webp'
-imageAlt: 'A screen showing HTML code and SEO'
+image: "../../../assets/blog/ferenc-almasi-eYpcLDXHVb0-unsplash.webp"
+imageAlt: "A screen showing HTML code and SEO"
 ---
 
 # SEO Optimization: Integrating Design and User Experience
