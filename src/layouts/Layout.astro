@@ -1,19 +1,19 @@
 ---
 // Project Imports
-import SideNavbar from "@/components/SideNavbar.astro";
-import SEOHead from "@/components/SEOHead.astro";
+import SideNavbar from '@/components/SideNavbar.astro'
+import SEOHead from '@/components/SEOHead.astro'
 
 interface Props {
-	title: string;
-	className?: string;
-	link?: string;
-	label?: string;
-	description: string;
-	border: "border-gray-300" | "border-gray-800";
+  title: string
+  className?: string
+  link?: string
+  label?: string
+  description: string
+  border: 'border-gray-300' | 'border-gray-800'
 }
 
 // Astro Props
-const { title, className, border, link, label, description } = Astro.props;
+const { title, className, border, link, label, description } = Astro.props
 ---
 
 <!doctype html>

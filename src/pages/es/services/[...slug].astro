@@ -1,50 +1,50 @@
 ---
 // Astro Imports
-import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
+import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
 
 // Project Imports
-import Layout from "@/layouts/Layout.astro";
-import ProjectCard from "@/components/ProjectCard.astro";
-import TechStackCard from "@/components/TechStackCard.astro";
+import Layout from '@/layouts/Layout.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
+import TechStackCard from '@/components/TechStackCard.astro'
 
 // Types Imports
-import type { TechStack } from "@/types";
+import type { TechStack } from '@/types'
 
 // Function to create the path for all the services
 export async function getStaticPaths() {
-	const services = await getCollection("services", ({ id }) => {
-		return id.startsWith("es/");
-	});
-	return services.map((service) => ({
-		params: { slug: service.slug },
-		props: service,
-	}));
+  const services = await getCollection('services', ({ id }) => {
+    return id.startsWith('es/')
+  })
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: service
+  }))
 }
 
 // Astro Props
-const service = Astro.props;
+const service = Astro.props
 
 // Props deconstruction
 const { name, excerpt, image, imageAlt, projects, quote, techStack } =
-	service.data;
+  service.data
 
 // Astro Params
-const slug = Astro.params.slug;
+const slug = Astro.params.slug
 
 // Special function to render the content of the MD
-const { Content } = await service.render();
+const { Content } = await service.render()
 
 // Redirect in case the path dosent exits
 if (!slug || !service) {
-	return new Response(null, {
-		status: 404,
-		statusText: "Not found",
-	});
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found'
+  })
 }
 
 // create static page instead of SSR
-export const prerender = true;
+export const prerender = true
 ---
 
 <Layout
@@ -57,53 +57,75 @@ export const prerender = true;
   <main
     class='w-screen my-20 md:my-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'
   >
-
-  <!-- Header Section -->
-   <section id="header" class='w-full bg-gray-800 text-center h-[600px] flex justify-center'>
+    <!-- Header Section -->
+    <section
+      id='header'
+      class='w-full bg-gray-800 text-center h-[600px] flex justify-center'
+    >
       <h1
-        class='font-prata text-[10vw] text-background self-center md:self-end md:leading-[10rem] uppercase'>
+        class='font-prata text-[10vw] text-background self-center md:self-end md:leading-[10rem] uppercase'
+      >
         {name}
       </h1>
     </section>
 
     <!-- Content Section -->
-    <section id="content" class='prose max-w-[1200px] px-5'>
+    <section id='content' class='prose max-w-[1200px] px-5'>
       <Content />
     </section>
 
     <!-- Tech Stack Section -->
-     {techStack && techStack.length > 0 && (
-       <section id="TechStack" class="w-full">
-         <h2 class="text-[5vw] md:leading-tight text-center text-gray-800 font-prata">Tecnologías</h2>
-         <ul role="list" class="flex gap-5 md:gap-10 w-full justify-center items-center mt-6">
-           {techStack.map((tech: TechStack) => <TechStackCard techStack={tech} />)}
-         </ul>
-       </section>
-     )}
+    {
+      techStack && techStack.length > 0 && (
+        <section id='TechStack' class='w-full'>
+          <h2 class='text-[5vw] md:leading-tight text-center text-gray-800 font-prata'>
+            Tecnologías
+          </h2>
+          <ul
+            role='list'
+            class='flex gap-5 md:gap-10 w-full justify-center items-center mt-6'
+          >
+            {techStack.map((tech: TechStack) => (
+              <TechStackCard techStack={tech} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
     <!-- Quote Section -->
-    <section id="Quote" class="w-full space-y-20 md:space-y-20">
+    <section id='Quote' class='w-full space-y-20 md:space-y-20'>
       <Image src={image} alt={imageAlt} loading='lazy' />
-      <h2 class="text-[5vw] md:leading-tight text-center text-gray-800 font-prata">"{quote}"</h2>
+      <h2
+        class='text-[5vw] md:leading-tight text-center text-gray-800 font-prata'
+      >
+        "{quote}"
+      </h2>
     </section>
 
     <!-- Projects Section -->
-    <section id="Projects" class="w-full">
-      {Array.isArray(projects) ? (
-        <ul role="presentation" class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-5 md:gap-10 w-full p-12">
-          {projects.map((project) => (
-            <ProjectCard slug={project} lang="es" />
-          ))}
-        </ul>
-      ) : (
-        <div class="text-center p-12" set:html={projects} />
-      )}
+    <section id='Projects' class='w-full'>
+      {
+        Array.isArray(projects) ? (
+          <ul
+            role='presentation'
+            class='grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-5 md:gap-10 w-full p-12'
+          >
+            {projects.map((project) => (
+              <ProjectCard slug={project} lang='es' />
+            ))}
+          </ul>
+        ) : (
+          <div class='text-center p-12' set:html={projects} />
+        )
+      }
     </section>
   </main>
 
   <!-- Contact Widget -->
-    <div
-    class='fixed bottom-7 md:bottom-10 right-7 md:right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-gray-800 text-background'>
+  <div
+    class='fixed bottom-7 md:bottom-10 right-7 md:right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-gray-800 text-background'
+  >
     <a
       href={`/es/contact?service=${slug}`}
       class='text-sm md:text-base hover-underline-animation-widget'>CONTACTAR</a
@@ -111,9 +133,10 @@ export const prerender = true;
   </div>
 
   <!-- Courtin -->
-   <div
+  <div
     class='absolute bg-gray-800 w-screen inset-0 z-50 origin-bottom'
-    id='courtin'>
+    id='courtin'
+  >
   </div>
 </Layout>
 
@@ -131,7 +154,7 @@ export const prerender = true;
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #A3BBFB;
+    background-color: #a3bbfb;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
@@ -142,7 +165,7 @@ export const prerender = true;
   }
 
   html {
-    scrollbar-color: #1f2937 #A3BBFB;
+    scrollbar-color: #1f2937 #a3bbfb;
   }
 </style>
 
@@ -153,6 +176,6 @@ export const prerender = true;
     targets: '#courtin',
     scaleY: [1, 0],
     duration: 700,
-    easing: 'easeInExpo',
+    easing: 'easeInExpo'
   })
 </script>

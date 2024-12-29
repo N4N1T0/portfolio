@@ -1,17 +1,18 @@
 ---
 interface Props {
-	code: string;
-	live: string;
-	background: string;
-	text: string;
+  code: string
+  live: string
+  background: string
+  text: string
 }
 
 // Astro Props
-const { code, live, background } = Astro.props;
+const { code, live, background } = Astro.props
 ---
 
 <div
-  class=`${background} fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2`>
+  class=`${background} fixed bottom-10 right-10 p-3 md:p-5 text-left rounded-lg space-y-2`
+>
   <a
     href={code}
     target='_blank'

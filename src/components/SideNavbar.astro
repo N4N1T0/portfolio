@@ -1,19 +1,21 @@
 ---
 interface Props {
-	link?: string;
-	label?: string;
-	border: "border-gray-300" | "border-gray-800";
+  link?: string
+  label?: string
+  border: 'border-gray-300' | 'border-gray-800'
 }
 
 // Astro Props
-const { link, label, border } = Astro.props;
+const { link, label, border } = Astro.props
 ---
 
 <aside
   class='p-10 h-10 md:h-screen w-screen md:w-10 flex justify-between items-center md:flex-col absolute md:fixed top-0 z-50 opacity-0'
-  id='nav'>
+  id='nav'
+>
   <div
-    class='md:-rotate-90 md:mt-32 flex items-center space-x-5 md:space-x-10 text-sm'>
+    class='md:-rotate-90 md:mt-32 flex items-center space-x-5 md:space-x-10 text-sm'
+  >
     <hr class=`w-10 md:w-20 border-[1.5px] ${border}` />
     {
       link === undefined ? (
@@ -30,11 +32,12 @@ const { link, label, border } = Astro.props;
           class:list={[
             'cursor-pointer',
             {
-              'hover-underline-animation-white': border === 'border-gray-300',
+              'hover-underline-animation-white': border === 'border-gray-300'
             },
-            { 'hover-underline-animation': border === 'border-gray-800' },
+            { 'hover-underline-animation': border === 'border-gray-800' }
           ]}
-          href={link}>
+          href={link}
+        >
           {label}
         </a>
       )
@@ -52,6 +55,6 @@ const { link, label, border } = Astro.props;
     targets: '#nav',
     opacity: 1,
     duration: 1000,
-    ease: 'easeOutExpo',
+    ease: 'easeOutExpo'
   })
 </script>

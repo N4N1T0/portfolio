@@ -1,28 +1,29 @@
 ---
 // Types Imports
-import type { ProjectTechStack } from "@/types";
+import type { ProjectTechStack } from '@/types'
 
 // Astro Props
-const { techStack, lang } = Astro.props;
+const { techStack, lang } = Astro.props
 
 // Props deconstruction
-const { link, title, info } = techStack;
+const { link, title, info } = techStack
 
 interface Props {
-	techStack: ProjectTechStack;
-	lang: string;
+  techStack: ProjectTechStack
+  lang: string
 }
 ---
- <li class='flex-1 space-y-2'>
-        <h3 class='font-bold md:text-lg'>{title}</h3>
-        <p class='text-sm md:text-base'>
-         {info}
-        </p>
-        <a
-          href={link}
-          target='_blank'
-          class='hover-underline-animation text-sm font-bold'>
-          {lang === "es" ? "Mas Info" : "More Info"} 
-          </a
-        >
-      </li>
+
+<li class='flex-1 space-y-2'>
+  <h3 class='font-bold md:text-lg'>{title}</h3>
+  <p class='text-sm md:text-base'>
+    {info}
+  </p>
+  <a
+    href={link}
+    target='_blank'
+    class='hover-underline-animation text-sm font-bold'
+  >
+    {lang === 'es' ? 'Mas Info' : 'More Info'}
+  </a>
+</li>

@@ -1,44 +1,44 @@
 ---
 // Astro Imports
-import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
+import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
 
 // Project Imports
-import Layout from "@/layouts/Layout.astro";
+import Layout from '@/layouts/Layout.astro'
 
 // Function to create the path for all the blogs
 export async function getStaticPaths() {
-	const posts = await getCollection("blog", ({ id }) => {
-		return id.startsWith("es/");
-	});
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
+  const posts = await getCollection('blog', ({ id }) => {
+    return id.startsWith('es/')
+  })
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post
+  }))
 }
 
 // Astro Props
-const post = Astro.props;
+const post = Astro.props
 
 // Props deconstruction
-const { title, excerpt, image, imageAlt, author, date } = post.data;
+const { title, excerpt, image, imageAlt, author, date } = post.data
 
 // Astro Params
-const slug = Astro.params.slug;
+const slug = Astro.params.slug
 
 // Special function to render the content of the MD
-const { Content } = await post.render();
+const { Content } = await post.render()
 
 // Redirect in case the path dosent exits
 if (!slug || !post) {
-	return new Response(null, {
-		status: 404,
-		statusText: "Not found",
-	});
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found'
+  })
 }
 
 // create static page instead of SSR
-export const prerender = true;
+export const prerender = true
 ---
 
 <Layout
@@ -46,24 +46,36 @@ export const prerender = true;
   title={post.data.title}
   label='Blog'
   link='/es/blog'
-  border='border-gray-800'>
+  border='border-gray-800'
+>
   <main
-    class='w-screen my-20 md:my-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'>
-
-     <!-- Header Section -->
-   <section id="header" class='w-full bg-gray-800 text-center h-[600px] flex justify-center relative overflow-hidden'>
+    class='w-screen my-20 md:my-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'
+  >
+    <!-- Header Section -->
+    <section
+      id='header'
+      class='w-full bg-gray-800 text-center h-[600px] flex justify-center relative overflow-hidden'
+    >
       <h1
-        class='font-prata text-[6vw] text-background self-center md:self-end md:leading-[6rem] uppercase z-20'>
+        class='font-prata text-[6vw] text-background self-center md:self-end md:leading-[6rem] uppercase z-20'
+      >
         {title}
       </h1>
-      <div class="absolute inset-0 w-full h-full z-10 bg-gray-800 opacity-50" />
-      <Image src={image} alt={imageAlt} loading='eager' class='absolute inset-0 h-full w-full object-cover' />
+      <div class='absolute inset-0 w-full h-full z-10 bg-gray-800 opacity-50'>
+      </div>
+      <Image
+        src={image}
+        alt={imageAlt}
+        loading='eager'
+        class='absolute inset-0 h-full w-full object-cover'
+      />
     </section>
 
     <!-- SubHeading Section -->
     <section
-      id="subheader"
-      class='flex w-full justify-between flex-col md:flex-row items-center px-5 gap-2 md:gap-0'>
+      id='subheader'
+      class='flex w-full justify-between flex-col md:flex-row items-center px-5 gap-2 md:gap-0'
+    >
       <strong>
         <a
           href={`${author === 'Dayana Abuin' ? 'https://www.linkedin.com/in/dayana-abuin-rios/' : 'https://www.linkedin.com/in/adrian-alvarez-alonso/'}`}
@@ -81,7 +93,7 @@ export const prerender = true;
     </section>
 
     <!-- Content Section -->
-    <section id="content" class='prose max-w-[1200px] px-5'>
+    <section id='content' class='prose max-w-[1200px] px-5'>
       <Content />
     </section>
   </main>
@@ -89,7 +101,8 @@ export const prerender = true;
   <!-- Courtin Section -->
   <div
     class='absolute bg-gray-800 w-screen inset-0 z-50 origin-bottom'
-    id='courtin'>
+    id='courtin'
+  >
   </div>
 </Layout>
 
@@ -119,7 +132,7 @@ export const prerender = true;
   }
 
   html {
-    scrollbar-color: #000000 #A3BBFB;
+    scrollbar-color: #000000 #a3bbfb;
   }
 </style>
 
@@ -130,6 +143,6 @@ export const prerender = true;
     targets: '#courtin',
     scaleY: [1, 0],
     duration: 700,
-    easing: 'easeInExpo',
+    easing: 'easeInExpo'
   })
 </script>

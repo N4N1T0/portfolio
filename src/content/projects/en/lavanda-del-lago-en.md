@@ -31,7 +31,7 @@ techStack:
       title: "Resend & React Email",
       info: "Resend is an email delivery platform that simplifies the integration of notifications and email campaigns. Together with React Email, it allows you to design and send customizable emails using React components.",
       link: "https://resend.com/",
-    }
+    },
   ]
 testimonial:
   {

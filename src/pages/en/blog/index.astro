@@ -1,15 +1,15 @@
 ---
 // Astro Imports
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from 'astro:content'
 
 // Project Imports
-import Layout from "@/layouts/Layout.astro";
+import Layout from '@/layouts/Layout.astro'
 
 // Utilities Imports
-import { getPosts } from "@/lib";
+import { getPosts } from '@/lib'
 
 // Astro get Collection
-const allBlogPosts: CollectionEntry<"blog">[] = await getPosts("en");
+const allBlogPosts: CollectionEntry<'blog'>[] = await getPosts('en')
 ---
 
 <Layout
@@ -18,12 +18,15 @@ const allBlogPosts: CollectionEntry<"blog">[] = await getPosts("en");
   className='text-gray-300'
   label='Home'
   link='/es/'
-  border='border-gray-300'>
+  border='border-gray-300'
+>
   <main
-    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'>
+    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'
+  >
     <aside
       class='space-y-3 self-end z-10 sticky bottom-24 flex-1 opacity-0'
-      id='info'>
+      id='info'
+    >
       <h1 class='font-semibold tracking-widest'>Blog</h1>
       <p class='text-sm'>
         Explore my featured articles about Web Design and Development,
@@ -35,13 +38,15 @@ const allBlogPosts: CollectionEntry<"blog">[] = await getPosts("en");
     </aside>
     <articule
       class='font-prata md:space-y-12 space-y-5 flex-1 opacity-0'
-      id='links'>
+      id='links'
+    >
       {
         allBlogPosts.map((post) => (
           <div class='space-y-2'>
             <a
               href={`/en/blog/${post.slug}`}
-              class='text-[7vw] uppercase md:text-[4vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'>
+              class='text-[7vw] uppercase md:text-[4vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
+            >
               <h2>{post.data.title}</h2>
             </a>
             <p class='text-xs md:text-base font-sans pl-5 inline'>
@@ -57,7 +62,8 @@ const allBlogPosts: CollectionEntry<"blog">[] = await getPosts("en");
   </main>
   <div
     class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'
-    id='courtin'>
+    id='courtin'
+  >
   </div>
 </Layout>
 
@@ -72,18 +78,18 @@ const allBlogPosts: CollectionEntry<"blog">[] = await getPosts("en");
 
   anime
     .timeline({
-      easing: 'easeInExpo',
+      easing: 'easeInExpo'
     })
     .add({
       targets: '#courtin',
       scaleY: [0, 1],
-      duration: 700,
+      duration: 700
     })
     .add(
       {
         targets: '#links',
         opacity: 1,
-        duration: 500,
+        duration: 500
       },
       500
     )
@@ -93,7 +99,7 @@ const allBlogPosts: CollectionEntry<"blog">[] = await getPosts("en");
         opacity: 1,
         translateY: [50, 0],
         delay: anime.stagger(100),
-        duration: 600,
+        duration: 600
       },
       700
     )

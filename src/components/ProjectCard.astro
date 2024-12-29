@@ -1,45 +1,59 @@
 ---
 // Astro Imports
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets'
 
 // Astro Props
-const { slug, lang } = Astro.props;
+const { slug, lang } = Astro.props
 
 // Utilities Imports
-import { getCollecionBySlug } from "@/lib";
+import { getCollecionBySlug } from '@/lib'
 
 interface Props {
-	slug: string;
-	lang: string;
+  slug: string
+  lang: string
 }
 
-const project = await getCollecionBySlug(slug);
+const project = await getCollecionBySlug(slug)
 ---
-{project !== undefined && (
- <li>
-   <article class="relative col-span-1 aspect-square group overflow-hidden text-background">
-    <figure class="w-full h-full">
-      <Image src={project.data.image} alt={project.data.title} title={project.data.title} loading="lazy" class="w-full h-full object-cover" />
-    </figure>
-    <a
-      href={`/${lang}/works/${project.slug}`}
-      target="_blank"
-      class="group absolute inset-0 w-full h-full translate-y-full group-hover:translate-y-0 duration-300 transition-all ease-in-out p-10"
-      style={{ backgroundColor: project.data.mainColor, color: project.data.secondaryColor }}
-      rel="nofollow noopener noreferrer"
-    >
-      <header>
-        <h2 class="uppercase text-xl md:text-2xl font-prata">{project.data.title}</h2>
-      </header>
-      <section>
-        <p class="text-sm md:text-base mt-3">{project.data.excerpt}</p>
-        <ul class="mt-3">
-          {project.data.techStack.map(tech => (
-            <li class="text-sm md:text-base underline">{tech.title}</li>
-          ))}
-        </ul>
-      </section>
-    </a>
-   </article>
- </li>
-)}
+
+{
+  project !== undefined && (
+    <li>
+      <article class='relative col-span-1 aspect-square group overflow-hidden text-background'>
+        <figure class='w-full h-full'>
+          <Image
+            src={project.data.image}
+            alt={project.data.title}
+            title={project.data.title}
+            loading='lazy'
+            class='w-full h-full object-cover'
+          />
+        </figure>
+        <a
+          href={`/${lang}/works/${project.slug}`}
+          target='_blank'
+          class='group absolute inset-0 w-full h-full translate-y-full group-hover:translate-y-0 duration-300 transition-all ease-in-out p-10'
+          style={{
+            backgroundColor: project.data.mainColor,
+            color: project.data.secondaryColor
+          }}
+          rel='nofollow noopener noreferrer'
+        >
+          <header>
+            <h2 class='uppercase text-xl md:text-2xl font-prata'>
+              {project.data.title}
+            </h2>
+          </header>
+          <section>
+            <p class='text-sm md:text-base mt-3'>{project.data.excerpt}</p>
+            <ul class='mt-3'>
+              {project.data.techStack.map((tech) => (
+                <li class='text-sm md:text-base underline'>{tech.title}</li>
+              ))}
+            </ul>
+          </section>
+        </a>
+      </article>
+    </li>
+  )
+}

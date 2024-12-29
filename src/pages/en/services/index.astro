@@ -1,15 +1,15 @@
 ---
 // Astro Imports
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from 'astro:content'
 
 // Project Imports
-import Layout from "@/layouts/Layout.astro";
+import Layout from '@/layouts/Layout.astro'
 
 // Utilities Imports
-import { getServices } from "@/lib";
+import { getServices } from '@/lib'
 
 // Astro get Collection
-const allServices: CollectionEntry<"services">[] = await getServices("en");
+const allServices: CollectionEntry<'services'>[] = await getServices('en')
 ---
 
 <Layout
@@ -18,12 +18,15 @@ const allServices: CollectionEntry<"services">[] = await getServices("en");
   className='text-gray-300'
   label='Home'
   link='/en/'
-  border='border-gray-300'>
+  border='border-gray-300'
+>
   <main
-    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'>
+    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'
+  >
     <aside
       class='space-y-3 self-end z-10 sticky bottom-24 flex-1 opacity-0'
-      id='info'>
+      id='info'
+    >
       <h1 class='font-semibold tracking-widest'>Services</h1>
       <p class='text-sm'>
         Embark on a journey through my dynamic expertise, spanning web design,
@@ -34,23 +37,25 @@ const allServices: CollectionEntry<"services">[] = await getServices("en");
     </aside>
     <articule
       class='font-prata md:space-y-10 space-y-5 flex-1 opacity-0'
-      id='links'>
-        <ul class='md:space-y-10 space-y-5' role="list">
-      {
-        allServices.map(({ data: { name, excerpt}, slug }) => (
-          <li>
-          <a href={`/en/services/${slug}`} class='text-[12vw] md:text-[7vw] uppercase block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'>
-            <h2>
-              {name}
-            </h2>
-          </a>
-            <h3 class='text-xs md:text-base font-sans pl-5 pt-5'>
-              <hr class='w-5 inline-block' />
-              {excerpt}
-            </h3>
-          </li>
-        ))
-      }
+      id='links'
+    >
+      <ul class='md:space-y-10 space-y-5' role='list'>
+        {
+          allServices.map(({ data: { name, excerpt }, slug }) => (
+            <li>
+              <a
+                href={`/en/services/${slug}`}
+                class='text-[12vw] md:text-[7vw] uppercase block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
+              >
+                <h2>{name}</h2>
+              </a>
+              <h3 class='text-xs md:text-base font-sans pl-5 pt-5'>
+                <hr class='w-5 inline-block' />
+                {excerpt}
+              </h3>
+            </li>
+          ))
+        }
       </ul>
       <hr class='w-full' />
       <div>
@@ -71,7 +76,8 @@ const allServices: CollectionEntry<"services">[] = await getServices("en");
   </main>
   <div
     class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'
-    id='courtin'>
+    id='courtin'
+  >
   </div>
 </Layout>
 
@@ -86,18 +92,18 @@ const allServices: CollectionEntry<"services">[] = await getServices("en");
 
   anime
     .timeline({
-      easing: 'easeOutExpo',
+      easing: 'easeOutExpo'
     })
     .add({
       targets: '#courtin',
       scaleY: [0, 1],
-      duration: 700,
+      duration: 700
     })
     .add(
       {
         targets: '#links',
         opacity: 1,
-        duration: 500,
+        duration: 500
       },
       500
     )
@@ -107,7 +113,7 @@ const allServices: CollectionEntry<"services">[] = await getServices("en");
         opacity: 1,
         translateY: [50, 0],
         delay: anime.stagger(100),
-        duration: 600,
+        duration: 600
       },
       700
     )
