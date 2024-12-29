@@ -1,19 +1,18 @@
 ---
 title: "Estrategias Narrativas"
 date: 2023-09-15
-slug: "estrategias-narrativas"
 excerpt: "Destaca en el mundo digital con una narrativa envolvente. Potencia la experiencia del usuario, lealtad a la marca y metas de marketing."
 author: 'Adrian "Nano" Alvarez'
 image: "../../../assets/blog/scott-graham-OQMZwNd3ThU-unsplash.webp"
 imageAlt: "un escritor redactando una narrativa envolvente"
+language: "es"
 ---
-
-# Estrategias Narrativas: Potenciando Tu Marca en el Mundo Digital
 
 En el saturado entorno digital actual, contar una historia cautivadora es crucial para destacar entre el ruido. Una narrativa efectiva puede impulsar la experiencia del usuario, la lealtad a la marca y los objetivos de marketing.
 
 ## Definición de la Historia de Marca
 
+Cuando diseño un nuevo sitio web o campaña, comienza definiendo la historia de tu marca: la perspectiva única y el valor que ofreces a los clientes. Teje esta narrativa sutilmente en la experiencia a través de texto, imágenes y metáforas en el sitio.
 Cuando diseñes un nuevo sitio web o campaña, comienza definiendo la historia de tu marca: la perspectiva única y el valor que ofreces a los clientes. Teje esta narrativa sutilmente en la experiencia a través de texto, imágenes y metáforas en el sitio.
 
 ## Captura de Atención en la Página Principal

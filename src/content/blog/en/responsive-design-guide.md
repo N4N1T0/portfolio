@@ -1,14 +1,12 @@
 ---
 title: "Responsive Design in Websites"
 date: 2023-06-19
-slug: "responsive-design-guide"
 excerpt: "How responsive design transforms user experience, boosts SEO, and optimizes your presence across all devices."
 author: 'Adrian "Nano" Alvarez'
 image: "../../../assets/blog/domenico-loia-EhTcC9sYXsw-unsplash.webp"
 imageAlt: "An Apple setup with an iMac and an AirBook"
+language: "en"
 ---
-
-# The Importance of Responsive Design in the Digital World
 
 In today's digital world, having a responsive website is essential for any business or organization seeking to reach its customers across different devices. Users regularly access websites from desktop computers, laptops, tablets, and smartphones. If your site is not optimized for different screen sizes, it can negatively impact the user experience and your financial results.
 

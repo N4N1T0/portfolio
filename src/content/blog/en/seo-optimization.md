@@ -1,20 +1,18 @@
 ---
 title: "SEO Optimization"
 date: 2023-07-20
-slug: "seo-optimization"
 excerpt: "Unify design and SEO for an effective website. From an intuitive structure to strategic keywords."
 author: 'Adrian "Nano" Alvarez'
 image: "../../../assets/blog/ferenc-almasi-eYpcLDXHVb0-unsplash.webp"
 imageAlt: "A screen showing HTML code and SEO"
+language: "en"
 ---
-
-# SEO Optimization: Integrating Design and User Experience
 
 In website construction, the connection between SEO and design is crucial for user-friendly navigation and understanding by search engines. By incorporating SEO best practices from the design phase, you can create a structure and experience that optimizes both usability and visibility in search engines.
 
 ## User Experience and Information Architecture
 
-Start by designing intuitive navigation with logically grouped pages. Use meaningful headers, subheaders, and lists to break down content into scannable segments. This approach makes it easy for search engines to index the site effectively and enhances the user experience.
+Start by designing intuitive navigation with logically grouped pages. Use meaningful headers, subheader, and lists to break down content into scannable segments. This approach makes it easy for search engines to index the site effectively and enhances the user experience.
 
 ## Keyword Prioritization
 

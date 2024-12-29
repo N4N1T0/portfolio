@@ -1,14 +1,12 @@
 ---
 title: "Diseño Responsivo en Sitios Web"
 date: 2023-06-19
-slug: "guia-diseño-responsive"
 excerpt: "Cómo el diseño responsivo transforma la experiencia del usuario, impulsa el SEO y optimiza tu presencia en todos los dispositivos."
 author: 'Adrian "Nano" Alvarez'
 image: "../../../assets/blog/domenico-loia-EhTcC9sYXsw-unsplash.webp"
 imageAlt: "un setup de apple con una IMac y una AirBook"
+language: "es"
 ---
-
-# La Importancia del Diseño Responsivo en el Mundo Digital
 
 En el mundo digital actual, contar con un sitio web responsivo es esencial para cualquier negocio u organización que busque llegar a sus clientes desde diferentes dispositivos. Los usuarios acceden a sitios web desde computadoras de escritorio, laptops, tabletas y teléfonos inteligentes de manera regular. Si tu sitio no está optimizado para diferentes tamaños de pantalla, puede afectar negativamente la experiencia del usuario y tus resultados financieros.
 
@@ -22,7 +20,7 @@ Los desarrolladores desempeñan un papel clave en la construcción de sitios res
 
 ## El Papel de los Diseñadores
 
-Los diseñadores también deben pensar de manera responsiva al crear diseños, esquemas y visuales que se ajusten dinámicamente al ancho de la pantalla. Cuadrículas flexibles, contenido modular e imágenes fluidas son elementos esenciales del diseño. Las imágenes de alta resolución deben optimizarse para una carga rápida en dispositivos móviles. El uso de iconos y una navegación sencilla facilita la usabilidad en pantallas pequeñas. La colaboración entre diseñadores y desarrolladores garantiza que la responsividad se considere desde el concepto hasta el lanzamiento.
+Los diseñadores también deben pensar de manera responsiva al crear diseños, esquemas y visuales que se ajusten dinámicamente al ancho de la pantalla. Cuadrículas flexibles, contenido modular e imágenes fluidas son elementos esenciales del diseño. Las imágenes de alta resolución deben optimizarse para una carga rápida en dispositivos móviles. El uso de iconos y una navegación sencilla facilita la usabilidad en pantallas pequeñas. La colaboración entre diseñadores y desarrolladores garantiza que la responsiva se considere desde el concepto hasta el lanzamiento.
 
 ## Beneficios del Diseño Responsivo
 

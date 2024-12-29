@@ -1,14 +1,12 @@
 ---
 title: "8 Tips to Optimize your Product Page"
 date: 2024-02-27
-slug: "8-tips-to-optimize-your-ecommerce"
 excerpt: "Transform your product pages into sales powerhouses with these 8 essential tips. Elevate your e-commerce game and boost conversions today"
 author: "Dayana Abuin"
 image: "../../../assets/blog/mark-konig-Tl8mDaue_II-unsplash.webp"
 imageAlt: "Ecommerce street sign"
+language: "en"
 ---
-
-# 10 Tips To Optimize Your Product Pages with CRO Techniques (Conversion Rate Optimization)
 
 ## Introduction
 

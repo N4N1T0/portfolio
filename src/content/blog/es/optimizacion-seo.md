@@ -1,14 +1,12 @@
 ---
 title: "Optimización SEO"
 date: 2023-07-20
-slug: "optimizacion-seo"
 excerpt: "Unifica diseño y SEO para un sitio web efectivo. Desde una estructura intuitiva hasta palabras clave estratégicas."
 author: 'Adrian "Nano" Alvarez'
 image: "../../../assets/blog/ferenc-almasi-eYpcLDXHVb0-unsplash.webp"
-imageAlt: "una pantalla con codigo html y SEO"
+imageAlt: "una pantalla con código html y SEO"
+language: "es"
 ---
-
-# Optimización SEO: Integrando Diseño y Experiencia del Usuario
 
 En la construcción de sitios web, la unión entre SEO y diseño es esencial para la navegación fácil de los usuarios y la comprensión por parte de los motores de búsqueda. Al incorporar las mejores prácticas de SEO desde la fase de diseño, puedes crear una estructura y experiencia que optimice tanto la usabilidad como la visibilidad en los motores de búsqueda.
 

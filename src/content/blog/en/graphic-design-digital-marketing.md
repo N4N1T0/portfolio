@@ -1,14 +1,12 @@
 ---
 title: "The Power of Graphic Design in Digital Marketing"
 date: 2023-08-17
-slug: "graphic-design-digital-marketing"
 excerpt: "Elevate your digital presence with strategic graphic design. From visual identity to impactful content, maximize your brand&quote;s potential."
 author: 'Adrian "Nano" Alvarez'
 image: "../../../assets/blog/nordwood-themes-ubIWo074QlU-unsplash.webp"
 imageAlt: "An Apple setup with an iMac and an AirBook"
+language: "en"
 ---
-
-# The Power of Graphic Design in Digital Marketing
 
 In today's digital era, visual content stands as a fundamental pillar for success in marketing. Studies reveal that images capture up to 80% more attention than plain text. However, creating attractive and high-quality visuals requires a strategic approach to graphic design.
 
@@ -18,7 +16,7 @@ Start by defining your brand's visual identity and voice. Consistent colors, fon
 
 ## Adapting Content to Purpose and Channel
 
-Consider the purpose and channel of your content. Infographics may be ideal for explaining concepts in social media posts, while illustrations can stand out in blog headers. Experiment with different formats to find what works best.
+Consider the purpose and channel of your content. Infographic may be ideal for explaining concepts in social media posts, while illustrations can stand out in blog headers. Experiment with different formats to find what works best.
 
 ## Design Tools and Experimentation
 
