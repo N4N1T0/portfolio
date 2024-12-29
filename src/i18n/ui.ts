@@ -1,17 +1,17 @@
 export const languages = {
   en: {
-    route: "/en/",
-    icon: "en",
+    route: '/en/',
+    icon: 'en'
   },
   es: {
-    route: "/es/",
-    icon: "es",
-  },
-};
+    route: '/es/',
+    icon: 'es'
+  }
+}
 
-export const defaultLang = "es";
+export const defaultLang = 'es'
 
 export const ui = {
   es: {},
-  en: {},
-};
+  en: {}
+}

@@ -16,12 +16,12 @@ import FormImage from '@/assets/form/balazs-ketyi-_x335IZXxfc-unsplash.webp'
   border='border-gray-800'
 >
   <main
-    class='w-screen p-10 mt-20 md:mt-5 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'
+    class='relative z-10 mt-20 flex w-screen flex-col items-center justify-around gap-16 p-10 md:mt-5 md:flex-row md:gap-32 md:p-24'
   >
     <aside class='flex-1'>
       <!-- Header -->
       <div
-        class='[&>h2]:text-[16vw] md:[&>h2]:text-[5vw] 2xl:[&>h2]:text-[7vw] font-prata opacity-0 [&>h2]:leading-[0.95em]'
+        class='font-prata opacity-0 [&>h2]:text-[16vw] [&>h2]:leading-[0.95em] md:[&>h2]:text-[5vw] 2xl:[&>h2]:text-[7vw]'
         id='links'
       >
         <h2>Formulario de Cliente</h2>
@@ -31,7 +31,7 @@ import FormImage from '@/assets/form/balazs-ketyi-_x335IZXxfc-unsplash.webp'
     </aside>
 
     <articule
-      class='self-start z-10 sticky top-20 flex-1 opacity-0 hidden md:block aspect-square'
+      class='sticky top-20 z-10 hidden aspect-square flex-1 self-start opacity-0 md:block'
       id='image'
     >
       <img
@@ -39,12 +39,12 @@ import FormImage from '@/assets/form/balazs-ketyi-_x335IZXxfc-unsplash.webp'
         alt='Design'
         loading='eager'
         id='image-to-change'
-        class='w-full h-full object-cover'
+        class='h-full w-full object-cover'
       />
     </articule>
   </main>
   <div
-    class='absolute bg-gray-800 w-screen inset-0 z-50 origin-bottom'
+    class='absolute inset-0 z-50 w-screen origin-bottom bg-gray-800'
     id='courtin'
   >
   </div>

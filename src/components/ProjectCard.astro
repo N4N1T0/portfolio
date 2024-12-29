@@ -19,20 +19,20 @@ const project = await getCollecionBySlug(slug)
 {
   project !== undefined && (
     <li>
-      <article class='relative col-span-1 aspect-square group overflow-hidden text-background'>
-        <figure class='w-full h-full'>
+      <article class='group relative col-span-1 aspect-square overflow-hidden text-background'>
+        <figure class='h-full w-full'>
           <Image
             src={project.data.image}
             alt={project.data.title}
             title={project.data.title}
             loading='lazy'
-            class='w-full h-full object-cover'
+            class='h-full w-full object-cover'
           />
         </figure>
         <a
           href={`/${lang}/works/${project.slug}`}
           target='_blank'
-          class='group absolute inset-0 w-full h-full translate-y-full group-hover:translate-y-0 duration-300 transition-all ease-in-out p-10'
+          class='group absolute inset-0 h-full w-full translate-y-full p-10 transition-all duration-300 ease-in-out group-hover:translate-y-0'
           style={{
             backgroundColor: project.data.mainColor,
             color: project.data.secondaryColor
@@ -40,15 +40,15 @@ const project = await getCollecionBySlug(slug)
           rel='nofollow noopener noreferrer'
         >
           <header>
-            <h2 class='uppercase text-xl md:text-2xl font-prata'>
+            <h2 class='font-prata text-xl uppercase md:text-2xl'>
               {project.data.title}
             </h2>
           </header>
           <section>
-            <p class='text-sm md:text-base mt-3'>{project.data.excerpt}</p>
+            <p class='mt-3 text-sm md:text-base'>{project.data.excerpt}</p>
             <ul class='mt-3'>
               {project.data.techStack.map((tech) => (
-                <li class='text-sm md:text-base underline'>{tech.title}</li>
+                <li class='text-sm underline md:text-base'>{tech.title}</li>
               ))}
             </ul>
           </section>

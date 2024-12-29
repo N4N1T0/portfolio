@@ -21,10 +21,10 @@ const allServices: CollectionEntry<'services'>[] = await getServices('en')
   border='border-gray-300'
 >
   <main
-    class='w-screen p-10 mt-20 md:p-24 relative flex flex-col md:flex-row justify-around items-center gap-16 md:gap-32 z-10'
+    class='relative z-10 mt-20 flex w-screen flex-col items-center justify-around gap-16 p-10 md:flex-row md:gap-32 md:p-24'
   >
     <aside
-      class='space-y-3 self-end z-10 sticky bottom-24 flex-1 opacity-0'
+      class='sticky bottom-24 z-10 flex-1 space-y-3 self-end opacity-0'
       id='info'
     >
       <h1 class='font-semibold tracking-widest'>Services</h1>
@@ -36,21 +36,21 @@ const allServices: CollectionEntry<'services'>[] = await getServices('en')
       </p>
     </aside>
     <articule
-      class='font-prata md:space-y-10 space-y-5 flex-1 opacity-0'
+      class='flex-1 space-y-5 font-prata opacity-0 md:space-y-10'
       id='links'
     >
-      <ul class='md:space-y-10 space-y-5'>
+      <ul class='space-y-5 md:space-y-10'>
         {
           allServices.map(({ data: { name, excerpt }, slug }) => (
             <li>
               <a
                 href={`/en/services/${slug}`}
-                class='text-[12vw] md:text-[7vw] uppercase block hover:-skew-x-12 hover:translate-x-10 transition-all duration-500 leading-[0.95em] ease-out'
+                class='block text-[12vw] uppercase leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12 md:text-[7vw]'
               >
                 <h2>{name}</h2>
               </a>
-              <h3 class='text-xs md:text-base font-sans pl-5 pt-5'>
-                <hr class='w-5 inline-block' />
+              <h3 class='pl-5 pt-5 font-sans text-xs md:text-base'>
+                <hr class='inline-block w-5' />
                 {excerpt}
               </h3>
             </li>
@@ -61,13 +61,13 @@ const allServices: CollectionEntry<'services'>[] = await getServices('en')
       <div>
         <a
           href='/en/contact'
-          class='text-[12vw] md:text-[7vw] block hover:-skew-x-12 hover:translate-x-10 transition-all duration-300 leading-[0.95em] ease-out'
+          class='block text-[12vw] leading-[0.95em] transition-all duration-300 ease-out hover:translate-x-10 hover:-skew-x-12 md:text-[7vw]'
           >CONTACT</a
         >
-        <p class='text-xs md:text-base font-sans pl-5 inline'>
+        <p class='inline pl-5 font-sans text-xs md:text-base'>
           Need help with anyone of this services?
           <span
-            class='py-1 px-2 ml-3 bg-slate-200 text-gray-950 rounded-xl animate-pulse hidden md:inline'
+            class='ml-3 hidden animate-pulse rounded-xl bg-slate-200 px-2 py-1 text-gray-950 md:inline'
             >No hesitate!</span
           >
         </p>
@@ -75,7 +75,7 @@ const allServices: CollectionEntry<'services'>[] = await getServices('en')
     </articule>
   </main>
   <div
-    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'
+    class='absolute inset-0 z-0 w-screen origin-bottom scale-0 bg-gray-800'
     id='courtin'
   >
   </div>

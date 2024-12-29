@@ -29,11 +29,11 @@ console.log(response)
   border='border-gray-300'
 >
   <main
-    class='w-screen min-h-screen p-10 mt-20 md:p-24 relative justify-around items-center gap-16 md:gap-32 z-10'
+    class='relative z-10 mt-20 min-h-screen w-screen items-center justify-around gap-16 p-10 md:gap-32 md:p-24'
   >
-    <div class='p-0 md:p-10 space-y-5 opacity-0' id='info'>
+    <div class='space-y-5 p-0 opacity-0 md:p-10' id='info'>
       <h1
-        class='font-prata text-[12vw] md:text-[7vw] leading-[0.95em] uppercase'
+        class='font-prata text-[12vw] uppercase leading-[0.95em] md:text-[7vw]'
       >
         Contact
       </h1>
@@ -45,7 +45,7 @@ console.log(response)
         <a
           href='https://www.nanofighters.club/en/'
           target='_blank'
-          class='inline-block text-xs hover-underline-animation-widget'
+          class='hover-underline-animation-widget inline-block text-xs'
           >or if you want a sparring partner too! &#128513; &#129354;</a
         >
       </div>
@@ -53,16 +53,16 @@ console.log(response)
       <!-- Info Section -->
       {
         response !== null ? (
-          <div class='space-y-3 max-w-[700px]'>
+          <div class='max-w-[700px] space-y-3'>
             <hr />
             <p class='uppercase'>Possible Message</p>
-            <h4 class='font-prata md:text-3xl text-2xl'>{response}</h4>
-            <div class='flex gap-3 justify-start items-start'>
+            <h4 class='font-prata text-2xl md:text-3xl'>{response}</h4>
+            <div class='flex items-start justify-start gap-3'>
               <a
                 href={generateWhatsAppLink(response)}
                 target='_blank'
                 rel='noopener noreferrer'
-                class='animate-pulse hover-underline-animation-widget'
+                class='hover-underline-animation-widget animate-pulse'
               >
                 WhatsApp
               </a>
@@ -70,7 +70,7 @@ console.log(response)
                 href={generateEmailLink(desUrlNames(query!, true), response)}
                 target='_blank'
                 rel='noopener noreferrer'
-                class='animate-pulse hover-underline-animation-widget'
+                class='hover-underline-animation-widget animate-pulse'
               >
                 Email
               </a>
@@ -120,7 +120,7 @@ console.log(response)
     </div>
   </main>
   <div
-    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'
+    class='absolute inset-0 z-0 w-screen origin-bottom scale-0 bg-gray-800'
     id='courtin'
   >
   </div>

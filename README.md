@@ -56,13 +56,11 @@ For support or questions, please contact me at: <a href="mailto:adrian.alvarezal
 
 ## TODO
 
-[X] Projects as Content
-[X] Astro 4.12 Upgrade
-[X] Services Pages
-[X] Add Testimonaial to Projects
-[x] Improve Contact Page (Add dynamic Services)
-[X] Change Blog to Project Stetics (Name Inside Image)
-[X] Make and 404 Page and Error Page
-[X] 404 and Error Page Animations
-[X] Improve responsiveness
+[X] tailwind classes sort prettier plugin
+[ ] Delete react
+[ ] Delete Resend
+[ ] Content Collection Update
+[ ] Add Place to Contact
+[ ] Add 3 More Blogs
+[ ] Add New Projects
 [ ] French Language

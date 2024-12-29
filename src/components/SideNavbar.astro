@@ -10,11 +10,11 @@ const { link, label, border } = Astro.props
 ---
 
 <aside
-  class='p-10 h-10 md:h-screen w-screen md:w-10 flex justify-between items-center md:flex-col absolute md:fixed top-0 z-50 opacity-0'
+  class='absolute top-0 z-50 flex h-10 w-screen items-center justify-between p-10 opacity-0 md:fixed md:h-screen md:w-10 md:flex-col'
   id='nav'
 >
   <div
-    class='md:-rotate-90 md:mt-32 flex items-center space-x-5 md:space-x-10 text-sm'
+    class='flex items-center space-x-5 text-sm md:mt-32 md:-rotate-90 md:space-x-10'
   >
     <hr class=`w-10 md:w-20 border-[1.5px] ${border}` />
     {
@@ -43,7 +43,7 @@ const { link, label, border } = Astro.props
       )
     }
   </div>
-  <small class='md:-rotate-90 block text-xs'
+  <small class='block text-xs md:-rotate-90'
     >@2020 <span class='hidden md:inline'>Copyrights</span></small
   >
 </aside>

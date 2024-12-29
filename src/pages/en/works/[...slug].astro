@@ -65,15 +65,15 @@ export const prerender = true
   border='border-gray-800'
 >
   <main
-    class='w-screen mt-20 md:mt-0 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'
+    class='relative mt-20 flex w-screen flex-col items-center justify-center gap-10 md:mt-0 md:gap-20 md:px-24'
   >
     <!-- Title Section -->
     <div
-      class='w-full text-center h-[500px] flex justify-center uppercase'
+      class='flex h-[500px] w-full justify-center text-center uppercase'
       style={`background-color: ${mainColor}`}
     >
       <h1
-        class='font-prata text-[11vw] self-center md:self-end'
+        class='self-center font-prata text-[11vw] md:self-end'
         style={`color: ${secondaryColor}`}
       >
         {title}
@@ -82,13 +82,13 @@ export const prerender = true
 
     <!-- SubHeader -->
     <h2
-      class='text-[7vw] md:text-[3vw] font-prata max-w-[700px] md:leading-[4rem] my-10 px-5 md:p-0'
+      class='my-10 max-w-[700px] px-5 font-prata text-[7vw] md:p-0 md:text-[3vw] md:leading-[4rem]'
     >
       {excerpt}
     </h2>
     <ul
       role='presentation'
-      class='flex flex-col md:flex-row justify-between items-start gap-3 md:gap-5 md:px-10 px-5'
+      class='flex flex-col items-start justify-between gap-3 px-5 md:flex-row md:gap-5 md:px-10'
     >
       {
         techStack.map((tech: ProjectTechStack) => (
@@ -109,10 +109,10 @@ export const prerender = true
         testimonial && (
           <section
             id='Testimonial'
-            class='w-full md:leading-tight text-center text-gray-800 font-prata pb-12'
+            class='w-full pb-12 text-center font-prata text-gray-800 md:leading-tight'
           >
             <h2 class='text-[3vw]'>"{testimonial.quote}"</h2>
-            <div class='w-full flex justify-between'>
+            <div class='flex w-full justify-between'>
               <p class='text-[2vw]'>{testimonial.name}</p>
               <p class='text-[2vw]'>{testimonial.role}</p>
             </div>
@@ -124,24 +124,24 @@ export const prerender = true
 
   <!-- Widget -->
   <div
-    class='fixed bottom-7 md:bottom-10 right-7 md:right-10 p-3 md:p-5 text-left rounded-lg space-y-2'
+    class='fixed bottom-7 right-7 space-y-2 rounded-lg p-3 text-left md:bottom-10 md:right-10 md:p-5'
     style={`background-color: ${mainColor}; color: ${secondaryColor}`}
   >
     <a
       href={repoLink}
       target='_blank'
-      class='text-sm md:text-base hover-underline-animation-widget'>CODE</a
+      class='hover-underline-animation-widget text-sm md:text-base'>CODE</a
     >
     <a
       href={liveLink}
       target='_blank'
-      class='text-sm md:text-base hover-underline-animation-widget'>LIVE</a
+      class='hover-underline-animation-widget text-sm md:text-base'>LIVE</a
     >
   </div>
 
   <!-- Courtin -->
   <div
-    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom'
+    class='absolute inset-0 z-0 w-screen origin-bottom bg-gray-800'
     id='courtin'
   >
   </div>

@@ -11,38 +11,38 @@ import Layout from '@/layouts/Layout.astro'
   link='/es/'
 >
   <main
-    class='w-screen md:min-h-screen p-10 mt-20 md:p-24 relative flex flex-col justify-around items-center gap-2 md:gap-5 z-10 text-center opacity-0'
+    class='relative z-10 mt-20 flex w-screen flex-col items-center justify-around gap-2 p-10 text-center opacity-0 md:min-h-screen md:gap-5 md:p-24'
     id='info'
   >
     <h1
-      class='text-[12vw] md:text-[7vw] uppercase leading-[0.95em] font-prata'
+      class='font-prata text-[12vw] uppercase leading-[0.95em] md:text-[7vw]'
       style='color: #fde047'
     >
       PAGE NOT FOUND
     </h1>
     <h2
-      class='text-[7vw] md:text-[3vw] font-prata max-w-[700px] md:leading-[4rem] my-5 px-5 md:p-0'
+      class='my-5 max-w-[700px] px-5 font-prata text-[7vw] md:p-0 md:text-[3vw] md:leading-[4rem]'
     >
       The page you are looking for does not exist.
     </h2>
-    <h3 class='text-lg my-5 px-5 md:p-0'>
+    <h3 class='my-5 px-5 text-lg md:p-0'>
       You can go back to the home page and continue browsing
     </h3>
-    <div class='flex justify-center items-center gap-5'>
+    <div class='flex items-center justify-center gap-5'>
       <a
         href='/es/'
-        class='text-xl block hover:-skew-x-12 transition-all duration-300 leading-[0.95em] ease-out'
+        class='block text-xl leading-[0.95em] transition-all duration-300 ease-out hover:-skew-x-12'
         >ESPAÑOL</a
       >
       <a
         href='/en/'
-        class='text-xl block hover:-skew-x-12 transition-all duration-300 leading-[0.95em] ease-out'
+        class='block text-xl leading-[0.95em] transition-all duration-300 ease-out hover:-skew-x-12'
         >ENGLISH</a
       >
     </div>
   </main>
   <div
-    class='absolute bg-gray-800 w-screen inset-0 z-0 origin-bottom scale-0'
+    class='absolute inset-0 z-0 w-screen origin-bottom scale-0 bg-gray-800'
     id='courtin'
   >
   </div>

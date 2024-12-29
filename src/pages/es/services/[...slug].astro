@@ -55,15 +55,15 @@ export const prerender = true
   border='border-gray-800'
 >
   <main
-    class='w-screen my-20 md:my-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'
+    class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 md:my-10 md:gap-20 md:px-24'
   >
     <!-- Header Section -->
     <section
       id='header'
-      class='w-full bg-gray-800 text-center h-[600px] flex justify-center'
+      class='flex h-[600px] w-full justify-center bg-gray-800 text-center'
     >
       <h1
-        class='font-prata text-[10vw] text-background self-center md:self-end md:leading-[10rem] uppercase'
+        class='self-center font-prata text-[10vw] uppercase text-background md:self-end md:leading-[10rem]'
       >
         {name}
       </h1>
@@ -78,10 +78,10 @@ export const prerender = true
     {
       techStack && techStack.length > 0 && (
         <section id='TechStack' class='w-full'>
-          <h2 class='text-[5vw] md:leading-tight text-center text-gray-800 font-prata'>
+          <h2 class='text-center font-prata text-[5vw] text-gray-800 md:leading-tight'>
             Tecnologías
           </h2>
-          <ul class='flex gap-5 md:gap-10 w-full justify-center items-center mt-6'>
+          <ul class='mt-6 flex w-full items-center justify-center gap-5 md:gap-10'>
             {techStack.map((tech: TechStack) => (
               <TechStackCard techStack={tech} />
             ))}
@@ -94,7 +94,7 @@ export const prerender = true
     <section id='Quote' class='w-full space-y-20 md:space-y-20'>
       <Image src={image} alt={imageAlt} loading='lazy' />
       <h2
-        class='text-[5vw] md:leading-tight text-center text-gray-800 font-prata'
+        class='text-center font-prata text-[5vw] text-gray-800 md:leading-tight'
       >
         "{quote}"
       </h2>
@@ -106,14 +106,14 @@ export const prerender = true
         Array.isArray(projects) ? (
           <ul
             role='presentation'
-            class='grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-5 md:gap-10 w-full p-12'
+            class='grid w-full grid-cols-1 gap-5 p-12 md:grid-cols-3 md:gap-10 2xl:grid-cols-4'
           >
             {projects.map((project) => (
               <ProjectCard slug={project} lang='es' />
             ))}
           </ul>
         ) : (
-          <div class='text-center p-12' set:html={projects} />
+          <div class='p-12 text-center' set:html={projects} />
         )
       }
     </section>
@@ -121,17 +121,17 @@ export const prerender = true
 
   <!-- Contact Widget -->
   <div
-    class='fixed bottom-7 md:bottom-10 right-7 md:right-10 p-3 md:p-5 text-left rounded-lg space-y-2 bg-gray-800 text-background'
+    class='fixed bottom-7 right-7 space-y-2 rounded-lg bg-gray-800 p-3 text-left text-background md:bottom-10 md:right-10 md:p-5'
   >
     <a
       href={`/es/contact?service=${slug}`}
-      class='text-sm md:text-base hover-underline-animation-widget'>CONTACTAR</a
+      class='hover-underline-animation-widget text-sm md:text-base'>CONTACTAR</a
     >
   </div>
 
   <!-- Courtin -->
   <div
-    class='absolute bg-gray-800 w-screen inset-0 z-50 origin-bottom'
+    class='absolute inset-0 z-50 w-screen origin-bottom bg-gray-800'
     id='courtin'
   >
   </div>
