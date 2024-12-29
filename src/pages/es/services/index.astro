@@ -40,7 +40,7 @@ const allServices: CollectionEntry<'services'>[] = await getServices('es')
       class='font-prata md:space-y-10 space-y-5 flex-1 opacity-0'
       id='links'
     >
-      <ul class='md:space-y-10 space-y-5' role='list'>
+      <ul class='md:space-y-10 space-y-5'>
         {
           allServices.map(({ data: { name, excerpt }, slug }) => (
             <li>

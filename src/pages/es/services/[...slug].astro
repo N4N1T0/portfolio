@@ -81,10 +81,7 @@ export const prerender = true
           <h2 class='text-[5vw] md:leading-tight text-center text-gray-800 font-prata'>
             Tecnologías
           </h2>
-          <ul
-            role='list'
-            class='flex gap-5 md:gap-10 w-full justify-center items-center mt-6'
-          >
+          <ul class='flex gap-5 md:gap-10 w-full justify-center items-center mt-6'>
             {techStack.map((tech: TechStack) => (
               <TechStackCard techStack={tech} />
             ))}
