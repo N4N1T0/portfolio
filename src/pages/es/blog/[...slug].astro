@@ -8,11 +8,11 @@ import Layout from '@/layouts/Layout.astro'
 
 // Function to create the path for all the blogs
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ id }) => {
-    return id.startsWith('es/')
+  const posts = await getCollection('blog', ({ data }) => {
+    return data.language === 'es'
   })
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: post
   }))
 }
@@ -27,7 +27,7 @@ const { title, excerpt, image, imageAlt, author, date } = post.data
 const slug = Astro.params.slug
 
 // Special function to render the content of the MD
-const { Content } = await post.render()
+const content = post.rendered
 
 // Redirect in case the path dosent exits
 if (!slug || !post) {
@@ -49,19 +49,19 @@ export const prerender = true
   border='border-gray-800'
 >
   <main
-    class='w-screen my-20 md:my-10 md:px-24 relative flex flex-col justify-center items-center gap-10 md:gap-20'
+    class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 md:my-10 md:gap-20 md:px-24'
   >
     <!-- Header Section -->
     <section
       id='header'
-      class='w-full bg-gray-800 text-center h-[600px] flex justify-center relative overflow-hidden'
+      class='relative flex h-[600px] w-full justify-center overflow-hidden bg-gray-800 text-center'
     >
       <h1
-        class='font-prata text-[6vw] text-background self-center md:self-end md:leading-[6rem] uppercase z-20'
+        class='z-20 self-center font-prata text-[6vw] uppercase text-background md:self-end md:leading-[7rem]'
       >
         {title}
       </h1>
-      <div class='absolute inset-0 w-full h-full z-10 bg-gray-800 opacity-50'>
+      <div class='absolute inset-0 z-10 h-full w-full bg-gray-800 opacity-50'>
       </div>
       <Image
         src={image}
@@ -74,13 +74,13 @@ export const prerender = true
     <!-- SubHeading Section -->
     <section
       id='subheader'
-      class='flex w-full justify-between flex-col md:flex-row items-center px-5 gap-2 md:gap-0'
+      class='flex w-full flex-col items-center justify-between gap-2 px-5 md:flex-row md:gap-0'
     >
       <strong>
         <a
           href={`${author === 'Dayana Abuin' ? 'https://www.linkedin.com/in/dayana-abuin-rios/' : 'https://www.linkedin.com/in/adrian-alvarez-alonso/'}`}
           target='_blank'
-          class='hover:text-gray-700 hover:underline text-gray-950 duration-200 transition ease-out'
+          class='text-gray-950 transition duration-200 ease-out hover:text-gray-700 hover:underline'
           rel='nofollow noopener noreferrer'>{author}</a
         >
       </strong>
@@ -94,13 +94,13 @@ export const prerender = true
 
     <!-- Content Section -->
     <section id='content' class='prose max-w-[1200px] px-5'>
-      <Content />
+      <div set:html={content?.html} />
     </section>
   </main>
 
   <!-- Courtin Section -->
   <div
-    class='absolute bg-gray-800 w-screen inset-0 z-50 origin-bottom'
+    class='absolute inset-0 z-50 w-screen origin-bottom bg-gray-800'
     id='courtin'
   >
   </div>

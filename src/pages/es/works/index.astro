@@ -5,11 +5,12 @@ import type { CollectionEntry } from 'astro:content'
 // Project Imports
 import Layout from '@/layouts/Layout.astro'
 
-// Utlities Imports
+// Utilities Imports
 import { getProjects } from '@/lib'
 
 // Astro get Collection
 const allProjects: CollectionEntry<'projects'>[] = await getProjects('es')
+console.log('🚀 ~ allProjects:', allProjects)
 ---
 
 <Layout
