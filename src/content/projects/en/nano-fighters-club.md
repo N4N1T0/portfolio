@@ -1,6 +1,5 @@
 ---
 title: "Nano Fighters Club"
-slug: "nano-fighters-club-en"
 date: 2023-11-20
 excerpt: "Combat Sports Trainer site using Astros new technologies to create maximum performance combined with:"
 image: "../../../assets/nano-fighters-club-showcase.webp"

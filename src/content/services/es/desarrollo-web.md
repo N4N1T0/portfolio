@@ -1,9 +1,8 @@
 ---
 name: 'Desarrollo Web'
-slug: 'desarrollo-web'
 excerpt: '¡Eleva tu presencia en línea! Con mi experiencia en desarrollo web, aprovecho la tecnología de vanguardia y un enfoque orientado al rendimiento.'
 image: '../../../assets/services/caspar-camille-rubin-0qvBNep1Y04-unsplash.webp'
-imageAlt: 'Escritoria de un desarrollador Web'
+imageAlt: 'Escritorio de un desarrollador Web'
 quote: 'Transforma tu visión digital en una realidad impresionante con tecnología de vanguardia y un rendimiento insuperable.'
 techStack: [
 	{
@@ -48,13 +47,14 @@ techStack: [
 	},
 ]
 projects: ['striking-gold', 'tough-ecommerce', 'nano-fighters-club']
+language: 'es'
 ---
 
 ### Transformando tu Presencia Digital
 
 Descubre el poder de una web desarrollada con tecnologías de alta gama y un enfoque impulsado por inteligencia artificial. Mi objetivo es proporcionar soluciones web que no solo impresionen visualmente, sino que también ofrezcan un rendimiento y velocidad excepcionales.
 
-### Características Destacadas:
+### Características Destacadas
 
 - **Tecnologías de Alta Gama:** Implemento las herramientas y tecnologías más avanzadas para asegurar que tu sitio esté a la vanguardia.
 - **Desarrollo Impulsado con AI:** Aprovecho la inteligencia artificial para optimizar cada aspecto del desarrollo, desde la velocidad de carga hasta la personalización del contenido.
@@ -62,7 +62,7 @@ Descubre el poder de una web desarrollada con tecnologías de alta gama y un enf
 - **Escalabilidad y Robustez:** Diseños que crecen con tu negocio. Mis soluciones son escalables y capaces de manejar el tráfico creciente sin comprometer la estabilidad.
 - **Enfoque en el Usuario y las Ventas:** Cada proyecto se centra en crear experiencias de usuario excepcionales que impulsen las conversiones y maximicen las ventas.
 
-### Por Qué Elegir Mis Servicios:
+### Por Qué Elegir Mis Servicios
 
 Mi enfoque se basa en una combinación de innovación y eficiencia, asegurando que tu sitio web no solo sea atractivo, sino también altamente funcional y orientado a resultados. Al elegir mis servicios, obtendrás una plataforma digital que resuena con tus clientes y potencia tu negocio al siguiente nivel.
 

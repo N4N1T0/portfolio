@@ -1,6 +1,5 @@
 ---
 title: "Backswing"
-slug: "backswing-ecommerce-en"
 date: 2024-06-10
 excerpt: "Headless Woocommerce for selling paddle items, using Next.js as the application base and these technologies:"
 image: "../../../assets/backswing-showcase.webp"

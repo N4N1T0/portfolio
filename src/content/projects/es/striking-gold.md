@@ -1,6 +1,5 @@
 ---
 title: "Striking Gold"
-slug: "striking-gold"
 date: 2024-04-27
 excerpt: " Blog de deportes Powered by AI, Usando LLM Davinci para ajustar la voz de los articules con tecnologías de edición in situ y también:"
 image: "../../../assets/striking-gold-showcase.webp"
@@ -24,7 +23,7 @@ techStack:
     },
     {
       title: "Prisma",
-      info: "Prisma desbloquea un nuevo nivel de experiencia para el desarrollador cuando trabaja con bases de datos gracias a su modelo de datos intuitivo y sus migraciones automatizadas. bases de datos gracias a suintuitivo modelo de datos, migraciones automatizadas seguridad de tipos y autocompletado.",
+      info: "Prisma desbloquea un nuevo nivel de experiencia para el desarrollador cuando trabaja con bases de datos gracias a su modelo de datos intuitivo y sus migraciones automatizadas. bases de datos gracias a su intuitivo modelo de datos, migraciones automatizadas seguridad de tipos y autocompletado.",
       link: "https://www.prisma.io/",
     },
     {
@@ -36,11 +35,11 @@ techStack:
 testimonial:
   {
     name: "Classius Black",
-    quote: "Un Blog, facil de usar, facil de ver y sobre todo con mucho potencial",
+    quote: "Un Blog, fácil de usar, fácil de ver y sobre todo con mucho potencial",
     role: "Owner de Striking Gold",
   }
 ---
 
-Adoptar OpenAI para mi blog supone una revolución en la creación de contenidos. contenidos. Aprovechando sus avanzados modelos lingüísticos, aprovecho el poder del procesamiento del lenguaje natural para generar contenidos atractivos y contextualmente relevantes. lenguaje natural para generar artículos atractivos y contextualmente contextuales.
+Adoptar OpenAI para mi blog supone una revolución en la creación de contenidos. contenidos. Aprovechando sus avanzados modelos lingüísticos, aprovecho el poder del procesamiento del lenguaje natural para generar contenidos atractivos y conceptualmente relevantes. lenguaje natural para generar artículos atractivos y contextualmente contextuales.
 
 Las capacidades de OpenAI elevan la calidad general de mis contenidos,haciéndolo más convincente y resonante para los lectores. Además, una herramienta de edición in situ como Tiptap mejora el proceso editorial, agilizando proceso editorial, agilizando la creación de contenidos con su interfaz intuitiva y intuitiva y repleta de funciones. Esta combinación no sólo agiliza el proceso de redacción, sino que sino que también garantiza una experiencia de edición fluida y colaborativa que, en última la eficacia y el impacto de mi blog.

@@ -1,6 +1,5 @@
 ---
 title: "Tough"
-slug: "tough-ecommerce"
 date: 2024-02-06
 excerpt: "Llamativo ecommerce de equipamiento deportivo, inspirado en la web de Everlast y hecho con estas tecnologías:"
 image: "../../../assets/tough-showcase.webp"
@@ -36,7 +35,7 @@ techStack:
 testimonial:
   {
     name: "Angel Luis Perez",
-    quote: "Un ecommerce especial, muy bien hecho, funcional y esteticamente agradable para los clientes. Cada vez que se usa, es un gran exito.",
+    quote: "Un ecommerce especial, muy bien hecho, funcional y estéticamente agradable para los clientes. Cada vez que se usa, es un gran éxito.",
     role: "CMO de Tough",
   }
 ---
@@ -44,4 +43,4 @@ testimonial:
 Para crear soluciones sólidas de comercio electrónico, aprovecho la potencia de Next.js por sus capacidades de renderizado sin interrupciones y del lado del servidor. Esto no sólo garantiza una experiencia de usuario rápida y receptiva sino que también facilita un rendimiento óptimo de los motores de búsqueda. Supabase actúa como la columna vertebral, proporcionando una infraestructura de base de datos escalable y segura,que permite una gestión de datos fluida y la colaboración en tiempo real.
 
 La integración de Stripe en el ecosistema garantiza un proceso de pago
-seguro y sin fisuras. y seguro, dotando a la plataforma de comercio electrónico de fiabilidad y fiabilidad y flexibilidad. Juntos, Next.js, Supabase y Stripe forman una tríada de tecnologías que convergen para crear una plataforma de comercio electrónico de alta calidad. tecnologías que convergen para crear una experiencia de comercio electrónico de alto rendimiento, segura y repleta de funciones.
+seguro y sin fisuras. y seguro, dotando a la plataforma de comercio electrónico de fiabilidad y fiabilidad y flexibilidad. Juntos, Next.js, Supabase y Stripe forman una triada de tecnologías que convergen para crear una plataforma de comercio electrónico de alta calidad. tecnologías que convergen para crear una experiencia de comercio electrónico de alto rendimiento, segura y repleta de funciones.

@@ -1,6 +1,5 @@
 ---
 name: "Desarrollo en Site Builders"
-slug: "desarrollo-en-site-builders"
 excerpt: "Crea sitios web impresionantes y funcionales con WordPress y Framer, aprovechando su flexibilidad y capacidad para personalización avanzada."
 image: "../../../assets/services/webfactory-ltd-CzShzocZtW0-unsplash.webp"
 imageAlt: "Un ordenador con WordPress Admin"
@@ -34,13 +33,14 @@ techStack:
     },
   ]
 projects: ["backswing-ecommerce"]
+language: "es"
 ---
 
 ### Crea Sitios Web Impresionantes con WordPress y Framer
 
 Aprovecha la potencia y flexibilidad de los mejores site builders del mercado, WordPress y Framer, para crear sitios web que no solo sean visualmente atractivos, sino también funcionales y fáciles de gestionar. Ofrezco soluciones de desarrollo que se adaptan a tus necesidades específicas, utilizando estas plataformas líderes.
 
-### Características Destacadas:
+### Características Destacadas
 
 #### **WordPress:**
 
@@ -56,12 +56,12 @@ Aprovecha la potencia y flexibilidad de los mejores site builders del mercado, W
 - **Ideal para Prototipos:** Perfecto para diseñadores y desarrolladores que buscan prototipar y lanzar sitios web modernos y atractivos rápidamente.
 - **Estadísticas:** Utilizado por miles de startups y empresas innovadoras, Framer es conocido por su capacidad de crear sitios web impresionantes en poco tiempo.
 
-### Beneficios de Elegir WordPress y Framer:
+### Beneficios de Elegir WordPress y Framer
 
 - **Versatilidad para Cualquier Proyecto:** Desde blogs y sitios corporativos hasta portafolios y tiendas online, estas plataformas se adaptan a cualquier tipo de proyecto.
 - **Gestión Sencilla:** Interfaces fáciles de usar que permiten una gestión y actualización sencilla del contenido.
 - **Rendimiento y SEO:** Herramientas integradas para optimizar el rendimiento y mejorar la visibilidad en los motores de búsqueda.
 
-### Por Qué Elegir Mis Servicios:
+### Por Qué Elegir Mis Servicios
 
 Al elegir mis servicios de desarrollo en WordPress y Framer, obtendrás una combinación perfecta de funcionalidad, diseño y rendimiento. Ya sea que necesites un sitio web dinámico y atractivo o una plataforma robusta y extensible, te ofrezco soluciones adaptadas a tus necesidades y objetivos comerciales.

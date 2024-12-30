@@ -31,11 +31,11 @@ techStack:
 testimonial:
   {
     name: "Pedro Luis",
-    quote: "Es una web Excepcional, rapida casi con una puntuacion perfecta en los CORE WEV VITALS",
-    role: "Usurio de Nano Fighters Club",
+    quote: "Es una web Excepcional, rápida casi con una puntuación perfecta en los CORE WEV VITALS",
+    role: "Usuario de Nano Fighters Club",
   }
 ---
 
-Para crear sitios estáticos dinámicos para pequeñas empresas, elijo Astro por su rendimiento ultrarrápido, que permite cargas de página rápidas y una y una experiencia de usuario excepcional. Shadcn contribuye al atractivo visual, proporcionando una solución robusta y eficiente para la generación de sombras, mejorando la estética del sitio sin comprometer la velocidad.
+Para crear sitios estáticos dinámicos para pequeñas empresas, elijo Astro por su rendimiento ultra-rápido, que permite cargas de página rápidas y una y una experiencia de usuario excepcional. Shadcn contribuye al atractivo visual, proporcionando una solución robusta y eficiente para la generación de sombras, mejorando la estética del sitio sin comprometer la velocidad.
 
 Tailwind CSS agiliza el proceso de diseño, ofreciendo un enfoque basado en la utilidad que acelera que acelera el desarrollo al tiempo que mantiene un diseño pulido y sensible. Este trío Este trío formado por Astro, Shadcn y Tailwind combina a la perfección velocidad, atractivo visual y eficacia de diseño. visual y la eficacia del diseño, lo que permite a las pequeñas empresas estática que no sólo tiene un aspecto impresionante, sino que también funciona en línea.

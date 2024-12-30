@@ -1,8 +1,7 @@
 ---
 title: "Backswing"
-slug: "backswing-ecommerce"
 date: 2024-06-10
-excerpt: "Woocomerce Headless para la venta de articulos de Padle, usando Next.js como base de aplicacion y estas tecnologias:"
+excerpt: "Woocomerce Headless para la venta de articulos de Padle, usando Next.js como base de aplicación y estas tecnologías:"
 image: "../../../assets/backswing-showcase.webp"
 imageSecondary: "../../../assets/backswing-style.webp"
 imageAlt: "Backswing Website"
@@ -31,7 +30,7 @@ techStack:
 testimonial:
   {
     name: "Jorge Montenegro",
-    quote: "Fue un placer trabajar con Adrian en este projecto. Gracias por todo el apoyo, siempre estare encantado de trabajar con usted en este proyecto.",
+    quote: "Fue un placer trabajar con Adrian en este proyecto. Gracias por todo el apoyo, siempre estaré encantado de trabajar con usted en este proyecto.",
     role: "CEO de Backswing",
   }
 ---

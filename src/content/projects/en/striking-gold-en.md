@@ -1,6 +1,5 @@
 ---
 title: "Striking Gold"
-slug: "striking-gold-en"
 date: 2024-04-27
 excerpt: "Sports blog powered by AI, using Davinci LLM to fine-tune the voice of articles with on-site editing technologies and also:"
 image: "../../../assets/striking-gold-showcase.webp"
@@ -35,7 +34,7 @@ techStack:
   ]
 testimonial:
   {
-    name: "Classius Black",
+    name: "Jack Potter",
     quote: "An easy-to-use, easy-to-view blog with a lot of potential.",
     role: "Owner of Striking Gold",
   }

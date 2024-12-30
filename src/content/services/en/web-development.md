@@ -1,6 +1,5 @@
 ---
 name: "Web Development"
-slug: "web-development"
 excerpt: "Elevate your online presence! With my web development expertise, I leverage cutting-edge technology and a performance-oriented approach."
 image: "../../../assets/services/caspar-camille-rubin-0qvBNep1Y04-unsplash.webp"
 imageAlt: "Desk of a Web Developer"
@@ -50,13 +49,14 @@ techStack:
   ]
 projects:
   ["striking-gold-en", "en/tough-ecommerce-en", "en/nano-fighters-club-en"]
+language: "en"
 ---
 
 ### Transforming Your Digital Presence
 
 Discover the power of a website developed with high-end technologies and an AI-driven approach. My goal is to provide web solutions that are not only visually impressive but also offer exceptional performance and speed.
 
-### Key Features:
+### Key Features
 
 - **High-End Technologies:** I implement the most advanced tools and technologies to ensure your site is at the cutting edge.
 - **AI-Driven Development:** I leverage artificial intelligence to optimize every aspect of development, from load speed to content personalization.
@@ -64,7 +64,7 @@ Discover the power of a website developed with high-end technologies and an AI-d
 - **Scalability and Robustness:** Designs that grow with your business. My solutions are scalable and capable of handling increasing traffic without compromising stability.
 - **User and Sales Focused:** Every project is centered on creating exceptional user experiences that drive conversions and maximize sales.
 
-### Why Choose My Services:
+### Why Choose My Services
 
 My approach is based on a combination of innovation and efficiency, ensuring your website is not only attractive but also highly functional and results-oriented. By choosing my services, you will get a digital platform that resonates with your customers and propels your business to the next level.
 

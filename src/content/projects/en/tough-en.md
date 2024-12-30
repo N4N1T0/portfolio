@@ -1,6 +1,5 @@
 ---
 title: "Tough"
-slug: "tough-ecommerce-en"
 date: 2024-02-06
 excerpt: "Eye-catching sports equipment e-commerce site, inspired by the Everlast website and built with these technologies:"
 image: "../../../assets/tough-showcase.webp"

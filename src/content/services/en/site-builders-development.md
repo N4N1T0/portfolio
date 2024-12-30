@@ -1,6 +1,5 @@
 ---
 name: "Site Builders Development"
-slug: "site-builders-development"
 excerpt: "Create stunning and functional websites with WordPress and Framer, leveraging their flexibility and capability for advanced customization."
 image: "../../../assets/services/webfactory-ltd-CzShzocZtW0-unsplash.webp"
 imageAlt: "A computer with WordPress Admin"
@@ -34,13 +33,14 @@ techStack:
     },
   ]
 projects: ["es/backswing-ecommerce"]
+language: "en"
 ---
 
 ### Create Stunning Websites with WordPress and Framer
 
 Harness the power and flexibility of the best site builders on the market, WordPress and Framer, to create websites that are not only visually appealing but also functional and easy to manage. I offer development solutions tailored to your specific needs using these leading platforms.
 
-### Key Features:
+### Key Features
 
 #### **WordPress:**
 
@@ -56,12 +56,12 @@ Harness the power and flexibility of the best site builders on the market, WordP
 - **Ideal for Prototypes:** Perfect for designers and developers looking to prototype and launch modern, attractive websites quickly.
 - **Statistics:** Used by thousands of startups and innovative companies, Framer is known for its ability to create stunning websites in a short time.
 
-### Benefits of Choosing WordPress and Framer:
+### Benefits of Choosing WordPress and Framer
 
 - **Versatility for Any Project:** From blogs and corporate sites to portfolios and online stores, these platforms adapt to any type of project.
 - **Easy Management:** User-friendly interfaces that allow for easy content management and updates.
 - **Performance and SEO:** Built-in tools to optimize performance and improve search engine visibility.
 
-### Why Choose My Services:
+### Why Choose My Services
 
 By choosing my development services in WordPress and Framer, you will get the perfect combination of functionality, design, and performance. Whether you need a dynamic and attractive website or a robust and extensible platform, I offer solutions tailored to your business needs and goals.

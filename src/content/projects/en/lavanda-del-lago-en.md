@@ -1,6 +1,5 @@
 ---
 title: "Lavanda del Lago"
-slug: "lavanda-del-lago-ecommerce-en"
 date: 2024-06-10
 excerpt: "Ecommerce for selling lavender and natural products, created and powered by these technologies:"
 image: "../../../assets/lavanda-del-lago-showcase.webp"
