@@ -27,7 +27,7 @@ const allServices: CollectionEntry<'services'>[] = await getServices('es')
       class='sticky bottom-24 flex-1 space-y-3 self-end opacity-0'
       id='info'
     >
-      <h1 class='font-semibold tracking-widest'>Servicios</h1>
+      <h1 class='text-4xl font-semibold tracking-widest'>Servicios</h1>
       <p class='text-sm'>
         Embárcate en un viaje a través de mi experiencia dinámica, que abarca el
         diseño web, desarrollo, mantenimiento, diseño de aplicaciones,
@@ -42,10 +42,10 @@ const allServices: CollectionEntry<'services'>[] = await getServices('es')
     >
       <ul class='space-y-5 md:space-y-10'>
         {
-          allServices.map(({ data: { name, excerpt }, slug }) => (
+          allServices.map(({ data: { name, excerpt }, id }) => (
             <li>
               <a
-                href={`/es/services/${slug}`}
+                href={`/es/services/${id}`}
                 class='block text-[12vw] uppercase leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12 md:text-[7vw]'
               >
                 <h2>{name}</h2>

@@ -5,7 +5,7 @@ import type { CollectionEntry } from 'astro:content'
 // Project Imports
 import Layout from '@/layouts/Layout.astro'
 
-// Utlities Imports
+// Utilities Imports
 import { getProjects } from '@/lib'
 
 // Astro get Collection
@@ -27,7 +27,7 @@ const allProjects: CollectionEntry<'projects'>[] = await getProjects('en')
       class='sticky bottom-24 z-10 flex-1 space-y-3 self-end opacity-0'
       id='info'
     >
-      <h1 class='font-semibold tracking-widest'>Projects</h1>
+      <h1 class='text-4xl font-semibold tracking-widest'>Projects</h1>
       <p class='text-sm'>
         Explore a compilation of my finest endeavors spanning Web Design and
         Development. In a dynamic digital landscape, my role has transformed
@@ -41,10 +41,10 @@ const allProjects: CollectionEntry<'projects'>[] = await getProjects('en')
       id='links'
     >
       {
-        allProjects.map(({ data: { title, excerpt }, slug }, index) => (
+        allProjects.map(({ data: { title, excerpt }, id }, index) => (
           <div>
             <a
-              href={`/en/works/${slug}`}
+              href={`/en/works/${id}`}
               class='block text-[12vw] uppercase leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12 md:text-[7vw]'
             >
               <h2>{title}</h2>

@@ -15,10 +15,10 @@ export default {
       },
     },
     {
-      files: "*.mdx",
+      files: "*.md",
       options: {
         singleQuote: true,
-        parser: "mdx",
+        parser: "md",
         trailingComma: "none",
         tabWidth: 2,
         semi: false,

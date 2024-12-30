@@ -13,10 +13,10 @@ import type { ProjectTechStack } from '@/types'
 // function to create the path for all the projects
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ id }) => {
-    return id.startsWith('en/')
+    return id.startsWith('en')
   })
   return projects.map((project) => ({
-    params: { slug: project.slug },
+    params: { slug: project.id },
     props: project
   }))
 }
@@ -43,7 +43,7 @@ const {
 const slug = Astro.params.slug
 
 // Special function to render the content of the MD
-const { Content } = await project.render()
+const content = project.rendered
 
 // Redirect in case the path dosent exits
 if (!slug || !project) {
@@ -61,7 +61,7 @@ export const prerender = true
   description='Llamativo ecommerce de equipamiento deportivo, inspirado en la web de Everlast'
   title='Tough - Ecommerce Site'
   label='Proyectos'
-  link='/es/works'
+  link='/en/works'
   border='border-gray-800'
 >
   <main
@@ -69,7 +69,7 @@ export const prerender = true
   >
     <!-- Title Section -->
     <div
-      class='flex h-[500px] w-full justify-center text-center uppercase'
+      class='flex h-[70vh] w-full justify-center text-center uppercase'
       style={`background-color: ${mainColor}`}
     >
       <h1
@@ -82,7 +82,7 @@ export const prerender = true
 
     <!-- SubHeader -->
     <h2
-      class='my-10 max-w-[700px] px-5 font-prata text-[7vw] md:p-0 md:text-[3vw] md:leading-[4rem]'
+      class='my-10 max-w-screen-lg px-5 font-prata text-[7vw] md:p-0 md:text-[3vw] md:leading-[4rem]'
     >
       {excerpt}
     </h2>
@@ -100,7 +100,7 @@ export const prerender = true
 
     <!-- Content Section -->
     <section id='content' class='prose max-w-[1200px] px-5'>
-      <Content />
+      <div set:html={content?.html} />
 
       <Image src={imageSecondary} alt={`${imageAlt} - Style`} loading='lazy' />
 
