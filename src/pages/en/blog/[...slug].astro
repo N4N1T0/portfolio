@@ -58,7 +58,7 @@ export const prerender = true
       class='relative flex h-[600px] w-full justify-center overflow-hidden bg-gray-800 text-center'
     >
       <h1
-        class='z-20 self-center font-prata text-[6vw] uppercase text-background md:self-end md:leading-[6rem]'
+        class='z-20 self-center font-prata text-[6vw] uppercase text-background md:self-end md:leading-[7rem]'
       >
         {title}
       </h1>
@@ -94,7 +94,10 @@ export const prerender = true
     </section>
 
     <!-- Content Section -->
-    <section id='content' class='prose max-w-[1200px] px-5'>
+    <section
+      id='content'
+      class='prose max-w-[1200px] px-5 prose-li:marker:bg-gray-800 prose-hr:border-gray-800'
+    >
       <div set:html={content?.html} />
     </section>
   </main>

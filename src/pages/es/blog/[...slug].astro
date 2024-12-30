@@ -93,7 +93,10 @@ export const prerender = true
     </section>
 
     <!-- Content Section -->
-    <section id='content' class='prose max-w-[1200px] px-5'>
+    <section
+      id='content'
+      class='prose max-w-[1200px] px-5 prose-li:marker:bg-gray-800 prose-hr:border-gray-800'
+    >
       <div set:html={content?.html} />
     </section>
   </main>
