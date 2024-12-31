@@ -52,15 +52,21 @@ Contributions are welcome! Please be nice, and if you see any improvements or bu
 
 ## Contact
 
-For support or questions, please contact me at: <a href="mailto:adrian.alvarezalonso1991@gmail.com" target="_blank">adrian.alvarezalonso1991@gmail.com</a>
+For support or questions, please contact me at: [adrian.alvarezalonso1991@gmail.com](mailto:adrian.alvarezalonso1991@gmail.com).
 
 ## TODO
 
 [X] tailwind classes sort prettier plugin
-[ ] Delete react
-[ ] Delete Resend
-[ ] Content Collection Update
+[X] Delete react
+[X] Delete Resend
+[X] Content Collection Update
 [ ] Add Place to Contact
-[ ] Add 3 More Blogs
 [ ] Add New Projects
 [ ] French Language
+
+### BLOG TODOS
+
+[X] Add 1 More Blogs
+[X] Change the Headers
+[X] Add Sharing Capabilities (like contact in services)
+[ ] Improve SEO

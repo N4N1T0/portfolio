@@ -124,7 +124,8 @@ export const prerender = true
 
   <!-- Widget -->
   <div
-    class='fixed bottom-7 right-7 space-y-2 rounded-lg p-3 text-left md:bottom-10 md:right-10 md:p-5'
+    id='widget'
+    class='fixed bottom-7 right-7 space-y-2 rounded-lg p-3 text-left opacity-0 transition-opacity duration-150 md:bottom-10 md:right-10 md:p-5'
     style={`background-color: ${mainColor}; color: ${secondaryColor}`}
   >
     <a
@@ -146,6 +147,20 @@ export const prerender = true
   >
   </div>
 </Layout>
+
+<script>
+  const share = document.getElementById('widget')
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      share?.classList.add('opacity-1') // Show the element
+      share?.classList.remove('opacity-0') // Show the element
+    } else {
+      share?.classList.add('opacity-0') // Hide the element
+      share?.classList.remove('opacity-1') // Hide the element
+    }
+  })
+</script>
 
 <style>
   .hover-underline-animation-widget {

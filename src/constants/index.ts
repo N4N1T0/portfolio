@@ -74,3 +74,21 @@ export const servicesResponseEnglish = [
       'Hello, I am interested in your email marketing services. Could you send me more details about your strategies and costs?'
   }
 ]
+
+export const shareLinks = [
+  {
+    label: 'LinkedIn',
+    href: (text: string) =>
+      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(text)}`
+  },
+  {
+    label: 'Twitter',
+    href: (text: string) =>
+      `https://twitter.com/intent/tweet?url=${encodeURIComponent(text)}`
+  },
+  {
+    label: 'Facebook',
+    href: (text: string) =>
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(text)}`
+  }
+]

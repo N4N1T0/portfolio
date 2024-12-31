@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content'
 
 // Project Imports
 import Layout from '@/layouts/Layout.astro'
+import { shareLinks } from '@/constants/index'
 
 // Function to create the path for all the blogs
 export async function getStaticPaths() {
@@ -74,9 +75,9 @@ export const prerender = true
     <!-- SubHeading Section -->
     <section
       id='subheader'
-      class='flex w-full flex-col items-center justify-between gap-2 px-5 md:flex-row md:gap-0'
+      class='flex w-full flex-col items-center justify-between gap-2 px-5 md:flex-row md:gap-10'
     >
-      <strong>
+      <strong class='flex-1'>
         <a
           href={`${author === 'Dayana Abuin' ? 'https://www.linkedin.com/in/dayana-abuin-rios/' : 'https://www.linkedin.com/in/adrian-alvarez-alonso/'}`}
           target='_blank'
@@ -84,21 +85,39 @@ export const prerender = true
           rel='nofollow noopener noreferrer'>{author}</a
         >
       </strong>
-      <span>
+      <span class='text-center text-3xl'>
         {excerpt}
       </span>
-      <strong>
-        {date.toLocaleDateString()}
+      <strong class='flex-1'>
+        {date.toLocaleDateString('es-ES')}
       </strong>
     </section>
 
     <!-- Content Section -->
     <section
       id='content'
-      class='prose max-w-[1200px] px-5 prose-li:marker:bg-gray-800 prose-hr:border-gray-800'
+      class='prose max-w-[1200px] px-5 prose-li:marker:text-gray-800 prose-hr:border-gray-800'
     >
       <div set:html={content?.html} />
     </section>
+
+    <!-- Share Widget -->
+    <div
+      id='share'
+      class='fixed bottom-7 right-7 space-y-2 rounded-lg bg-gray-800 p-3 text-left text-background opacity-0 transition-opacity duration-150 md:bottom-10 md:right-10 md:p-5'
+    >
+      {
+        shareLinks.map((link) => (
+          <a
+            href={link.href(Astro.url.href)}
+            target='_blank'
+            class='hover-underline-animation-widget w-fit text-sm md:text-base'
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
   </main>
 
   <!-- Courtin Section -->
@@ -109,11 +128,25 @@ export const prerender = true
   </div>
 </Layout>
 
+<script>
+  const share = document.getElementById('share')
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      share?.classList.add('opacity-1') // Show the element
+      share?.classList.remove('opacity-0') // Show the element
+    } else {
+      share?.classList.add('opacity-0') // Hide the element
+      share?.classList.remove('opacity-1') // Hide the element
+    }
+  })
+</script>
+
 <style>
   .hover-underline-animation-widget {
     display: block;
     position: relative;
-    color: #3ba697;
+    color: #a3bbfb;
   }
 
   .hover-underline-animation-widget::after {
@@ -124,7 +157,7 @@ export const prerender = true
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #3ba697;
+    background-color: #a3bbfb;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
