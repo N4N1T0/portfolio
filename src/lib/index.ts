@@ -65,9 +65,9 @@ export async function getServices(
 export async function getProjects(
   lang: string
 ): Promise<Array<CollectionEntry<'projects'>>> {
-  const projects = await getCollection('projects', ({ id }) =>
-    id.startsWith(lang)
-  )
+  const projects = (
+    await getCollection('projects', ({ id }) => id.startsWith(lang))
+  ).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 
   return projects
 }
