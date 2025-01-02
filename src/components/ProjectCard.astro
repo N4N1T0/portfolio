@@ -25,7 +25,7 @@ const project = await getCollecionBySlug(slug)
             src={project.data.image}
             alt={project.data.title}
             title={project.data.title}
-            loading='lazy'
+            loading='eager'
             class='h-full w-full object-cover'
           />
         </figure>

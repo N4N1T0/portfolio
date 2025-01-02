@@ -1,6 +1,7 @@
 ---
 // Types Imports
 import type { TechStack } from '@/types'
+import { Image } from 'astro:assets'
 
 // Astro Props
 const { techStack } = Astro.props
@@ -20,10 +21,12 @@ interface Props {
     class='group relative inset-0 h-full w-full'
     rel='nofollow noopener noreferrer'
   >
-    <img
+    <Image
       src={image}
       alt={title}
       title={title}
+      width={100}
+      height={100}
       loading='lazy'
       class='h-full w-full object-cover transition-all duration-200 ease-in-out group-hover:scale-110 group-hover:opacity-70'
     />
