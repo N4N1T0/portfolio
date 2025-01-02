@@ -60,9 +60,9 @@ For support or questions, please contact me at: [adrian.alvarezalonso1991@gmail.
 [X] Delete react
 [X] Delete Resend
 [X] Content Collection Update
-[ ] Add Place to Contact
-[ ] Add New Projects
-[ ] French Language
+[X] Add Place to Contact
+[X] Add 2 New Projects (Shopify)
+[ ] Change to sharp corner
 
 ### BLOG TODOS
 

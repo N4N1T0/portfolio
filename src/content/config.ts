@@ -1,4 +1,4 @@
-import { z, defineCollection } from 'astro:content'
+import { z, defineCollection, reference } from 'astro:content'
 import { glob } from 'astro/loaders'
 
 // Typescript for the Blog Content
@@ -53,8 +53,7 @@ const serviceCollection = defineCollection({
         })
       ),
       quote: z.string(),
-      projects: z.union([z.array(z.string()), z.string()]),
-      language: z.string()
+      projects: z.array(reference('projects'))
     })
 })
 

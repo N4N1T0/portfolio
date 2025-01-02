@@ -1,39 +1,28 @@
-// .prettierrc.mjs
 /** @type {import("prettier").Config} */
 export default {
+  semi: false,
+  singleQuote: true,
+  jsxSingleQuote: true,
+  quoteProps: "preserve",
+  trailingComma: "none",
+  tabWidth: 2,
+  useTabs: false,
+  printWidth: 80,
   plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   overrides: [
     {
       files: "*.astro",
       options: {
         parser: "astro",
-        singleQuote: true,
-        trailingComma: "none",
-        tabWidth: 2,
-        semi: false,
-        jsxSingleQuote: true,
       },
     },
     {
       files: "*.md",
       options: {
-        singleQuote: true,
-        parser: "md",
-        trailingComma: "none",
-        tabWidth: 2,
-        semi: false,
-        jsxSingleQuote: true,
+        parser: "markdown",
       },
-    },
-    {
-      files: "*.ts",
-      options: {
+      rules: {
         singleQuote: true,
-        parser: "typescript",
-        trailingComma: "none",
-        tabWidth: 2,
-        semi: false,
-        jsxSingleQuote: true,
       },
     },
   ],
