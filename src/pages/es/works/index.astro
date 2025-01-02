@@ -52,11 +52,6 @@ const allProjects: CollectionEntry<'projects'>[] = await getProjects('es')
             </a>
             <p class='inline pl-5 font-sans text-xs md:text-base'>
               - {excerpt}
-              {index === 0 && (
-                <span class='ml-3 animate-pulse rounded-xl bg-slate-200 px-2 py-1 text-gray-950'>
-                  Nuevo
-                </span>
-              )}
             </p>
           </div>
         ))

@@ -73,7 +73,7 @@ const allBlogPosts = await getPosts('en')
   </div>
   <div
     id='modal'
-    class='absolute bottom-5 right-5 z-40 hidden w-[300px] animate-bounce space-y-1 rounded-lg bg-gray-800 p-3 text-gray-100 opacity-0 hover:[animation-play-state:paused] md:block'
+    class='absolute bottom-5 right-5 z-40 hidden w-[300px] animate-bounce space-y-1 bg-gray-800 p-3 text-gray-100 opacity-0 hover:[animation-play-state:paused] md:block'
   >
     <h5 class='font-prata text-xl uppercase'>New Articule</h5>
     <a
@@ -94,14 +94,14 @@ const allBlogPosts = await getPosts('en')
     .add({
       targets: '#courtin',
       scaleY: [1, 0],
-      duration: 700
+      duration: 600
     })
     .add(
       {
         targets: '#info',
         opacity: 1,
         translateY: [40, 0],
-        duration: 600
+        duration: 500
       },
       500
     )
@@ -109,7 +109,7 @@ const allBlogPosts = await getPosts('en')
       {
         targets: '#links',
         opacity: 1,
-        duration: 500,
+        duration: 400,
         delay: anime.stagger(100)
       },
       900

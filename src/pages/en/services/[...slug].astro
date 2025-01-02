@@ -13,11 +13,11 @@ import type { TechStack } from '@/types'
 
 // Function to create the path for all the services
 export async function getStaticPaths() {
-  const services = await getCollection('services', ({ data }) => {
-    return data.language === 'en'
+  const services = await getCollection('services', ({ id }) => {
+    return id.startsWith('en/')
   })
   return services.map((service) => ({
-    params: { slug: service.id },
+    params: { slug: service.id.split('/')[1] },
     props: service
   }))
 }
@@ -55,22 +55,51 @@ export const prerender = true
   border='border-gray-800'
 >
   <main
-    class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 md:my-10 md:gap-20 md:px-24'
+    class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 pb-20 md:my-10 md:gap-20 md:px-24'
   >
     <!-- Header Section -->
     <section
       id='header'
-      class='flex h-[600px] w-full justify-center bg-gray-800 text-center'
+      class='relative flex h-[600px] w-full justify-center overflow-hidden bg-gray-800 text-center'
     >
       <h1
-        class='self-center font-prata text-[10vw] uppercase text-background md:self-end md:leading-[11rem]'
+        class='z-20 self-center font-prata text-[10vw] uppercase text-background md:self-end md:leading-[11rem]'
       >
         {name}
       </h1>
+      <div class='absolute inset-0 z-10 h-full w-full bg-gray-800 opacity-50'>
+      </div>
+      <Image
+        src={image}
+        alt={imageAlt}
+        loading='eager'
+        class='absolute inset-0 h-full w-full object-cover'
+      />
     </section>
 
+    <!-- Projects Section -->
+    {
+      Array.isArray(projects) ? (
+        <section id='Projects' class='w-full'>
+          <ul
+            role='presentation'
+            class='mx-auto grid w-full grid-cols-1 place-content-center gap-5 p-12 md:grid-cols-3 md:gap-10 2xl:grid-cols-4'
+          >
+            {projects.map(({ id }) => (
+              <ProjectCard slug={id} lang='es' />
+            ))}
+          </ul>
+        </section>
+      ) : (
+        <div class='p-12 text-center' set:html={projects} />
+      )
+    }
+
     <!-- Content Section -->
-    <section id='content' class='prose max-w-[1200px] px-5'>
+    <section
+      id='content'
+      class='prose max-w-[1200px] px-5 prose-li:marker:text-gray-800'
+    >
       <div set:html={content?.html} />
     </section>
 
@@ -92,42 +121,23 @@ export const prerender = true
 
     <!-- Quote Section -->
     <section id='Quote' class='w-full space-y-20 md:space-y-20'>
-      <Image src={image} alt={imageAlt} loading='lazy' />
       <h2
-        class='text-center font-prata text-[5vw] text-gray-800 md:leading-tight'
+        class='text-center font-prata text-[3vw] text-gray-800 md:leading-tight'
       >
         "{quote}"
       </h2>
-    </section>
-
-    <!-- Projects Section -->
-    <section id='Projects' class='w-full'>
-      {
-        Array.isArray(projects) ? (
-          <ul
-            role='presentation'
-            class='grid w-full grid-cols-1 gap-5 pb-12 md:grid-cols-3 md:gap-10 2xl:grid-cols-4'
-          >
-            {projects.map((project) => (
-              <ProjectCard slug={project} lang='es' />
-            ))}
-          </ul>
-        ) : (
-          <div class='p-12 text-center' set:html={projects} />
-        )
-      }
     </section>
   </main>
 
   <!-- Contact Widget -->
   <div
     id='contact'
-    class='fixed bottom-7 right-7 space-y-2 rounded-lg bg-gray-800 p-3 text-left text-background opacity-0 md:bottom-10 md:right-10 md:p-5'
+    class='fixed bottom-7 right-7 space-y-2 bg-gray-800 p-3 text-left text-background opacity-0 md:bottom-10 md:right-10 md:p-5'
   >
     <a
       href={`/en/contact?service=${slug.split('/')[1]}`}
       class='hover-underline-animation-widget text-sm md:text-base'
-      >Contact me</a
+      >CONTACT ME</a
     >
   </div>
 

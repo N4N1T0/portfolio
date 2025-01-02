@@ -45,14 +45,13 @@ const allServices: CollectionEntry<'services'>[] = await getServices('es')
           allServices.map(({ data: { name, excerpt }, id }) => (
             <li>
               <a
-                href={`/es/services/${id}`}
+                href={`/es/services/${id.split('/')[1]}`}
                 class='block text-[12vw] uppercase leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12 md:text-[7vw]'
               >
                 <h2>{name}</h2>
               </a>
               <h3 class='pl-5 pt-5 font-sans text-xs md:text-base'>
-                <hr class='inline-block w-5' />
-                {excerpt}
+                - {excerpt}
               </h3>
             </li>
           ))

@@ -58,8 +58,8 @@ export const prerender = true
 ---
 
 <Layout
-  description='Llamativo ecommerce de equipamiento deportivo, inspirado en la web de Everlast'
-  title='Tough - Ecommerce Site'
+  description={excerpt}
+  title={title}
   label='Projects'
   link='/en/works'
   border='border-gray-800'
@@ -109,9 +109,9 @@ export const prerender = true
         testimonial && (
           <section
             id='Testimonial'
-            class='w-full pb-12 text-center font-prata text-gray-800 md:leading-tight'
+            class='w-full pb-12 text-center text-gray-800 md:leading-tight'
           >
-            <h2 class='text-[3vw]'>"{testimonial.quote}"</h2>
+            <h2 class='font-prata text-[3vw]'>"{testimonial.quote}"</h2>
             <div class='flex w-full justify-between'>
               <p class='text-[2vw]'>{testimonial.name}</p>
               <p class='text-[2vw]'>{testimonial.role}</p>
@@ -125,7 +125,7 @@ export const prerender = true
   <!-- Widget -->
   <div
     id='widget'
-    class='fixed bottom-7 right-7 space-y-2 rounded-lg p-3 text-left opacity-0 transition-opacity duration-150 md:bottom-10 md:right-10 md:p-5'
+    class='fixed bottom-7 right-7 space-y-2 p-3 text-left opacity-0 transition-opacity duration-150 md:bottom-10 md:right-10 md:p-5'
     style={`background-color: ${mainColor}; color: ${secondaryColor}`}
   >
     <a

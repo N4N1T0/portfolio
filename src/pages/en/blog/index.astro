@@ -52,8 +52,8 @@ const allBlogPosts: CollectionEntry<'blog'>[] = await getPosts('en')
             <p class='inline pl-5 font-sans text-xs md:text-base'>
               - {post.data.excerpt}
             </p>
-            <strong class='ml-3 block w-fit rounded-xl bg-slate-200 px-2 py-1 text-gray-950'>
-              - {post.data.date.toLocaleDateString()}
+            <strong class='ml-3 block w-fit bg-slate-200 px-2 py-1 text-gray-950'>
+              - {post.data.date.toLocaleDateString('es-ES')}
             </strong>
           </div>
         ))
