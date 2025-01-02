@@ -1,11 +1,11 @@
 ---
-title: "El Poder del Diseño Gráfico en el Marketing"
+title: 'El Poder del Diseño Gráfico en el Marketing'
 date: 2023-08-17
-excerpt: "Eleva tu presencia digital con un diseño gráfico estratégico. Desde identidad visual hasta contenido impactante, maximiza el potencial de tu marca."
+excerpt: 'Eleva tu presencia digital con un diseño gráfico estratégico. Desde identidad visual hasta contenido impactante, maximiza el potencial de tu marca.'
 author: 'Adrian "Nano" Alvarez'
-image: "../../../assets/blog/nordwood-themes-ubIWo074QlU-unsplash.webp"
-imageAlt: "un setup de apple con una IMac y una AirBook"
-language: "es"
+image: '../../../assets/blog/nordwood-themes-ubIWo074QlU-unsplash.webp'
+imageAlt: 'un setup de apple con una IMac y una AirBook'
+language: 'es'
 ---
 
 En la era digital actual, el contenido visual se erige como pilar fundamental para el éxito en marketing. Estudios revelan que las imágenes captan hasta un 80% más de atención que el simple texto. No obstante, la creación de visuales atractivos y de alta calidad requiere un enfoque estratégico de diseño gráfico.
