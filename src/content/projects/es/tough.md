@@ -1,42 +1,42 @@
 ---
-title: "Tough"
+title: 'Tough'
 date: 2024-02-06
-excerpt: "Llamativo ecommerce de equipamiento deportivo, inspirado en la web de Everlast y hecho con estas tecnologías:"
-image: "../../../assets/tough-showcase.webp"
-imageSecondary: "../../../assets/tough-style.webp"
-imageAlt: "Tough Website"
-liveLink: "https://tough-ecommerce.vercel.app/"
-repoLink: "https://github.com/N4N1T0/tough-ecommerce"
-mainColor: "#030712"
-secondaryColor: "#f3f4f6"
+excerpt: 'Llamativo ecommerce de equipamiento deportivo, inspirado en la web de Everlast y hecho con estas tecnologías:'
+image: '../../../assets/tough-showcase.webp'
+imageSecondary: '../../../assets/tough-style.webp'
+imageAlt: 'Tough Website'
+liveLink: 'https://tough-ecommerce.vercel.app/'
+repoLink: 'https://github.com/N4N1T0/tough-ecommerce'
+mainColor: '#030712'
+secondaryColor: '#f3f4f6'
 techStack:
   [
     {
-      title: "Next.js",
-      info: "Utilizado por algunas de las empresas más grandes del mundo, Next.js le permite crear aplicaciones web completas ampliando las últimas funciones de React e integrando potentes herramientas JavaScript basadas en Rust para las construcciones más rápidas.",
-      link: "https://nextjs.org/",
+      title: 'Next.js',
+      info: 'Utilizado por algunas de las empresas más grandes del mundo, Next.js le permite crear aplicaciones web completas ampliando las últimas funciones de React e integrando potentes herramientas JavaScript basadas en Rust para las construcciones más rápidas.',
+      link: 'https://nextjs.org/'
     },
     {
-      title: "Supabase",
-      info: "Supabase es una alternativa de código abierto a Firebase. Comienza tu proyecto con una base de datos Postgres, Autenticación, APIs instantáneas, Edge Funciones, suscripciones en tiempo real,  almacenamiento, y Vector incrustaciones.",
-      link: "https://supabase.com/",
+      title: 'Supabase',
+      info: 'Supabase es una alternativa de código abierto a Firebase. Comienza tu proyecto con una base de datos Postgres, Autenticación, APIs instantáneas, Edge Funciones, suscripciones en tiempo real,  almacenamiento, y Vector incrustaciones.',
+      link: 'https://supabase.com/'
     },
     {
-      title: "Shadcn UI",
-      info: "Componentes bellamente diseñados que puedes copiar y pegar en tus aplicaciones. Accesibles. Personalizables. De código abierto.",
-      link: "https://ui.shadcn.com/",
+      title: 'Shadcn UI',
+      info: 'Componentes bellamente diseñados que puedes copiar y pegar en tus aplicaciones. Accesibles. Personalizables. De código abierto.',
+      link: 'https://ui.shadcn.com/'
     },
     {
-      title: "Stripe",
-      info: " Millones de empresas de todos los tamaños utilizan Stripe en línea y en persona para aceptar pagos, enviar transferencias, automatizar procesos financieros y y, en última instancia, aumentar los ingresos.",
-      link: "https://stripe.com/es",
-    },
+      title: 'Stripe',
+      info: ' Millones de empresas de todos los tamaños utilizan Stripe en línea y en persona para aceptar pagos, enviar transferencias, automatizar procesos financieros y y, en última instancia, aumentar los ingresos.',
+      link: 'https://stripe.com/es'
+    }
   ]
 testimonial:
   {
-    name: "Angel Luis Perez",
-    quote: "Un ecommerce especial, muy bien hecho, funcional y estéticamente agradable para los clientes. Cada vez que se usa, es un gran éxito.",
-    role: "CMO de Tough",
+    name: 'Angel Luis Perez',
+    quote: 'Un ecommerce especial, muy bien hecho, funcional y estéticamente agradable para los clientes. Cada vez que se usa, es un gran éxito.',
+    role: 'CMO de Tough'
   }
 ---
 

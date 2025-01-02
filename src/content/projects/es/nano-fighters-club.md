@@ -1,38 +1,38 @@
 ---
-title: "Nano Fighters Club"
-slug: "nano-fighters-club"
+title: 'Nano Fighters Club'
+slug: 'nano-fighters-club'
 date: 2023-11-20
-excerpt: "Sitio de Entrenador de Deportes de Combate usando las Nuevas tecnologías de Astro para crear máximo rendimientos en combinación con:"
-image: "../../../assets/nano-fighters-club-showcase.webp"
-imageSecondary: "../../../assets/nano-fighters-club-style.webp"
-imageAlt: "Nano Fighters Club Website"
-liveLink: "https://www.nanofighters.club/es/"
-repoLink: "https://github.com/N4N1T0/nfc-astro-shadcn"
-mainColor: "#f64646"
-secondaryColor: "#020817"
+excerpt: 'Sitio de Entrenador de Deportes de Combate usando las Nuevas tecnologías de Astro para crear máximo rendimientos en combinación con:'
+image: '../../../assets/nano-fighters-club-showcase.webp'
+imageSecondary: '../../../assets/nano-fighters-club-style.webp'
+imageAlt: 'Nano Fighters Club Website'
+liveLink: 'https://www.nanofighters.club/es/'
+repoLink: 'https://github.com/N4N1T0/nfc-astro-shadcn'
+mainColor: '#f64646'
+secondaryColor: '#020817'
 techStack:
   [
     {
-      title: "Astro",
-      info: "Astro construye sitios de contenido rápido, potentes aplicaciones web, dinámicas API de servidor dinámicas y todo lo demás.",
-      link: "https://astro.build/",
+      title: 'Astro',
+      info: 'Astro construye sitios de contenido rápido, potentes aplicaciones web, dinámicas API de servidor dinámicas y todo lo demás.',
+      link: 'https://astro.build/'
     },
     {
-      title: "Shadcn UI",
-      info: "Componentes bellamente diseñados que puedes copiar y pegar en tus aplicaciones. Accesibles. Personalizables. De código abierto.",
-      link: "https://ui.shadcn.com/",
+      title: 'Shadcn UI',
+      info: 'Componentes bellamente diseñados que puedes copiar y pegar en tus aplicaciones. Accesibles. Personalizables. De código abierto.',
+      link: 'https://ui.shadcn.com/'
     },
     {
-      title: "Tailwind",
-      info: "Un marco CSS que da prioridad a las utilidades, repleto de clases como flex, pt-4, text-center y rotate-90 que pueden componerse para construir cualquier diseño directamente en tu marcado.",
-      link: "https://tailwindcss.com/",
-    },
+      title: 'Tailwind',
+      info: 'Un marco CSS que da prioridad a las utilidades, repleto de clases como flex, pt-4, text-center y rotate-90 que pueden componerse para construir cualquier diseño directamente en tu marcado.',
+      link: 'https://tailwindcss.com/'
+    }
   ]
 testimonial:
   {
-    name: "Pedro Luis",
-    quote: "Es una web Excepcional, rápida casi con una puntuación perfecta en los CORE WEV VITALS",
-    role: "Usuario de Nano Fighters Club",
+    name: 'Pedro Luis',
+    quote: 'Es una web Excepcional, rápida casi con una puntuación perfecta en los CORE WEV VITALS',
+    role: 'Usuario de Nano Fighters Club'
   }
 ---
 
