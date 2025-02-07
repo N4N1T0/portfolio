@@ -1,5 +1,6 @@
 ---
 // Project Imports
+import SocialMedia from '@/components/SocialMedia.astro'
 import Layout from '@/layouts/Layout.astro'
 
 // Utilities Imports
@@ -31,13 +32,7 @@ const allBlogPosts = await getPosts('en')
           dedicated to crafting clean, impactful designs, my work is a testament
           to the fusion of skill and creativity.
         </p>
-        <br />
-        <a
-          href={`${Astro.site}en/Adrian_Alvarez_Alonso_CV.pdf`}
-          target='_blank'
-          class='cursor-pointer text-sm underline transition-colors duration-200 hover:text-gray-600'
-          >Download my CV</a
-        >
+        <SocialMedia />
       </div>
       <div
         class='font-prata opacity-0 [&>a]:block [&>a]:cursor-pointer [&>a]:text-[16vw] md:[&>a]:text-[10vw]'

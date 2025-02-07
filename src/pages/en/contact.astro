@@ -96,24 +96,13 @@ console.log(response)
                 +34 647 31 72 14
               </a>
             </p>
-            <p class='text-sm'>
-              On the Web:{' '}
-              <a
-                href='https://www.linkedin.com/in/adrian-%C3%A1lvarez-alonso/'
-                target='_blank'
-                class='hover-underline-animation-widget'
-              >
-                LinkedIn
-              </a>
-              /
-              <a
-                href='https://github.com/N4N1T0'
-                target='_blank'
-                class='hover-underline-animation-widget'
-              >
-                GitHub
-              </a>
-            </p>
+            <a
+              href={`${Astro.site}en/Adrian_Alvarez_Alonso_CV.pdf`}
+              target='_blank'
+              class='cursor-pointer text-sm underline transition-colors duration-200 hover:text-gray-600'
+            >
+              Download my CV
+            </a>
           </div>
         )
       }

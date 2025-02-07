@@ -1,0 +1,46 @@
+---
+const socialMedia = [
+  {
+    href: 'https://github.com/N4N1T0',
+    icon: 'https://cdn.simpleicons.org/github/243E61',
+    label: 'GitHub'
+  },
+  {
+    href: 'https://stackoverflow.com/users/23143125/n4n1t0',
+    icon: 'https://cdn.simpleicons.org/stackoverflow/243E61',
+    label: 'Stack Overflow'
+  },
+  {
+    href: 'https://x.com/AdrianlvarezAl1',
+    icon: 'https://cdn.simpleicons.org/x/243E61',
+    label: 'X (Twitter)'
+  },
+  {
+    href: 'https://wa.me/+34647317214',
+    icon: 'https://cdn.simpleicons.org/whatsapp/243E61',
+    label: 'WhatsApp'
+  },
+  {
+    href: 'mailto:adrian.alvarezalonso1991@gmail.com',
+    icon: 'https://cdn.simpleicons.org/gmail/243E61',
+    label: 'Email'
+  }
+]
+---
+
+<div class='mt-5 flex gap-5'>
+  {
+    socialMedia.map(({ href, icon, label }) => (
+      <a href={href} target='_blank' class='group'>
+        <img
+          src={icon}
+          alt={label}
+          title={label}
+          width={24}
+          height={24}
+          class='transition-all duration-200 ease-in-out group-hover:scale-110 group-hover:opacity-70'
+        />
+      </a>
+    ))
+  }
+</div>
