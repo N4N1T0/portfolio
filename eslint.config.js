@@ -7,7 +7,6 @@ export default [
   ...eslintPluginAstro.configs['jsx-a11y-recommended'],
   {
     ignores: ['.vscode/*', '.husky/*', '**.lock', 'package.json'],
-    file: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx', '**/*.astro'],
     rules: {
       '@typescript-eslint/no-unused-vars': 'off',
       'unused-imports/no-unused-imports': 'error'
