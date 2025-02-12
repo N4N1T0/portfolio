@@ -41,7 +41,7 @@ const allProjects: CollectionEntry<'projects'>[] = await getProjects('en')
       id='links'
     >
       {
-        allProjects.map(({ data: { title, excerpt }, id }, index) => (
+        allProjects.map(({ data: { title, excerpt }, id }) => (
           <div>
             <a
               href={`/en/works/${id}`}
