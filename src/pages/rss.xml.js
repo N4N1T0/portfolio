@@ -1,3 +1,4 @@
+import { getPosts } from '@/lib'
 import rss from '@astrojs/rss'
 
 export async function GET(context) {
