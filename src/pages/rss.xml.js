@@ -14,13 +14,13 @@ export async function GET(context) {
     items: [
       ...enBlog.map((post) => ({
         title: post.data.title,
-        pubDate: post.data.date.toLocaleDateString('en-US'),
+        pubDate: post.data.date,
         description: post.data.excerpt,
         href: `/en/blog/${post.id}`
       })),
       ...esBlog.map((post) => ({
         title: post.data.title,
-        pubDate: post.data.date.toLocaleDateString('es-ES'),
+        pubDate: post.data.date,
         description: post.data.excerpt,
         href: `/es/blog/${post.id}`
       }))
