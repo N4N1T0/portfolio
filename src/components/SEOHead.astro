@@ -4,12 +4,16 @@ import { getLangFromUrl, changeLangFromUrl } from '@/i18n/utils'
 interface Props {
   title?: string | undefined
   description?: string | undefined
+  image?: string | undefined
 }
 
-const { title, description } = Astro.props
+const { title, description, image } = Astro.props
 
 const lang = getLangFromUrl(Astro.url)
 const newLangUrl = changeLangFromUrl(Astro.url, lang)
+const ogImage = image
+  ? `${Astro.site}${lang}/${image}`
+  : `${Astro.site}${lang}/og-image.jpg`
 ---
 
 <!-- Basic HTML Meta Tags -->
@@ -64,14 +68,14 @@ const newLangUrl = changeLangFromUrl(Astro.url, lang)
 <meta property='og:url' content={Astro.url} />
 <meta property='og:title' content={title} />
 <meta property='og:description' content={description} />
-<meta property='og:image' content={`${Astro.site}${lang}/og-image.jpg`} />
+<meta property='og:image' content={ogImage} />
 
 <!-- Twitter -->
 <meta property='twitter:card' content='summary_large_image' />
 <meta property='twitter:url' content={Astro.url} />
 <meta property='twitter:title' content={title} />
 <meta property='twitter:description' content={description} />
-<meta property='twitter:image' content={`${Astro.site}${lang}/og-image.jpg`} />
+<meta property='twitter:image' content={ogImage} />
 
 <!-- Rss Feed -->
 <link
