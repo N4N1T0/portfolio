@@ -3,12 +3,7 @@
 import Layout from '@/layouts/Layout.astro'
 
 // Utilities Imports
-import {
-  handleResponseFromQuery,
-  generateWhatsAppLink,
-  generateEmailLink,
-  desUrlNames
-} from '@/lib'
+import { handleResponseFromQuery } from '@/lib'
 
 // Query Params
 const { searchParams } = Astro.url
@@ -49,72 +44,33 @@ const response = handleResponseFromQuery(query, 'es')
       </div>
 
       <!-- Info Section -->
-      {
-        response !== null ? (
-          <div class='max-w-[700px] space-y-3'>
-            <hr />
-            <p class='uppercase'>Posible Mensage</p>
-            <h4 class='font-prata text-2xl md:text-3xl'>{response}</h4>
-            <div class='flex items-start justify-start gap-3'>
-              <a
-                href={generateWhatsAppLink(response)}
-                target='_blank'
-                rel='noopener noreferrer'
-                class='hover-underline-animation-widget animate-pulse'
-              >
-                Whatsapp
-              </a>
-              <a
-                href={generateEmailLink(desUrlNames(query!, true), response)}
-                target='_blank'
-                rel='noopener noreferrer'
-                class='hover-underline-animation-widget animate-pulse'
-              >
-                Email
-              </a>
-            </div>
-          </div>
-        ) : (
-          <div class='space-y-2'>
-            <p class='text-sm'>
-              Email:{' '}
-              <a
-                href='mailto:adrian.alvarezalonso1991@gmail.com'
-                class='hover-underline-animation-widget'
-              >
-                adrian.alvarezalonso1991@gmail.com
-              </a>
-            </p>
-            <p class='text-sm'>
-              Telefono:{' '}
-              <a
-                href='tel:34-647-31-72-14'
-                class='hover-underline-animation-widget'
-              >
-                +34 647 31 72 14
-              </a>
-            </p>
-            <p class='text-sm'>
-              en la Web:{' '}
-              <a
-                href='https://www.linkedin.com/in/adrian-%C3%A1lvarez-alonso/'
-                target='_blank'
-                class='hover-underline-animation-widget'
-              >
-                LinkedIn
-              </a>
-              <span>/</span>
-              <a
-                href='https://github.com/N4N1T0'
-                target='_blank'
-                class='hover-underline-animation-widget'
-              >
-                Github
-              </a>
-            </p>
-          </div>
-        )
-      }
+      <div class='space-y-2'>
+        <p class='text-sm'>
+          Email:{' '}
+          <a
+            href='mailto:adrian.alvarezalonso1991@gmail.com'
+            class='hover-underline-animation-widget'
+          >
+            adrian.alvarezalonso1991@gmail.com
+          </a>
+        </p>
+        <p class='text-sm'>
+          Telefono:{' '}
+          <a
+            href='tel:34-647-31-72-14'
+            class='hover-underline-animation-widget'
+          >
+            +34 647 31 72 14
+          </a>
+        </p>
+        <a
+          href={`${Astro.site}es/Adrian_Alvarez_Alonso_CV.pdf`}
+          target='_blank'
+          class='block cursor-pointer text-sm underline transition-colors duration-200 hover:text-gray-600'
+        >
+          Descargar mi CV
+        </a>
+      </div>
     </div>
   </main>
   <div
