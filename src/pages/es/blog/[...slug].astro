@@ -1,19 +1,17 @@
 ---
 // Astro Imports
 import { Image } from 'astro:assets'
-import { getCollection } from 'astro:content'
 
 // Project Imports
 import Layout from '@/layouts/Layout.astro'
 import { shareLinks } from '@/constants/index'
+import { getPosts } from '@/lib'
 
 // Function to create the path for all the blogs
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => {
-    return data.language === 'es'
-  })
+  const posts = await getPosts('es')
   return posts.map((post) => ({
-    params: { slug: post.id },
+    params: { slug: post.id.replace('/', '') },
     props: post
   }))
 }

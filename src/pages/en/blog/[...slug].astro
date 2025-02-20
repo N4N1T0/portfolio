@@ -1,17 +1,15 @@
 ---
 // Astro Imports
 import { Image } from 'astro:assets'
-import { getCollection } from 'astro:content'
 
 // Project Imports
 import Layout from '@/layouts/Layout.astro'
 import { shareLinks } from '@/constants'
+import { getPosts } from '@/lib'
 
 // Function to create the path for all the blogs
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => {
-    return data.language === 'en'
-  })
+  const posts = await getPosts('en')
   return posts.map((post) => ({
     params: { slug: post.id },
     props: post
@@ -45,6 +43,7 @@ export const prerender = true
 <Layout
   description={post.data.excerpt}
   title={post.data.title}
+  image={post.data.image.src}
   className='bg-background'
   label='Blog'
   link='/en/blog'

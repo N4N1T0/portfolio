@@ -44,7 +44,7 @@ const allBlogPosts: CollectionEntry<'blog'>[] = await getPosts('es')
         allBlogPosts.map((post) => (
           <div class='space-y-2'>
             <a
-              href={`/es/blog/${post.id}`}
+              href={`/es/blog${post.id}`}
               class='block text-[7vw] uppercase leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12 md:text-[4vw]'
             >
               <h2>{post.data.title}</h2>
