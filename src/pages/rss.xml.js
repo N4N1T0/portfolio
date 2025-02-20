@@ -1,8 +1,8 @@
+import { getPosts } from '@/lib'
 import rss from '@astrojs/rss'
-import { getCollection } from 'astro:content'
 
 export async function GET(context) {
-  const blog = await getCollection('blog')
+  const blog = await getPosts('en')
   return rss({
     title: 'Adrian Alvarez Blog',
     description:

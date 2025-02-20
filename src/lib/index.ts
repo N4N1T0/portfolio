@@ -29,13 +29,24 @@ export const desUrlNames = (name: string, capitalize: boolean): string => {
 + * @return {Promise<Array<CollectionEntry<'blog'>>>} A promise that resolves to an array of blog posts.
 + */
 export async function getPosts(
-  lang: string
+  lang: 'es' | 'en'
 ): Promise<Array<CollectionEntry<'blog'>>> {
   const posts = (
     await getCollection('blog', ({ data }) => {
       return data.language === lang
     })
-  ).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  )
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+    .map((post) => {
+      const refactoredId =
+        lang === 'es'
+          ? post.id.replace(/es\//g, '/')
+          : post.id.replace(/en\//g, '/')
+      return {
+        ...post,
+        id: refactoredId
+      }
+    })
 
   return posts
 }
