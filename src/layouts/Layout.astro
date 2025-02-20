@@ -9,17 +9,19 @@ interface Props {
   link?: string
   label?: string
   description: string
+  image?: string | undefined
   border: 'border-gray-300' | 'border-gray-800'
 }
 
 // Astro Props
-const { title, className, border, link, label, description } = Astro.props
+const { title, className, border, link, label, description, image } =
+  Astro.props
 ---
 
 <!doctype html>
 <html lang='en'>
   <head>
-    <SEOHead title={title} description={description} />
+    <SEOHead title={title} description={description} image={image} />
   </head>
   <body class=`overflow-x-hidden flex relative bg-background ${className}`>
     <SideNavbar border={border} link={link} label={label} />
