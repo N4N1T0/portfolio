@@ -11,9 +11,7 @@ const { title, description, image } = Astro.props
 
 const lang = getLangFromUrl(Astro.url)
 const newLangUrl = changeLangFromUrl(Astro.url, lang)
-const ogImage = image
-  ? `${Astro.site}${lang}/${image}`
-  : `${Astro.site}${lang}/og-image.jpg`
+const ogImage = image ? image : `${Astro.site}${lang}/og-image.jpg`
 ---
 
 <!-- Basic HTML Meta Tags -->
@@ -69,6 +67,7 @@ const ogImage = image
 <meta property='og:title' content={title} />
 <meta property='og:description' content={description} />
 <meta property='og:image' content={ogImage} />
+<meta property='og:logo' content={`${Astro.site}favicon.ico`} />
 
 <!-- Twitter -->
 <meta property='twitter:card' content='summary_large_image' />
