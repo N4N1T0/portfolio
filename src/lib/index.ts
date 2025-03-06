@@ -60,8 +60,19 @@ export async function getPosts(
 export async function getServices(
   lang: string
 ): Promise<Array<CollectionEntry<'services'>>> {
-  const services = await getCollection('services', ({ id }) => {
-    return id.startsWith(lang)
+  const services = (
+    await getCollection('services', ({ id }) => {
+      return id.startsWith(lang)
+    })
+  ).map((service) => {
+    const refactoredId =
+      lang === 'es'
+        ? service.id.replace(/es\//g, '/')
+        : service.id.replace(/en\//g, '/')
+    return {
+      ...service,
+      id: refactoredId
+    }
   })
 
   return services
@@ -78,7 +89,18 @@ export async function getProjects(
 ): Promise<Array<CollectionEntry<'projects'>>> {
   const projects = (
     await getCollection('projects', ({ id }) => id.startsWith(lang))
-  ).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  )
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+    .map((project) => {
+      const refactoredId =
+        lang === 'es'
+          ? project.id.replace(/es\//g, '/')
+          : project.id.replace(/en\//g, '/')
+      return {
+        ...project,
+        id: refactoredId
+      }
+    })
 
   return projects
 }
@@ -94,34 +116,4 @@ export async function getCollecionBySlug(
 ): Promise<CollectionEntry<'projects'> | undefined> {
   const projects = await getEntry('projects', id)
   return projects
-}
-
-export const handleResponseFromQuery = (
-  service: string | null,
-  lang: string
-) => {
-  const serviceList = lang === 'es' ? servicesResponse : servicesResponseEnglish
-
-  const serviceEntry = serviceList.find((entry) => entry.service === service)
-
-  return serviceEntry ? serviceEntry.response : null
-}
-
-export function generateWhatsAppLink(message: string) {
-  // Base URL para WhatsApp
-  const baseUrl = 'https://wa.me/34647317214?text='
-  // Codifica el mensaje para que sea seguro en la URL
-  const encodedMessage = encodeURIComponent(message)
-  // Devuelve el enlace completo
-  return baseUrl + encodedMessage
-}
-
-export function generateEmailLink(subject: string, body: string) {
-  // Base URL para email
-  const baseUrl = 'mailto:adrian.alvarezalonso1991@gmail.com'
-  // Codifica el asunto y el cuerpo del mensaje para que sean seguros en la URL
-  const encodedSubject = encodeURIComponent(subject)
-  const encodedBody = encodeURIComponent(body)
-  // Devuelve el enlace completo
-  return `${baseUrl}?subject=${encodedSubject}&body=${encodedBody}`
 }
