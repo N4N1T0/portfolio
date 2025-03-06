@@ -8,7 +8,6 @@ imageAlt: 'TinaCMS interface with live editing'
 language: 'en'
 ---
 
-/**\*\***\***\*\*** ✨ Codeium Command 🌟 **\*\***\***\*\***/
 In the world of web development, Content Management Systems (CMS) have evolved significantly in recent years. With the growing demand for flexible, scalable, and modern workflow-compatible solutions, TinaCMS has positioned itself as a standout option. This open-source, headless CMS offers native integration with Git, giving developers total control over content with an efficient versioning system.
 
 ## What is TinaCMS?
