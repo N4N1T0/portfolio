@@ -11,17 +11,18 @@ interface Props {
   description: string
   image?: string | undefined
   border: 'border-gray-300' | 'border-gray-800'
+  ld?: string
 }
 
 // Astro Props
-const { title, className, border, link, label, description, image } =
+const { title, className, border, link, label, description, image, ld } =
   Astro.props
 ---
 
 <!doctype html>
 <html lang='en'>
   <head>
-    <SEOHead title={title} description={description} image={image} />
+    <SEOHead title={title} description={description} image={image} ld={ld} />
   </head>
   <body class=`overflow-x-hidden flex relative bg-background ${className}`>
     <SideNavbar border={border} link={link} label={label} />

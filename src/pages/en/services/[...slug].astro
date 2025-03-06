@@ -10,6 +10,7 @@ import TechStackCard from '@/components/TechStackCard.astro'
 
 // Types Imports
 import type { TechStack } from '@/types'
+import { generateServiceJsonLD } from '@/components/jsonLD'
 
 // Function to create the path for all the services
 export async function getStaticPaths() {
@@ -45,6 +46,8 @@ if (!slug || !service) {
 
 // create static page instead of SSR
 export const prerender = true
+
+const ld = generateServiceJsonLD(service, 'en')
 ---
 
 <Layout
@@ -53,6 +56,7 @@ export const prerender = true
   label='Servicios'
   link='/en/services'
   border='border-gray-800'
+  ld={ld}
 >
   <main
     class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 pb-20 md:my-10 md:gap-20 md:px-24'

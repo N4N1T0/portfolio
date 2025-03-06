@@ -7,9 +7,12 @@ import Layout from '@/layouts/Layout.astro'
 
 // Utilities Imports
 import { getProjects } from '@/lib'
+import { generateProjectListJsonLD } from '@/components/jsonLD'
 
 // Astro get Collection
 const allProjects: CollectionEntry<'projects'>[] = await getProjects('en')
+
+const ld = generateProjectListJsonLD(allProjects, 'en')
 ---
 
 <Layout
@@ -19,6 +22,7 @@ const allProjects: CollectionEntry<'projects'>[] = await getProjects('en')
   label='Home'
   link='/en/'
   border='border-gray-300'
+  ld={ld}
 >
   <main
     class='relative z-10 mt-20 flex w-screen flex-col items-center justify-around gap-16 p-10 md:flex-row md:gap-32 md:p-24'

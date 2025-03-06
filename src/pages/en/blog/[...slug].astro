@@ -6,6 +6,7 @@ import { Image } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
 import { shareLinks } from '@/constants'
 import { getPosts } from '@/lib'
+import { generateJsonLDForBlogPost } from '@/components/jsonLD'
 
 // Function to create the path for all the blogs
 export async function getStaticPaths() {
@@ -36,6 +37,9 @@ if (!slug || !post) {
   })
 }
 
+// Generate JsonLD
+const ld = await generateJsonLDForBlogPost(post, 'en')
+
 // create static page instead of SSR
 export const prerender = true
 ---
@@ -48,6 +52,7 @@ export const prerender = true
   label='Blog'
   link='/en/blog'
   border='border-gray-800'
+  ld={ld}
 >
   <main
     class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 md:my-10 md:gap-20 md:px-24'
@@ -69,6 +74,7 @@ export const prerender = true
         alt={imageAlt}
         loading='eager'
         class='absolute inset-0 h-full w-full object-cover'
+        id='primaryimage'
       />
     </section>
 

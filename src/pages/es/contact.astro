@@ -1,16 +1,14 @@
 ---
 // Project Imports
+import { generateContactJsonLD } from '@/components/jsonLD'
 import Layout from '@/layouts/Layout.astro'
-
-// Utilities Imports
-import { handleResponseFromQuery } from '@/lib'
 
 // Query Params
 const { searchParams } = Astro.url
 const query = searchParams.get('service')
 
 // Services Response Handler
-const response = handleResponseFromQuery(query, 'es')
+const ld = generateContactJsonLD('es')
 ---
 
 <Layout
@@ -20,6 +18,7 @@ const response = handleResponseFromQuery(query, 'es')
   label='Home'
   link='/es/'
   border='border-gray-300'
+  ld={ld}
 >
   <main
     class='relative z-10 mt-20 min-h-screen w-screen items-center justify-around gap-16 p-10 md:gap-32 md:p-24'
