@@ -9,7 +9,7 @@ const blogCollection = defineCollection({
       title: z
         .string()
         .max(
-          60,
+          70,
           'For optimize SEO, please provide a title with 60 characters or less'
         ),
       date: z.date(),
