@@ -56,17 +56,45 @@ For support or questions, please contact me at: [adrian.alvarezalonso1991@gmail.
 
 ## TODO
 
-[X] tailwind classes sort prettier plugin
-[X] Delete react
-[X] Delete Resend
-[X] Content Collection Update
-[X] Add Place to Contact
-[X] Add 2 New Projects (Shopify)
-[ ] Change to sharp corner
+- [x] tailwind classes sort prettier plugin
+- [x] Delete react
+- [x] Delete Resend
+- [x] Content Collection Update
+- [x] Add Place to Contact
+- [x] Add 2 New Projects (Shopify)
 
 ### BLOG TODOS
 
-[X] Add 1 More Blogs
-[X] Change the Headers
-[X] Add Sharing Capabilities (like contact in services)
-[ ] Improve SEO
+- [x] Add 1 More Blogs
+- [x] Change the Headers
+- [x] Add Sharing Capabilities (like contact in services)
+- [x] Improve SEO with jsonLD
+
+---
+
+### Termogar Structure
+
+- Migration from Wordpress to Sanity
+- - Woocommerce API
+- - Custom Fields
+- - Email Campaign for lost password
+- Custom CMS to mimic ERP Capabilities
+- - Webhook for Out of Stock Notifications
+- - Currier integration and automatic updates
+- Marketing Capabilities
+- - Google Apis for seamless google shop/google ads integration
+- AI Capabilities
+- - Orama vector database
+- - AI chatbot
+
+### Enka Structure
+
+- Scrapping
+- - Scrapping from 2 distributions brands
+- - Sanity/cheerio integration for automated updates
+- VPS and Deploy
+- - Github Actions / Docker / Hostinger custom workflow
+- Sanity CMS
+- - Sanity Actions (Duplicate, Variant)
+- Marketing improvement
+- - Powerful UI and Logic for reseller management
