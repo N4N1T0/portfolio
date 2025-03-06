@@ -5,9 +5,11 @@ interface Props {
   title?: string | undefined
   description?: string | undefined
   image?: string | undefined
+  ld?: string
 }
 
-const { title, description, image } = Astro.props
+const { title, description, image, ld } = Astro.props
+console.log('🚀 ~ ld:', ld)
 
 const lang = getLangFromUrl(Astro.url)
 const newLangUrl = changeLangFromUrl(Astro.url, lang)
@@ -86,7 +88,9 @@ const ogImage = image ? image : `${Astro.site}${lang}/og-image.jpg`
 
 <!-- Schema -->
 <Fragment
-  set:html={`<script type='application/ld+json'>
+  set:html={ld
+    ? `<script type='application/ld+json'>${ld}</script>`
+    : `<script type='application/ld+json'>
   {
     "@context": "https://schema.org",
     "@type": "WebDevelopment",
