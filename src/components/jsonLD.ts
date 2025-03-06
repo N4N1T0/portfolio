@@ -25,7 +25,7 @@ export const generateJsonLDForBlogPost = async (
         'image': {
           '@id': `https://www.adrian-alvarez.dev/${lang}${blog.id}/#primaryimage`
         },
-        'thumbnailUrl': blog.data.image,
+        'thumbnailUrl': `https://www.adrian-alvarez.dev/${blog.data.image}`,
         'datePublished': blog.data.date.toISOString(),
         'dateModified':
           blog.data.date?.toISOString() || blog.data.date.toISOString(),
@@ -49,8 +49,8 @@ export const generateJsonLDForBlogPost = async (
         '@type': 'ImageObject',
         'inLanguage': lang,
         '@id': `https://www.adrian-alvarez.dev/${lang}${blog.id}/#primaryimage`,
-        'url': blog.data.image,
-        'contentUrl': blog.data.image,
+        'url': `https://www.adrian-alvarez.dev/${blog.data.image}`,
+        'contentUrl': `https://www.adrian-alvarez.dev/${blog.data.image}`,
         'width': 972,
         'height': 216
       },
@@ -116,9 +116,17 @@ export const generateBlogListJsonLD = (
         '@type': 'BlogPosting',
         'url': `https://www.adrian-alvarez.dev/${lang}/blog/${blog.id}/`,
         'name': blog.data.title,
+        'headline': blog.data.title,
         'description': blog.data.excerpt,
         'datePublished': blog.data.date.toISOString(),
-        'image': blog.data.image
+        'image': [`https://www.adrian-alvarez.dev/${blog.data.image}`],
+        'author': [
+          {
+            '@type': 'Person',
+            'name': blog.data.author || 'Adrian Alvarez',
+            'url': `https://dev.to/n4n1t0`
+          }
+        ]
       }
     }))
   })
