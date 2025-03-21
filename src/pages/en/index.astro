@@ -73,7 +73,7 @@ const allBlogPosts = await getPosts('en')
     <h5 class='font-prata text-xl uppercase'>New Articule</h5>
     <a
       class='block text-sm transition duration-200 ease-out hover:text-gray-400 hover:underline'
-      href={`${Astro.site}en/blog/${allBlogPosts[0].id}`}
+      href={`${Astro.site}en/blog${allBlogPosts[0].id}`}
       >{allBlogPosts[0].data.title}</a
     >
   </div>
