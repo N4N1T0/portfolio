@@ -1,7 +1,6 @@
 import { getCollection, type CollectionEntry, getEntry } from 'astro:content'
-
-// Constants Imports
-import { servicesResponse, servicesResponseEnglish } from '@/constants'
+import { clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 /**
 + * Replaces spaces in a string with hyphens.
@@ -116,4 +115,19 @@ export async function getCollecionBySlug(
 ): Promise<CollectionEntry<'projects'> | undefined> {
   const projects = await getEntry('projects', id)
   return projects
+}
+
+/**
+ * A utility function that merges and normalizes CSS class names using Tailwind CSS.
+ *
+ * @param {string | undefined | string[]} inputs - The CSS class names to merge.
+ * @return {string | undefined} - The merged and normalized CSS class names.
+ *
+ * @example
+ * cn('bg-red-500', 'text-white', 'rounded-full', 'p-2') // 'bg-red-500 text-white rounded-full p-2'
+ * cn('bg-red-500', undefined, 'rounded-full', 'p-2') // 'bg-red-500 rounded-full p-2'
+ * cn('bg-red-500', [], 'rounded-full', 'p-2') // 'bg-red-500 rounded-full p-2'
+ */
+export function cn(...inputs: Array<string | undefined>): string | undefined {
+  return twMerge(clsx(inputs))
 }
