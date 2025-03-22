@@ -11,8 +11,6 @@ This project is the main development portfolio of Adrian Alvarez Alonso. It show
 - **Framework:** Astro
 - **UI:** Tailwind CSS
 - **Animations:** Anime.js
-- **Dynamic Components:** React
-- **Contact Form:** React Hook Form and Zod
 
 ## Installation
 
@@ -56,19 +54,8 @@ For support or questions, please contact me at: [adrian.alvarezalonso1991@gmail.
 
 ## TODO
 
-- [x] tailwind classes sort prettier plugin
-- [x] Delete react
-- [x] Delete Resend
-- [x] Content Collection Update
-- [x] Add Place to Contact
-- [x] Add 2 New Projects (Shopify)
-
-### BLOG TODOS
-
-- [x] Add 1 More Blogs
-- [x] Change the Headers
-- [x] Add Sharing Capabilities (like contact in services)
-- [x] Improve SEO with jsonLD
+- [ ] PANTONE Color of the year Switch
+- [ ] Blog Header Restructure
 
 ---
 
