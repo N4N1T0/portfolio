@@ -1,0 +1,23 @@
+---
+import SocialMedia from '@/components/home/SocialMedia.astro'
+import { useTranslations } from '@/i18n/utils'
+
+interface Props {
+  lang: 'es' | 'en'
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+---
+
+<header
+  class='max-w-[500px] space-y-3 self-end text-pretty opacity-0'
+  id='info'
+>
+  <h1 class='text-3xl font-semibold tracking-widest'>{t('home')['heading']}</h1>
+  <p class='text-sm'>{t('home')['role']}</p>
+  <p class='text-sm'>
+    {t('home')['description']}
+  </p>
+  <SocialMedia />
+</header>
