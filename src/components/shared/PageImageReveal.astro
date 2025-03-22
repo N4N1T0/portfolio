@@ -1,0 +1,77 @@
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+
+  const projectItems = document.querySelectorAll(
+    '.project-item'
+  ) as NodeListOf<HTMLElement>
+  const projectImage = document.getElementById(
+    'project-image'
+  ) as HTMLImageElement
+
+  anime
+    .timeline({
+      easing: 'easeOutExpo'
+    })
+    .add({
+      targets: '#courtin',
+      scaleY: [0, 1],
+      duration: 700
+    })
+    .add(
+      {
+        targets: '#links',
+        opacity: 1,
+        duration: 500
+      },
+      500
+    )
+    .add(
+      {
+        targets: '#info',
+        opacity: 1,
+        translateY: [50, 0],
+        delay: anime.stagger(100),
+        duration: 600
+      },
+      700
+    )
+
+  projectItems.forEach((item) => {
+    const dataImage = item.dataset.image
+
+    item.addEventListener('mouseenter', () => {
+      if (projectImage) {
+        anime({
+          targets: projectImage,
+          opacity: 0,
+          duration: 200,
+          easing: 'easeInOutQuad',
+          complete: () => {
+            projectImage.src = dataImage as string
+            anime({
+              targets: projectImage,
+              opacity: 1,
+              duration: 300,
+              easing: 'easeInOutQuad'
+            })
+          }
+        })
+      }
+    })
+
+    item.addEventListener('mouseleave', () => {
+      if (projectImage) {
+        anime({
+          targets: projectImage,
+          opacity: 0,
+          duration: 200,
+          easing: 'easeInOutQuad',
+          complete: () => {
+            projectImage.src = projectImage.dataset.src as string
+            projectImage.classList.add('opacity-0')
+          }
+        })
+      }
+    })
+  })
+</script>
