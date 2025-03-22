@@ -9,7 +9,6 @@ interface Props {
 }
 
 const { title, description, image, ld } = Astro.props
-console.log('🚀 ~ ld:', ld)
 
 const lang = getLangFromUrl(Astro.url)
 const newLangUrl = changeLangFromUrl(Astro.url, lang)
