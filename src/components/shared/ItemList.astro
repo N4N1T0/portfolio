@@ -1,0 +1,43 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  list:
+    | CollectionEntry<'projects'>[]
+    | CollectionEntry<'blog'>[]
+    | CollectionEntry<'services'>[]
+}
+
+const { list } = Astro.props
+---
+
+<section class='flex-1 py-8 font-prata opacity-0 md:py-16' id='links'>
+  <ul role='navigation' class='space-y-5 md:space-y-10'>
+    {
+      list.map(({ data: { title, excerpt, image }, id }) => (
+        <li class='project-item' data-image={image.src}>
+          <a
+            href={`/es/projects${id}`}
+            class:list={[
+              'block text-[12vw] uppercase leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12',
+              {
+                'md:text-[6vw]': list.some(
+                  ({ collection }) => collection === 'services'
+                ),
+                'md:text-[7vw]': list.some(
+                  ({ collection }) => collection === 'projects'
+                ),
+                'md:text-[4vw]': list.some(
+                  ({ collection }) => collection === 'blog'
+                )
+              }
+            ]}
+          >
+            <h2>{title}</h2>
+          </a>
+          <h3 class='inline pl-5 font-sans text-xs md:text-base'>{excerpt}</h3>
+        </li>
+      ))
+    }
+  </ul>
+</section>
