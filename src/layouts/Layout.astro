@@ -2,6 +2,7 @@
 // Project Imports
 import SideNavbar from '@/components/SideNavbar.astro'
 import SEOHead from '@/components/SEOHead.astro'
+import { cn } from '@/lib'
 
 interface Props {
   title: string
@@ -24,7 +25,7 @@ const { title, className, border, link, label, description, image, ld } =
   <head>
     <SEOHead title={title} description={description} image={image} ld={ld} />
   </head>
-  <body class=`overflow-x-hidden flex relative bg-background ${className}`>
+  <body class={cn('overflow-x-hidden flex relative bg-background', className)}>
     <SideNavbar border={border} link={link} label={label} />
     <slot />
     <style is:global>
