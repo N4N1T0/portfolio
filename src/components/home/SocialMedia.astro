@@ -1,0 +1,32 @@
+---
+import { socialMedia } from '@/constants'
+import { Image } from 'astro:assets'
+---
+
+<div class='w-fit'>
+  <hr class='border-px my-3 w-full border-gray-800' />
+  <ul class='mt-5 flex gap-5 px-2'>
+    {
+      socialMedia.map(({ href, icon, label }) => (
+        <li class='list-none'>
+          <a
+            href={href}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='group'
+          >
+            <Image
+              src={icon}
+              alt={label}
+              loading='eager'
+              title={label}
+              width={24}
+              height={24}
+              class='transition-all duration-200 ease-in-out group-hover:scale-110 group-hover:opacity-70'
+            />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
