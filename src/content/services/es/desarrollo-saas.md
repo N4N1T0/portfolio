@@ -1,5 +1,5 @@
 ---
-name: 'Desarrollo SaaS'
+title: 'Desarrollo SaaS'
 excerpt: 'Creamos plataformas SaaS innovadoras y escalables diseñadas a medida para resolver problemas específicos y ofrecer experiencias excepcionales.'
 image: '../../../assets/services/airfocus-v89zhr0iBFY-unsplash.webp'
 imageAlt: 'Una reunion para un brainstorm de ideas para un saas'

@@ -1,5 +1,5 @@
 ---
-name: 'Unique Projects'
+title: 'Unique Projects'
 excerpt: 'We build unique and customized solutions to address specific needs and bring your most ambitious ideas to life.'
 image: '../../../assets/services/carlos-muza-hpjSkU2UYSU-unsplash.webp'
 imageAlt: 'Developer working on a custom project'

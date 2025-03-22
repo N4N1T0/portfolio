@@ -1,5 +1,5 @@
 ---
-name: 'Ecommerce Development'
+title: 'Ecommerce Development'
 excerpt: 'I create powerful and scalable online stores, designed to increase your sales and provide an impeccable user experience.'
 image: '../../../assets/services/shoper-slLo94wES2M-unsplash.webp'
 imageAlt: 'Design of an online store on a screen'

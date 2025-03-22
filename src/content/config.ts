@@ -31,7 +31,7 @@ const serviceCollection = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/services' }),
   schema: ({ image }) =>
     z.object({
-      name: z
+      title: z
         .string()
         .max(
           60,

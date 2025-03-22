@@ -1,5 +1,5 @@
 ---
-name: 'Frontend Development'
+title: 'Frontend Development'
 excerpt: 'I develop and create unique websites, tailored to your needs, with cutting-edge technology to ensure exceptional performance.'
 image: '../../../assets/services/caspar-camille-rubin-0qvBNep1Y04-unsplash.webp'
 imageAlt: 'The setup of a front-end developer'

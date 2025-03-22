@@ -1,5 +1,5 @@
 ---
-name: 'Proyectos Únicos'
+title: 'Proyectos Únicos'
 excerpt: 'Construimos soluciones únicas y personalizadas para cubrir necesidades específicas y hacer realidad tus ideas más ambiciosas.'
 image: '../../../assets/services/carlos-muza-hpjSkU2UYSU-unsplash.webp'
 imageAlt: 'Desarrollador trabajando en un proyecto personalizado'

@@ -1,5 +1,5 @@
 ---
-name: 'SaaS Development'
+title: 'SaaS Development'
 excerpt: 'We create innovative and scalable SaaS platforms tailored to solve specific problems and offer exceptional experiences.'
 image: '../../../assets/services/airfocus-v89zhr0iBFY-unsplash.webp'
 imageAlt: 'A brainstorming meeting for a SaaS idea'

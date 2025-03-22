@@ -1,5 +1,5 @@
 ---
-name: 'Desarrollo Ecommerce'
+title: 'Desarrollo Ecommerce'
 excerpt: 'Creo tiendas online potentes y escalables, diseñadas para aumentar tus ventas y ofrecer una experiencia de usuario impecable.'
 image: '../../../assets/services/shoper-slLo94wES2M-unsplash.webp'
 imageAlt: 'Diseño de una tienda en línea en una pantalla'

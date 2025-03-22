@@ -1,5 +1,5 @@
 ---
-name: 'Desarrollo Frontend'
+title: 'Desarrollo Frontend'
 excerpt: 'Desarrollo y creo sitios web únicos, adaptados a tus necesidades y con tecnología de vanguardia para garantizar un rendimiento excepcional.'
 image: '../../../assets/services/caspar-camille-rubin-0qvBNep1Y04-unsplash.webp'
 imageAlt: 'El setup de un front-end developer'
