@@ -1,15 +1,19 @@
-import { languages, defaultLang, ui } from './ui'
+import { defaultLang, ui, languages } from './ui'
+import type { UI } from '@/types'
+
+export function useTranslations(lang: 'en' | 'es') {
+  return function t(key: keyof UI[typeof lang]) {
+    return (
+      (ui[lang] as UI[typeof lang])[key] ||
+      (ui[defaultLang] as UI[typeof lang])[key]
+    )
+  }
+}
 
 export function getLangFromUrl(url: URL) {
   const [, lang] = url.pathname.split('/')
   if (lang in languages) return lang as keyof typeof languages
   return defaultLang
-}
-
-export function useTranslations(lang: keyof typeof ui) {
-  return function t(key: keyof (typeof ui)[typeof defaultLang]) {
-    return ui[lang][key] || ui[defaultLang][key]
-  }
 }
 
 export function changeLangFromUrl(url: URL, lang: string) {
