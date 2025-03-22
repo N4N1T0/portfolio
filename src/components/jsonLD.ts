@@ -1,6 +1,6 @@
+import { socialMedia } from '@/constants'
 import { getPosts } from '@/lib'
 import type { CollectionEntry } from 'astro:content'
-import { socialMedia } from '@/components/SocialMedia.astro'
 
 export const generateJsonLDForBlogPost = async (
   blog: CollectionEntry<'blog'>,
@@ -144,7 +144,7 @@ export const generateProjectListJsonLD = (
       'position': index + 1,
       'item': {
         '@type': 'CreativeWork',
-        'url': `https://www.adrian-alvarez.dev/${lang}/works/${project.id}/`,
+        'url': `https://www.adrian-alvarez.dev/${lang}/projects/${project.id}/`,
         'name': project.data.title,
         'description': project.data.excerpt,
         'datePublished': project.data.date.toISOString(),
@@ -161,8 +161,8 @@ export const generateProjectJsonLD = (
   return JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
-    '@id': `https://www.adrian-alvarez.dev/${lang}/works/${project.id}/`,
-    'url': `https://www.adrian-alvarez.dev/${lang}/works/${project.id}/`,
+    '@id': `https://www.adrian-alvarez.dev/${lang}/projects/${project.id}/`,
+    'url': `https://www.adrian-alvarez.dev/${lang}/projects/${project.id}/`,
     'name': project.data.title,
     'description': project.data.excerpt,
     'image': project.data.excerpt,
@@ -191,7 +191,7 @@ export const generateServiceListJsonLD = (
       'item': {
         '@type': 'CreativeWork',
         'url': `https://www.adrian-alvarez.dev/${lang}/services/${services.id}/`,
-        'name': services.data.name,
+        'name': services.data.title,
         'description': services.data.excerpt,
         'image': services.data.image
       }
@@ -208,7 +208,7 @@ export const generateServiceJsonLD = (
     '@type': 'Service',
     '@id': `https://adrian-alvarez.dev/${lang}/services/${service.id}/`,
     'url': `https://adrian-alvarez.dev/${lang}/services/${service.id}/`,
-    'name': service.data.name,
+    'name': service.data.title,
     'description': service.data.excerpt,
     'image': service.data.image,
     'provider': {
