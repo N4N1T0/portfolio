@@ -3,7 +3,7 @@ import PageLayout from '@/layouts/PageLayout.astro'
 import Heading from '@/components/shared/Heading.astro'
 import ItemList from '@/components/shared/ItemList.astro'
 import { getPosts } from '@/lib'
-import { generateBlogListJsonLD } from '@/components/jsonLD'
+import { generateBlogListJsonLD } from '@/components/shared/jsonLD'
 import type { CollectionEntry } from 'astro:content'
 
 const allBlogPosts: CollectionEntry<'blog'>[] = await getPosts('es')

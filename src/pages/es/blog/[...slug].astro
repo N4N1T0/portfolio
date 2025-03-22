@@ -6,7 +6,7 @@ import { Image } from 'astro:assets'
 import Layout from '@/layouts/Layout.astro'
 import { shareLinks } from '@/constants/index'
 import { getPosts } from '@/lib'
-import { generateJsonLDForBlogPost } from '@/components/jsonLD'
+import { generateJsonLDForBlogPost } from '@/components/shared/jsonLD'
 
 // Function to create the path for all the blogs
 export async function getStaticPaths() {

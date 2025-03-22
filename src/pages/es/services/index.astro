@@ -3,7 +3,7 @@ import PageLayout from '@/layouts/PageLayout.astro'
 import Heading from '@/components/shared/Heading.astro'
 import ItemList from '@/components/shared/ItemList.astro'
 import { getServices } from '@/lib'
-import { generateServiceListJsonLD } from '@/components/jsonLD'
+import { generateServiceListJsonLD } from '@/components/shared/jsonLD'
 import type { CollectionEntry } from 'astro:content'
 
 const allServices: CollectionEntry<'services'>[] = await getServices('es')

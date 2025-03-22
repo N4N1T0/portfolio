@@ -3,7 +3,7 @@ import Heading from '@/components/shared/Heading.astro'
 import ItemList from '@/components/shared/ItemList.astro'
 import PageLayout from '@/layouts/PageLayout.astro'
 import { getProjects } from '@/lib'
-import { generateProjectListJsonLD } from '@/components/jsonLD'
+import { generateProjectListJsonLD } from '@/components/shared/jsonLD'
 import type { CollectionEntry } from 'astro:content'
 
 const allProjects: CollectionEntry<'projects'>[] = await getProjects('en')
