@@ -17,7 +17,7 @@ export async function getStaticPaths() {
     return id.startsWith('en')
   })
   return projects.map((project) => ({
-    params: { slug: project.id },
+    params: { slug: project.id.replace('en/', '') },
     props: project
   }))
 }
@@ -64,7 +64,7 @@ const ld = generateProjectJsonLD(project, 'en')
   description={excerpt}
   title={title}
   label='Projects'
-  link='/en/works'
+  link='/en/projects'
   border='border-gray-800'
   ld={ld}
 >

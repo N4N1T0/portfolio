@@ -1,0 +1,24 @@
+---
+import Heading from '@/components/shared/Heading.astro'
+import ItemList from '@/components/shared/ItemList.astro'
+import PageLayout from '@/layouts/PageLayout.astro'
+import { getProjects } from '@/lib'
+import { generateProjectListJsonLD } from '@/components/jsonLD'
+import type { CollectionEntry } from 'astro:content'
+
+const allProjects: CollectionEntry<'projects'>[] = await getProjects('en')
+const ld = generateProjectListJsonLD(allProjects, 'en')
+---
+
+<PageLayout
+  description='Explore a compilation of my finest endeavors spanning Web Design and Development. In a dynamic digital landscape'
+  title='Adrian - Works'
+  className='text-gray-300'
+  label='Home'
+  link='/en/'
+  border='border-gray-300'
+  ld={ld}
+>
+  <Heading lang='en' page='projects' />
+  <ItemList list={allProjects} />
+</PageLayout>

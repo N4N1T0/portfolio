@@ -1,13 +1,13 @@
 ---
-import PageLayout from '@/layouts/PageLayout.astro'
 import Heading from '@/components/shared/Heading.astro'
+import PageLayout from '@/layouts/PageLayout.astro'
 import ItemList from '@/components/shared/ItemList.astro'
-import { getServices } from '@/lib'
-import { generateServiceListJsonLD } from '@/components/jsonLD'
+import { getProjects } from '@/lib'
+import { generateProjectListJsonLD } from '@/components/jsonLD'
 import type { CollectionEntry } from 'astro:content'
 
-const allServices: CollectionEntry<'services'>[] = await getServices('es')
-const ld = generateServiceListJsonLD(allServices, 'es')
+const allProjects: CollectionEntry<'projects'>[] = await getProjects('es')
+const ld = generateProjectListJsonLD(allProjects, 'es')
 ---
 
 <PageLayout
@@ -19,6 +19,6 @@ const ld = generateServiceListJsonLD(allServices, 'es')
   border='border-gray-300'
   ld={ld}
 >
-  <Heading lang='es' page='services' />
-  <ItemList list={allServices} />
+  <Heading lang='es' page='projects' />
+  <ItemList list={allProjects} />
 </PageLayout>

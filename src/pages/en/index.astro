@@ -1,9 +1,9 @@
 ---
-// Project Imports
-import SocialMedia from '@/components/SocialMedia.astro'
+import Heading from '@/components/home/Heading.astro'
+import Nav from '@/components/home/Nav.astro'
+import NewArticleModal from '@/components/home/NewArticleModal.astro'
+import Courtain from '@/components/shared/Courtain.astro'
 import Layout from '@/layouts/Layout.astro'
-
-// Utilities Imports
 import { getPosts } from '@/lib'
 
 const allBlogPosts = await getPosts('en')
@@ -19,64 +19,14 @@ const allBlogPosts = await getPosts('en')
     class='mt-20 min-h-screen w-screen overflow-hidden p-10 md:mt-0 md:h-screen md:p-24'
   >
     <div
-      class='flex h-full flex-col items-center gap-16 md:mt-0 md:flex-row md:justify-around md:gap-32'
+      class='flex h-full flex-col items-center gap-12 md:mt-0 md:flex-row md:justify-around md:gap-20'
     >
-      <div class='space-y-3 self-end opacity-0' id='info'>
-        <h1 class='text-3xl font-semibold tracking-widest'>
-          Adrian Alvarez Alonso
-        </h1>
-        <p class='text-sm'>Web Designer & Developer / Marketing Strategist</p>
-        <p class='text-sm'>
-          Cuban-born and self-taught, I bring a unique blend of passion and
-          proficiency to development and design. Obsessed with performance and
-          dedicated to crafting clean, impactful designs, my work is a testament
-          to the fusion of skill and creativity.
-        </p>
-        <SocialMedia />
-      </div>
-      <div
-        class='font-prata opacity-0 [&>a]:block [&>a]:cursor-pointer [&>a]:text-[16vw] md:[&>a]:text-[10vw]'
-        id='links'
-      >
-        <a
-          href='/en/works'
-          class='leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12'
-          ><h2>PROJECTS</h2></a
-        >
-        <a
-          href='/en/services'
-          class='leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12'
-          ><h2>SERVICES</h2></a
-        >
-        <a
-          href='/en/contact'
-          class='leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12'
-          ><h2>CONTACT</h2></a
-        >
-        <a
-          href='/en/blog'
-          class='leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12'
-          ><h2>BLOG</h2></a
-        >
-      </div>
+      <Heading lang='en' />
+      <Nav lang='en' />
     </div>
   </main>
-  <div
-    class='absolute inset-0 z-50 w-screen origin-bottom bg-gray-800'
-    id='courtin'
-  >
-  </div>
-  <div
-    id='modal'
-    class='absolute bottom-5 right-5 z-40 hidden w-[300px] animate-bounce space-y-1 bg-gray-800 p-3 text-gray-100 opacity-0 hover:[animation-play-state:paused] md:block'
-  >
-    <h5 class='font-prata text-xl uppercase'>New Articule</h5>
-    <a
-      class='block text-sm transition duration-200 ease-out hover:text-gray-400 hover:underline'
-      href={`${Astro.site}en/blog${allBlogPosts[0].id}`}
-      >{allBlogPosts[0].data.title}</a
-    >
-  </div>
+  <Courtain />
+  <NewArticleModal article={allBlogPosts[0]} />
 </Layout>
 
 <script>

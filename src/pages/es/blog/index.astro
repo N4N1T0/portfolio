@@ -1,110 +1,24 @@
 ---
-// Astro Imports
-import type { CollectionEntry } from 'astro:content'
-
-// Project Imports
-import Layout from '@/layouts/Layout.astro'
-
-// Utilities Imports
+import PageLayout from '@/layouts/PageLayout.astro'
+import Heading from '@/components/shared/Heading.astro'
+import ItemList from '@/components/shared/ItemList.astro'
 import { getPosts } from '@/lib'
 import { generateBlogListJsonLD } from '@/components/jsonLD'
+import type { CollectionEntry } from 'astro:content'
 
-// Astro get Collection
 const allBlogPosts: CollectionEntry<'blog'>[] = await getPosts('es')
-
 const ld = generateBlogListJsonLD(allBlogPosts, 'es')
 ---
 
-<Layout
+<PageLayout
   description='Explore una recopilación de mis mejores esfuerzos en Diseño y Desarrollo Web. En un panorama digital dinámico'
-  title='Adrian - Blog'
+  title='Adrian - Proyectos'
   className='text-gray-300'
   label='Home'
   link='/es/'
   border='border-gray-300'
   ld={ld}
 >
-  <main
-    class='relative z-10 mt-20 flex w-screen flex-col items-center justify-around gap-16 p-10 md:flex-row md:gap-32 md:p-24'
-  >
-    <aside
-      class='sticky bottom-24 flex-1 space-y-3 self-end opacity-0'
-      id='info'
-    >
-      <h1 class='text-4xl font-semibold tracking-widest'>Blog</h1>
-      <p class='text-sm'>
-        Explora mis artículos destacados sobre Diseño y Desarrollo Web,
-        Marketing, SEO, Tech y Diseño Gráfico. Adéntrate en el apasionante
-        universo digital de los últimos 3 años y acompáñame en este continuo
-        viaje de aprendizaje e innovación. ¡Descubre las tendencias y novedades
-        más recientes en estos emocionantes campos!
-      </p>
-    </aside>
-    <articule
-      class='flex-1 space-y-5 font-prata opacity-0 md:space-y-12'
-      id='links'
-    >
-      {
-        allBlogPosts.map((post) => (
-          <div class='space-y-2'>
-            <a
-              href={`/es/blog${post.id}`}
-              class='block text-[7vw] uppercase leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12 md:text-[4vw]'
-            >
-              <h2>{post.data.title}</h2>
-            </a>
-            <p class='inline pl-5 font-sans text-xs md:text-base'>
-              - {post.data.excerpt}
-            </p>
-            <strong class='ml-3 block w-fit bg-slate-200 px-2 py-1 text-gray-950'>
-              - {post.data.date.toLocaleDateString('es-ES')}
-            </strong>
-          </div>
-        ))
-      }
-    </articule>
-  </main>
-  <div
-    class='absolute inset-0 z-0 w-screen origin-bottom scale-0 bg-gray-800'
-    id='courtin'
-  >
-  </div>
-</Layout>
-
-<style>
-  html {
-    scrollbar-color: #d1d5db #1f2937;
-  }
-</style>
-
-<script>
-  import anime from 'animejs/lib/anime.es.js'
-
-  anime
-    .timeline({
-      easing: 'easeInExpo'
-    })
-    .add({
-      targets: '#courtin',
-      scaleY: [0, 1],
-      duration: 700
-    })
-    .add(
-      {
-        targets: '#links',
-        opacity: 1,
-        duration: 500
-      },
-      500
-    )
-    .add(
-      {
-        targets: '#info',
-        opacity: 1,
-        translateY: [50, 0],
-        delay: anime.stagger(100),
-        duration: 600
-      },
-      700
-    )
-</script>
+  <Heading lang='es' page='blog' />
+  <ItemList list={allBlogPosts} />
+</PageLayout>
