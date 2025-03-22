@@ -13,3 +13,13 @@ export interface TechStack {
 export interface ProjectTechStack extends Omit<TechStack, 'image'> {
   info: string
 }
+
+export interface UI {
+  [key: string]: {
+    [key: string]: {
+      heading: string
+      description: string
+      role?: string
+    }
+  }
+}
