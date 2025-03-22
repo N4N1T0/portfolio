@@ -1,0 +1,31 @@
+---
+import { navlists } from '@/i18n/ui'
+
+interface Props {
+  lang: 'es' | 'en'
+}
+
+const { lang } = Astro.props
+const list = navlists[lang]
+---
+
+<ul
+  id='links'
+  role='navigation'
+  aria-label='Main Navigation'
+  class='font-prata uppercase opacity-0'
+>
+  {
+    list.map(({ label, route }) => (
+      <li class='[&>a]:block [&>a]:cursor-pointer [&>a]:text-[15vw] md:[&>a]:text-[9vw]'>
+        <a
+          href={route}
+          class='leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12'
+          aria-label={label}
+        >
+          {label}
+        </a>
+      </li>
+    ))
+  }
+</ul>
