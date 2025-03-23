@@ -12,6 +12,7 @@
   },
   "lint-staged": {
     "*.astro": [
+      "astro check",
       "prettier --write",
       "eslint --fix"
     ]

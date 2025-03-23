@@ -27,15 +27,7 @@ if (!slug || !post) {
 const ld = await generateJsonLDForBlogPost(post, 'es')
 ---
 
-<IndividualPageLayout
-  description={post.data.excerpt}
-  title={post.data.title}
-  image={post.data.image.src}
-  label='Blog'
-  link='/es/blog'
-  ld={ld}
-  entry={post}
->
+<IndividualPageLayout label='Blog' link='/es/blog' ld={ld} entry={post}>
   <Body blog={post} />
   <Courtain />
 </IndividualPageLayout>
