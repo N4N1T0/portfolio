@@ -13,12 +13,10 @@ const ld = generateBlogListJsonLD(allBlogPosts, 'en')
 <PageLayout
   description='Explore una recopilación de mis mejores esfuerzos en Diseño y Desarrollo Web. En un panorama digital dinámico'
   title='Adrian - Blog'
-  className='text-gray-300'
   label='Home'
   link='/en/'
-  border='border-gray-300'
   ld={ld}
 >
   <Heading lang='en' page='blog' />
-  <ItemList list={allBlogPosts} />
+  <ItemList list={allBlogPosts} lang='en' />
 </PageLayout>

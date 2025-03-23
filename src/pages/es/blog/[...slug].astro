@@ -1,14 +1,10 @@
 ---
-// Astro Imports
-import { Image } from 'astro:assets'
-
-// Project Imports
 import Layout from '@/layouts/Layout.astro'
-import { shareLinks } from '@/constants/index'
 import { getPosts } from '@/lib'
 import { generateJsonLDForBlogPost } from '@/components/shared/jsonLD'
+import Body from '@/components/blog/Body.astro'
+import Courtain from '@/components/shared/Courtain.astro'
 
-// Function to create the path for all the blogs
 export async function getStaticPaths() {
   const posts = await getPosts('es')
   return posts.map((post) => ({
@@ -17,19 +13,10 @@ export async function getStaticPaths() {
   }))
 }
 
-// Astro Props
 const post = Astro.props
-
-// Props deconstruction
-const { title, excerpt, image, imageAlt, author, date } = post.data
-
-// Astro Params
 const slug = Astro.params.slug
+export const prerender = true
 
-// Special function to render the content of the MD
-const content = post.rendered
-
-// Redirect in case the path dosent exits
 if (!slug || !post) {
   return new Response(null, {
     status: 404,
@@ -37,11 +24,7 @@ if (!slug || !post) {
   })
 }
 
-// Generate JsonLD
 const ld = await generateJsonLDForBlogPost(post, 'es')
-
-// create static page instead of SSR
-export const prerender = true
 ---
 
 <Layout
@@ -50,140 +33,8 @@ export const prerender = true
   image={post.data.image.src}
   label='Blog'
   link='/es/blog'
-  border='border-gray-800'
   ld={ld}
 >
-  <main
-    class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 md:my-10 md:gap-20 md:px-24'
-  >
-    <!-- Header Section -->
-    <section
-      id='header'
-      class='relative flex h-[600px] w-full justify-center overflow-hidden bg-gray-800 text-center'
-    >
-      <h1
-        class='z-20 self-center font-prata text-[6vw] uppercase text-background md:self-end md:leading-[7rem]'
-      >
-        {title}
-      </h1>
-      <div class='absolute inset-0 z-10 h-full w-full bg-gray-800 opacity-50'>
-      </div>
-      <Image
-        src={image}
-        alt={imageAlt}
-        loading='eager'
-        id='primaryimage'
-        class='absolute inset-0 h-full w-full object-cover'
-      />
-    </section>
-
-    <!-- SubHeading Section -->
-    <section
-      id='subheader'
-      class='flex w-full flex-col items-center justify-between gap-2 px-5 md:flex-row md:gap-10'
-    >
-      <strong class='flex-1'>
-        <a
-          href={`${author === 'Dayana Abuin' ? 'https://www.linkedin.com/in/dayana-abuin-rios/' : 'https://www.linkedin.com/in/adrian-alvarez-alonso/'}`}
-          target='_blank'
-          class='text-gray-950 transition duration-200 ease-out hover:text-gray-700 hover:underline'
-          rel='nofollow noopener noreferrer'>{author}</a
-        >
-      </strong>
-      <span class='text-center text-3xl'>
-        {excerpt}
-      </span>
-      <strong class='flex-1'>
-        {date.toLocaleDateString('es-ES')}
-      </strong>
-    </section>
-
-    <!-- Content Section -->
-    <section
-      id='content'
-      class='prose max-w-[1200px] px-5 prose-li:marker:text-gray-800 prose-hr:border-gray-800'
-    >
-      <div set:html={content?.html} />
-    </section>
-
-    <!-- Share Widget -->
-    <div
-      id='share'
-      class='fixed bottom-7 right-7 space-y-2 bg-gray-800 p-3 text-left text-background opacity-0 transition-opacity duration-150 md:bottom-10 md:right-10 md:p-5'
-    >
-      {
-        shareLinks.map((link) => (
-          <a
-            href={link.href(Astro.url.href)}
-            target='_blank'
-            class='hover-underline-animation-widget w-fit text-sm md:text-base'
-          >
-            {link.label}
-          </a>
-        ))
-      }
-    </div>
-  </main>
-
-  <!-- Courtin Section -->
-  <div
-    class='absolute inset-0 z-50 w-screen origin-bottom bg-gray-800'
-    id='courtin'
-  >
-  </div>
+  <Body blog={post} />
+  <Courtain />
 </Layout>
-
-<script>
-  const share = document.getElementById('share')
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      share?.classList.add('opacity-1') // Show the element
-      share?.classList.remove('opacity-0') // Show the element
-    } else {
-      share?.classList.add('opacity-0') // Hide the element
-      share?.classList.remove('opacity-1') // Hide the element
-    }
-  })
-</script>
-
-<style>
-  .hover-underline-animation-widget {
-    display: block;
-    position: relative;
-    color: #a3bbfb;
-  }
-
-  .hover-underline-animation-widget::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #a3bbfb;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-
-  .hover-underline-animation-widget:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
-  html {
-    scrollbar-color: #000000 #a3bbfb;
-  }
-</style>
-
-<script>
-  import anime from 'animejs/lib/anime.es.js'
-
-  anime({
-    targets: '#courtin',
-    scaleY: [1, 0],
-    duration: 700,
-    easing: 'easeInExpo'
-  })
-</script>
