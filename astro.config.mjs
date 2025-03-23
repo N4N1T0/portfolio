@@ -27,5 +27,8 @@ export default defineConfig({
     playformCompress()
   ],
   output: 'static',
-  adapter: vercel()
+  adapter: vercel(),
+  experimental: {
+    svg: true
+  }
 })
