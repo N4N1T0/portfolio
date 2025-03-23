@@ -51,6 +51,20 @@ export async function getPosts(
 }
 
 /**
+ * Retrieves the first blog post in a specified language.
+ *
+ * @param {string} lang - The language of the blog posts to retrieve.
+ * @return {Promise<CollectionEntry<'blog'> | undefined>} A promise that resolves to the first blog post or undefined if no posts are found.
+ */
+
+export async function getFirstPost(
+  lang: 'es' | 'en'
+): Promise<CollectionEntry<'blog'>> {
+  const posts = await getPosts(lang)
+  return posts[0]
+}
+
+/**
  * Retrieves an array of services in a specified language.
  *
  * @param {string} lang - The language of the services to retrieve.
@@ -75,6 +89,34 @@ export async function getServices(
   })
 
   return services
+}
+
+/**
+ * Returns the correct border color for a given className.
+ *
+ * @param {string} [className] - The className to check.
+ * @return {string} The correct border color.
+ */
+export function getBorderColor(className?: string): string {
+  if (!className) return 'border-foreground'
+
+  return className.includes('background')
+    ? 'border-background'
+    : 'border-foreground'
+}
+
+/**
+ * Returns the correct border color for a given className.
+ *
+ * @param {string} [className] - The className to check.
+ * @return {string} The correct border color.
+ */
+export function getHoverBorderColor(className?: string): string {
+  if (!className) return 'hover-underline-animation'
+
+  return className.includes('background')
+    ? 'hover-underline-animation-reverse'
+    : 'hover-underline-animation'
 }
 
 /**
@@ -110,7 +152,7 @@ export async function getProjects(
  * @param {string} id - The id of the collection entry.
  * @return {Promise<CollectionEntry<"projects"> | undefined>} A promise that resolves to the collection entry.
  */
-export async function getCollecionBySlug(
+export async function getCollectionBySlug(
   id: string
 ): Promise<CollectionEntry<'projects'> | undefined> {
   const projects = await getEntry('projects', id)
