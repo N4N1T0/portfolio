@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  project: CollectionEntry<'projects'>
+}
+
+const { project } = Astro.props
+
+const { mainColor, secondaryColor, repoLink, liveLink } = project.data
+---
+
+<div
+  id='widget'
+  class='fixed bottom-7 right-7 space-y-2 p-3 text-left opacity-0 transition-opacity duration-150 md:bottom-10 md:right-10 md:p-5'
+  style={`background-color: ${mainColor}; color: ${secondaryColor}`}
+>
+  <a
+    href={repoLink}
+    target='_blank'
+    class='hover-underline-animation-widget text-sm md:text-base'>CODE</a
+  >
+  <a
+    href={liveLink}
+    target='_blank'
+    class='hover-underline-animation-widget text-sm md:text-base'>LIVE</a
+  >
+</div>

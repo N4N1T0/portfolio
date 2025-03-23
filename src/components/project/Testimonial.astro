@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  project: CollectionEntry<'projects'>
+}
+
+const { project } = Astro.props
+const { testimonial } = project.data
+---
+
+<!-- TODO: IMPROVE -->
+<section
+  id='Testimonial'
+  class='w-full pb-12 text-center text-foreground md:leading-tight'
+>
+  <h2 class='font-prata text-[3vw]'>"{testimonial.quote}"</h2>
+  <div class='flex w-full justify-between'>
+    <p class='text-[2vw]'>{testimonial.name}</p>
+    <p class='text-[2vw]'>{testimonial.role}</p>
+  </div>
+</section>
