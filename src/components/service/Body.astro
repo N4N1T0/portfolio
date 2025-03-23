@@ -1,0 +1,23 @@
+---
+import Content from '@/components/shared/Content.astro'
+import Header from '@/components/shared/Header.astro'
+import type { CollectionEntry } from 'astro:content'
+import Techstack from '@/components/service/Techstack.astro'
+import Quotes from '@/components/service/Quotes.astro'
+
+interface Props {
+  service: CollectionEntry<'services'>
+}
+
+const { service } = Astro.props
+const content = service.rendered
+---
+
+<main
+  class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 pb-20 md:my-10 md:gap-20 md:px-24'
+>
+  <Header data={service} />
+  <Content content={content} />
+  <Techstack service={service} />
+  <Quotes service={service} />
+</main>

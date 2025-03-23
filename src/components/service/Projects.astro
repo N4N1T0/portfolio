@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import ProjectCard from './ProjectCard.astro'
+
+interface Props {
+  service: CollectionEntry<'services'>
+}
+
+const { service } = Astro.props
+const { projects } = service.data
+---
+
+{
+  Array.isArray(projects) ? (
+    <section id='Projects' class='w-full'>
+      <ul
+        role='presentation'
+        class='mx-auto grid w-full grid-cols-1 place-content-center gap-5 p-12 md:grid-cols-3 md:gap-10 2xl:grid-cols-4'
+      >
+        {projects.map(({ id }) => (
+          <ProjectCard slug={id} lang='es' />
+        ))}
+      </ul>
+    </section>
+  ) : (
+    <div class='p-12 text-center' set:html={projects} />
+  )
+}

@@ -1,42 +1,25 @@
 ---
-// Astro Imports
-import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
-
-// Project Imports
 import Layout from '@/layouts/Layout.astro'
-import ProjectCard from '@/components/ProjectCard.astro'
-import TechStackCard from '@/components/TechStackCard.astro'
-
-// Types Imports
-import type { TechStack } from '@/types'
 import { generateServiceJsonLD } from '@/components/shared/jsonLD'
+import Body from '@/components/service/Body.astro'
+import ContactWidget from '@/components/service/ContactWidget.astro'
+import Courtain from '@/components/shared/Courtain.astro'
 
-// Function to create the path for all the services
 export async function getStaticPaths() {
   const services = await getCollection('services', ({ id }) => {
     return id.startsWith('es/')
   })
   return services.map((service) => ({
-    params: { slug: service.id.split('/')[1] },
+    params: { slug: service.id.replace('es/', '') },
     props: service
   }))
 }
 
-// Astro Props
 const service = Astro.props
-
-// Props deconstruction
-const { name, excerpt, image, imageAlt, projects, quote, techStack } =
-  service.data
-
-// Astro Params
 const slug = Astro.params.slug
+export const prerender = true
 
-// Special function to render the content of the MD
-const content = service.rendered
-
-// Redirect in case the path dosent exits
 if (!slug || !service) {
   return new Response(null, {
     status: 404,
@@ -44,165 +27,17 @@ if (!slug || !service) {
   })
 }
 
-// create static page instead of SSR
-export const prerender = true
-
 const ld = generateServiceJsonLD(service, 'es')
 ---
 
 <Layout
-  description={excerpt}
-  title={name}
+  description={service.data.excerpt}
+  title={service.data.title}
   label='Servicios'
   link='/es/services'
-  border='border-gray-800'
   ld={ld}
 >
-  <main
-    class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 pb-20 md:my-10 md:gap-20 md:px-24'
-  >
-    <!-- Header Section -->
-    <section
-      id='header'
-      class='relative flex h-[600px] w-full justify-center overflow-hidden bg-gray-800 text-center'
-    >
-      <h1
-        class='z-20 self-center font-prata text-[10vw] uppercase text-background md:self-end md:leading-[11rem]'
-      >
-        {name}
-      </h1>
-      <div class='absolute inset-0 z-10 h-full w-full bg-gray-800 opacity-50'>
-      </div>
-      <Image
-        src={image}
-        alt={imageAlt}
-        loading='eager'
-        class='absolute inset-0 h-full w-full object-cover'
-      />
-    </section>
-
-    <!-- Projects Section -->
-    {
-      Array.isArray(projects) ? (
-        <section id='Projects' class='w-full'>
-          <ul
-            role='presentation'
-            class='mx-auto grid w-full grid-cols-1 place-content-center gap-5 p-12 md:grid-cols-3 md:gap-10 2xl:grid-cols-4'
-          >
-            {projects.map(({ id }) => (
-              <ProjectCard slug={id} lang='es' />
-            ))}
-          </ul>
-        </section>
-      ) : (
-        <div class='p-12 text-center' set:html={projects} />
-      )
-    }
-
-    <!-- Content Section -->
-    <section
-      id='content'
-      class='prose max-w-[1200px] px-5 prose-li:marker:text-gray-800'
-    >
-      <div set:html={content?.html} />
-    </section>
-
-    <!-- Tech Stack Section -->
-    {
-      techStack && techStack.length > 0 && (
-        <section id='TechStack' class='w-full'>
-          <h2 class='text-center font-prata text-[5vw] text-gray-800 md:leading-tight'>
-            Tecnologías
-          </h2>
-          <ul class='mt-6 flex w-full items-center justify-center gap-5 md:gap-10'>
-            {techStack.map((tech: TechStack) => (
-              <TechStackCard techStack={tech} />
-            ))}
-          </ul>
-        </section>
-      )
-    }
-
-    <!-- Quote Section -->
-    <section id='Quote' class='w-full space-y-20 md:space-y-20'>
-      <h2
-        class='text-center font-prata text-[3vw] text-gray-800 md:leading-tight'
-      >
-        "{quote}"
-      </h2>
-    </section>
-  </main>
-
-  <!-- Contact Widget -->
-  <div
-    id='contact'
-    class='fixed bottom-7 right-7 space-y-2 bg-gray-800 p-3 text-left text-background opacity-0 transition-opacity duration-150 md:bottom-10 md:right-10 md:p-5'
-  >
-    <a
-      href={`/es/contact?service=${slug.split('/')[1]}`}
-      class='hover-underline-animation-widget text-sm md:text-base'
-      >CONTACTAME</a
-    >
-  </div>
-
-  <!-- Courtin -->
-  <div
-    class='absolute inset-0 z-50 w-screen origin-bottom bg-gray-800'
-    id='courtin'
-  >
-  </div>
+  <Body service={service} />
+  <ContactWidget slug={slug} />
+  <Courtain />
 </Layout>
-
-<script>
-  const share = document.getElementById('contact')
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      share?.classList.add('opacity-1') // Show the element
-      share?.classList.remove('opacity-0') // Show the element
-    } else {
-      share?.classList.add('opacity-0') // Hide the element
-      share?.classList.remove('opacity-1') // Hide the element
-    }
-  })
-</script>
-
-<style>
-  .hover-underline-animation-widget {
-    display: block;
-    position: relative;
-  }
-
-  .hover-underline-animation-widget::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #a3bbfb;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-
-  .hover-underline-animation-widget:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
-  html {
-    scrollbar-color: #1f2937 #a3bbfb;
-  }
-</style>
-
-<script>
-  import anime from 'animejs/lib/anime.es.js'
-
-  anime({
-    targets: '#courtin',
-    scaleY: [1, 0],
-    duration: 700,
-    easing: 'easeInExpo'
-  })
-</script>

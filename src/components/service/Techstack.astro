@@ -1,0 +1,27 @@
+---
+import TechStackCard from '@/components/service/TechStackCard.astro'
+import type { TechStack } from '@/types'
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  service: CollectionEntry<'services'>
+}
+
+const { service } = Astro.props
+const { techStack } = service.data
+---
+
+{
+  techStack && techStack.length > 0 && (
+    <section id='TechStack' class='w-full'>
+      <h2 class='text-center font-prata text-[5vw] text-foreground md:leading-tight'>
+        Tecnologías
+      </h2>
+      <ul class='mt-6 flex w-full items-center justify-center gap-5 md:gap-10'>
+        {techStack.map((tech: TechStack) => (
+          <TechStackCard techStack={tech} />
+        ))}
+      </ul>
+    </section>
+  )
+}

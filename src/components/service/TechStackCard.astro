@@ -1,0 +1,30 @@
+---
+import type { TechStack } from '@/types'
+import { Image } from 'astro:assets'
+
+interface Props {
+  techStack: TechStack
+}
+
+const { techStack } = Astro.props
+const { link, title, image } = techStack
+---
+
+<li class='aspect-square size-20'>
+  <a
+    href={link}
+    target='_blank'
+    class='group relative inset-0 h-full w-full'
+    rel='nofollow noopener noreferrer'
+  >
+    <Image
+      src={image}
+      alt={title}
+      title={title}
+      width={100}
+      height={100}
+      loading='lazy'
+      class='h-full w-full object-cover transition-all duration-200 ease-in-out group-hover:scale-110 group-hover:opacity-70'
+    />
+  </a>
+</li>

@@ -1,0 +1,13 @@
+---
+const { slug } = Astro.props
+---
+
+<div
+  id='contact'
+  class='fixed bottom-7 right-7 space-y-2 bg-gray-800 p-3 text-left text-background opacity-0 md:bottom-10 md:right-10 md:p-5'
+>
+  <a
+    href={`/en/contact?service=${slug.split('/')[1]}`}
+    class='hover-underline-animation-widget text-sm md:text-base'>CONTACT ME</a
+  >
+</div>

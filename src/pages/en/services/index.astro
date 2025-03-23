@@ -13,12 +13,10 @@ const ld = generateServiceListJsonLD(allServices, 'en')
 <PageLayout
   description='Embark on a journey through my dynamic expertise, spanning web design, development, maintenance, app design, development, and SEO audit'
   title='Adrian - Services'
-  className='text-gray-300'
   label='Home'
   link='/en/'
-  border='border-gray-300'
   ld={ld}
 >
   <Heading lang='en' page='services' />
-  <ItemList list={allServices} />
+  <ItemList list={allServices} lang='en' />
 </PageLayout>

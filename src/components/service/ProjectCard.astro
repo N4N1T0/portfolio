@@ -1,0 +1,59 @@
+---
+// Astro Imports
+import { Image } from 'astro:assets'
+
+// Astro Props
+const { slug, lang } = Astro.props
+
+// Utilities Imports
+import { getCollectionBySlug } from '@/lib'
+
+interface Props {
+  slug: string
+  lang: string
+}
+
+const project = await getCollectionBySlug(slug)
+---
+
+{
+  project !== undefined && (
+    <li>
+      <article class='group relative col-span-1 aspect-square overflow-hidden text-background'>
+        <figure class='h-full w-full'>
+          <Image
+            src={project.data.image}
+            alt={project.data.title}
+            title={project.data.title}
+            loading='eager'
+            class='h-full w-full object-cover'
+          />
+        </figure>
+        <a
+          href={`/${lang}/projects/${project.id}`}
+          target='_blank'
+          class='group absolute inset-0 h-full w-full translate-y-full p-10 transition-all duration-300 ease-in-out group-hover:translate-y-0'
+          style={{
+            backgroundColor: project.data.mainColor,
+            color: project.data.secondaryColor
+          }}
+          rel='nofollow noopener noreferrer'
+        >
+          <header>
+            <h2 class='font-prata text-xl uppercase md:text-2xl'>
+              {project.data.title}
+            </h2>
+          </header>
+          <section>
+            <p class='mt-3 text-sm md:text-base'>{project.data.excerpt}</p>
+            <ul class='mt-3'>
+              {project.data.techStack.map((tech) => (
+                <li class='text-sm underline md:text-base'>{tech.title}</li>
+              ))}
+            </ul>
+          </section>
+        </a>
+      </article>
+    </li>
+  )
+}

@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  service: CollectionEntry<'services'>
+}
+
+const { service } = Astro.props
+const {
+  data: { quote }
+} = service
+---
+
+<section id='Quote' class='w-full space-y-20 md:space-y-20'>
+  <h2
+    class='text-center font-prata text-[3vw] text-foreground md:leading-tight'
+  >
+    "{quote}"
+  </h2>
+</section>
