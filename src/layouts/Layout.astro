@@ -4,6 +4,8 @@ import SEOHead from '@/components/SEOHead.astro'
 import { getLangFromUrl } from '@/i18n/utils'
 import '@/styles/index.css'
 import Animations from '@/components/layout/Animations.astro'
+import SideNavbarMobile from '@/components/layout/SideNavbarMobile.astro'
+import ThemeSwitcherScript from '@/components/layout/ThemeSwitcherScript.astro'
 
 interface Props {
   title: string
@@ -31,8 +33,10 @@ const { title, className, link, label, description, image, ld } = Astro.props
     />
   </head>
   <body class='relative overflow-x-hidden bg-background text-foreground'>
+    <SideNavbarMobile className={className} link={link} label={label} />
     <SideNavbar className={className} link={link} label={label} />
     <slot />
     <Animations />
+    <ThemeSwitcherScript />
   </body>
 </html>
