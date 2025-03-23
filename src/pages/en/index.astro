@@ -4,16 +4,14 @@ import Nav from '@/components/home/Nav.astro'
 import NewArticleModal from '@/components/home/NewArticleModal.astro'
 import Courtain from '@/components/shared/Courtain.astro'
 import Layout from '@/layouts/Layout.astro'
-import { getPosts } from '@/lib'
+import { getFirstPost } from '@/lib'
 
-const allBlogPosts = await getPosts('en')
+const lastPost = await getFirstPost('en')
 ---
 
 <Layout
   description='Cuban-born and self-taught, I bring a unique blend of passion and proficiency to web development and design'
   title='Adrian Alvarez Portfolio'
-  className='bg-background'
-  border='border-gray-800'
 >
   <main
     class='mt-20 min-h-screen w-screen overflow-hidden p-10 md:mt-0 md:h-screen md:p-24'
@@ -26,47 +24,5 @@ const allBlogPosts = await getPosts('en')
     </div>
   </main>
   <Courtain />
-  <NewArticleModal article={allBlogPosts[0]} />
+  <NewArticleModal article={lastPost} lang='en' />
 </Layout>
-
-<script>
-  import anime from 'animejs/lib/anime.es.js'
-
-  anime
-    .timeline({
-      easing: 'easeInExpo'
-    })
-    .add({
-      targets: '#courtin',
-      scaleY: [1, 0],
-      duration: 600
-    })
-    .add(
-      {
-        targets: '#info',
-        opacity: 1,
-        translateY: [40, 0],
-        duration: 500
-      },
-      500
-    )
-    .add(
-      {
-        targets: '#links',
-        opacity: 1,
-        duration: 400,
-        delay: anime.stagger(100)
-      },
-      900
-    )
-    .add(
-      {
-        targets: '#modal',
-        opacity: 1,
-        translateY: [10, 0],
-        delay: 600,
-        duration: 600
-      },
-      700
-    )
-</script>
