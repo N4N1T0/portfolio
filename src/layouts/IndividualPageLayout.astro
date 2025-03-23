@@ -1,0 +1,39 @@
+---
+import Courtain from '@/components/shared/Courtain.astro'
+import Layout from './Layout.astro'
+import type { CollectionEntry } from 'astro:content'
+import Header from '@/components/shared/Header.astro'
+
+interface Props {
+  className?: string
+  link?: string
+  label?: string
+  ld?: string
+  entry:
+    | CollectionEntry<'blog'>
+    | CollectionEntry<'projects'>
+    | CollectionEntry<'services'>
+}
+
+const { className, link, label, ld, entry } = Astro.props
+---
+
+<Layout
+  description={'description' in entry.data
+    ? (entry.data.description as string)
+    : entry.data.excerpt}
+  title={entry.data.title}
+  className={`${className} text-foreground`}
+  link={link}
+  label={label}
+  image={entry.data.image.src}
+  ld={ld}
+>
+  <main
+    class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 md:my-10 md:gap-20 md:px-24'
+  >
+    <Header data={entry} />
+    <slot />
+  </main>
+  <Courtain />
+</Layout>

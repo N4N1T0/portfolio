@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content'
-import Layout from '@/layouts/Layout.astro'
 import { generateProjectJsonLD } from '@/components/shared/jsonLD'
 import Body from '@/components/project/Body.astro'
 import Courtain from '@/components/shared/Courtain.astro'
+import IndividualPageLayout from '@/layouts/IndividualPageLayout.astro'
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ id }) => {
@@ -29,13 +29,12 @@ if (!slug || !project) {
 const ld = generateProjectJsonLD(project, 'es')
 ---
 
-<Layout
-  description={project.data.excerpt}
-  title={project.data.title}
+<IndividualPageLayout
   label='Proyectos'
   link='/es/projects'
   ld={ld}
+  entry={project}
 >
   <Body project={project} />
   <Courtain />
-</Layout>
+</IndividualPageLayout>

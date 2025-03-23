@@ -1,9 +1,9 @@
 ---
-import Layout from '@/layouts/Layout.astro'
 import { getPosts } from '@/lib'
 import { generateJsonLDForBlogPost } from '@/components/shared/jsonLD'
 import Body from '@/components/blog/Body.astro'
 import Courtain from '@/components/shared/Courtain.astro'
+import IndividualPageLayout from '@/layouts/IndividualPageLayout.astro'
 
 export async function getStaticPaths() {
   const posts = await getPosts('en')
@@ -27,14 +27,7 @@ if (!slug || !post) {
 const ld = await generateJsonLDForBlogPost(post, 'en')
 ---
 
-<Layout
-  description={post.data.excerpt}
-  title={post.data.title}
-  image={post.data.image.src}
-  label='Blog'
-  link='/en/blog'
-  ld={ld}
->
+<IndividualPageLayout label='Blog' link='/en/blog' ld={ld} entry={post}>
   <Body blog={post} />
   <Courtain />
-</Layout>
+</IndividualPageLayout>

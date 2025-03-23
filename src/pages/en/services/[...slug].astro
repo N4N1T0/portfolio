@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content'
-import Layout from '@/layouts/Layout.astro'
 import { generateServiceJsonLD } from '@/components/shared/jsonLD'
 import Body from '@/components/service/Body.astro'
 import ContactWidget from '@/components/service/ContactWidget.astro'
 import Courtain from '@/components/shared/Courtain.astro'
+import IndividualPageLayout from '@/layouts/IndividualPageLayout.astro'
 
 export async function getStaticPaths() {
   const services = await getCollection('services', ({ id }) => {
@@ -30,14 +30,13 @@ if (!slug || !service) {
 const ld = generateServiceJsonLD(service, 'en')
 ---
 
-<Layout
-  description={service.data.excerpt}
-  title={service.data.title}
+<IndividualPageLayout
   label='Servicios'
   link='/en/services'
   ld={ld}
+  entry={service}
 >
   <Body service={service} />
   <ContactWidget slug={slug} />
   <Courtain />
-</Layout>
+</IndividualPageLayout>

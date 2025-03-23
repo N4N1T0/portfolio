@@ -1,131 +1,17 @@
 ---
-// Project Imports
+import Body from '@/components/contact/Body.astro'
 import { generateContactJsonLD } from '@/components/shared/jsonLD'
-import Layout from '@/layouts/Layout.astro'
-
-// Query Params
-const { searchParams } = Astro.url
-const query = searchParams.get('service')
+import PageLayout from '@/layouts/PageLayout.astro'
 
 const ld = generateContactJsonLD('en')
 ---
 
-<Layout
+<PageLayout
   description='Contact page for my online web development business portfolio with my contact information'
   title='Adrian - Contact'
-  className='text-gray-300'
   label='Home'
   link='/en/'
-  border='border-gray-300'
   ld={ld}
 >
-  <main
-    class='relative z-10 mt-20 min-h-screen w-screen items-center justify-around gap-16 p-10 md:gap-32 md:p-24'
-  >
-    <div class='space-y-5 p-0 opacity-0 md:p-10' id='info'>
-      <h1
-        class='font-prata text-[12vw] uppercase leading-[0.95em] md:text-[7vw]'
-      >
-        Contact
-      </h1>
-      <div>
-        <h2 class='block'>
-          If you need help with a website or application, feel free to contact
-          me
-        </h2>
-        <a
-          href='https://www.nanofighters.club/en/'
-          target='_blank'
-          class='hover-underline-animation-widget inline-block text-xs'
-          >or if you want a sparring partner too! &#128513; &#129354;</a
-        >
-      </div>
-
-      <!-- Info Section -->
-      <div class='space-y-2'>
-        <p class='text-sm'>
-          Email:{' '}
-          <a
-            href='mailto:adrian.alvarezalonso1991@gmail.com'
-            class='hover-underline-animation-widget'
-          >
-            adrian.alvarezalonso1991@gmail.com
-          </a>
-        </p>
-        <p class='text-sm'>
-          Phone:{' '}
-          <a
-            href='tel:34-647-31-72-14'
-            class='hover-underline-animation-widget'
-          >
-            +34 647 31 72 14
-          </a>
-        </p>
-        <a
-          href={`${Astro.site}en/Adrian_Alvarez_Alonso_CV.pdf`}
-          target='_blank'
-          class='block cursor-pointer text-sm underline transition-colors duration-200 hover:text-gray-600'
-        >
-          Download my CV
-        </a>
-      </div>
-    </div>
-  </main>
-  <div
-    class='absolute inset-0 z-0 w-screen origin-bottom scale-0 bg-gray-800'
-    id='courtin'
-  >
-  </div>
-</Layout>
-
-<style>
-  .hover-underline-animation-widget {
-    position: relative;
-  }
-
-  .hover-underline-animation-widget::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-
-  .hover-underline-animation-widget:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
-  html {
-    scrollbar-color: #d1d5db #1f2937;
-  }
-</style>
-
-<script>
-  import anime from 'animejs/lib/anime.es.js'
-
-  anime
-    .timeline({
-      easing: 'easeOutExpo'
-    })
-    .add({
-      targets: '#courtin',
-      scaleY: [0, 1],
-      duration: 700
-    })
-    .add(
-      {
-        targets: '#info',
-        opacity: 1,
-        translateY: [50, 0],
-        delay: anime.stagger(100),
-        duration: 600
-      },
-      700
-    )
-</script>
+  <Body lang='en' />
+</PageLayout>
