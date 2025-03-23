@@ -1,8 +1,9 @@
 ---
-// Project Imports
-import SideNavbar from '@/components/SideNavbar.astro'
+import SideNavbar from '@/components/layout/SideNavbar.astro'
 import SEOHead from '@/components/SEOHead.astro'
-import { cn } from '@/lib'
+import { getLangFromUrl } from '@/i18n/utils'
+import '@/styles/index.css'
+import Animations from '@/components/layout/Animations.astro'
 
 interface Props {
   title: string
@@ -11,78 +12,27 @@ interface Props {
   label?: string
   description: string
   image?: string | undefined
-  border: 'border-gray-300' | 'border-gray-800'
   ld?: string
 }
 
-// Astro Props
-const { title, className, border, link, label, description, image, ld } =
-  Astro.props
+const lang = getLangFromUrl(Astro.url)
+const { title, className, link, label, description, image, ld } = Astro.props
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang={lang}>
   <head>
-    <SEOHead title={title} description={description} image={image} ld={ld} />
+    <SEOHead
+      title={title}
+      description={description}
+      image={image}
+      ld={ld}
+      lang={lang}
+    />
   </head>
-  <body class={cn('overflow-x-hidden flex relative bg-background', className)}>
-    <SideNavbar border={border} link={link} label={label} />
+  <body class='relative overflow-x-hidden bg-background text-foreground'>
+    <SideNavbar className={className} link={link} label={label} />
     <slot />
-    <style is:global>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Prata&display=swap');
-
-      html,
-      body {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      .hover-underline-animation {
-        display: inline-block;
-        position: relative;
-      }
-
-      .hover-underline-animation::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: rgb(31 41 55 / 1);
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-      }
-
-      .hover-underline-animation:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-
-      .hover-underline-animation-white {
-        display: inline-block;
-        position: relative;
-      }
-
-      .hover-underline-animation-white::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: rgb(209 213 219 / 1);
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-      }
-
-      .hover-underline-animation-white:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-    </style>
+    <Animations />
   </body>
 </html>
