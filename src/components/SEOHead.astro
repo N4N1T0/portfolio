@@ -1,16 +1,16 @@
 ---
-import { getLangFromUrl, changeLangFromUrl } from '@/i18n/utils'
+import { changeLangFromUrl } from '@/i18n/utils'
 
 interface Props {
   title?: string | undefined
   description?: string | undefined
   image?: string | undefined
   ld?: string
+  lang: string
 }
 
-const { title, description, image, ld } = Astro.props
+const { title, description, image, ld, lang } = Astro.props
 
-const lang = getLangFromUrl(Astro.url)
 const newLangUrl = changeLangFromUrl(Astro.url, lang)
 const ogImage = image ? image : `${Astro.site}${lang}/og-image.jpg`
 ---
