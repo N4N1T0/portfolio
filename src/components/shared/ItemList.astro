@@ -6,9 +6,11 @@ interface Props {
     | CollectionEntry<'projects'>[]
     | CollectionEntry<'blog'>[]
     | CollectionEntry<'services'>[]
+  lang: 'es' | 'en'
 }
 
-const { list } = Astro.props
+const page = Astro.url.pathname.split('/').filter((item) => item !== '')[1]
+const { list, lang } = Astro.props
 ---
 
 <section class='flex-1 py-8 font-prata opacity-0 md:py-16' id='links'>
@@ -17,7 +19,7 @@ const { list } = Astro.props
       list.map(({ data: { title, excerpt, image }, id }) => (
         <li class='project-item' data-image={image.src}>
           <a
-            href={`/es/projects${id}`}
+            href={`/${lang}/${page}${id}`}
             class:list={[
               'block text-[12vw] uppercase leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12',
               {

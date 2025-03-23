@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
-import PlaceholderDark from '@/assets/Placeholder-Dark.webp'
+import PlaceholderOriginal from '@/assets/Placeholder-Original.webp'
+import PlaceholderPantone from '@/assets/Placeholder-Pantone.webp'
 import { useTranslations } from '@/i18n/utils'
 
 interface Props {
@@ -17,7 +18,7 @@ const t = useTranslations(lang)
   id='info'
 >
   <Image
-    src={PlaceholderDark}
+    src={PlaceholderOriginal}
     alt='Adrian Alvarez Alonso'
     width={400}
     height={400}
@@ -26,7 +27,8 @@ const t = useTranslations(lang)
     loading='eager'
     class='fade-in hidden aspect-square w-full object-cover p-10 opacity-0 md:block'
     id='project-image'
-    data-src={PlaceholderDark.src}
+    data-original={PlaceholderOriginal.src}
+    data-pantone={PlaceholderPantone.src}
   />
 
   <div class='space-y-3'>

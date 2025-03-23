@@ -1,0 +1,51 @@
+<script>
+  import anime from 'animejs/lib/anime.es.js'
+  const share = document.getElementById('share')
+
+  anime
+    .timeline({
+      easing: 'easeOutExpo'
+    })
+    .add({
+      targets: '#courtin',
+      scaleY: [1, 0],
+      duration: 700,
+      easing: 'easeInExpo'
+    })
+    .add(
+      {
+        targets: '#header',
+        opacity: 1,
+        duration: 500,
+        easing: 'easeInExpo'
+      },
+      300
+    )
+    .add(
+      {
+        targets: '#title',
+        translateY: ['110%', 0],
+        duration: 500,
+        easing: 'easeInExpo'
+      },
+      500
+    )
+    .add(
+      {
+        targets: '#nav',
+        opacity: 1,
+        duration: 400
+      },
+      900
+    )
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      share?.classList.add('opacity-1') // Show the element
+      share?.classList.remove('opacity-0') // Show the element
+    } else {
+      share?.classList.add('opacity-0') // Hide the element
+      share?.classList.remove('opacity-1') // Hide the element
+    }
+  })
+</script>

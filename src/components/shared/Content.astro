@@ -1,0 +1,14 @@
+---
+import type { RenderedContent } from 'astro:content'
+
+interface Props {
+  content: RenderedContent | undefined
+}
+
+const { content } = Astro.props
+---
+
+<section id='content' class='custom-prose'>
+  <div set:html={content?.html} />
+  <slot />
+</section>

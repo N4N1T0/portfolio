@@ -1,12 +1,17 @@
 <script>
   import anime from 'animejs/lib/anime.es.js'
 
+  const theme = localStorage.getItem('theme')
   const projectItems = document.querySelectorAll(
     '.project-item'
   ) as NodeListOf<HTMLElement>
   const projectImage = document.getElementById(
     'project-image'
   ) as HTMLImageElement
+  const defaultImage =
+    theme === 'dark'
+      ? projectImage.dataset.pantone
+      : projectImage.dataset.original
 
   anime
     .timeline({
@@ -23,7 +28,7 @@
         opacity: 1,
         duration: 500
       },
-      500
+      600
     )
     .add(
       {
@@ -33,7 +38,15 @@
         delay: anime.stagger(100),
         duration: 600
       },
-      700
+      800
+    )
+    .add(
+      {
+        targets: '#nav',
+        opacity: 1,
+        duration: 400
+      },
+      1000
     )
 
   projectItems.forEach((item) => {
@@ -67,7 +80,7 @@
           duration: 200,
           easing: 'easeInOutQuad',
           complete: () => {
-            projectImage.src = projectImage.dataset.src as string
+            projectImage.src = defaultImage as string
             projectImage.classList.add('opacity-0')
           }
         })

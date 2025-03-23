@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  data:
+    | CollectionEntry<'services'>
+    | CollectionEntry<'projects'>
+    | CollectionEntry<'blog'>
+}
+
+const { data } = Astro.props
+const variant = data.collection
+---
+
+<section
+  id='header'
+  class:list={[
+    'relative flex w-full justify-center overflow-hidden text-center opacity-0',
+    {
+      'h-[70vh]': variant === 'projects',
+      'h-[600px]': variant !== 'projects'
+    }
+  ]}
+  style={`background-color: ${'mainColor' in data.data ? data.data.mainColor : 'transparent'};`}
+>
+  <h1
+    id='title'
+    class:list={[
+      'z-20 self-end text-balance font-prata uppercase',
+      {
+        'text-[11vw]': variant === 'projects',
+        'text-[7vw] leading-[7vw]': variant !== 'projects'
+      }
+    ]}
+    style={`color: ${'secondaryColor' in data.data ? data.data.secondaryColor : 'inherit'};`}
+  >
+    {data.data.title}
+  </h1>
+
+  {
+    variant !== 'projects' && (
+      <>
+        <div class='absolute inset-0 z-10 h-full w-full bg-background opacity-20' />
+        <Image
+          src={data.data.image}
+          alt={data.data.imageAlt || data.data.title}
+          loading='eager'
+          class='absolute inset-0 h-full w-full object-cover'
+          id='primaryimage'
+        />
+      </>
+    )
+  }
+</section>
