@@ -1,0 +1,50 @@
+---
+import { contactItems } from '@/i18n/ui'
+import { useTranslations } from '@/i18n/utils'
+
+interface Props {
+  lang: 'es' | 'en'
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+---
+
+<main
+  class='relative z-10 mt-20 min-h-screen w-screen items-center justify-around gap-16 p-10 md:gap-32 md:p-24'
+>
+  <div class='space-y-5 p-0 opacity-0 md:p-10' id='info'>
+    <h1 class='font-prata text-[12vw] uppercase leading-[0.95em] md:text-[7vw]'>
+      {t('contact')['heading']}
+    </h1>
+    <h2 class='block'>
+      {t('contact')['description']}
+    </h2>
+
+    <div class='space-y-2'>
+      {
+        contactItems.map(({ label, link, subLabel }) => (
+          <p class='text-sm'>
+            {label}:{' '}
+            <a
+              href={link}
+              target='_blank'
+              class='hover-underline-animation-reverse'
+            >
+              {subLabel}
+            </a>
+          </p>
+        ))
+      }
+      <p class='w-fit text-sm'>
+        <a
+          href={`${Astro.site}${lang}/Adrian_Alvarez_Alonso_CV.pdf`}
+          target='_blank'
+          class='hover-underline-animation-reverse block cursor-pointer'
+        >
+          {lang === 'es' ? 'Descargar CV' : 'Download CV'}
+        </a>
+      </p>
+    </div>
+  </div>
+</main>
