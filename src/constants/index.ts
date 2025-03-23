@@ -1,3 +1,5 @@
+import { Devto, Github, Instagram, Stackoverflow, X } from '@/assets/svg'
+
 export const shareLinks = [
   {
     label: 'LinkedIn',
@@ -19,27 +21,27 @@ export const shareLinks = [
 export const socialMedia = [
   {
     href: 'https://github.com/N4N1T0',
-    icon: 'https://cdn.simpleicons.org/github/243E61',
+    icon: Github,
     label: 'GitHub'
   },
   {
     href: 'https://stackoverflow.com/users/23143125/n4n1t0',
-    icon: 'https://cdn.simpleicons.org/stackoverflow/243E61',
+    icon: Stackoverflow,
     label: 'Stack Overflow'
   },
   {
     href: 'https://x.com/AdrianlvarezAl1',
-    icon: 'https://cdn.simpleicons.org/x/243E61',
+    icon: X,
     label: 'X (Twitter)'
   },
   {
     href: 'https://dev.to/n4n1t0',
-    icon: 'https://cdn.simpleicons.org/devdotto/243E61',
+    icon: Devto,
     label: 'Dev.to'
   },
   {
     href: 'https://www.instagram.com/adrian_alvarez_dev/',
-    icon: 'https://cdn.simpleicons.org/instagram/243E61',
+    icon: Instagram,
     label: 'Instagram'
   }
 ]
