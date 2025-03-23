@@ -1,0 +1,65 @@
+---
+import { cn, getBorderColor, getHoverBorderColor } from '@/lib'
+
+interface Props {
+  className?: string
+}
+
+const { className } = Astro.props
+const border = getBorderColor(className)
+const hover = getHoverBorderColor(className)
+---
+
+<div
+  class='pointer-events-none flex h-full items-center space-x-5 pr-32 text-sm md:-rotate-90 md:space-x-10'
+>
+  <button
+    id='theme-toggle'
+    class={cn('pointer-events-auto cursor-pointer', hover)}
+  >
+    <span id='theme-original' class='hidden' title='Original Scheme'
+      >Original</span
+    >
+    <span id='theme-pantone' title='Pantone Scheme - Color of Year'
+      >Pantone</span
+    >
+  </button>
+  <hr class={cn('border-px w-10 md:w-20', border)} />
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById(
+      'theme-toggle'
+    ) as HTMLButtonElement
+    const lightIcon = document.getElementById(
+      'theme-pantone'
+    ) as HTMLSpanElement
+    const darkIcon = document.getElementById(
+      'theme-original'
+    ) as HTMLSpanElement
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark')
+      darkIcon.classList.remove('hidden')
+      lightIcon.classList.add('hidden')
+    } else {
+      document.documentElement.classList.remove('dark')
+      darkIcon.classList.add('hidden')
+      lightIcon.classList.remove('hidden')
+    }
+
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark')
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark')
+        darkIcon.classList.remove('hidden')
+        lightIcon.classList.add('hidden')
+      } else {
+        localStorage.setItem('theme', 'light')
+        darkIcon.classList.add('hidden')
+        lightIcon.classList.remove('hidden')
+      }
+    })
+  })
+</script>
