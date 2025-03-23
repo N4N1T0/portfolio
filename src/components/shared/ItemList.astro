@@ -13,8 +13,8 @@ const page = Astro.url.pathname.split('/').filter((item) => item !== '')[1]
 const { list, lang } = Astro.props
 ---
 
-<section class='flex-1 py-8 font-prata opacity-0 md:py-16' id='links'>
-  <ul role='navigation' class='space-y-5 md:space-y-10'>
+<section class='flex-1 text-balance font-prata opacity-0 md:py-16' id='links'>
+  <ul role='navigation' class='space-y-10'>
     {
       list.map(({ data: { title, excerpt, image }, id }) => (
         <li class='project-item' data-image={image.src}>
