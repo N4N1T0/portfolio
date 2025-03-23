@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Prata&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #a3bbfb;
+    --foreground: #1f2937;
+  }
+
+  .dark {
+    --background: #a47864;
+    --foreground: #f1e8df;
+  }
+
+  html,
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scrollbar-color: var(--foreground) var(--background);
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--foreground);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .hover-underline-animation-reverse {
+    display: inline-block;
+    position: relative;
+  }
+
+  .hover-underline-animation-reverse::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--background);
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation-reverse:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+  }
+
+  .custom-prose {
+    @apply prose max-w-[1200px] px-5 text-foreground prose-headings:text-foreground prose-strong:text-foreground prose-li:marker:text-foreground prose-hr:border-foreground;
+  }
+}
