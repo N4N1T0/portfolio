@@ -33,6 +33,11 @@ export const ui = {
       heading: 'Blog',
       description:
         'Explora mis artículos destacados sobre Diseño y Desarrollo Web, Marketing, SEO, Tech y Diseño Gráfico. Adéntrate en el apasionante universo digital de los últimos 3 años y acompáñame en este continuo viaje de aprendizaje e innovación. ¡Descubre las tendencias y novedades más recientes en estos emocionantes campos'
+    },
+    'contact': {
+      heading: 'Contacto',
+      description:
+        'Si necesitas ayuda con un sitio web o una aplicación, no dudes en contactarme'
     }
   },
   'en': {
@@ -56,6 +61,11 @@ export const ui = {
       heading: 'Blog',
       description:
         ' Explore my featured articles about Web Design and Development, Marketing, SEO, Tech and Graphic Design. Delve into the exciting digital digital universe of the last 3 years and join me in this continuous journey of learning and innovation. Discover the latest trends and developments in these exciting fields! in these exciting fields!'
+    },
+    'contact': {
+      heading: 'Contact',
+      description:
+        "If you need help with a website or an application, don't hesitate to contact me"
     }
   }
 }
@@ -72,7 +82,7 @@ export const navlists = {
     },
     {
       label: 'Contacto',
-      route: '/es/contacto'
+      route: '/es/contact'
     },
     {
       label: 'Blog',
@@ -98,3 +108,21 @@ export const navlists = {
     }
   ]
 }
+
+export const contactItems = [
+  {
+    label: 'Email',
+    subLabel: 'adrian.alvarezalonso1991@gmail.com',
+    link: 'adrian.alvarezalonso1991@gmail.com'
+  },
+  {
+    label: 'Telefono',
+    subLabel: '+34 647 31 72 14',
+    link: 'tel:34-647-31-72-14'
+  },
+  {
+    label: 'Github',
+    subLabel: 'github.com/AdrianAlvarezAlonso',
+    link: 'https://github.com/N4N1T0'
+  }
+]
