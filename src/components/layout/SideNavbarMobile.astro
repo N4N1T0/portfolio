@@ -1,0 +1,60 @@
+---
+import { cn, getBorderColor, getHoverBorderColor } from '@/lib'
+
+interface Props {
+  link?: string
+  label?: string
+  className?: string
+}
+
+const { link, label, className } = Astro.props
+const border = getBorderColor(className)
+const hover = getHoverBorderColor(className)
+---
+
+<aside
+  class={cn(
+    'flex h-14 w-full items-center justify-between px-10 opacity-0 md:hidden relative z-50 text-sm gap-5',
+    className
+  )}
+  id='nav'
+>
+  <button
+    id='theme-toggle'
+    class={cn('pointer-events-auto cursor-pointer', hover)}
+  >
+    <span id='theme-original' class='hidden' title='Original Scheme'
+      >Original</span
+    >
+    <span id='theme-pantone' title='Pantone Scheme - Color of Year'
+      >Pantone</span
+    >
+  </button>
+  <hr class={cn('border-px flex-1', border)} />
+  <div class='flex items-center gap-3'>
+    {
+      link === undefined ? (
+        <>
+          <a
+            href='/es/'
+            class='hover-underline-animation cursor-pointer'
+            title='Version en español'
+          >
+            Español
+          </a>
+          <a
+            href='/en/'
+            class='hover-underline-animation cursor-pointer'
+            title='English Version'
+          >
+            English
+          </a>
+        </>
+      ) : (
+        <a href={link} class='hover-underline-animation-reverse'>
+          {label}
+        </a>
+      )
+    }
+  </div>
+</aside>
