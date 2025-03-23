@@ -1,0 +1,13 @@
+---
+import HomeAnimations from '@/components/home/HomeAnimations.astro'
+import PageAnimation from '@/components/shared/PageAnimation.astro'
+import IndividualPageAnimation from '@/components/shared/IndividualPageAnimation.astro'
+
+const pageCount = Astro.url.pathname
+  .split('/')
+  .filter((item) => item !== '').length
+---
+
+{pageCount === 1 && <HomeAnimations />}
+{pageCount === 2 && <PageAnimation />}
+{pageCount > 2 && <IndividualPageAnimation />}
