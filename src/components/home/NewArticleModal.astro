@@ -3,14 +3,15 @@ import type { CollectionEntry } from 'astro:content'
 
 interface Props {
   article: CollectionEntry<'blog'>
+  lang: 'es' | 'en'
 }
 
-const { article } = Astro.props
+const { article, lang } = Astro.props
 ---
 
 <article
   id='modal'
-  class='absolute bottom-5 right-5 z-40 hidden w-[300px] animate-bounce space-y-1 bg-gray-800 p-3 text-gray-100 opacity-0 hover:[animation-play-state:paused] md:block'
+  class='absolute bottom-5 right-5 z-40 hidden w-[300px] animate-bounce space-y-1 bg-foreground p-3 text-background opacity-0 hover:[animation-play-state:paused] md:block'
   role='dialog'
   aria-labelledby='new-article-title'
   aria-hidden='true'
@@ -19,8 +20,8 @@ const { article } = Astro.props
     Articulo Nuevo
   </h5>
   <a
-    class='block text-sm transition duration-200 ease-out hover:text-gray-400 hover:underline'
-    href={`${Astro.site}es/blog${article.id}`}
+    class='block text-sm transition duration-200 ease-out hover:underline'
+    href={`${Astro.site}${lang}/blog${article.id}`}
     aria-label={`Read more about ${article.data.title}`}>{article.data.title}</a
   >
 </article>
