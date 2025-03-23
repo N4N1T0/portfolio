@@ -1,7 +1,6 @@
 ---
 import ShareSocial from '@/components/blog/ShareSocial.astro'
 import Content from '@/components/shared/Content.astro'
-import Header from '@/components/shared/Header.astro'
 import type { CollectionEntry } from 'astro:content'
 import Subheading from '@/components/blog/Subheading.astro'
 
@@ -13,11 +12,6 @@ const { blog } = Astro.props
 const content = blog.rendered
 ---
 
-<main
-  class='relative my-20 flex w-screen flex-col items-center justify-center gap-10 md:my-10 md:gap-20 md:px-24'
->
-  <Header data={blog} />
-  <Subheading blog={blog} />
-  <Content content={content} />
-  <ShareSocial />
-</main>
+<Subheading blog={blog} />
+<Content content={content} />
+<ShareSocial />

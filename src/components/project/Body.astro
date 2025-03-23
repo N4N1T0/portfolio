@@ -4,7 +4,6 @@ import type { CollectionEntry } from 'astro:content'
 import UrlWidget from '@/components/project/UrlWidget.astro'
 import Testimonial from '@/components/project/Testimonial.astro'
 import Content from '@/components/shared/Content.astro'
-import Header from '@/components/shared/Header.astro'
 import Subheading from '@/components/project/Subheading.astro'
 
 interface Props {
@@ -17,15 +16,10 @@ const { image, imageAlt, testimonial, imageSecondary } = project.data
 const content = project.rendered
 ---
 
-<main
-  class='relative mt-20 flex w-screen flex-col items-center justify-center gap-10 md:mt-0 md:gap-20 md:px-24'
->
-  <Header data={project} />
-  <Subheading project={project} />
-  <Image src={image} alt={`${imageAlt} - Showcase`} loading='lazy' />
-  <Content content={content}>
-    <Image src={imageSecondary} alt={`${imageAlt} - Style`} loading='lazy' />
-    {testimonial && <Testimonial project={project} />}
-  </Content>
-  <UrlWidget project={project} />
-</main>
+<Subheading project={project} />
+<Image src={image} alt={`${imageAlt} - Showcase`} loading='lazy' />
+<Content content={content}>
+  <Image src={imageSecondary} alt={`${imageAlt} - Style`} loading='lazy' />
+  {testimonial && <Testimonial project={project} />}
+</Content>
+<UrlWidget project={project} />
