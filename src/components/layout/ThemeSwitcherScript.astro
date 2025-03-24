@@ -1,36 +1,38 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById(
-      'theme-toggle'
-    ) as HTMLButtonElement
-    const lightIcon = document.getElementById(
-      'theme-pantone'
-    ) as HTMLSpanElement
-    const darkIcon = document.getElementById(
-      'theme-original'
-    ) as HTMLSpanElement
+    const themeToggle = document.querySelectorAll(
+      '#theme-toggle'
+    ) as NodeListOf<HTMLButtonElement>
+    const lightIcons = document.querySelectorAll(
+      '.theme-pantone'
+    ) as NodeListOf<HTMLSpanElement>
+    const darkIcons = document.querySelectorAll(
+      '.theme-original'
+    ) as NodeListOf<HTMLSpanElement>
 
     if (localStorage.getItem('theme') === 'dark') {
       document.documentElement.classList.add('dark')
-      darkIcon.classList.remove('hidden')
-      lightIcon.classList.add('hidden')
+      darkIcons.forEach((icon) => icon.classList.remove('hidden'))
+      lightIcons.forEach((icon) => icon.classList.add('hidden'))
     } else {
       document.documentElement.classList.remove('dark')
-      darkIcon.classList.add('hidden')
-      lightIcon.classList.remove('hidden')
+      darkIcons.forEach((icon) => icon.classList.add('hidden'))
+      lightIcons.forEach((icon) => icon.classList.remove('hidden'))
     }
 
-    themeToggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark')
-      if (document.documentElement.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark')
-        darkIcon.classList.remove('hidden')
-        lightIcon.classList.add('hidden')
-      } else {
-        localStorage.setItem('theme', 'light')
-        darkIcon.classList.add('hidden')
-        lightIcon.classList.remove('hidden')
-      }
+    themeToggle.forEach((button) => {
+      button.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark')
+        if (document.documentElement.classList.contains('dark')) {
+          localStorage.setItem('theme', 'dark')
+          darkIcons.forEach((icon) => icon.classList.remove('hidden'))
+          lightIcons.forEach((icon) => icon.classList.add('hidden'))
+        } else {
+          localStorage.setItem('theme', 'light')
+          darkIcons.forEach((icon) => icon.classList.add('hidden'))
+          lightIcons.forEach((icon) => icon.classList.remove('hidden'))
+        }
+      })
     })
   })
 </script>
