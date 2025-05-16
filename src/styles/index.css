@@ -72,7 +72,7 @@
     transform-origin: bottom right;
   }
 
-  .custom-prose {
+  /* .custom-prose {
     @apply prose max-w-[1200px] px-5 text-foreground prose-headings:text-foreground prose-strong:text-foreground prose-li:marker:text-foreground prose-hr:border-foreground;
-  }
+  } */
 }
