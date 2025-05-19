@@ -13,18 +13,22 @@ const t = useTranslations(lang)
 <main
   class='relative z-10 mt-20 min-h-screen w-screen items-center justify-around gap-16 p-10 md:gap-32 md:p-24'
 >
-  <div class='space-y-5 p-0 opacity-0 md:p-10' id='info'>
-    <h1 class='font-prata text-[12vw] uppercase leading-[0.95em] md:text-[7vw]'>
+  <div class='space-y-5 p-0 md:p-10' id='info'>
+    <h1
+      class='font-prata animate-fade-in-down animate-delay-300 text-[12vw] leading-[0.95em] uppercase md:text-[7vw]'
+    >
       {t('contact')['heading']}
     </h1>
-    <h2 class='block'>
+    <h2 class='animate-fade-in-down animate-delay-400 block'>
       {t('contact')['description']}
     </h2>
 
     <div class='space-y-2'>
       {
-        contactItems.map(({ label, link, subLabel }) => (
-          <p class='text-sm'>
+        contactItems.map(({ label, link, subLabel }, index) => (
+          <p
+            class={`animate-fade-in-down animate-delay-${(index + 4) * 100} text-sm`}
+          >
             {label}:{' '}
             <a
               href={link}
@@ -36,7 +40,9 @@ const t = useTranslations(lang)
           </p>
         ))
       }
-      <p class='w-fit text-sm'>
+      <p
+        class={`animate-fade-in-down animate-delay-${(contactItems.length + 4) * 100} w-fit text-sm`}
+      >
         <a
           href={`${Astro.site}${lang}/Adrian_Alvarez_Alonso_CV.pdf`}
           target='_blank'

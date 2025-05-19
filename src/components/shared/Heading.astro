@@ -14,7 +14,7 @@ const t = useTranslations(lang)
 ---
 
 <header
-  class='3xl:bottom-20 sticky bottom-10 z-10 flex max-w-[650px] flex-1 flex-col self-end opacity-0'
+  class='3xl:bottom-20 sticky bottom-10 z-10 flex max-w-[650px] flex-1 flex-col self-end'
   id='info'
 >
   <Image
@@ -32,8 +32,12 @@ const t = useTranslations(lang)
   />
 
   <div class='space-y-3'>
-    <h1 class='text-4xl font-semibold tracking-widest'>{t(page)['heading']}</h1>
-    <p class='text-sm'>
+    <h1
+      class='animate-fade-in-down animate-delay-500 text-4xl font-semibold tracking-widest'
+    >
+      {t(page)['heading']}
+    </h1>
+    <p class='animate-fade-in-down animate-delay-600 text-sm'>
       {t(page)['description']}
     </p>
   </div>

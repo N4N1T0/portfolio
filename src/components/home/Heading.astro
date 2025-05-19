@@ -11,14 +11,17 @@ const { lang } = Astro.props
 const t = useTranslations(lang)
 ---
 
-<header
-  class='max-w-[500px] space-y-3 self-end text-pretty opacity-0'
-  id='info'
->
+<header class='max-w-[500px] space-y-3 self-end text-pretty' id='info'>
   <Pantone />
-  <h1 class='text-3xl font-semibold tracking-widest'>{t('home')['heading']}</h1>
-  <p class='text-sm'>{t('home')['role']}</p>
-  <p class='text-sm'>
+  <h1
+    class='animate-fade-in-down animate-delay-700 text-3xl font-semibold tracking-widest'
+  >
+    {t('home')['heading']}
+  </h1>
+  <p class='animate-fade-in-down animate-delay-600 text-sm'>
+    {t('home')['role']}
+  </p>
+  <p class='animate-fade-in-down animate-delay-600 text-sm'>
     {t('home')['description']}
   </p>
   <SocialMedia />

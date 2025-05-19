@@ -13,15 +13,18 @@ const page = Astro.url.pathname.split('/').filter((item) => item !== '')[1]
 const { list, lang } = Astro.props
 ---
 
-<section class='flex-1 text-balance font-prata opacity-0 md:py-16' id='links'>
+<section class='font-prata flex-1 text-balance md:py-16'>
   <ul role='navigation' class='space-y-10'>
     {
-      list.map(({ data: { title, excerpt, image }, id }) => (
-        <li class='project-item' data-image={image.src}>
+      list.map(({ data: { title, excerpt, image }, id }, index) => (
+        <li
+          class={`project-item animate-fade-in-down animate-delay-${(index + 3) * 100}`}
+          data-image={image.src}
+        >
           <a
             href={`/${lang}/${page}${id}`}
             class:list={[
-              'block text-[12vw] uppercase leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12',
+              'block text-[12vw] leading-[0.95em] uppercase transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12',
               {
                 'md:text-[6vw]': list.some(
                   ({ collection }) => collection === 'services'

@@ -13,11 +13,13 @@ const list = navlists[lang]
   id='links'
   role='navigation'
   aria-label='Main Navigation'
-  class='font-prata uppercase opacity-0'
+  class='font-prata uppercase'
 >
   {
-    list.map(({ label, route }) => (
-      <li class='[&>a]:block [&>a]:cursor-pointer [&>a]:text-[14vw] md:[&>a]:text-[9vw]'>
+    list.map(({ label, route }, index) => (
+      <li
+        class={`animate-fade-in-up animate-delay-${(index + 3) * 100} [&>a]:block [&>a]:cursor-pointer [&>a]:text-[14vw] md:[&>a]:text-[9vw]`}
+      >
         <a
           href={route}
           class='leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12'

@@ -1,54 +1,12 @@
 <script>
-  import anime from 'animejs/lib/anime.es.js'
+  import { animate } from 'animejs'
   const share = document.getElementById('share')
 
-  anime
-    .timeline({
-      easing: 'easeOutExpo'
-    })
-    .add({
-      targets: '#courtin',
-      scaleY: [1, 0],
-      duration: 700,
-      easing: 'easeInExpo'
-    })
-    .add(
-      {
-        targets: '#header',
-        opacity: 1,
-        duration: 500,
-        easing: 'easeInExpo'
-      },
-      300
-    )
-    .add(
-      {
-        targets: '#title',
-        opacity: 1,
-        translateY: [50, 0],
-        duration: 500,
-        easing: 'easeInExpo'
-      },
-      500
-    )
-    .add(
-      {
-        targets: '#subtitle',
-        opacity: 1,
-        translateY: [50, 0],
-        duration: 500,
-        easing: 'easeInExpo'
-      },
-      700
-    )
-    .add(
-      {
-        targets: '#nav',
-        opacity: 1,
-        duration: 400
-      },
-      1100
-    )
+  animate('#courtin', {
+    scaleY: [1, 0],
+    duration: 500,
+    easing: 'easeInOutQuad'
+  })
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {

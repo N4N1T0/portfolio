@@ -16,7 +16,7 @@ const variant = data.collection
 <section
   id='header'
   class:list={[
-    'relative flex w-full justify-center overflow-hidden text-center opacity-0',
+    'animate-fade-in animate-delay-400 relative flex w-full justify-center overflow-hidden text-center',
     {
       'md: h-[70vh]': variant === 'projects',
       'h-[600px]': variant !== 'projects'
@@ -27,7 +27,7 @@ const variant = data.collection
   <h1
     id='title'
     class:list={[
-      'z-20 self-end text-balance font-prata uppercase opacity-0',
+      'font-prata animate-fade-in-down animate-delay-500 z-20 self-end text-balance uppercase',
       {
         'text-[11vw]': variant === 'projects',
         'text-[7vw] leading-[7vw]': variant !== 'projects'
@@ -41,7 +41,7 @@ const variant = data.collection
   {
     variant !== 'projects' && (
       <>
-        <div class='absolute inset-0 z-10 h-full w-full bg-background opacity-20' />
+        <div class='bg-background absolute inset-0 z-10 h-full w-full opacity-20' />
         <Image
           src={data.data.image}
           alt={data.data.imageAlt || data.data.title}

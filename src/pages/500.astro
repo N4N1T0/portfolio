@@ -14,13 +14,13 @@ import Layout from '@/layouts/Layout.astro'
     id='info'
   >
     <h1
-      class='font-prata text-[12vw] uppercase leading-[0.95em] md:text-[7vw]'
+      class='font-prata text-[12vw] leading-[0.95em] uppercase md:text-[7vw]'
       style='color: #f87171'
     >
       SERVER ERROR
     </h1>
     <h2
-      class='my-5 max-w-[700px] px-5 font-prata text-[7vw] text-red-400 md:p-0 md:text-[3vw] md:leading-[4rem]'
+      class='font-prata my-5 max-w-[700px] px-5 text-[7vw] text-red-400 md:p-0 md:text-[3vw] md:leading-16'
     >
       An unexpected error has occurred.
     </h2>
@@ -54,25 +54,10 @@ import Layout from '@/layouts/Layout.astro'
 </style>
 
 <script>
-  import anime from 'animejs/lib/anime.es.js'
+  import { animate } from 'animejs'
 
-  anime
-    .timeline({
-      easing: 'easeOutExpo'
-    })
-    .add({
-      targets: '#courtin',
-      scaleY: [0, 1],
-      duration: 700
-    })
-    .add(
-      {
-        targets: '#info',
-        opacity: 1,
-        translateY: [50, 0],
-        delay: anime.stagger(100),
-        duration: 500
-      },
-      700
-    )
+  animate('#courtin', {
+    scaleY: [0, 1],
+    duration: 700
+  })
 </script>
