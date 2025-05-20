@@ -9,12 +9,13 @@
   })
 
   window.addEventListener('scroll', () => {
+    console.log(share)
     if (window.scrollY > 300) {
-      share?.classList.add('opacity-1') // Show the element
-      share?.classList.remove('opacity-0') // Show the element
+      share?.classList.add('opacity-100')
+      share?.classList.remove('opacity-0')
     } else {
-      share?.classList.add('opacity-0') // Hide the element
-      share?.classList.remove('opacity-1') // Hide the element
+      share?.classList.add('opacity-0')
+      share?.classList.remove('opacity-100')
     }
   })
 </script>
