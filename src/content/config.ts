@@ -13,12 +13,7 @@ const blogCollection = defineCollection({
           'For optimize SEO, please provide a title with 60 characters or less'
         ),
       date: z.date(),
-      excerpt: z
-        .string()
-        .max(
-          160,
-          'For optimize SEO, please provide a excerpt/description with 160 characters or less'
-        ),
+      excerpt: z.string(),
       author: z.string(),
       image: image(),
       imageAlt: z.string(),
@@ -37,12 +32,7 @@ const serviceCollection = defineCollection({
           60,
           'For optimize SEO, please provide a title with 60 characters or less'
         ),
-      excerpt: z
-        .string()
-        .max(
-          160,
-          'For optimize SEO, please provide a excerpt/description with 160 characters or less'
-        ),
+      excerpt: z.string(),
       image: image(),
       imageAlt: z.string(),
       techStack: z.array(
@@ -59,7 +49,7 @@ const serviceCollection = defineCollection({
 
 // Typescript for the Projects
 const projectCollection = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
+  loader: glob({ pattern: '**/*.json', base: './src/content/projects' }),
   schema: ({ image }) =>
     z.object({
       title: z
@@ -68,27 +58,26 @@ const projectCollection = defineCollection({
           60,
           'For optimize SEO, please provide a title with 60 characters or less'
         ),
-      date: z.date(),
-      excerpt: z
-        .string()
-        .max(
-          160,
-          'For optimize SEO, please provide a excerpt/description with 160 characters or less'
-        ),
-      image: image(),
-      imageSecondary: image(),
-      imageAlt: z.string(),
-      liveLink: z.string().url(),
-      repoLink: z.string().url(),
-      mainColor: z.string(),
-      secondaryColor: z.string(),
-      techStack: z.array(
+      date: z.string(),
+      excerpt: z.string(),
+      images: z.array(
         z.object({
-          link: z.string().url(),
-          title: z.string(),
-          info: z.string()
+          src: image(),
+          alt: z.string()
         })
       ),
+      liveLink: z.string().url(),
+      repoLink: z.string().url(),
+      colors: z.array(z.string()),
+      techStack: z.array(
+        z.object({
+          title: z.string(),
+          info: z.string(),
+          link: z.string().url()
+        })
+      ),
+      challenge: z.string().optional(),
+      solution: z.string().optional(),
       testimonial: z.object({
         name: z.string(),
         quote: z.string(),
