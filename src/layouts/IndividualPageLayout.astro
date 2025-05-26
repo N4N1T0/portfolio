@@ -16,6 +16,10 @@ interface Props {
 }
 
 const { className, link, label, ld, entry } = Astro.props
+const image =
+  entry.collection === 'projects'
+    ? entry.data.images?.[0].src
+    : entry.data.image
 ---
 
 <Layout
@@ -26,7 +30,7 @@ const { className, link, label, ld, entry } = Astro.props
   className={`${className} text-foreground`}
   link={link}
   label={label}
-  image={entry.data.image.src}
+  image={image}
   ld={ld}
 >
   <main

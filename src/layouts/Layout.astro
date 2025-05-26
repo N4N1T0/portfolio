@@ -13,7 +13,7 @@ interface Props {
   link?: string
   label?: string
   description: string
-  image?: string | undefined
+  image?: ImageMetadata
   ld?: string
 }
 
@@ -32,7 +32,7 @@ const { title, className, link, label, description, image, ld } = Astro.props
       lang={lang}
     />
   </head>
-  <body class='relative overflow-x-hidden bg-background text-foreground'>
+  <body class='bg-background text-foreground relative overflow-x-hidden'>
     <SideNavbarMobile className={className} link={link} label={label} />
     <SideNavbar className={className} link={link} label={label} />
     <slot />

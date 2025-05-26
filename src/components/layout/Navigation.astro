@@ -1,5 +1,5 @@
 ---
-import { cn, getBorderColor } from '@/lib'
+import { cn, getBorderColor, getHoverBorderColor } from '@/lib'
 
 interface Props {
   link?: string
@@ -8,7 +8,9 @@ interface Props {
 }
 
 const { link, label, className } = Astro.props
+console.log('🚀 ~ className:', className)
 const border = getBorderColor(className)
+const hoverAnimation = getHoverBorderColor(className)
 ---
 
 <div
@@ -20,21 +22,21 @@ const border = getBorderColor(className)
       <>
         <a
           href='/es/'
-          class='hover-underline-animation cursor-pointer'
+          class='hover-underline-animation-reverse cursor-pointer'
           title='Version en español'
         >
           Español
         </a>
         <a
           href='/en/'
-          class='hover-underline-animation cursor-pointer'
+          class='hover-underline-animation-reverse cursor-pointer'
           title='English Version'
         >
           English
         </a>
       </>
     ) : (
-      <a href={link} class='hover-underline-animation-reverse'>
+      <a href={link} class={hoverAnimation}>
         {label}
       </a>
     )
