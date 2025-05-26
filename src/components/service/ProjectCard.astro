@@ -19,10 +19,10 @@ const project = await getCollectionBySlug(slug)
 {
   project !== undefined && (
     <li>
-      <article class='group relative col-span-1 aspect-square overflow-hidden text-background'>
+      <article class='group text-background relative col-span-1 aspect-square overflow-hidden'>
         <figure class='h-full w-full'>
           <Image
-            src={project.data.image}
+            src={project.data.images[0].src as ImageMetadata}
             alt={project.data.title}
             title={project.data.title}
             loading='eager'
@@ -34,8 +34,8 @@ const project = await getCollectionBySlug(slug)
           target='_blank'
           class='group absolute inset-0 h-full w-full translate-y-full p-10 transition-all duration-300 ease-in-out group-hover:translate-y-0'
           style={{
-            backgroundColor: project.data.mainColor,
-            color: project.data.secondaryColor
+            backgroundColor: project.data.colors[0],
+            color: project.data.colors[1]
           }}
           rel='nofollow noopener noreferrer'
         >
