@@ -16,24 +16,24 @@ const variant = data.collection
 <section
   id='header'
   class:list={[
-    'animate-fade-in animate-delay-400 relative flex w-full justify-center overflow-hidden text-center',
+    'animate-fade-in animate-delay-300 relative flex w-full justify-center overflow-hidden text-center',
     {
       'md: h-[70vh]': variant === 'projects',
       'h-[600px]': variant !== 'projects'
     }
   ]}
-  style={`background-color: ${'mainColor' in data.data ? data.data.mainColor : 'transparent'};`}
+  style={`background-color: ${'colors' in data.data ? data.data.colors[0] : 'transparent'};`}
 >
   <h1
     id='title'
     class:list={[
-      'font-prata animate-fade-in-down animate-delay-500 z-20 self-end text-balance uppercase',
+      'font-prata animate-fade-in-down animate-delay-400 z-20 self-end text-balance uppercase',
       {
         'text-[11vw]': variant === 'projects',
         'text-[7vw] leading-[7vw]': variant !== 'projects'
       }
     ]}
-    style={`color: ${'secondaryColor' in data.data ? data.data.secondaryColor : 'inherit'};`}
+    style={`color: ${'colors' in data.data ? data.data.colors[1] : 'inherit'};`}
   >
     {data.data.title}
   </h1>
@@ -53,3 +53,25 @@ const variant = data.collection
     )
   }
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const title = document.getElementById('title')
+
+    if (title) {
+      const handleScroll = () => {
+        title.classList.remove('animate-fade-in-down')
+        const scrollPosition = window.scrollY
+        title.style.transform = `translateY(${scrollPosition * 0.3}px)`
+      }
+
+      // Add scroll event listener
+      window.addEventListener('scroll', handleScroll)
+
+      // Clean up event listener when component is removed
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+      }
+    }
+  })
+</script>

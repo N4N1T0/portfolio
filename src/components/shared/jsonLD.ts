@@ -147,8 +147,8 @@ export const generateProjectListJsonLD = (
         'url': `https://www.adrian-alvarez.dev/${lang}/projects/${project.id}/`,
         'name': project.data.title,
         'description': project.data.excerpt,
-        'datePublished': project.data.date.toISOString(),
-        'image': project.data.image
+        'datePublished': project.data.date,
+        'image': project?.data?.images?.[0].src?.src || '/favicon.ico'
       }
     }))
   })
@@ -165,8 +165,8 @@ export const generateProjectJsonLD = (
     'url': `https://www.adrian-alvarez.dev/${lang}/projects/${project.id}/`,
     'name': project.data.title,
     'description': project.data.excerpt,
-    'image': project.data.excerpt,
-    'datePublished': project.data.date.toISOString(),
+    'image': project?.data?.images?.[0].src?.src || '/favicon.ico',
+    'datePublished': project.data.date,
     'publisher': {
       '@type': 'Organization',
       'name': 'Adrian Alvarez Portfolio',
