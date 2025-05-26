@@ -1,52 +1,48 @@
 {
   "title": "ENKA Cosmetics",
   "date": "2025-01-15",
-  "excerpt": "Complete redesign and rebuild of a cosmetics store in southern Spain. The project included automated scraping from distributor retail sites, a full migration from WordPress, and a fast rebuild using Next.js, Sanity, and Bootstrap to restore the brand’s digital presence.",
+  "excerpt": "Rediseño y reconstrucción completa de una tienda de cosmética en el sur de España. El proyecto incluyó el scrapping automatizado de sitios web de distribuidores, una migración completa desde WordPress y una reconstrucción rápida con Next.js, Sanity y Bootstrap para recuperar la presencia digital de la marca.",
   "images": [
     {
-      "src": "../../../assets/enka-showcase.webp",
+      "src": "src/assets/projects/enka-1.webp",
       "alt": "ENKA Cosmetics Website"
     },
     {
-      "src": "../../../assets/enka-style.webp",
+      "src": "src/assets/projects/enka-2.webp",
       "alt": "ENKA Cosmetics Website"
     }
   ],
-  "liveLink": "",
-  "repoLink": "",
+  "liveLink": "https://enkaesteticapro.com/",
+  "repoLink": "https://github.com/N4N1T0/enka-ecommerce",
   "colors": ["#f5f5f5", "#cc3366"],
   "techStack": [
     {
       "title": "Next.js",
-      "info": "Next.js is a React framework that enables modern web applications with static and dynamic rendering optimized for performance and SEO.",
+      "info": "Next.js es un framework de React que permite desarrollar aplicaciones web modernas con renderizado estático y dinámico, optimizadas para el rendimiento y SEO.",
       "link": "https://nextjs.org/"
     },
     {
       "title": "Sanity",
-      "info": "Sanity is a headless content management platform ideal for building flexible and scalable experiences. In this project, it was used as the structured product database.",
+      "info": "Sanity es una plataforma de gestión de contenido headless, ideal para crear experiencias flexibles y escalables. En este proyecto se usó como base de datos estructurada para productos.",
       "link": "https://www.sanity.io/"
     },
     {
-      "title": "Shibrio",
-      "info": "Shibrio is an automated scraping tool that efficiently extracts structured data from third-party websites.",
-      "link": "https://shibrio.com/"
+      "title": "Cheerio",
+      "info": "Cheerio es una herramienta de scraping automatizado que extrae datos estructurados de sitios web de terceros de manera eficiente.",
+      "link": "https://cheerio.js.org/"
     },
     {
       "title": "Bootstrap",
-      "info": "Bootstrap is a CSS framework that allows rapid development of responsive web interfaces, perfect for quick and consistent layout.",
+      "info": "Bootstrap es un framework CSS que permite desarrollar interfaces web responsivas rápidamente, perfecto para la maquetación urgente y consistente.",
       "link": "https://getbootstrap.com/"
-    },
-    {
-      "title": "CSS",
-      "info": "CSS was used to customize components and adapt the design precisely and consistently to the brand’s aesthetics.",
-      "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
     }
   ],
   "testimonial": {
-    "name": "Client Name",
-    "quote": "Thanks to this collaboration, ENKA was able to come back strong online. The team saved our brand!",
-    "role": "CEO of ENKA Cosmetics"
+    "name": "Nombre del cliente",
+    "quote": "Gracias a esta colaboración, ENKA pudo regresar fuerte online. ¡El equipo salvó nuestra marca!",
+    "role": "CEO de ENKA Cosmetics"
   },
-  "challenge": "The brand had completely lost its website and database due to previous mismanagement. Without access to their old content or catalog, they needed a fast, secure, and scalable solution to return to the digital market without sacrificing functionality or performance.",
-  "solution": "An automated scraping system with Shibrio was designed to rebuild the catalog from retailers. A brand new website was built with Next.js and Sanity as CMS, using Bootstrap to speed up layout. The platform is now fast, secure, and ready to scale with new features."
+  "challenge": "La marca había perdido completamente su sitio web y base de datos debido a la mala gestión previa. Sin acceso a su contenido antiguo o catálogo, necesitaba una solución rápida, segura y escalable para regresar al mercado digital sin sacrificar funcionalidad ni rendimiento.",
+  "solution": "Se diseñó un sistema de scraping automatizado con Shibrio para reconstruir el catálogo desde los sitios web de los distribuidores. Se construyó un sitio web completamente nuevo con Next.js y Sanity como CMS, utilizando Bootstrap para acelerar la maquetación. La plataforma está ahora lista para escalar con nuevas características.",
+  "comingSoon": false
 }

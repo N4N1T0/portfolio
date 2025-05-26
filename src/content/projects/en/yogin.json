@@ -2,10 +2,19 @@
   "title": "Yogi",
   "date": "2025-04-10",
   "excerpt": "An innovative SaaS platform for yoga students and instructors to create events, classes, and personalized profiles, featuring integrated payments and subscriptions for continuous analytics and improvement.",
-  "images": [],
-  "liveLink": "",
+  "images": [
+    {
+      "src": "src/assets/projects/yogin-1.webp",
+      "alt": "Yogi Website"
+    },
+    {
+      "src": "src/assets/projects/yogin-2.webp",
+      "alt": "Yogi Website"
+    }
+  ],
+  "liveLink": "https://yog-in.es",
   "repoLink": "",
-  "colors": [],
+  "colors": ["#4d869c", "#d3944a"],
   "techStack": [
     {
       "title": "React",
@@ -28,19 +37,9 @@
       "link": "http://www.passportjs.org/"
     },
     {
-      "title": "ChatGM",
-      "info": "UI toolkit for building conversational and interactive interfaces, optimizing user experience.",
-      "link": ""
-    },
-    {
       "title": "Tailwind CSS",
       "info": "Utility-first CSS framework that allows fast building of clean and responsive designs.",
       "link": "https://tailwindcss.com/"
-    },
-    {
-      "title": "Tankstack",
-      "info": "Solution for managing and optimizing API calls and communication between services.",
-      "link": ""
     }
   ],
   "testimonial": {
@@ -49,5 +48,6 @@
     "role": ""
   },
   "challenge": "Build a modern SaaS platform for yoga students and instructors to manage events, classes, profiles, and payments, with advanced filtering and subscription analytics, maintaining a secure and scalable architecture.",
-  "solution": "We used React with Bit to build a modular and reusable UI, along with Node.js and Express on the backend for a robust API. Passport was implemented for secure authentication, Tailwind CSS for clean and responsive design, and ChatGM to enhance the UI experience. Tankstack was integrated to optimize API calls, ensuring performance and scalability."
+  "solution": "We used React with Bit to build a modular and reusable UI, along with Node.js and Express on the backend for a robust API. Passport was implemented for secure authentication, Tailwind CSS for clean and responsive design, and ChatGM to enhance the UI experience. Tankstack was integrated to optimize API calls, ensuring performance and scalability.",
+  "comingSoon": false
 }

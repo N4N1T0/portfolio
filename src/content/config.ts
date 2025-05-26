@@ -62,12 +62,12 @@ const projectCollection = defineCollection({
       excerpt: z.string(),
       images: z.array(
         z.object({
-          src: image(),
+          src: image().optional(),
           alt: z.string()
         })
       ),
       liveLink: z.string().url(),
-      repoLink: z.string().url(),
+      repoLink: z.string().optional(),
       colors: z.array(z.string()),
       techStack: z.array(
         z.object({
@@ -82,7 +82,8 @@ const projectCollection = defineCollection({
         name: z.string(),
         quote: z.string(),
         role: z.string()
-      })
+      }),
+      comingSoon: z.boolean().optional()
     })
 })
 

@@ -4,11 +4,11 @@
   "excerpt": "High-end e-commerce platform for aerothermal product sales, built and powered with these technologies:",
   "images": [
     {
-      "src": "../../../assets/termogar-showcase.webp",
+      "src": "src/assets/projects/termogar-1.webp",
       "alt": "Termogar Website"
     },
     {
-      "src": "../../../assets/termogar-style.webp",
+      "src": "src/assets/projects/termogar-2.webp",
       "alt": "Termogar Website"
     }
   ],
@@ -43,5 +43,6 @@
     "role": "CEO of Termogar"
   },
   "challenge": "Completely overhaul an outdated WordPress website with modern technologies",
-  "solution": "Built a new website using Next.js with static and dynamic rendering capabilities"
+  "solution": "Built a new website using Next.js with static and dynamic rendering capabilities",
+  "comingSoon": false
 }

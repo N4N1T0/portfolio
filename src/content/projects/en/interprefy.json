@@ -4,13 +4,17 @@
   "excerpt": "Brand revamp and full website rebuild using HubSpot’s CMS and site builder, with custom modules developed in HubL. A fast-paced project focused on layout customization and performance enhancements.",
   "images": [
     {
-      "src": "../../../assets/interprefy-showcase.webp",
+      "src": "src/assets/projects/interprefy-1.webp",
+      "alt": "Interprefy Website"
+    },
+    {
+      "src": "src/assets/projects/interprefy-2.webp",
       "alt": "Interprefy Website"
     }
   ],
-  "liveLink": "",
+  "liveLink": "https://www.interprefy.com/",
   "repoLink": "",
-  "colors": ["#004080", "#f0f4f8"],
+  "colors": ["#f0f4f8", "#FF5D22"],
   "techStack": [
     {
       "title": "HubSpot CMS",
@@ -44,5 +48,6 @@
     "role": "Marketing Manager at Interprefy"
   },
   "challenge": "Interprefy needed a full brand revamp with a complete website rebuild on HubSpot’s platform, including custom modules aligned with their design guidelines and structure, all on a tight deadline.",
-  "solution": "Developed custom HubL modules adhering to the client’s subsprite guidelines and used HubSpot’s site builder to assemble the site quickly. Applied JavaScript, jQuery, and Parallax.js to improve performance and add smooth animations, delivering a polished product within weeks."
+  "solution": "Developed custom HubL modules adhering to the client’s subsprite guidelines and used HubSpot’s site builder to assemble the site quickly. Applied JavaScript, jQuery, and Parallax.js to improve performance and add smooth animations, delivering a polished product within weeks.",
+  "comingSoon": false
 }

@@ -4,19 +4,11 @@
   "excerpt": "Rediseño completo de un ecommerce de aerotermia de alta gama con Next.js, Sanity y NextAuth. Una plataforma moderna, rápida y escalable, pensada para destacar productos técnicos con un diseño limpio y una experiencia de usuario optimizada para convertir.",
   "images": [
     {
-      "src": "../../../assets/termogar-showcase.webp",
+      "src": "src/assets/projects/termogar-1.webp",
       "alt": "Termogar Website"
     },
     {
-      "src": "../../../assets/termogar-style.webp",
-      "alt": "Termogar Website"
-    },
-    {
-      "src": "../../../assets/termogar-showcase.webp",
-      "alt": "Termogar Website"
-    },
-    {
-      "src": "../../../assets/termogar-style.webp",
+      "src": "src/assets/projects/termogar-2.webp",
       "alt": "Termogar Website"
     }
   ],
@@ -51,5 +43,6 @@
     "role": "CEO de Termogar"
   },
   "challenge": "Renovar por completo una antigua página web en WordPress con tecnologías modernas",
-  "solution": "Desarrollar una nueva web con Next.js con capacidades de renderizado estático y dinámico"
+  "solution": "Desarrollar una nueva web con Next.js con capacidades de renderizado estático y dinámico",
+  "comingSoon": false
 }

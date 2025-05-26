@@ -4,13 +4,17 @@
   "excerpt": "Renovación de marca y reconstrucción completa del sitio web usando el CMS de HubSpot y su site builder, con módulos personalizados desarrollados en HubL. Proyecto rápido enfocado en personalización del layout y mejoras de rendimiento.",
   "images": [
     {
-      "src": "../../../assets/interprefy-showcase.webp",
-      "alt": "Sitio web de Interprefy"
+      "src": "src/assets/projects/interprefy-1.webp",
+      "alt": "Interprefy Website"
+    },
+    {
+      "src": "src/assets/projects/interprefy-2.webp",
+      "alt": "Interprefy Website"
     }
   ],
-  "liveLink": "",
+  "liveLink": "https://www.interprefy.com/",
   "repoLink": "",
-  "colors": ["#004080", "#f0f4f8"],
+  "colors": ["#f0f4f8", "#FF5D22"],
   "techStack": [
     {
       "title": "HubSpot CMS",
@@ -44,5 +48,6 @@
     "role": "Gerente de Marketing en Interprefy"
   },
   "challenge": "Interprefy necesitaba una renovación completa de su marca y la reconstrucción total de su sitio web en la plataforma de HubSpot, incluyendo módulos personalizados alineados con sus directrices de diseño y estructura, todo con un plazo ajustado.",
-  "solution": "Desarrollamos módulos personalizados en HubL siguiendo las directrices de subsprite del cliente y usamos el site builder de HubSpot para armar el sitio rápidamente. Aplicamos JavaScript, jQuery y Parallax.js para mejorar el rendimiento y añadir animaciones suaves, entregando un producto pulido en pocas semanas."
+  "solution": "Desarrollamos módulos personalizados en HubL siguiendo las directrices de subsprite del cliente y usamos el site builder de HubSpot para armar el sitio rápidamente. Aplicamos JavaScript, jQuery y Parallax.js para mejorar el rendimiento y añadir animaciones suaves, entregando un producto pulido en pocas semanas.",
+  "comingSoon": false
 }
