@@ -19,7 +19,7 @@
   }
 
   html {
-    scrollbar-color: var(--foreground) var(--background);
+    scrollbar-color: var(--color-foreground) var(--color-background);
   }
 
   .dark {
@@ -44,7 +44,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--foreground);
+    background-color: var(--color-background);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
@@ -67,7 +67,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--background);
+    background-color: var(--color-foreground);
     transform-origin: bottom left;
     transition: transform 0.25s ease-out;
   }
