@@ -8,13 +8,12 @@ interface Props {
 }
 
 const { link, label, className } = Astro.props
-console.log('🚀 ~ className:', className)
 const border = getBorderColor(className)
 const hoverAnimation = getHoverBorderColor(className)
 ---
 
 <div
-  class='flex h-full items-center justify-center space-x-5 pl-12 text-sm md:-rotate-90 md:space-x-10 2xl:pl-32'
+  class='flex h-full items-center justify-center space-x-5 pl-12 text-sm md:-rotate-90 md:space-x-10 2xl:pl-5'
 >
   <hr class={cn('border-px w-10 md:w-20', border)} />
   {
