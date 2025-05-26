@@ -6,8 +6,8 @@ import Courtain from '@/components/shared/Courtain.astro'
 import IndividualPageLayout from '@/layouts/IndividualPageLayout.astro'
 
 export async function getStaticPaths() {
-  const projects = await getCollection('projects', ({ id }) => {
-    return id.startsWith('es')
+  const projects = await getCollection('projects', ({ id, data }) => {
+    return !data.comingSoon && id.startsWith('es')
   })
   return projects.map((project) => ({
     params: { slug: project.id.replace('es/', '') },

@@ -2,21 +2,21 @@
 import type { CollectionEntry } from 'astro:content'
 
 interface Props {
-  project: CollectionEntry<'projects'>
+  data: CollectionEntry<'projects'>
 }
 
-const { project } = Astro.props
-const { testimonial } = project.data
+const { data } = Astro.props
 ---
 
-<!-- TODO: IMPROVE -->
 <section
-  id='Testimonial'
-  class='w-full pb-12 text-center text-foreground md:leading-tight'
+  class='flex w-full justify-center overflow-hidden text-center'
+  style={`background-color: ${'colors' in data.data ? data.data.colors[1] : 'transparent'};`}
 >
-  <h2 class='font-prata text-[3vw]'>"{testimonial.quote}"</h2>
-  <div class='flex w-full justify-between'>
-    <p class='text-[2vw]'>{testimonial.name}</p>
-    <p class='text-[2vw]'>{testimonial.role}</p>
-  </div>
+  <h1
+    id='title'
+    class='font-prata animate-fade-in-down animate-delay-400 z-20 self-end text-balance uppercase'
+    style={`color: ${'colors' in data.data ? data.data.colors[0] : 'inherit'};`}
+  >
+    {data.data.testimonial.quote}
+  </h1>
 </section>

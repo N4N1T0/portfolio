@@ -1,6 +1,4 @@
 ---
-import type { ProjectTechStack } from '@/types'
-import ProjectTechStackCard from './ProjectTechStackCard.astro'
 import type { CollectionEntry } from 'astro:content'
 
 interface Props {
@@ -8,23 +6,12 @@ interface Props {
 }
 
 const { project } = Astro.props
-const { excerpt, techStack } = project.data
+const { excerpt } = project.data
 ---
 
-<!-- TODO: IMPROVE -->
 <h2
   id='subtitle'
-  class='font-prata animate-fade-in-up animate-delay-700 my-10 max-w-(--breakpoint-lg) px-5 text-[7vw] md:p-0 md:text-[3vw] md:leading-16'
+  class='animate-fade-in-up animate-delay-700 my-10 text-[6vw] uppercase md:p-0 md:text-[2vw] md:leading-16'
 >
   {excerpt}
 </h2>
-<ul
-  role='presentation'
-  class='flex flex-col items-start justify-between gap-3 px-5 md:flex-row md:gap-5 md:px-10'
->
-  {
-    techStack.map((tech: ProjectTechStack) => (
-      <ProjectTechStackCard techStack={tech} lang='es' />
-    ))
-  }
-</ul>
