@@ -4,7 +4,7 @@ import { changeLangFromUrl } from '@/i18n/utils'
 interface Props {
   title?: string | undefined
   description?: string | undefined
-  image?: string | undefined
+  image?: ImageMetadata
   ld?: string
   lang: string
 }
@@ -12,7 +12,7 @@ interface Props {
 const { title, description, image, ld, lang } = Astro.props
 
 const newLangUrl = changeLangFromUrl(Astro.url, lang)
-const ogImage = image ? image : `${Astro.site}${lang}/og-image.jpg`
+const ogImage = image ? image.src : `${Astro.site}${lang}/og-image.jpg`
 ---
 
 <!-- Basic HTML Meta Tags -->
