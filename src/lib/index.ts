@@ -115,8 +115,8 @@ export function getHoverBorderColor(className?: string): string {
   if (!className) return 'hover-underline-animation'
 
   return className.includes('background')
-    ? 'hover-underline-animation-reverse'
-    : 'hover-underline-animation'
+    ? 'hover-underline-animation'
+    : 'hover-underline-animation-reverse'
 }
 
 /**
@@ -131,7 +131,11 @@ export async function getProjects(
   const projects = (
     await getCollection('projects', ({ id }) => id.startsWith(lang))
   )
-    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+    .sort((a, b) => {
+      const aDate = new Date(a.data.date).valueOf()
+      const bDate = new Date(b.data.date).valueOf()
+      return bDate - aDate
+    })
     .map((project) => {
       const refactoredId =
         lang === 'es'
