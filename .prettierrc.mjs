@@ -20,9 +20,14 @@ export default {
       files: "*.md",
       options: {
         parser: "markdown",
-      },
-      rules: {
         singleQuote: true,
+      },
+    },
+    {
+      files: "*.json",
+      options: {
+        parser: "json",
+        printWidth: 100,
       },
     },
   ],
